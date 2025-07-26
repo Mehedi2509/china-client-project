@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+
+
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+	
+	/* Common Style */
+	.section-title {
+		margin-bottom: 40px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.section-title h2 {
+		font-family: Alexandria;
+		font-size: 34px;
+		line-height: 51px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.section-title p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		color: #4B5563;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.section-title {
+			margin-bottom: 32px;
+		}
+		.section-title h2 {
+			font-size: 28px;
+			line-height: 40px;
+		}
+		.section-title p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	
+	/* Hero Area */
+	.hero-area {
+		min-height: 560px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+		background-repeat: no-repeat !important;
+		background-position: right center !important;
+		background-size: cover !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.hero-area .hero-container {
+		max-width: 955px;
+		width: 100%;
+		background-color: #FFFFFFCC;
+		border-radius: 40px;
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+	}
+	.hero-area .hero-content-wrapper {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.hero-area .hero-content-wrapper .hero-title {
+		font-family: Alexandria;
+		font-size: 56px;
+		font-weight: 400;
+		line-height: initial;
+		color: #4B5563;
+	}
+	.hero-area .hero-content-wrapper .hero-list {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.hero-area .hero-content-wrapper .hero-list li {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		font-family: Alexandria;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: initial;
+		color: #4B5563;
+	}
+	.hero-area .hero-content-wrapper .hero-btn-wrapper {
+		display: flex;
+		margin-top: 18px;
+	}
+	
+	@media only screen and (max-width: 1024px) {
+		.hero-area {
+			padding: 70px 16px;
+			min-height: unset;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.hero-area {
+			padding: 20px 16px;
+		}
+		.hero-area .hero-container {
+			border-radius: 12px;
+			padding: 24px;
+		}
+		.hero-area .hero-content-wrapper .hero-title {
+			font-size: 32px;;
+		}
+		.hero-area .hero-content-wrapper .hero-list {
+			display: none;
+		}
+		.hero-area .hero-content-wrapper .hero-list li {
+			gap: 16px;
+			font-size: 16px;
+		}
+		.hero-area .hero-content-wrapper .hero-btn-wrapper {
+			margin-top: 0;
+		}
+		.hero-area .hero-content-wrapper .popup-form-btn {
+			font-size: 16px;
+			padding: 10px 16px;
+			line-height: inherit;
+		}
+	}
+
+	/* About Section */
+	.about-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.about-area .about-wrapper {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	.about-area .about-content-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.about-area .about-content-wrapper .about-title {
+		font-family: Alexandria;
+		font-size: 34px;
+		line-height: 51px;
+		font-weight: 400;
+		color: #4B5563;
+		margin-bottom: 12px;
+	}
+	.about-area .about-content-wrapper p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		text-align: justify;
+		color: #4B5563;
+	}
+	.about-area .about-image-wrapper {
+		display: flex;
+		flex-shrink: 0;
+		width: 480px;
+	}
+	.about-area .about-image-wrapper .image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 4.80/4.44;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.about-area .about-image-wrapper .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.about-area .about-bottom-content {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+		margin-top: 32px;
+	}
+	.about-area .about-bottom-content p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		text-align: justify;
+		color: #4B5563;
+	}
+	.about-area .about-btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 32px;
+	}
+	.about-area .about-btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.about-area {
+			padding: 50px 0;
+		}
+		.about-area .about-wrapper {
+			flex-wrap: wrap;
+		}
+		.about-area .about-image-wrapper {
+			width: 100%;
+		}
+		.about-area .about-content-wrapper {
+			gap: 20px;
+		}
+		.about-area .about-content-wrapper .about-title {
+			font-size: 28px;
+			line-height: 40px;
+		}
+		.about-area .about-btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	/* Custom wiring looms Section */
+	.custom-wiring-looms-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		background-color: #F0F0F0;
+		overflow: hidden;
+	}
+	.custom-wiring-looms-area .icon-card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 24px;
+	}
+	.custom-wiring-looms-area .icon-card-wrapper .icon-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		width: 100%;
+		height: 100%;
+		min-height: 228px;
+		padding: 32px 20px;
+		background-color: #16529B;
+		border-radius: 12px;
+	}
+	.custom-wiring-looms-area .icon-card-wrapper .icon-card .icon-card-content-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.custom-wiring-looms-area .icon-card-wrapper .icon-card .icon-card-content-wrapper .icon-card-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #fff;
+		letter-spacing: -0.72px;
+	}
+	.custom-wiring-looms-area .icon-card-wrapper .icon-card .icon-card-content-wrapper .icon-card-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: justify;
+		color: #fff;
+	}
+	.custom-wiring-looms-area .icon-card-btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.custom-wiring-looms-area {
+			padding: 50px 0;
+		}
+		.custom-wiring-looms-area .icon-card-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	/* Why QL‑Custom section */
+	.why-qL‑custom-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		overflow: hidden;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper {
+		display: flex;
+		align-items: flex-start;
+		gap: 126px;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-list-card-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		height: 100%;
+	}
+	.why-qL‑custom-area .section-title {
+		margin-bottom: 20px;
+		text-align: left;
+		gap: 32px;
+	}
+	.why-qL‑custom-area .feature-list-btn-wrapper {
+		display: flex;
+		margin-top: 20px;
+	}
+	.why-qL‑custom-area .feature-list-btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+		list-style: none;
+		align-items: center;
+		gap: 16px;
+		background-color: #FFF;
+		padding: 12px 16px;
+		border: 0.5px solid #16529B;
+		border-radius: 12px;
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		box-shadow: 0px 0px 10px 0px #0000001A;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-list-card span {
+		font-weight: 500;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-image-wrapper {
+		display: flex;
+		flex-shrink: 0;
+		width: 574px;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-image-wrapper .image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.why-qL‑custom-area .feature-list-main-wrapper .feature-image-wrapper .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.why-qL‑custom-area .feature-list-main-wrapper {
+			gap: 24px;
+			align-items: center;
+		}
+		.why-qL‑custom-area .feature-list-main-wrapper .feature-image-wrapper {
+			flex-shrink: unset;
+			width: 100%;
+		}
+		.why-qL‑custom-area .feature-list-main-wrapper .feature-image-wrapper .image {
+			aspect-ratio: unset;
+		}
+	}
+	@media only screen and (max-width: 575px) {
+		.why-qL‑custom-area {
+			padding: 50px 0;
+		}
+		.why-qL‑custom-area .feature-list-main-wrapper {
+			flex-wrap: wrap;
+		}
+		.why-qL‑custom-area .section-title {
+			gap: 16px;
+		}
+		.why-qL‑custom-area .feature-list-main-wrapper .feature-list-card .feature-list-desc {
+			width: 55%;
+		}
+		.why-qL‑custom-area .feature-list-btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	
+	/* Products Advantage Section */
+	.products-advantage-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+		background-color: #F0F0F0;
+	}
+	.products-advantage-area .info-card-wrapper {
+		display: flex;
+		gap: 20px;
+		margin-bottom: 20px;
+	}
+	.products-advantage-area .info-card-wrapper:last-child {
+		margin-bottom: 0;
+	}
+	.products-advantage-area .info-card-wrapper .info-card {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		align-items: center;
+		width: 100%;
+		padding: 32px 24px;
+		background-color: #FFF;
+		border-radius: 40px;
+	}
+	.products-advantage-area .info-card-wrapper .info-card.style-two {
+		flex-direction: row-reverse;
+		gap: 100px;
+		align-items: center;
+		justify-content: start;
+		padding: 30px 24px;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-image {
+		display: flex;
+		flex-shrink: 0;
+		width: 220px;
+		height: 220px;
+		border: 1px solid #00BDE7;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.products-advantage-area .info-card-wrapper .info-card.style-two .info-card-image {
+		width: 400px;
+		height: 400px;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: 100%;
+	}
+	.products-advantage-area .info-card-wrapper .info-card.style-two .info-card-content-wrapper {
+		max-width: 556px;
+		height: unset;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-list {
+		list-style: disc;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: justify;
+		color: #4B5563;
+		padding-left: 24px;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.products-advantage-area .products-advantage-area .info-card-wrapper {
+			flex-wrap: wrap;
+			gap: 32px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.products-advantage-area {
+			padding: 50px 0;
+		}
+		.products-advantage-area .info-card-wrapper {
+			flex-wrap: wrap;
+		}
+		.products-advantage-area .info-card-wrapper .info-card.style-two {
+			flex-direction: column;
+			gap: 32px;
+			align-items: center;
+			padding: 32px 24px;
+		}
+		.products-advantage-area .info-card-wrapper .info-card.style-two .info-card-image {
+			width: 220px;
+			height: 220px;
+		}
+	}
+
+	/* Smart Wiring Solutions Section */
+	.smart-wiring-solutions-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.smart-wiring-solutions-area .smart-wiring-solutions-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.smart-wiring-solutions-area .smart-wiring-solutions-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.smart-wiring-solutions-area .smart-wiring-solutions-content p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		text-align: justify;
+		color: #4B5563;
+	}
+	.smart-wiring-solutions-area .image-grid-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+		margin-top: 40px;
+	}
+	.smart-wiring-solutions-area .image-grid-wrapper .image-grid-item {
+		display: flex;
+		width: 100%;
+	}
+	.smart-wiring-solutions-area .image-grid-item .image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 40px;
+		overflow: hidden;
+	}
+	.smart-wiring-solutions-area .image-grid-item .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.smart-wiring-solutions-area .btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+	.smart-wiring-solutions-area .btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.smart-wiring-solutions-area {
+			padding: 50px 0;
+		}
+		.smart-wiring-solutions-area .image-grid-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+			margin-top: 32px;
+		}
+		.smart-wiring-solutions-area .btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	/* Recommended Components section */
+	.recommended-components-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+		background-color: #F0F0F0;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper {
+		display: flex;
+		flex-direction: column;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		background-color: #FFF;
+		padding: 20px;
+		border-bottom: 0.5px solid #37373750;
+		min-height: 80px;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card:last-child {
+		border-bottom-color: transparent;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card.feature-list-card-header {
+		background-color: #00BDE7;
+		min-height: 64px;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-title {
+		width: 200px;
+		flex-shrink: 0;
+		font-family: Alexandria;
+		font-size: 16px;
+		line-height: initial;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card.feature-list-card-header .feature-list-title {
+		font-size: 20px;
+		color: #FFF;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-desc {
+		width: 100%;
+		font-family: Alexandria;
+		font-size: 16px;
+		line-height: initial;
+		font-weight: 300;
+		color: #4B5563;
+	}
+	.recommended-components-area .feature-list-main-wrapper .feature-list-card.feature-list-card-header .feature-list-desc {
+		font-size: 20px;
+		color: #FFF;
+	}
+	.recommended-components-area .image-grid-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 20px;
+		row-gap: 24px;
+		margin-top: 40px;
+	}
+	.recommended-components-area .image-grid-item {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		justify-content: center;
+	}
+	.recommended-components-area .image-grid-item .image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 2.8/2.4;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.recommended-components-area .image-grid-item .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.recommended-components-area .image-grid-item .title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: initial;
+		font-weight: 300;
+		color: #16529B;
+		text-align: center;
+	}
+	.recommended-components-area  .bottom-text {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.recommended-components-area {
+			padding: 50px 0;
+		}
+		.recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-title {
+			width: 100px;
+		}
+		.recommended-components-area .image-grid-wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.recommended-components-area  .bottom-text {
+			margin-top: 32px;
+		}
+	}
+	@media only screen and (max-width: 575px) {
+		.recommended-components-area .image-grid-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	/* Recommended Raw Materials section */
+	.recommended-raw-materials-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.recommended-raw-materials-area .image-wrapper {
+		display: flex;
+		width: 100%;
+		height: 620px;
+		overflow: hidden;
+	}
+	.recommended-raw-materials-area .image-wrapper img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+	.recommended-raw-materials-area .product-grid-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 24px;
+		margin-top: 40px;
+	}
+	.recommended-raw-materials-area .product-grid-item {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-image {
+		display: flex;
+		width: 100%;
+		height: 240px;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-content {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-cat {
+		font-family: Alexandria;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		margin-top: 4px;
+	}
+	.recommended-raw-materials-area .product-grid-item .product-desc span {
+		font-weight: 500;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.recommended-raw-materials-area {
+			padding: 50px 0;
+		}
+		.recommended-raw-materials-area .product-grid-wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.recommended-raw-materials-area .image-wrapper {
+			height: unset;
+		}
+	}
+	@media only screen and (max-width: 575px) {
+		.recommended-raw-materials-area .product-grid-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	/* Your Custom Section */
+	.your-custom-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		background-color: #F0F0F0;
+		overflow: hidden;
+	}
+	.your-custom-area .your-custom-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 20px 32px;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-image {
+		display: flex;
+		width: 100%;
+		height: 580px;
+		border-radius: 40px;
+		overflow: hidden;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-content p {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		text-align: justify;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-content ul {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		list-style: disc;
+		padding-left: 20px;
+	}
+	.your-custom-area .your-custom-wrapper .your-custom-content .btn-wrapper {
+		display: flex;
+		margin-top: 12px;
+	}
+	.your-custom-area .btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.your-custom-area .your-custom-wrapper {
+			align-items: start;
+		}
+		.your-custom-area .your-custom-wrapper .your-custom-image {
+			height: unset;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.your-custom-area {
+			padding: 50px 0;
+		}
+		.your-custom-area .your-custom-wrapper {
+			flex-wrap: wrap;
+		}
+		.your-custom-area .btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	/* Timeline Section */
+	.timeline-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		background-color: #16529B;
+		margin-bottom: 4px;
+		overflow: hidden;
+	}
+	.timeline-area .timeline-wrapper {
+		display: flex;
+		align-items: end;
+		gap: 20px;
+	}
+	.timeline-area .timeline-wrapper .timeline-image-wrapper {
+		width: 100%;
+	}
+	.timeline-area .timeline-wrapper .timeline-content {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.timeline-area .timeline-image-wrapper .section-title h2 {
+		text-align: left;
+		color: #fff;
+	}
+	.timeline-area .timeline-image-wrapper .timeline-image {
+		display: flex;
+		width: 480px;
+		height: 480px;
+		border-radius: 40px;
+		overflow: hidden;
+	}
+	.timeline-area .timeline-image-wrapper .timeline-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.timeline-area .timeline {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+        }
+
+        .timeline-area .timeline:before {
+            position: absolute;
+            left: 257px;
+            top: 0;
+            content: ' ';
+            display: block;
+            width: 2px;
+            height: 100%;
+            background: #fff;
+            z-index: 5;
+        }
+
+        .timeline-area .timeline li {
+            position: relative;
+            display: flex;
+            align-items: center;
+			justify-content: end;
+        }
+
+        .timeline-area .timeline li:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .timeline-area .timeline-left {
+            width: 259px;
+            text-align: right;
+            padding-right: 41px;
+			position: relative;
+        }
+
+        .timeline-area .timeline-right {
+            width: 319px;
+            padding-left: 41px;
+        }
+
+        .timeline-area .timeline-dot {
+            position: absolute;
+            right: -5px;
+            top: 50%;
+			transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background: #00BDE7;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.2);
+            z-index: 10;
+        }
+
+		.timeline-area .timeline-title {
+                font-family: Alexandria;
+				font-size: 18px;
+				line-height: 28px;
+				font-weight: 300;
+				color: #fff;
+            }
+
+            .timeline-area .timeline-description {
+                font-family: Alexandria;
+				font-size: 18px;
+				line-height: 28px;
+				font-weight: 300;
+				color: #fff;
+				text-align: justify;
+            }
+
+    @media only screen and (max-width: 1024px) {
+        .timeline-area .timeline-wrapper {
+
+        }
+		.timeline-area .timeline-image-wrapper .timeline-image {
+			width: 100%;
+			height: unset;
+		}
+        .timeline-area .timeline:before {
+            left: 176px;
+        }
+        .timeline-area .timeline-left {
+			flex-shrink: 0;
+            width: 180px;
+            padding-right: 24px;
+        }
+
+        .timeline-area .timeline-right {
+            width: 100%;
+            padding-left: 24px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+		.timeline-area {
+			padding: 50px 0;
+		}
+        .timeline-area .timeline-wrapper {
+			flex-wrap: wrap;
+			gap: 32px;
+        }
+
+        .timeline-area .timeline:before {
+            left: 156px;
+        }
+        .timeline-area .timeline-left {
+            width: 160px;
+        }
+		.timeline-area .timeline li {
+			justify-content: center;
+		}
+		.timeline-area .timeline-title {
+			font-size: 16px;
+			line-height: 26px;
+        }
+
+        .timeline-area .timeline-description {
+            font-size: 16px;
+			line-height: 26px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Hero Section -->
+	<div class="hero-area" style="background: url('https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/9f94b592cd750f58f58a35ed5cb2aeeac5854b22.jpg')">
+		<div class="hero-container">
+			  <div class="hero-content-wrapper">
+				  <h1 class="hero-title">
+					  Custom wiring looms
+				  </h1>
+				  
+				  <ul class="hero-list">
+					  <li class="hero-list-item">
+						  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+							  <circle cx="5.5" cy="5.5" r="4.5" stroke="#4B5563"/>
+						  </svg>
+						  PE, PP loom for wire harness
+					  </li>
+					  <li class="hero-list-item">
+						  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+							  <circle cx="5.5" cy="5.5" r="4.5" stroke="#4B5563"/>
+						  </svg>
+						   Either Split or  Closed
+					  </li>
+					  <li class="hero-list-item">
+						  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+							  <circle cx="5.5" cy="5.5" r="4.5" stroke="#4B5563"/>
+						  </svg>
+						   Colors are available to OEM
+					  </li>
+				  </ul>
+
+				  <div class="hero-btn-wrapper">
+					  <?php
+						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					  ?>
+				  </div>
+			  </div>
+	   </div>
+   </div>
+
+	<!-- About Section -->
+   <div class="about-area">
+		<div class="container mx-auto">
+			<div class="about-wrapper">
+				<div class="about-image-wrapper">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/3d019b2345f526167c47f6ca02e40465d0db406c.png" alt="" />
+					</div>
+				</div>
+			  <div class="about-content-wrapper">
+				<h2 class="about-title">
+					What Is a Custom Wiring Loom — And Why It Matters
+				</h2>
+				  <p>Do you need custom wiring looms for your car or your bike? You may also need wires for a tool or a small machine. Wires can get mixed up and break. And it causes errors in your devices. That can be hard to fix. A custom wire loom helps a lot. It keeps the wires all together. It keeps them neat and safe. It stops dirt and water from getting in. It also keeps wires from bending or breaking. They also save your time. You do not have to fix wires again and again.</p>
+				  <p>QL-Custom Technology Ltd. makes great custom wiring looms. They make custom wiring looms for cars, bikes, and machines, too. They can make one just for you. You tell them what you need. They will help you get it. Their team is kind and fast. QL-Custom Technology Ltd. makes sure the job is done right.</p>
+			  </div>
+		  </div>
+		  <div class="about-bottom-content">
+			<p>A wiring loom is a group of wires that are bundled together. These wires send power or signals from one part of a machine to another. The cables are wrapped in covers to keep them safe and neat. We make bespoke wiring looms that match your exact needs. You can send us a sketch, a drawing, or a photo. We will make a loom that fits just right.</p>
+			<p>Custom wiring looms are very helpful. They keep your wires from getting messy. They stop wires from getting too hot, wet, or damaged. They also make it easier to install and fix things. You don't need to worry about loose wires or messy cables. These Automotive wiring looms were first used in cars. But now, they are used everywhere — in factories, boats, robots, and hospitals.</p>
+			<p>If you don't use a loom, wires can tangle. They might tear or break. A tailored cable harness stops that from happening. It keeps everything in order and safe. custom wiring looms are better than ones you buy off the shelf. Why? Because they are made to fit your machine. They use the proper wires and the right parts. They save you time and make your system work better.</p>
+		</div>
+		<div class="about-btn-wrapper">
+			<?php
+				echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+			?>
+		</div>
+	   </div>
+   </div>
+
+   <!-- Custom wiring looms section -->
+	<div class="custom-wiring-looms-area">
+		<div class="container mx-auto">
+		  <div class="section-title">
+			  <h2>Custom wiring looms are used in</h2>
+		  </div>
+		  <div class="icon-card-wrapper">
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Automotive & Motorsport</h4>
+					  <p class="icon-card-desc">Used in vehicles like cars, trucks, and EVs to safely connect lights, batteries, sensors, engines, and more.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Industrial Automation</h4>
+					  <p class="icon-card-desc">Installed in factory machines and robots to control movements, power, and safety with strong, safe wiring.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Energy systems</h4>
+					  <p class="icon-card-desc">Carry power between batteries, solar panels, and chargers, with wires that don't lose energy and stay safe under load.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Robotics & Control Panels</h4>
+					  <p class="icon-card-desc">Help robots connect parts like motors, wheels, cameras, and sensors to move and work properly.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Marine & RV Systems</h4>
+					  <p class="icon-card-desc">Manage systems like lights, sounds, GPS, and engines, making travel smooth and safe.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Aerospace Equipment</h4>
+					  <p class="icon-card-desc">These custom wiring looms are used in many types of aerospace technology. It connects the powered cables for the various vital sections.</p>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+
+	  <!-- Why QL‑Custom section -->
+	  <div class="why-qL‑custom-area">
+		<div class="container mx-auto">
+		  <div class="feature-list-main-wrapper">
+			  <div class="feature-list-card-wrapper">
+				<div class="section-title">
+					<h2>Why QL‑Custom Is Your Top Choice</h2>
+					<p>Drawing from Wiringo’s strengths—ISO 9001 and IATF 16949 certifications and “cite → quick 12‑hour quote turnaround”—we offer:</p>
+				</div>
+				  <li class="feature-list-card">
+					  <span>Factory-certified quality: </span>
+					  ISO 9001:2015 & working toward IATF 16949 compliance.
+				  </li>
+				  <li class="feature-list-card">
+					  <span>Modern production: </span>
+					  State-of-the-art crimpers, braid-over-molding, over-molding, PCB potting, and waterproofing lines.
+				  </li>
+				  <li class="feature-list-card">
+					  <span>No/minimal MOQ: </span>
+					  Scaling from single prototypes to high-volume runs.
+				  </li>
+				  
+				  <div class="feature-list-btn-wrapper">
+					  <?php
+						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					  ?>
+				  </div>
+			  </div>
+			  <div class="feature-image-wrapper">
+				<div class="image">
+					<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/4c1f163f6613932c3480e50b9cf68d63c22eaa6f.png" alt="" />
+				</div>
+			</div>
+		  </div>
+	  </div>
+	</div>
+
+  <!-- Products Advantage Control -->
+	<div class="products-advantage-area">
+		<div class="container mx-auto">
+		  <div class="section-title">
+			  <h2>Custom Wiring Looms Products Advantage</h2>
+		  </div>
+		  <div class="info-card-wrapper">
+			  <div class="info-card">
+				  <div class="info-card-image">
+					  <img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/82a92f0bf22302507a575004a7f667d50a097744-1.png" alt="">
+				  </div>
+				  <div class="info-card-content-wrapper">
+					  <h3 class="info-card-title">Wires (Main Part of the Loom)</h3>
+					  <ul class="info-card-list">
+						<li>Copper wires: These wires are used in most cases, about 85%. Copper is strong and soft. It lets power move easily. It can take heat up to 105°C, bend many times and still work.</li>
+						<li>Tinned copper wires: Tinned wires are like copper wires but with a thin tin layer. The tin stops rusting. This wire works well in wet or dirty places, like boats or car engines.
+						</li>
+						<li>Aluminum wires: Aluminum is light but not as strong as copper. These are used for low powers. These wires are used when saving weight is essential, like in planes.</li>
+						<li>Single-core wires: These wires have one thick part inside. They are stiff. Multi-core wires have many thin parts inside. They bend more easily. Shielded cables have a cover to block other signals. This keeps the signal clean.</li>
+					  </ul>
+				  </div>
+			  </div>
+			  <div class="info-card">
+				  <div class="info-card-image">
+					  <img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/a4caa897635cdfa183ecfd20ee1018aa706e3bf5.png" alt="">
+				  </div>
+				  <div class="info-card-content-wrapper">
+					  <h3 class="info-card-title">Insulation (The Cover Around the Wire)</h3>
+					  <ul class="info-card-list">
+						<li>PVC insulation: This item is common for the insulation. It works well up to 105°C. It stops power from leaking and is soft and cheap.</li>
+						<li>XLPE insulation: It is stronger and durable. It works well up to 125°C. It lasts longer if it rubs or gets hot.
+						</li>
+						<li>PTFE insulation: PTFE is also called Teflon. It handles very high heat, up to 260°C. It is used in hot machines or airplanes.</li>
+						<li>Rubber insulation: It is very flexible and it bends a lot. It is suitable for places that move or shake a lot, like robots or cars.</li>
+					  </ul>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="info-card-wrapper">
+			  <div class="info-card style-two">
+				  <div class="info-card-image">
+					  <img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/a499e0d482c7510f7e504118f9e054243b833237.png" alt="">
+				  </div>
+				  <div class="info-card-content-wrapper">
+					  <h3 class="info-card-title">Outer Sleeving and Braiding (Extra Covering)</h3>
+					  <ul class="info-card-list">
+						<li>Braided sleeving: These are similar to a soft net. It is strong and helps wires stay together. It handles heat and rubbing.</li>
+						<li>Spiral wraps: These wraps are like a spring around the wires. You can take them off or change wires easily.
+						</li>
+						<li>Heat shrink tubing: It is a plastic tube. It gets tight when you heat it. It keeps wires tight and blocks water and dirt. It works in hot places, up to 250°C.</li>
+					  </ul>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="info-card-wrapper">
+			  <div class="info-card">
+				  <div class="info-card-image">
+					  <img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/8e7fd1e55932bff71c24ccbab2cf817c436b0b8c.png" alt="">
+				  </div>
+				  <div class="info-card-content-wrapper">
+					  <h3 class="info-card-title">Connectors and Terminals (Ends That Plug In)</h3>
+					  <ul class="info-card-list">
+						<li>Crimp terminals: Crimp terminals are squeezed onto wires. They stay tight even when they shake.
+						</li>
+						<li>Solder terminals: These are melted onto wires. This makes a strong bond that lasts long.</li>
+						<li>Plug connectors: These are used to carry the power. Some can block water and work in hard places.</li>
+					  </ul>
+				  </div>
+			  </div>
+			  <div class="info-card">
+				  <div class="info-card-image">
+					  <img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/5b37d1843357223196a9082b4220233d67ad5ce2.png" alt="">
+				  </div>
+				  <div class="info-card-content-wrapper">
+					  <h3 class="info-card-title">Tapes and Bindings (To Hold Wires Together)</h3>
+					  <ul class="info-card-list">
+						<li>Cloth tape: It is used in cars and is also soft and firm. It works well up to 150°C.</li>
+						<li>PVC tape: This is suitable for small jobs. It can stretch and bend, but not for heat.
+						</li>
+						<li>Foil tape: This is shiny and blocks other signals. It is used in radios and sound wires.</li>
+						<li>Grommets and Seals (Protection for Holes)</li>
+						<li>Rubber grommets: These are soft and stop wires from rubbing on sharp metal. These also stop shaking.</li>
+						<li>Silicone seals are strong and work in hot and wet places to stop leaks and last long.</li>
+					  </ul>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+
+	<!-- Smart Wiring Solutions Section -->
+	<div class="smart-wiring-solutions-area">
+		<div class="container mx-auto">
+			<div class="smart-wiring-solutions-wrapper">
+				<div class="section-title">
+					<h2>Smart Wiring Solutions</h2>
+					<p>High-Performance Custom Looms for Power, Signal & Protection</p>
+				</div>
+				<div class="smart-wiring-solutions-content">
+				  <p>Custom wiring looms use 70% PVC for heat and rub, 20% braid for noise, and 10% shrink wrap to hold tight. This helps wires send power and signals with no loss. These looms take heat up to 125°C and control up to 600V. They can carry signals up to 3 GHz and block noise up to 60 dB. Wire types include coaxial, twisted, or multi-core. Looms are easy to put in. Most have plug ends already. </p>
+				  <p>This saves time. You can fix or swap parts fast. They are used in ECUs, CAN buses, control boxes, and robots. They stop breaks and short wires. They keep signals clear. Custom looms last long. They protect 24V power, 5V data, or 2.4 GHz wireless lines. All wires stay safe in one strong pack. The above solutions are used to keep the looms in an ideal position.</p>
+				</div>
+				<div class="btn-wrapper">
+					<?php
+						echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					?>
+				</div>
+				<div class="image-grid-wrapper">
+					<div class="image-grid-item">
+						<div class="image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/191bfb4d86babd8023cbefe78072fccf8d72855e-1.png" alt="product image" >
+						</div>
+					</div>
+					<div class="image-grid-item">
+						<div class="image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/b26911d1bf70e90dfce1e745a0a87ac55b135a36.png" alt="product image" >
+						</div>
+					</div>
+					<div class="image-grid-item">
+						<div class="image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/ec24f868fd5cc3f585b01577642e98a83f9a1d4a.png" alt="product image" >
+						</div>
+					</div>
+				</div>
+			</div>
+	   </div>
+   </div>
+
+     <!-- Recommended Components section -->
+	<div class="recommended-components-area">
+		<div class="container mx-auto">
+		  <div class="section-title">
+			  <h2>We build wiring looms according to your design</h2>
+		  </div>
+		  <div class="feature-list-main-wrapper">
+			  <div class="feature-list-card-wrapper">
+				  <li class="feature-list-card feature-list-card-header">
+					  <h5 class="feature-list-title">
+						Part
+					  </h5>
+					  <p class="feature-list-desc">
+						Choices
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Cable Types
+					  </h5>
+					  <p class="feature-list-desc">
+						Choose from PVC, Teflon, Braided, Shielded, Silicone, and other safe and flexible cables
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Connectors
+					  </h5>
+					  <p class="feature-list-desc">
+						We support brands like Molex, JST, Deutsch, TE, or custom connectors for your project
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Colors
+					  </h5>
+					  <p class="feature-list-desc">
+						Pick any wire color you like, or choose special color codes to help during installation
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Protection
+					  </h5>
+					  <p class="feature-list-desc">
+						Add heat shrink, plastic sleeves, or tough outer covers to protect your wires
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Voltage Range
+					  </h5>
+					  <p class="feature-list-desc">
+						Works with low (1V) to very high (1000V+) voltages, depending on your need
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Lengths
+					  </h5>
+					  <p class="feature-list-desc">
+						From tiny wires at 5 cm to long runs over 15 meters — we handle it all
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Labels
+					  </h5>
+					  <p class="feature-list-desc">
+						Use tags, barcodes, printed names, or color codes to mark each wire
+					  </p>
+				  </li>
+				  <li class="feature-list-card">
+					  <h5 class="feature-list-title">
+						Quantity
+					  </h5>
+					  <p class="feature-list-desc">
+						Order just 1 loom or over 10,000 — we scale to your project size
+					  </p>
+				  </li>
+			  </div>
+		  </div>
+			<div class="bottom-text">
+				Every loom is made with care. Everyone is tested. We also sign NDAs if your project is private.
+			</div>
+	  </div>
+	</div>
+
+    <!-- Recommended Raw Materials section -->
+	<div class="recommended-raw-materials-area">
+		<div class="container mx-auto">
+		  <div class="section-title">
+			  <h2>Recommended Raw Materials for Custom Wiring Looms</h2>
+			  <p>We offer the most suitable raw materials to match your project's environment, durability, and performance needs.</p>
+		  </div>
+			<div class="image-wrapper">
+				<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/Rectangle-4438.png" alt="Recommended Raw Materials">
+			</div>
+			<div class="product-grid-wrapper">
+				<div class="product-grid-item">
+					<div class="product-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/0be912b606097385b34d87e01d3f2a2b51a7c8cd.jpg" alt="product image" >
+					</div>
+					<div class="product-content">
+						<span class="product-cat">PP – Polypropylene</span>
+						<h4 class="product-title">
+							Best for: General-purpose wiring looms
+						</h4>
+						<p class="product-desc">
+							<span>Why it works: </span>PP is a lightweight and cost-effective material with excellent electrical insulation and chemical resistance. It's a solid choice for standard consumer and industrial wiring needs.
+						</p>
+					</div>
+				</div>
+				<div class="product-grid-item">
+					<div class="product-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/fb889e25ac4b66816bfd86bf1e3b0da8fe27a457.jpg" alt="product image" >
+					</div>
+					<div class="product-content">
+						<span class="product-cat">PE – Polyethylene</span>
+						<h4 class="product-title">
+							Best for: Moisture-prone or outdoor environments
+						</h4>
+						<p class="product-desc">
+							<span>Why it works: </span>Known for its flexibility and water resistance, PE is ideal for wiring looms used in wet or exposed conditions. It protects wires from moisture damage and extends the lifespan of your installation.
+						</p>
+					</div>
+				</div>
+				<div class="product-grid-item">
+					<div class="product-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/7de009cd41d47afc105d3dbf19a00e5eeb3d93ee.png" alt="product image" >
+					</div>
+					<div class="product-content">
+						<span class="product-cat">PA – Polyamide (Nylon)</span>
+						<h4 class="product-title">
+							Best for: Automotive and high-performance applications
+						</h4>
+						<p class="product-desc">
+							<span>Why it works: </span>PA offers exceptional mechanical strength, abrasion resistance, and thermal stability. It's the go-to material for automotive harnesses and other demanding environments where heat and wear are concerns.
+						</p>
+					</div>
+				</div>
+			</div>
+	  </div>
+	</div>
+
+	<!-- Start Your Custom section -->
+	<div class="your-custom-area">
+		<div class="container mx-auto">
+			<div class="section-title">
+				<h2>Start Your Custom Wiring Loom Project Today</h2>
+			</div>
+		  	<div class="your-custom-wrapper">
+				<div class="your-custom-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/4c94cef5c3a7fa271a3998f7d895dd7398726690.jpg" alt="" />
+				</div>
+			  <div class="your-custom-content">
+				  <p>
+					Upload your spec sheet, drawing, or photo, and we'll turn it into a thoroughly tested, production-ready wiring loom.
+				  </p>
+				  <ul>
+					<li>Share your plan or sketch.</li>
+					<li>Get a quote fast.</li>
+					<li>Try a test sample.</li>
+					<li>Receive tested custom wiring looms, ready to use.</li>
+				  </ul>
+				  <p>
+					We ship around the world. Our custom wiring looms help run machines in hospitals, boats, farms, and factories.
+				  </p>
+				  <p>
+					Let's build your custom wiring looms together.
+				  </p>
+				  <p>
+					Have questions? Our chat tool connects you with helpful experts right away.
+				  </p>
+				  
+				  <div class="btn-wrapper">
+					  <?php
+						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					  ?>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</div>
+
+	<!-- Timeline Section -->
+	<div class="timeline-area">
+		<div class="container mx-auto">
+			<div class="timeline-wrapper">
+				<div class="timeline-image-wrapper">
+					<div class="section-title">
+						<h2>From Sketch to Shipment in 5 Steps</h2>
+					</div>
+					<div class="timeline-image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/6a4810ae5193aa52b33edadd39f2a23cf4f7a945.jpg" alt="" />
+					</div>
+				</div>
+			  <div class="timeline-content">
+				<ul class="timeline">
+					<li>
+						<div class="timeline-left">
+							<div class="timeline-dot"></div>
+							<p class="timeline-title">Consult & Quote</p>
+						</div>
+						<div class="timeline-right">
+							<p class="timeline-description">Send us your drawing or photo. Tell us what it needs to do. We'll give you a fast quote.</p>
+						</div>
+					</li>
+			
+					<li>
+						<div class="timeline-left">
+							<div class="timeline-dot"></div>
+							<h3 class="timeline-title">Engineering & BOM Review</h3>
+						</div>
+						<div class="timeline-right">
+							<p class="timeline-description">Our team checks the design. We look at each part and help you improve it.</p>
+						</div>
+					</li>
+			
+					<li>
+						<div class="timeline-left">
+							<div class="timeline-dot"></div>
+							<h3 class="timeline-title">Prototyping (Optional)</h3>
+						</div>
+						<div class="timeline-right">
+							<p class="timeline-description">If you want to test it first, we can build one loom for you to try before making the whole batch.</p>
+						</div>
+					</li>
+			
+					<li>
+						<div class="timeline-left">
+							<div class="timeline-dot"></div>
+							<h3 class="timeline-title">Assembly & Testing</h3>
+						</div>
+						<div class="timeline-right">
+							<p class="timeline-description">Once you say yes, we build all your custom wiring looms and test every wire to ensure it works correctly.</p>
+						</div>
+					</li>
+			
+					<li>
+						<div class="timeline-left">
+							<div class="timeline-dot"></div>
+							<h3 class="timeline-title">Delivery Worldwide</h3>
+						</div>
+						<div class="timeline-right">
+							<p class="timeline-description">Each loom is carefully packed, labeled, and sent to you quickly and safely.</p>
+						</div>
+					</li>
+				</ul>
+			  </div>
+		  </div>
+	   </div>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+
+
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+	
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	.container {
+		max-width: 1180px;
+	}
+	.mx-auto {
+		margin: 0 auto;
+	}
+
+	/* Common Style */
+	.section-title {
+		margin-bottom: 40px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.section-title h2 {
+		font-family: Alexandria;
+		font-size: 34px;
+		line-height: 51px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.section-title p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		color: #4B5563;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.section-title {
+			margin-bottom: 32px;
+		}
+		.section-title h2 {
+			font-size: 28px;
+			line-height: 40px;
+		}
+		.section-title p {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	
+	/* Hero Area */
+	.hero-area {
+		min-height: 560px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+		background-repeat: no-repeat !important;
+		background-position: center center !important;
+		background-size: cover !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	.hero-area::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #00000051;
+	}
+	.hero-area .hero-container {
+		max-width: 1180px;
+		width: 100%;
+		border-radius: 20px;
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+	}
+	.hero-area .hero-content-wrapper {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		text-align: center;
+	}
+	.hero-area .section-title {
+		margin-bottom: 0;
+		gap: 40px;
+	}
+	.hero-area .section-title h1 {
+		font-family: Alexandria;
+		font-size: 64px;
+		font-weight: 400;
+		line-height: 75px;
+		color: #fff;
+	}
+	.hero-area .section-title p {
+		font-family: Alexandria;
+		font-size: 28px;
+		font-weight: 300;
+		line-height: initial;
+		color: #fff;
+	}
+	.hero-area .hero-content-wrapper .hero-btn-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	
+	@media only screen and (max-width: 1024px) {
+		.hero-area {
+			padding: 70px 16px;
+			min-height: 400px;
+		}
+		.hero-area .hero-container {
+			max-width: 768px;
+		}
+		.hero-area .hero-content-wrapper {
+			gap: 24px;
+		}
+		.hero-area .section-title {
+			gap: 24px;
+		}
+		.hero-area .section-title h1 {
+			font-size: 48px;
+			line-height: 56px;
+		}
+		.hero-area .section-title p {
+			font-size: 20px;
+		}
+		.hero-area .hero-btn-wrapper .popup-form-btn {
+			font-size: 16px;
+			padding: 8px 16px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.hero-area {
+			padding: 20px 16px;
+			min-height: 0;
+			background-position: left center !important;
+		}
+		.hero-area .section-title h1 {
+			font-size: 32px;
+			line-height: 42px;
+			text-align: left;
+		}
+		.hero-area .section-title p {
+			font-size: 18px;
+			display: none;
+		}
+		.hero-area .hero-container {
+			padding: 0;
+		}
+		.hero-area .hero-content-wrapper .hero-btn-wrapper {
+			justify-content: start;
+		}
+	}
+
+	/* About Section */
+	.about-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.about-area .about-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.about-area .about-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.about-area .about-content-wrapper p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		text-align: center;
+		color:#4B5563;
+	}
+	.about-area .about-btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 32px;
+	}
+	.about-area .about-btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.about-area {
+			padding: 50px 0;
+		}
+		.about-area .about-btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	/* Product Introduction section */
+	.product-introduction-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.product-introduction-area .product-introduction-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	.product-introduction-area .product-introduction-wrapper .product-introduction-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	.product-introduction-area .section-title {
+		text-align: left;
+	}
+	.product-introduction-area .product-introduction-content {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.product-introduction-area .product-introduction-content p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Alexandria;
+		line-height: 28px;
+		color:#4B5563;
+	}
+	.product-introduction-area .btn-wrapper {
+		display: flex;
+		margin-top: 40px;
+	}
+	.product-introduction-area .btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+	.product-introduction-area .product-introduction-wrapper .product-introduction-image-wrapper {
+		display: flex;
+		width: 100%;
+	}
+	.product-introduction-area .product-introduction-wrapper .product-introduction-image-wrapper .image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 5.80/5.26;
+		overflow: hidden;
+	}
+	.product-introduction-area .product-introduction-wrapper .product-introduction-image-wrapper .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.product-introduction-area .product-introduction-wrapper {
+			gap: 24px;
+			align-items: center;
+		}
+		.product-introduction-area .product-introduction-wrapper .product-introduction-image-wrapper {
+			flex-shrink: unset;
+			width: 100%;
+		}
+		.product-introduction-area .product-introduction-wrapper .product-introduction-image-wrapper .image {
+			aspect-ratio: unset;
+		}
+	}
+	@media only screen and (max-width: 575px) {
+		.product-introduction-area {
+			padding: 50px 0;
+		}
+		.product-introduction-area .product-introduction-wrapper {
+			flex-wrap: wrap;
+		}
+		.product-introduction-area .section-title {
+			gap: 16px;
+		}
+		.product-introduction-area .product-introduction-wrapper .product-introduction-content .feature-list-desc {
+			width: 55%;
+		}
+		.product-introduction-area .btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+
+	/* Material recommendation Section */
+	.material-recommendation-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.material-recommendation-area .icon-card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.material-recommendation-area .icon-card-wrapper .icon-card {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		background-color: #F0F0F0;
+		border-radius: 20px;
+	}
+	.material-recommendation-area .icon-card-wrapper .icon-card .icon-card-content-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.material-recommendation-area .icon-card-wrapper .icon-card .icon-card-content-wrapper .icon-card-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.material-recommendation-area .icon-card-wrapper .icon-card .icon-card-content-wrapper .icon-card-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: justify;
+		color: #4B5563;
+	}
+	.material-recommendation-area .icon-card-btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 40px;
+	}
+	.material-recommendation-area .image-grid-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+		margin-top: 40px;
+	}
+	.material-recommendation-area .image-grid-wrapper .image-grid-item {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		width: 100%;
+	}
+	.material-recommendation-area .image-grid-item .image {
+		display: flex;
+		width: 100%;
+		border-radius: 40px;
+		overflow: hidden;
+	}
+	.material-recommendation-area .image-grid-item .image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.material-recommendation-area .image-grid-item .image-grid-item-title {
+		font-family: Alexandria;
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: center;
+		color: #4B5563;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.material-recommendation-area {
+			padding: 50px 0;
+		}
+		.material-recommendation-area .icon-card-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.material-recommendation-area .image-grid-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	
+	/* Products Advantage Section */
+	.products-advantage-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.products-advantage-area .info-card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.products-advantage-area .info-card-wrapper .info-card {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		justify-content: space-between;
+		width: 100%;
+		padding: 24px 20px;
+		border-radius: 20px;
+		box-shadow: 0px 0px 8px 0px #00000014;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 3.40/3.72;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-image img {
+		width: 100%;
+		height: 100%;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.products-advantage-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: justify;
+		color: #4B5563;
+	}
+	
+
+	@media only screen and (max-width: 991px) {
+		.products-advantage-area .info-card-wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.products-advantage-area {
+			padding: 50px 0;
+		}
+		.products-advantage-area .info-card-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	/* Solutions Section */
+	.solutions-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.solutions-area .info-card-wrapper.style-two {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 20px;
+		margin-bottom: 20px;
+	}
+	.solutions-area .info-card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.solutions-area .info-card-wrapper.style-two .info-card {
+		padding: 20px;
+		padding-right: 0;
+		flex-direction: row;
+		align-items: center;
+	}
+	.solutions-area .info-card-wrapper.style-two .info-card-image {
+		border-radius: 12px;
+	}
+	.solutions-area .info-card-wrapper.style-two .info-card-content-wrapper {
+		width: 100%;
+	}
+	.solutions-area .info-card-wrapper .info-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		border-radius: 20px;
+		overflow: hidden;
+		background-color: #F0F0F0;
+		box-shadow: 0px 0px 8px 0px #00000014;
+	}
+	.solutions-area .info-card-wrapper .info-card .info-card-image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 5.8/3.4;
+		overflow: hidden;
+	}
+	.solutions-area .info-card-wrapper .info-card .info-card-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.solutions-area .info-card-wrapper .info-card .info-card-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		gap: 16px;
+	}
+	.solutions-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-title {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.solutions-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-align: justify;
+		color: #4B5563;
+	}
+	
+	@media only screen and (max-width: 767px) {
+		.solutions-area {
+			padding: 50px 0;
+		}
+		.solutions-area .info-card-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.solutions-area .info-card-wrapper.style-two .info-card {
+			padding: 0;
+			flex-direction: column;
+		}
+		.solutions-area .info-card-wrapper.style-two .info-card-image {
+			border-radius: unset;
+		}
+	}
+
+	/* Custom Braided Wire Section */
+	.custom-braided-wire-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	.custom-braided-wire-area .info-card-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		width: 100%;
+		padding: 16px;
+		border-radius: 20px;
+		overflow: hidden;
+		background-color: #16529B;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card .info-card-image {
+		display: flex;
+		width: 100%;
+		height: 348px;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card .info-card-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card .info-card-content-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-title {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #fff;
+		text-align: center;
+	}
+	.custom-braided-wire-area .info-card-wrapper .info-card .info-card-content-wrapper .info-card-desc {
+		font-family: Alexandria;
+		font-size: 16px;
+		line-height: initial;
+		font-weight: 300;
+		color: #fff;
+		text-align: center;
+	}
+	.custom-braided-wire-area .btn-wrapper {
+		display: flex;
+		margin-top: 40px;
+		justify-content: center;
+	}
+	.custom-braided-wire-area .btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+	
+	@media only screen and (max-width: 767px) {
+		.custom-braided-wire-area {
+			padding: 50px 0;
+		}
+		.custom-braided-wire-area .info-card-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.custom-braided-wire-area .btn-wrapper {
+			margin-top: 32px;
+		}
+		.custom-braided-wire-area .btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	
+
+	/* Feature List Section */
+	.feature-list-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.feature-list-area .feature-list-main-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 40px;
+		row-gap: 40px;
+	}
+	.feature-list-area .feature-list-image-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-image-wrapper .section-title {
+		text-align: left;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-image-wrapper .feature-list-image {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 5.50/3.65;
+		border: 1px solid #16529B;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-image-wrapper .feature-list-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-card-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 12px 16px;
+		border-radius: 8px;
+		background-color: #F0F0F0;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-card .feature-list-icon {
+		width: 18px;
+		display: flex;
+		flex-shrink: 0;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-card .feature-list-icon svg {
+		width: 100%;
+		height: 100%;
+	}
+	.feature-list-area .feature-list-main-wrapper .feature-list-card .feature-list-title {
+		width: 100%;
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+	}
+	.feature-list-area .bottom-text {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+	}
+	.feature-list-area .bottom-text p {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		text-align: center;
+	}
+	.feature-list-area .feature-list-btn-wrapper {
+		display: flex;
+		margin-top: 40px;
+		justify-content: center;
+	}
+	.feature-list-area .feature-list-btn-wrapper .popup-form-btn {
+		padding: 14px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: initial;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.feature-list-area {
+			padding: 50px 0;
+		}
+		.feature-list-area .feature-list-main-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.feature-list-area .bottom-text {
+			margin-top: 24px;
+		}
+		.feature-list-area .feature-list-btn-wrapper {
+			margin-top: 24px;
+		}
+		.feature-list-area .feature-list-btn-wrapper .popup-form-btn {
+			padding: 10px 16px;
+		}
+	}
+
+	/* Custom Braided Wire Section */
+	.customer-reviews-area {
+		padding: 70px 16px;
+		max-width: 1920px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.customer-reviews-area .custom-container {
+		max-width: 1580px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.customer-reviews-area .customer-reviews-wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		width: 100%;
+		padding: 20px;
+		border-radius: 20px;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-rating {
+		display: flex;
+		align-items: center;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-rating svg {
+		width: 32px;
+		height: 32px;
+		fill: #B1B100;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .author-info {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card .author-image {
+		display: flex;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card .author-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card .review-card-content {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card .author-name {
+		font-family: Alexandria;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 400;
+		color: #4B5563;
+	}
+	.customer-reviews-area .customer-reviews-wrapper .review-card .review-card-content .review-card-desc {
+		font-family: Alexandria;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		color: #4B5563;
+		text-align: justify;
+	}
+	.customer-reviews-area .btn-wrapper {
+		display: flex;
+		margin-top: 40px;
+	}
+	
+	@media only screen and (max-width: 1199px) {
+		.customer-reviews-area .customer-reviews-wrapper {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	@media only screen and (max-width: 992px) {
+		.customer-reviews-area .customer-reviews-wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.customer-reviews-area {
+			padding: 50px 0;
+		}
+		.customer-reviews-area .customer-reviews-wrapper {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+</style>
+
+
+</head>
+<body>
+
+   <!-- Hero Section -->
+	<div class="hero-area" style="background: url('https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/14fd67d1370fb34d388f990cdffe49a9481f972e.jpg')">
+		<div class="hero-container">
+			  <div class="hero-content-wrapper">
+				<div class="section-title">
+					<h1>Custom Braided Wire Harness Solutions</h1>
+					<p>Engineered for durability, flexibility, and protection — built to fit your exact needs.</p>
+				</div>
+
+				  <div class="hero-btn-wrapper">
+					  <?php
+						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					  ?>
+				  </div>
+			  </div>
+	   </div>
+   </div>
+
+	<!-- About Section -->
+   <div class="about-area">
+		<div class="container mx-auto">
+			<div class="about-wrapper">
+				<div class="section-title">
+					<h2>Custom Braided Wire Harness</h2>
+					<p>Durable, Flexible & Tailored for Your Needs</p>
+				</div>
+			  <div class="about-content-wrapper">
+				  <p>A Custom braided wire harness is a group of wires bundled and protected using a special woven cover. This cover is made from strong threads tightly woven around the wires using a wire harness braiding machine. This braided layer helps stop damage from heat, shaking, and rubbing. It also blocks electric noise and helps keep signals clear. Our braided wire harnesses are used in many industries and machines. We are a trusted braided wire harness manufacturer, and we make each harness to match your job needs.</p>
+				  <p>QL-Custom Technology Ltd. works with care. We use the best wire harness braiding materials. We watch every step closely. You can give us your design or ask us to help make a new one. We are here from start to end. We want your job to go smoothly, and your wires to stay safe.</p>
+			  </div>
+			  <div class="about-btn-wrapper">
+				<?php
+					echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+				?>
+			</div>
+		  </div>
+	   </div>
+   </div>
+
+   <!-- Product Introduction section -->
+   <div class="product-introduction-area">
+		<div class="container mx-auto">
+			<div class="product-introduction-wrapper">
+				<div class="product-introduction-content-wrapper">
+					<div class="section-title">
+						<h2>Product Introduction</h2>
+					</div>
+					<div class="product-introduction-content">
+						<p>Our custom braided wire harness is made to keep your wires safe and organized. We start by placing the cables together in groups. Then, we wrap them with a braid. This braid is strong but light and soft. It protects the wires from cuts, heat, dust, shaking, etc.</p>
+						<p>You can ask for a tight braid for strong protection. Or you can get a loose braid if you need more bending. We can even mark wires with color to help you tell them apart. First, we give you a sample. You can check it. Once you approve it, we start full production. We always listen to what you need.</p>
+					</div>
+					<div class="btn-wrapper">
+						<?php
+							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+						?>
+					</div>
+				</div>
+				<div class="product-introduction-image-wrapper">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/Group-42117.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Products Advantage Control -->
+	<div class="products-advantage-area">
+		<div class="container mx-auto">
+			<div class="section-title">
+				<h2>Product Advantages</h2>
+				<p>Our harnesses have many substantial benefits. They are made to last and work well in tough places.</p>
+			</div>
+			<div class="info-card-wrapper">
+				<div class="info-card">
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Bending resistance</h3>
+						<p class="info-card-desc">
+							Our braided harnesses are great for machines or tools that move a lot. The braid lets the wires bend again and again without breaking. It holds the cables tight and spreads out the stress. Your wires stay safe even in high-motion jobs. With the best features you and your device will be always safe with our harnesses.
+						</p>
+					</div>
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/360e975f192a45ebec6e3ec764303493a9e2f818.png" alt="">
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Durable</h3>
+						<p class="info-card-desc">
+							We use strong materials for the braid. These materials resist heat, dirt, oil, and even sharp surfaces. This means the harness can last long in cars, engines, tools, and big machines. You won't have to replace it soon. That saves time and money. The top quality of the materials ensures the best durability.
+						</p>
+					</div>
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/7da49cffa4bd5cc9543758e09f7b26ba064b5c9b.png" alt="">
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Protection</h3>
+						<p class="info-card-desc">
+							The braid acts like a wall. It blocks dust, water, and even electrical noise. This is important for wires that carry power or signals. The braid helps your system work better and stay safe. It keeps the cables from getting harmed or dirty.
+						</p>
+					</div>
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/f32cf8a8fb8f3b494ad299f316a7405b1f78a15b.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+   <!-- Material recommendation section -->
+	<div class="material-recommendation-area">
+		<div class="container mx-auto">
+		  <div class="section-title">
+			  <h2>Material recommendation</h2>
+			  <p>QL-Custom Technology Ltd. have many choices for wire harness braiding material. Each one is good for different jobs. We will help you choose the best one for your Custom braided wire harness project.</p>
+		  </div>
+		  <div class="icon-card-wrapper">
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">PET</h4>
+					  <p class="icon-card-desc">PET braid is made from plastic. It's light, strong, and low-cost. It bends easily and fits around many shapes. It stands up to heat, dirt, oil, and sun. You can use it inside or outside. It's an excellent choice for general jobs.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Nylon</h4>
+					  <p class="icon-card-desc">The nylon braid is firm and rigid. It resists high heat, oil, water, and acid. It keeps its shape and color even after prolonged use. It's excellent for engines, tools, and heavy jobs. It works well in places with lots of action and wear.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Tinned copper shielding sleeve</h4>
+					  <p class="icon-card-desc">This braid is made from tiny copper wires coated with tin. It blocks electric noise and keeps power signals clean. It's best for wires that carry signals, power, or data. It also adds strength and protects from rubbing.</p>
+				  </div>
+			  </div>
+			  <div class="icon-card">
+				  <div class="icon-card-content-wrapper">
+					  <h4 class="icon-card-title">Military green nylon braided mesh tube</h4>
+					  <p class="icon-card-desc">This is made with strong nylon in army green. It's built for defense systems. It resists heat, dirt, and water. It fits tight places and works well in planes, radios, tanks, etc.</p>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="image-grid-wrapper">
+				<div class="image-grid-item">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/da40040531a92754676ead24ca79952bce2c910c.png" alt="product image" >
+					</div>
+					<div class="image-grid-item-content">
+						<h4 class="image-grid-item-title">Pet</h4>
+					</div>
+				</div>
+				<div class="image-grid-item">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/d85f6733fe6613ba9ca66dbfef999bf9c1eb8f12.png" alt="product image" >
+					</div>
+					<div class="image-grid-item-content">
+						<h4 class="image-grid-item-title">Nylon</h4>
+					</div>
+				</div>
+				<div class="image-grid-item">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/518b88bbcd7128685218da647d243626b14a4837.png" alt="product image" >
+					</div>
+					<div class="image-grid-item-content">
+						<h4 class="image-grid-item-title">Tinned copper shielding sleeve</h4>
+					</div>
+				</div>
+				<div class="image-grid-item">
+					<div class="image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/794091ca14949e35e568beefa8fea1c3534f4c2d.png" alt="product image" >
+					</div>
+					<div class="image-grid-item-content">
+						<h4 class="image-grid-item-title">Military green nylon braided mesh tube</h4>
+					</div>
+				</div>
+			</div>
+	  </div>
+	</div>
+
+  	<!-- Solutions section -->
+	<div class="solutions-area">
+		<div class="container mx-auto">
+			<div class="section-title">
+				<h2>Solutions</h2>
+				<p>We build the harness that fits your needs. First, we place and group the wires. Then, we twist them if needed. After that, we add the braid. This keeps wires in place, stops rubbing, and adds long life to the harness.</p>
+			</div>
+			<div class="info-card-wrapper style-two">
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/dc8603bc78a72d60dcb6ebdbf14ab21c3f5d8e65.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Twisted Wire Harness Twisted</h3>
+						<p class="info-card-desc">
+							Some jobs need extra strength. In that case, we twist smaller wire pairs, then twist them again into bigger sets. After that, we add the braid. This makes the harness very strong, neat, and flexible. It's suitable for tough places.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="info-card-wrapper">
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/8bc3a614195f12b5d77b3ed82ae43145533731e2.jpg" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Twisting wires</h3>
+						<p class="info-card-desc">
+							Twisting wires helps keep them tight and neat. It stops them from moving too much or getting messy. When wires are twisted, the braid stays snug. This adds a clean and pro look to your harness.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/ba2e57efda538351c20ded77f18e0413dba89cdf.jpg" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Customizable braiding density</h3>
+						<p class="info-card-desc">
+							You can choose how tight or loose you want the braid to be. If you need strong protection, go with a tight braid. If you need more bend, a loose braid is better. We use a skilled wire harness braider to meet your exact needs.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  	<!-- Custom Braided Wire section -->
+	<div class="custom-braided-wire-area">
+		<div class="container mx-auto">
+			<div class="section-title">
+				<h2>Custom Braided Wire Harness Applications</h2>
+				<p>Our braided wire harnesses are used in many fields. Here's where they work best:</p>
+			</div>
+			<div class="info-card-wrapper">
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/11dc74ead9f8147fa087fe4222dcc068e0ed97d0-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Cars and Engines</h3>
+						<p class="info-card-desc">
+							Keeps wires safe from oil, heat, and movement. Helps cars run better.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/2e17d04fcd3325d1086f64d683f60d593d8e2925-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Race Cars</h3>
+						<p class="info-card-desc">
+							Uses light but strong braid. Helps with speed and control.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/da246895ae00e2b90022610d1795db411dac7662.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Planes</h3>
+						<p class="info-card-desc">
+							Light and clean setup for flight safety and systems.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/aaa23b5b73918ba8edab6e16f818965346f2661b-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Factories</h3>
+						<p class="info-card-desc">
+							Power machines and robots with tough wire harnesses.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/7f0ddda3f046f4d681ae6b1593b56fa4841796a9-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Military</h3>
+						<p class="info-card-desc">
+							Built for rough places and harsh work.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/acb2b2e02871788f79bb5d22715b3162f14a7dbd-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Oil and Gas</h3>
+						<p class="info-card-desc">
+							Handles heat, dirt, and rough conditions.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/15fefec854cb03ea0db5d050220c825256adb1ca-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Solar and Wind</h3>
+						<p class="info-card-desc">
+							Works well in all weather. Keeps power lines safe.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/c8e0a7ef5154d3d3f8f681705973fe480d7e84b9-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Boats and Buses</h3>
+						<p class="info-card-desc">
+							Resists salt, water, and shaking.
+						</p>
+					</div>
+				</div>
+				<div class="info-card">
+					<div class="info-card-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/234957dccacdab6aeb7c496cb41a867bbd1d4f92-min.png" alt="">
+					</div>
+					<div class="info-card-content-wrapper">
+						<h3 class="info-card-title">Medical Tools</h3>
+						<p class="info-card-desc">
+							Keeps wires clean, safe, and easy to use.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="btn-wrapper">
+				<?php
+					echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+				?>
+			</div>
+		</div>
+	</div>
+
+	<!-- Feature List section -->
+	<div class="feature-list-area">
+		<div class="container mx-auto">
+			<div class="feature-list-main-wrapper">
+				<div class="feature-list-image-wrapper">
+					<div class="section-title">
+						<h2>Benefits You Will get from Our Custom braided wire harness</h2>
+						<p>Here's what you get when you use our Custom braided wire harnesses:</p>
+					</div>
+					<div class="feature-list-image">
+						<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/73b28706d6ababcee397c0b2ea978b5cc13708cc-min.png" alt="Feature List Image">
+					</div>
+				</div>
+				<div class="feature-list-card-wrapper">
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+							</svg>
+						</span>
+						<p class="feature-list-title">
+							Firm braid that stays firm for years.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+							</svg>
+						</span>
+						<p class="feature-list-title">
+							Bends well with no breaks or stress.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+							</svg>
+						</span>
+						<p class="feature-list-title">
+							Looks neat and clean in every setup.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Full support from start to finish.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Stops wires from rubbing or cutting.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Blocks noise and keeps the signal clean.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Easy to mark and sort wires.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Custom fits your job needs.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+	</svg>
+						</span>
+						<p class="feature-list-title">
+							Saves time and lowers costs in the long run.
+						</p>
+					</li>
+					<li class="feature-list-card">
+						<span class="feature-list-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" 		fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.6339 0.450844C16.4769 0.503844 15.7899 1.17584 11.2239 5.73684L5.99391 10.9618L3.76391 8.73784C1.74691 6.72584 1.51491 6.50684 1.33691 6.44784C0.946909 6.31884 0.570909 6.40384 0.292909 6.68184C0.0149094 6.95984 -0.0700906 7.33584 0.0589094 7.72584C0.117909 7.90484 0.364909 8.16384 2.74891 10.5538C4.63091 12.4408 5.42391 13.2088 5.54991 13.2698C5.79391 13.3888 6.05891 13.4068 6.31991 13.3228C6.52491 13.2568 6.77791 13.0098 12.1649 7.62884C16.2789 3.51884 17.8189 1.95584 17.8809 1.82684C18.2789 1.00984 17.5029 0.153844 16.6339 0.450844Z" fill="#00BDE7"/>
+								</svg>
+						</span>
+						<p class="feature-list-title">
+							Built with care using the top wire braiding harness technique.
+						</p>
+					</li>
+				</div>
+			</div>
+			<div class="bottom-text">
+				<p>Get the top-quality Custom braided wire harnesses from QL-Custom Technology Ltd. Send us the design, and you will get the accurate details in your harnesses. We promise on-time delivery to satisfy you with the exact product you need. Also, get service from us after buying the product.</p>
+			</div>
+			<div class="feature-list-btn-wrapper">
+				<?php
+					echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+				?>
+			</div>
+		</div>
+	</div>
+
+	<!-- Customer Reviews section -->
+	<div class="customer-reviews-area">
+		<div class="custom-container">
+			<div class="section-title">
+				<h2>Customer Reviews</h2>
+			</div>
+			<div class="customer-reviews-wrapper">
+				<div class="review-card">
+					<div class="review-rating">
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+					</div>
+					<div class="review-card-content">
+						<p class="review-card-desc">
+							"The harness fit just right. It was strong and looked good. The team helped fast and gave a fair price. I'll order again."
+						</p>
+					</div>
+					<div class="author-info">
+						<div class="author-image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/51a2667788ebcdbeeab9f107b69a80d1053e1aa1.jpg" alt="">
+						</div>
+						<h4 class="author-name">John Smith</h4>
+					</div>
+				</div>
+				<div class="review-card">
+					<div class="review-rating">
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+					</div>
+					<div class="review-card-content">
+						<p class="review-card-desc">
+							"The harness fit just right. It was strong and looked good. The team helped fast and gave a fair price. I'll order again."
+						</p>
+					</div>
+					<div class="author-info">
+						<div class="author-image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/773f90938c4c6cfc92be609465a02420cc7095e0.jpg" alt="">
+						</div>
+						<h4 class="author-name">Maria Gonzalez</h4>
+					</div>
+				</div>
+				<div class="review-card">
+					<div class="review-rating">
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+					</div>
+					<div class="review-card-content">
+						<p class="review-card-desc">
+							"They helped me pick the best braid. It fits my tools well and looks pro. Customer support was kind and fast."
+
+						</p>
+					</div>
+					<div class="author-info">
+						<div class="author-image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/2dbaebd7fc220e2024bf1254e156e8f712b04595.jpg" alt="">
+						</div>
+						<h4 class="author-name">Linda P.</h4>
+					</div>
+				</div>
+				<div class="review-card">
+					<div class="review-rating">
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"/>
+						</svg>
+
+					</div>
+					<div class="review-card-content">
+						<p class="review-card-desc">
+							"We needed strong harnesses for racing cars. They worked great, looked clean, and came on time. Great job and great team."
+						</p>
+					</div>
+					<div class="author-info">
+						<div class="author-image">
+							<img src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/8b9cbe34325f5b9852308c72dd68e2b446454903.jpg" alt="">
+						</div>
+						<h4 class="author-name">Wei Chen</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
