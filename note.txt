@@ -1,3 +1,6 @@
 section "Jumper Wire Harness Solutions Tailored to Your Industry"
 
 skipped for later
+
+
+template 5 have container width is 1280 so the container is modified to 1280px. 

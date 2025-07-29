@@ -14,7 +14,7 @@
         padding: 0;
       }
       .container {
-        max-width: 1180px;
+        max-width: 1280px;
       }
       .mx-auto {
         margin: 0 auto;
@@ -1222,6 +1222,69 @@
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      /*<!--! Section why ql-custom -->*/
+
+      .why-ql-custom-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .why-ql-custom-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .why-ql-custom-area .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        display: flex;
+        gap: 20px;
+      }
+      .why-ql-custom-area .serial-no {
+        font-family: Alexandria;
+        font-size: 4rem;
+        line-height: 3rem;
+        font-weight: 600;
+        color: #16529b;
+      }
+
+      .why-ql-custom-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .why-ql-custom-area {
+          padding: 50px 0;
+        }
+
+        .why-ql-custom-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .why-ql-custom-area .serial-no {
+          font-size: 3rem;
+          line-height: 2rem;
+        }
+        .why-ql-custom-area .info-card-wrapper{
+          gap: 10px;
+        }
+        .why-ql-custom-area .info-card {
+          gap: 10px;
+        }
+        
+      }
     </style>
   </head>
   <body>
@@ -1653,7 +1716,7 @@
       </div>
     </div>
 
-    <!-- !section Common Applications -->
+    <!-- section Common Applications -->
     <div class="common-applications-area">
       <div class="container mx-auto">
         <div class="section-title">
@@ -1750,6 +1813,57 @@
                 keeps everything connected without loose wires.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! Section why ql-custom -->
+    <div class="why-ql-custom-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Why Choose QL-Custom for Jumper Wire Harness Manufacturing?</h2>
+          <p>
+            When you need a reliable jumper wire harness, QL-Custom is the best
+            choice. We have years of experience making wire harnesses that work
+            perfectly in many devices and machines. Our team uses high-quality
+            materials and the latest tools to build strong and safe wire
+            harnesses.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <span class="serial-no">1</span>
+            <p class="info-card-desc">
+              We focus on quality. Every jumper wire harness we make goes
+              through strict tests. This ensures the wires stay connected and
+              safe even in tough conditions. We also use materials like double
+              crimping terminals and full insulation to keep your wiring
+              protected from heat, water, and damage.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <span class="serial-no">2</span>
+            <p class="info-card-desc">
+              We offer custom designs. We understand that every project is
+              different. So, we work closely with you to create a wire harness
+              that fits your exact needs. This saves you time and money while
+              giving you the best performance.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <span class="serial-no">3</span>
+            <p class="info-card-desc">
+              Our customer service is friendly and helpful. We listen carefully
+              to your requirements and answer your questions quickly. You can
+              trust us to deliver on time and support you every step of the way.
+            </p>
           </div>
         </div>
       </div>
