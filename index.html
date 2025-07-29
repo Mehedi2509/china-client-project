@@ -1068,7 +1068,7 @@
         overflow: hidden;
       }
 
-      .jumper-wire-recommendation-area .recommend-material-card-wrapper{
+      .jumper-wire-recommendation-area .recommend-material-card-wrapper {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
@@ -1086,7 +1086,6 @@
       .jumper-wire-recommendation-area .flex-row-reversed {
         flex-direction: row-reverse;
       }
-
 
       .jumper-wire-recommendation-area
         .material-card
@@ -1151,6 +1150,76 @@
           width: 60%;
           height: auto;
           object-fit: cover;
+        }
+      }
+
+      /* section Common Applications*/
+
+      .common-applications-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .common-applications-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+
+      .common-applications-area .info-card {
+        padding: 1rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .common-applications-area .info-card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .common-applications-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .common-applications-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      .common-applications-area .info-card-image-wrapper {
+        width: 100%;
+        max-height: 320px;
+        border-radius: 12px;
+      }
+
+      .common-applications-area .info-card-image-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .common-applications-area {
+          padding: 50px 0;
+        }
+
+        .common-applications-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
@@ -1363,7 +1432,7 @@
       </div>
     </div>
 
-    <!--! Jumper wire material recommendation section -->
+    <!-- Jumper wire material recommendation section -->
     <div class="jumper-wire-recommendation-area">
       <div class="container mx-auto">
         <div class="section-title">
@@ -1577,6 +1646,108 @@
                 It works well in devices that need regular maintenance or
                 changes. The full insulation also protects users from electric
                 shocks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- !section Common Applications -->
+    <div class="common-applications-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Common Applications of Jumper Wire Harness</h2>
+          <p>
+            We know how important a good wire harness is for many kinds of
+            projects. Jumper wire harnesses help connect different parts of
+            machines and devices safely and easily. They come in many shapes and
+            sizes, but their job is always the same—to carry power and signals
+            where they are needed. Here are four common applications where wire
+            harnesses play a big role.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/XcGLwSZ/image.png"
+                alt="Automotive application"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Automotive Industry</h4>
+              <p class="info-card-desc">
+                One of the most popular uses of jumper wire harnesses is in cars
+                and trucks. Vehicles have many electrical parts like lights,
+                sensors, and control units. Jumper harnesses connect these parts
+                quickly and keep everything working smoothly. They protect wires
+                from heat and vibration while the vehicle moves.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/vxrjCdz4/64669168f39735bb9ccea26d7378a3678ca2c54a.jpg"
+                alt="Industrial machinery"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Industrial Machines</h4>
+              <p class="info-card-desc">
+                Industrial machines use jumper wire harnesses to connect motors,
+                switches, and control panels. These machines often work in tough
+                places with dust, heat, and strong vibrations. Jumper harnesses
+                keep the wiring safe and organized so the machine runs well
+                without breakdowns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/RpDtxTpT/rrsr.jpg"
+                alt="Home appliances"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Home Appliances</h4>
+              <p class="info-card-desc">
+                Many home appliances like washing machines, refrigerators, and
+                air conditioners also use jumper wire harnesses. These harnesses
+                help connect the electronic parts inside, making sure they work
+                properly. Because home appliances need to be safe and durable,
+                our pre-insulated wire harnesses are a perfect fit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/fdfCSQf2/759f1fe074d7336805cb5c28c37bdd28fad6a602.jpg"
+                alt="Electronics"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Electronics and Gadgets</h4>
+              <p class="info-card-desc">
+                Small electronic devices and gadgets also rely on jumper wire
+                harnesses. They help link sensors, batteries, switches, and
+                screens inside these devices. A neat and reliable wire harness
+                keeps everything connected without loose wires.
               </p>
             </div>
           </div>
