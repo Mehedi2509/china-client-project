@@ -803,6 +803,7 @@
         background-color: #16529b;
         overflow: hidden;
       }
+
       .custom-industrial-area .custom-industrial-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1355,6 +1356,89 @@
       @media only screen and (max-width: 767px) {
         .quality-testing-area {
           padding: 50px 0;
+        }
+      }
+
+      /*Start custom industrial section*/
+
+      .start-custom-industrial-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        background-color: #16529b;
+        overflow: hidden;
+      }
+
+      .start-custom-industrial-area .custom-industrial-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+      }
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .start-custom-industrial-area .section-title {
+        margin-bottom: 0;
+        text-align: left;
+      }
+      .start-custom-industrial-area .section-title h2 {
+        color: #fff;
+      }
+      .start-custom-industrial-area .custom-industrial-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .start-custom-industrial-area .custom-industrial-content p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #fff;
+        text-align: justify;
+      }
+
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        width: calc(520 / 1280 * 100%);
+      }
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper
+        .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .start-custom-industrial-area .custom-industrial-wrapper {
+          gap: 24px;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        .start-custom-industrial-area {
+          padding: 50px .5rem;
+        }
+        .start-custom-industrial-area .custom-industrial-wrapper {
+          flex-direction: column;
+        }
+        .start-custom-industrial-area .section-title {
+          gap: 16px;
+        }
+        .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper{
+          width: 100%;
         }
       }
     </style>
@@ -1941,13 +2025,11 @@
       </div>
     </div>
 
-    <!--! Quality and testing section -->
-    <!--! Quality and testing section -->
-
+    <!-- Quality and testing section -->
     <div class="quality-testing-area">
       <div class="container mx-auto quality-testing-wrapper">
         <div class="section-title">
-          <h2>Out Quality Standards & Testing Procedures</h2>
+          <h2>Our Quality Standards & Testing Procedures</h2>
           <p>
             We take quality very seriously. When you buy a jumper wire harness
             from us, you get a product that meets high standards. We make sure
@@ -2029,426 +2111,16 @@
       </div>
     </div>
 
-    <!-- Products Advantage Control -->
-    <div class="products-advantage-area">
-      <div class="products-advantage-container">
-        <div class="products-advantage-image">
-          <img
-            src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/1db3490069b01db40545d53d324499658e2a3cf1.png"
-            alt=""
-          />
-        </div>
-        <div class="products-advantage-wrapper">
-          <div class="section-title">
-            <h2>Our Industrial Wire Harness Products Advantage</h2>
-            <p>
-              We take pride in offering top-quality industrial wire harness
-              products. These are made to last, work better, and keep your
-              machines running safely. Here’s a closer look at what makes our
-              wire harnesses stand out:
-            </p>
-          </div>
-          <div class="info-card-wrapper">
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Strong Build
-                </h3>
-                <p class="info-card-desc">
-                  We use high-grade wires, connectors, and insulation materials.
-                  This means our wire harnesses can handle high temperatures,
-                  heavy loads, and rough environments like factories, trucks,
-                  and machines.
-                </p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Neat and Organized
-                </h3>
-                <p class="info-card-desc">
-                  All wires are bundled tightly and arranged clearly. This helps
-                  prevent mess and confusion. It also makes it easier to check,
-                  fix, or change wires when needed.
-                </p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Custom Design
-                </h3>
-                <p class="info-card-desc">
-                  Every machine is different. That’s why we make wire harnesses
-                  to match your size, length, and function needs. You get
-                  exactly what fits your equipment—nothing more, nothing less.
-                </p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Easy to Install
-                </h3>
-                <p class="info-card-desc">
-                  Our harnesses come ready to use. No cutting or guessing. Just
-                  plug them in. This saves time and lowers the chance of
-                  mistakes during setup.
-                </p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Safe and Secure
-                </h3>
-                <p class="info-card-desc">
-                  We follow strong safety standards. Each product goes through
-                  checks to avoid short circuits, loose wires, or overheating.
-                  You get peace of mind every time.
-                </p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.42339 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </svg>
-                  Fast Delivery
-                </h3>
-                <p class="info-card-desc">
-                  We work quickly to meet your deadlines. Our team handles
-                  orders with care and ships on time, so your work doesn’t stop.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="btn-wrapper">
-            <?php
-						echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-					?>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Solutions section -->
-    <div class="solutions-area">
-      <div class="container-fluid mx-auto">
-        <div class="section-title">
-          <h2>Custom Wire Harness Solution Tailored to Your Industry</h2>
-        </div>
-        <div class="info-card-wrapper">
-          <div class="info-card-main">
-            <div class="info-card">
-              <div class="info-card-image">
-                <img
-                  src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/f02e2fdbe4d36c80235a4b52889517ad5c1b5dbf.png"
-                  alt=""
-                />
-              </div>
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  Tailored Wire Harnesses for Every Industry
-                </h3>
-                <p class="info-card-desc">
-                  At QL-Custom, we offer custom wire harness solutions made just
-                  for your industry. Every field has its own needs. That’s why
-                  we don’t believe in one-size-fits-all. Whether you work in
-                  automotive, factory machines, medical tools, or farming
-                  equipment, we design wire harnesses that fit your job exactly
-                  right.
-                </p>
-                <div class="btn-wrapper">
-                  <?php
-									echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-								?>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info-card-main">
-            <div class="info-card">
-              <div class="info-card-image">
-                <img
-                  src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/9ad5fb9f05f0ceec8df560e4527332040d54dc88.png"
-                  alt=""
-                />
-              </div>
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  Precision-Engineered Wiring Solutions
-                </h3>
-                <p class="info-card-desc">
-                  We start by listening to what your system needs. Then, we
-                  build a wire harness that matches the size, shape, and power
-                  of your machines. Our team uses strong materials and smart
-                  designs to make sure your harness works well and lasts long.
-                  We also test every product before it ships, so you get quality
-                  you can trust.
-                </p>
-                <div class="btn-wrapper">
-                  <?php
-									echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-								?>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="info-card-main">
-            <div class="info-card">
-              <div class="info-card-image">
-                <img
-                  src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/a7a556ff5a5cbad3192740ed60b86f3fb7b72735.png"
-                  alt=""
-                />
-              </div>
-              <div class="info-card-content-wrapper">
-                <h3 class="info-card-title">
-                  Heavy-Duty Harnesses Built to Perform
-                </h3>
-                <p class="info-card-desc">
-                  From high heat to heavy use, our industrial wire harness can
-                  handle it all. We can also add special features like extra
-                  shielding, labels, or connectors to make setup easy. No matter
-                  how big or small your order is, we give it full attention.
-                </p>
-                <p class="info-card-desc">
-                  Our custom wire harness service gives you safety, speed, and
-                  strength—all made for your industry. So, when you need the
-                  perfect fit, count on QL-Custom. We’re ready to build the
-                  solution that powers your success!
-                </p>
-                <div class="btn-wrapper">
-                  <?php
-									echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-								?>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wide-Ranging section -->
-    <div class="wide-ranging-area">
-      <div class="container mx-auto">
-        <div class="section-title">
-          <h2>Wide-Ranging Applications Across Sectors</h2>
-          <p>
-            Our industrial wire harness products are used in many industries.
-            These harnesses help machines work better, faster, and safer. Here
-            are four key areas where our custom wire harness solutions make a
-            big difference:
-          </p>
-        </div>
-        <div class="info-card-wrapper">
-          <div class="info-card">
-            <div class="info-card-image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/172406d8390d94ce3121d5ba735bf7f7a61917a4.jpg"
-                alt=""
-              />
-            </div>
-            <div class="info-card-content-wrapper">
-              <h3 class="info-card-title">Automotive Industry</h3>
-              <p class="info-card-desc">
-                Wire harnesses power lights, sensors, and controls inside cars,
-                trucks, and buses. They keep wires safe and well-organized,
-                making the vehicle run smoothly without any wire mess.
-              </p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/e420fd9f10f2368ad25164cbc3bf9ee160870402.jpg"
-                alt=""
-              />
-            </div>
-            <div class="info-card-content-wrapper">
-              <h3 class="info-card-title">Industrial Machinery</h3>
-              <p class="info-card-desc">
-                In factories, wire harnesses connect motors, sensors, and
-                control panels. They handle heavy use, heat, and dust while
-                helping machines stay efficient and safe.
-              </p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/47265b61d38ce790d808de819317942fecb7e85f.jpg"
-                alt=""
-              />
-            </div>
-            <div class="info-card-content-wrapper">
-              <h3 class="info-card-title">Medical Equipment</h3>
-              <p class="info-card-desc">
-                Medical devices need clean and reliable wiring. Our wire
-                harnesses help power machines like X-rays, patient monitors, and
-                surgical tools. They ensure everything works right every time.
-              </p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/a1589cbf18d786c0623b381a6f55839a2ed39667.jpg"
-                alt=""
-              />
-            </div>
-            <div class="info-card-content-wrapper">
-              <h3 class="info-card-title">Agricultural Equipment</h3>
-              <p class="info-card-desc">
-                Tractors and harvesters need strong wire harnesses for rough
-                outdoor jobs. Our harnesses resist weather, dirt, and movement,
-                helping farm machines work longer without problems.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="btn-wrapper">
-          <?php
-					echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-				?>
-        </div>
-      </div>
-    </div>
-
-    <!-- Why Choose section -->
-    <div class="why-choose-area">
-      <div class="container mx-auto">
-        <div class="why-choose-wrapper">
-          <div class="why-choose-content-wrapper">
-            <div class="section-title">
-              <h2>Why Choose QL-Custom for Wire Harness Manufacturing?</h2>
-            </div>
-            <div class="why-choose-content">
-              <p>
-                When it comes to wire harness manufacturing, QL-Custom is the
-                name you can trust. We don’t just build products—we build smart
-                solutions that fit your exact needs. Our team works with care,
-                skill, and speed to deliver high-quality industrial wire harness
-                systems for many industries. From automotive to factory
-                machines, we serve every sector with pride.
-              </p>
-              <p>
-                We use only top-grade materials, so your wire harness lasts
-                longer and works better. Our custom designs make sure you get
-                the right size, shape, and function for your job. We also test
-                every harness before it leaves our factory. This means fewer
-                problems and more peace of mind for you.
-              </p>
-              <p>
-                At QL-Custom, we believe in teamwork and clear communication. We
-                listen to what you need and help you find the best solution.
-                Whether it’s a small order or a big project, we treat every
-                customer with care. We deliver on time. Fast service matters,
-                and we make sure you get your products when you need them.
-              </p>
-            </div>
-            <div class="btn-wrapper">
-              <?php
-							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-						?>
-            </div>
-          </div>
-          <div class="why-choose-image-wrapper">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/d4972226c78d69d9dd10ec623d09ca801ef50604.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Custom Industrial section -->
-    <div class="custom-industrial-area">
+    <!--! Custom Industrial section -->
+    <div class="start-custom-industrial-area">
       <div class="container mx-auto">
         <div class="custom-industrial-wrapper">
           <div class="custom-industrial-image-wrapper">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/fadaf26752313ccb9c3ff9fb1f091c0281b04d96.jpg"
-                alt=""
-              />
-            </div>
+            <img
+              src="https://i.ibb.co/Z1XDFKHC/image.png"
+              alt=""
+              class="image"
+            />
           </div>
           <div class="custom-industrial-content-wrapper">
             <div class="section-title">
@@ -2472,68 +2144,6 @@
               <?php
 							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
 						?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- our quality Section -->
-    <div class="our-quality-area">
-      <div class="container-full mx-auto">
-        <div class="section-title">
-          <h2>Our Quality Standards & Testing Procedures</h2>
-          <p>
-            We take quality seriously. Every industrial wire harness we build
-            goes through a clear step-by-step testing process. This helps us
-            make sure your product is safe, strong, and ready to perform. Here’s
-            how we do it:
-          </p>
-        </div>
-        <div class="info-card-wrapper">
-          <div class="info-card">
-            <div class="info-card-content">
-              <h3 class="info-card-title">Step 1: Material Check</h3>
-              <p class="info-card-desc">
-                We start by checking all wires, connectors, and covers. Only
-                top-quality materials pass this step.
-              </p>
-            </div>
-          </div>
-          <div class="info-card custom-color">
-            <div class="info-card-content">
-              <h3 class="info-card-title">Step 2: Design Review</h3>
-              <p class="info-card-desc">
-                Our team reviews your custom design. We make sure every part
-                matches your needs and works well together.
-              </p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-content">
-              <h3 class="info-card-title">Step 3: Assembly Check</h3>
-              <p class="info-card-desc">
-                During the build, we inspect each connection. This helps us
-                catch any errors early and fix them fast.
-              </p>
-            </div>
-          </div>
-          <div class="info-card custom-color">
-            <div class="info-card-content">
-              <h3 class="info-card-title">Step 4: Electrical Testing</h3>
-              <p class="info-card-desc">
-                We run tests to check for open circuits, shorts, and signal
-                flow. This proves the wire harness works correctly.
-              </p>
-            </div>
-          </div>
-          <div class="info-card">
-            <div class="info-card-content">
-              <h3 class="info-card-title">Step 5: Final Inspection</h3>
-              <p class="info-card-desc">
-                Before shipping, we do one last full check. We look at the
-                shape, size, labeling, and finish.
-              </p>
             </div>
           </div>
         </div>
