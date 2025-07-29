@@ -1277,13 +1277,85 @@
           font-size: 3rem;
           line-height: 2rem;
         }
-        .why-ql-custom-area .info-card-wrapper{
+        .why-ql-custom-area .info-card-wrapper {
           gap: 10px;
         }
         .why-ql-custom-area .info-card {
           gap: 10px;
         }
-        
+      }
+
+      /*Quality and testing section*/
+
+      .quality-testing-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .quality-testing-area .quality-testing-wrapper {
+        display: flex;
+        gap: 20px;
+      }
+
+      .quality-testing-area .section-title {
+        max-width: calc(440 / 1290 * 100%);
+        text-align: start;
+      }
+      .quality-testing-area .section-title p {
+        text-align: justify;
+      }
+
+      .quality-testing-area .info-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .quality-testing-area .info-card-content-wrapper {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+      }
+
+      .quality-testing-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .quality-testing-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .quality-testing-area .quality-testing-wrapper {
+          flex-direction: column;
+        }
+        .quality-testing-area .section-title {
+          max-width: 100%;
+          text-align: center;
+        }
+        .quality-testing-area .section-title p {
+          text-align: center;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .quality-testing-area {
+          padding: 50px 0;
+        }
       }
     </style>
   </head>
@@ -1818,7 +1890,7 @@
       </div>
     </div>
 
-    <!--! Section why ql-custom -->
+    <!-- Section why ql-custom -->
     <div class="why-ql-custom-area">
       <div class="container mx-auto">
         <div class="section-title">
@@ -1863,6 +1935,94 @@
               Our customer service is friendly and helpful. We listen carefully
               to your requirements and answer your questions quickly. You can
               trust us to deliver on time and support you every step of the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! Quality and testing section -->
+    <!--! Quality and testing section -->
+
+    <div class="quality-testing-area">
+      <div class="container mx-auto quality-testing-wrapper">
+        <div class="section-title">
+          <h2>Out Quality Standards & Testing Procedures</h2>
+          <p>
+            We take quality very seriously. When you buy a jumper wire harness
+            from us, you get a product that meets high standards. We make sure
+            every wire harness is safe, strong, and reliable. To do this, we
+            follow strict quality standards and testing procedures. Here is how
+            we keep our quality high:
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Material Inspection</h3>
+            <p class="info-card-desc">
+              We start by checking all materials before production. This means
+              inspecting wires, terminals, and insulation. We only use materials
+              that pass our tests for strength and safety. This helps us build a
+              wire harness that lasts long.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">info-card-wrapper</h3>
+            <p class="info-card-desc">
+              Our skilled team uses advanced machines to make jumper harnesses.
+              We control every step carefully to avoid mistakes. This precision
+              ensures every wire is connected properly and tightly.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Double Crimping Check</h3>
+            <p class="info-card-desc">
+              We test the double crimping on terminals and joints. Double
+              crimping means the wire is squeezed firmly in two spots. This
+              keeps wires from coming loose and improves safety.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Insulation Testing</h3>
+            <p class="info-card-desc">
+              We check that all insulation covers the wires completely. Good
+              insulation protects wires from heat, water, and electric shocks.
+              This testing helps prevent short circuits and other problems.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Electrical Performance Test</h3>
+            <p class="info-card-desc">
+              Every jumper wire harness goes through a test to make sure
+              electricity flows well. We look for breaks, shorts, or weak spots.
+              This step ensures your device will work without electrical faults.
+            </p>
+          </div>
+          <!-- Card 6 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Durability Test</h3>
+            <p class="info-card-desc">
+              We shake, bend, and heat the harness to see if it can handle tough
+              conditions. This makes sure the jumper harness stays strong in
+              real use.
+            </p>
+          </div>
+          <!-- Card 7 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Final Quality Inspection</h3>
+            <p class="info-card-desc">
+              Before shipping, we inspect each jumper wire harness carefully. We
+              check for neat wiring, correct length, and clean connections.
             </p>
           </div>
         </div>
