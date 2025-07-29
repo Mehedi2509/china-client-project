@@ -1058,14 +1058,100 @@
         .jumper-wire-advantage-area .icon-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
-        .jumper-wire-advantage-area .image-grid-wrapper {
-          grid-template-columns: repeat(1, 1fr);
+      }
+      /*recommendation jumper wire section*/
+
+      .jumper-wire-recommendation-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .jumper-wire-recommendation-area .recommend-material-card-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+
+      .jumper-wire-recommendation-area .material-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+      }
+
+      .jumper-wire-recommendation-area .flex-row-reversed {
+        flex-direction: row-reverse;
+      }
+
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-image-wrapper {
+        flex: 0 0 20%;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-image-wrapper
+        .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper
+        .material-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper
+        .material-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .jumper-wire-recommendation-area {
+          padding: 50px 0;
         }
-        .jumper-wire-advantage-area .image-grid-wrapper .image-grid-item {
-          align-items: center;
+
+        .jumper-wire-recommendation-area .material-card {
+          flex-direction: column;
+          text-align: center;
         }
-        .jumper-wire-advantage-area .image-grid-item .image {
-          width: 80%;
+
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-image-wrapper
+          .image {
+          width: 60%;
+          height: auto;
+          object-fit: cover;
         }
       }
     </style>
@@ -1178,21 +1264,17 @@
       </div>
     </div>
 
-    <!-- 
-      https://i.ibb.co/MDpddBfd/image.png
-      https://i.ibb.co/TDpMHhTz/image.png
-      https://i.ibb.co/LdTGm2fd/image.png
-      https://i.ibb.co/tpdrXshf/image.png
-     -->
+    <!-- jumper wire advantage section -->
 
-    <!-- Material recommendation section -->
-    <!-- <div class="material-recommendation-area"> -->
     <div class="jumper-wire-advantage-area">
       <div class="container mx-auto">
         <div class="section-title">
           <h2>Advantages of Using Our Jumper Wire Harness</h2>
           <p>
-            We take pride in offering the best jumper wire harness for all your wiring needs. Our harnesses are designed to make your work easier, safer, and more reliable. Here are four big advantages of using our wire harness.
+            We take pride in offering the best jumper wire harness for all your
+            wiring needs. Our harnesses are designed to make your work easier,
+            safer, and more reliable. Here are four big advantages of using our
+            wire harness.
           </p>
         </div>
 
@@ -1275,6 +1357,227 @@
                 it does not come loose easily. Plus, we use high-quality
                 materials that resist shaking, heat, and wear. This makes our
                 harness last longer even in tough conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! Jumper wire material recommendation section -->
+    <div class="jumper-wire-recommendation-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendations for Jumper Wire Harness</h2>
+          <p>
+            Choosing the right materials for a jumper wire harness is key to
+            making it safe, strong, and reliable. Using the right terminals and
+            joints helps wires connect better and keeps your devices working
+            well. Here are some of our best material recommendations for wire
+            harnesses.
+          </p>
+        </div>
+
+        <div class="recommend-material-card-wrapper">
+          <!-- Card 1 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/JFgLH92S/image.png"
+                alt="Fork terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Fork-Shaped Pre-Insulated Terminal (TU-JTK Type)
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Connecting wires quickly to screws or posts.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This fork-shaped terminal is designed to
+                slide easily around screws or posts, making connection fast and
+                simple. It uses double crimping, which means the wire is
+                squeezed tightly in two spots for a stronger hold. The
+                pre-insulated cover protects the wire and stops short circuits.
+                Because it holds wires firmly, it prevents loosening caused by
+                shaking or vibrations. This terminal works great in machines or
+                cars where wires must stay connected safely.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/vC2fsWxV/image.png"
+                alt="Round terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Round Pre-Insulated Terminal (TO-JTK Type)
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Securing wires to bolts or studs.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> The round, ring-like shape fits perfectly
+                on bolts or studs, giving a solid connection point. Double
+                crimping grips the wire in two places, so it won't slip out
+                easily. The insulation protects the wire and connection from
+                damage or electric shocks. This type is perfect for tight spaces
+                because it sits flat and takes up little room. It keeps
+                connections safe and neat, even in crowded wiring setups.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/FbjckcgP/image.png"
+                alt="Nylon joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Nylon Pre-Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Joining wires while protecting them from water
+                and dust.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> The nylon cover is strong and keeps dirt,
+                dust, and moisture away from the wire joint. Double crimping
+                holds wires tightly inside the joint so they don't come loose
+                when the harness moves. Nylon is also light and flexible, which
+                helps when wires bend or twist. This joint is easy to use and
+                helps your harness last longer in tough conditions. It is a
+                smart choice for outdoor or machine wiring.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/0SvMmC8/image.png"
+                alt="Female insulated joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Female Fully Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Safe and secure female terminal connections.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint fully covers the female
+                terminal, blocking any chance of sparks or short circuits. The
+                double crimping inside holds wires firmly so the connection does
+                not break. Its full insulation keeps electricity safely inside
+                the wires, protecting both the device and the user. This joint
+                is very reliable for electronics where safety matters most. It
+                also helps make the wiring look clean and organized.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/gMvs5QPZ/image.png"
+                alt="Female pre-insulated joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Female Pre-Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Reliable female terminal connections with basic
+                insulation.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint offers strong wire holding
+                through double crimping, making sure wires stay fixed. It has
+                pre-insulation to protect the connection from dust and minor
+                moisture. The design is simple yet effective, making it easy to
+                use in many wiring projects. It helps prevent electrical faults
+                while keeping wiring tidy. This joint works well in places where
+                full insulation is not required but safety is still important.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/NgF3C3Zr/image.png"
+                alt="Sheet-shaped terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Sheet-Shaped Pre-Insulated Terminal
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Reliable female terminal connections with basic
+                insulation.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint offers strong wire holding
+                through double crimping, making sure wires stay fixed. It has
+                pre-insulation to protect the connection from dust and minor
+                moisture. The design is simple yet effective, making it easy to
+                use in many wiring projects. It helps prevent electrical faults
+                while keeping wiring tidy. This joint works well in places where
+                full insulation is not required but safety is still important.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://i.ibb.co/LdTL8dNC/image.png"
+                alt="Shoulder-shaped joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Shoulder-Shaped Male and Female Fully Insulated
+                Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Easy-to-connect male and female terminal pairs
+                with full protection.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> These male and female terminals have a
+                shoulder shape that locks them tightly when connected. Double
+                crimping inside holds wires firmly, while full insulation covers
+                the whole joint to prevent shorts. This pair allows quick
+                connecting and disconnecting without losing safety or stability.
+                It works well in devices that need regular maintenance or
+                changes. The full insulation also protects users from electric
+                shocks.
               </p>
             </div>
           </div>
