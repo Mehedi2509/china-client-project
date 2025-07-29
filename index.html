@@ -977,7 +977,97 @@
       .product-introduction-area p {
         text-align: justify;
       }
-      
+
+      /* Advantages of using our jumper wire harness */
+
+      .jumper-wire-advantage-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .jumper-wire-advantage-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+
+      .jumper-wire-advantage-area .icon-card-wrapper .icon-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        border-radius: 12px;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper
+        .icon-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper
+        .icon-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      .jumper-wire-advantage-area .jumper-wire-img-wrapper {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+
+      .jumper-wire-advantage-area .jumper-wire-img-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .jumper-wire-advantage-area {
+          padding: 50px 0;
+        }
+        .jumper-wire-advantage-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .jumper-wire-advantage-area .image-grid-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .jumper-wire-advantage-area .image-grid-wrapper .image-grid-item {
+          align-items: center;
+        }
+        .jumper-wire-advantage-area .image-grid-item .image {
+          width: 80%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1082,6 +1172,110 @@
           <div class="product-introduction-image-wrapper">
             <div class="image">
               <img src="https://i.ibb.co/qZmFJ65/image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      https://i.ibb.co/MDpddBfd/image.png
+      https://i.ibb.co/TDpMHhTz/image.png
+      https://i.ibb.co/LdTGm2fd/image.png
+      https://i.ibb.co/tpdrXshf/image.png
+     -->
+
+    <!-- Material recommendation section -->
+    <!-- <div class="material-recommendation-area"> -->
+    <div class="jumper-wire-advantage-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Advantages of Using Our Jumper Wire Harness</h2>
+          <p>
+            We take pride in offering the best jumper wire harness for all your wiring needs. Our harnesses are designed to make your work easier, safer, and more reliable. Here are four big advantages of using our wire harness.
+          </p>
+        </div>
+
+        <div class="icon-card-wrapper">
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://i.ibb.co/MDpddBfd/image.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Easy and Fast Installation</h4>
+              <p class="icon-card-desc">
+                Our jumper wire harnesses are made to fit perfectly and connect
+                quickly. Because the wires come bundled and labeled, you don’t
+                have to spend hours sorting or guessing where each wire goes.
+                This saves a lot of time during installation. Also, our
+                terminals and joints use double crimping and insulation to make
+                connections strong and safe right from the start.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://i.ibb.co/TDpMHhTz/image.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Better Safety and Protection</h4>
+
+              <p class="icon-card-desc">
+                Safety is very important in any electrical project. Our jumper
+                wire harness comes with pre-insulated terminals and fully
+                insulated joints. These features protect wires from short
+                circuits and sparks. The insulation also shields the wires from
+                dust, water, and heat. This means your wires last longer and
+                work without problems.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://i.ibb.co/LdTGm2fd/image.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Neat and Organized Wiring</h4>
+
+              <p class="icon-card-desc">
+                Messy wires can cause problems and make repairs hard. Our jumper
+                wire harness bundles the wires tightly into one neat unit. This
+                makes your wiring look clean and professional. It also prevents
+                wires from tangling or breaking. When wires are organized, it is
+                easier to find and fix any issue if something goes wrong later.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://i.ibb.co/tpdrXshf/image.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Strong and Durable Connections</h4>
+
+              <p class="icon-card-desc">
+                Our jumper wire harness uses double crimping on all terminals
+                and joints. This means the wire is held firmly in two spots, so
+                it does not come loose easily. Plus, we use high-quality
+                materials that resist shaking, heat, and wear. This makes our
+                harness last longer even in tough conditions.
+              </p>
             </div>
           </div>
         </div>
@@ -1257,128 +1451,6 @@
             <?php
 						echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
 					?>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Material recommendation section -->
-    <div class="material-recommendation-area">
-      <div class="container mx-auto">
-        <div class="section-title">
-          <h2>Recommended Materials for Custom Wire Harness</h2>
-          <p>
-            Choosing the right materials is key to building a safe and strong
-            custom wire harness. At QL-Custom, we use only trusted materials
-            that work well in industrial settings. Here are the top materials we
-            recommend:
-          </p>
-        </div>
-        <div class="icon-card-wrapper">
-          <div class="icon-card">
-            <div class="icon-card-content-wrapper">
-              <h4 class="icon-card-title">PVC (Polyvinyl Chloride)</h4>
-              <p class="icon-card-desc">
-                Best for: General use in dry indoor environments.
-              </p>
-              <p class="icon-card-desc">
-                Why it works: PVC is flexible and easy to shape. It offers basic
-                protection against wear, moisture, and chemicals. It’s also
-                affordable and widely used. This makes it great for machines
-                that don’t face harsh weather. Plus, it keeps wires safe and
-                neat inside the harness.
-              </p>
-            </div>
-          </div>
-          <div class="icon-card">
-            <div class="icon-card-content-wrapper">
-              <h4 class="icon-card-title">Teflon (PTFE)</h4>
-              <p class="icon-card-desc">
-                Best for: High-temperature and high-performance equipment.
-              </p>
-              <p class="icon-card-desc">
-                Why it works: Teflon can handle heat better than many other
-                materials. It also resists oil, fuel, and strong chemicals. That
-                means it works well in engines and heavy machines. It doesn’t
-                break down easily and lasts a long time. Even when things get
-                hot, it keeps your wire harness safe.
-              </p>
-            </div>
-          </div>
-          <div class="icon-card">
-            <div class="icon-card-content-wrapper">
-              <h4 class="icon-card-title">Cross-Linked Polyethylene (XLPE)</h4>
-              <p class="icon-card-desc">
-                Best for: Outdoor and high-voltage applications.
-              </p>
-              <p class="icon-card-desc">
-                Why it works: XLPE has great electrical insulation. It also
-                resists sunlight and water, which makes it perfect for outdoor
-                use. It stays strong even in tough weather. Its heat resistance
-                helps keep wires from melting. This means your custom wire
-                harness stays safe for longer.
-              </p>
-            </div>
-          </div>
-          <div class="icon-card">
-            <div class="icon-card-content-wrapper">
-              <h4 class="icon-card-title">Polyurethane (PU)</h4>
-              <p class="icon-card-desc">
-                Best for: Moving parts and flexible cable needs.
-              </p>
-              <p class="icon-card-desc">
-                Why it works: PU is very bendy and doesn’t crack. It can take on
-                a lot of motion without wearing out. It resists oil, cuts, and
-                scrapes too. This makes it great for machines that move often.
-                It helps your wire harness stay strong and flexible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="image-grid-wrapper">
-          <div class="image-grid-item">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/image-5.png"
-                alt="product image"
-              />
-            </div>
-            <div class="image-grid-item-content">
-              <h4 class="image-grid-item-title">Electronic Wire</h4>
-            </div>
-          </div>
-          <div class="image-grid-item">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/image-6.png"
-                alt="product image"
-              />
-            </div>
-            <div class="image-grid-item-content">
-              <h4 class="image-grid-item-title">Chart Label</h4>
-            </div>
-          </div>
-          <div class="image-grid-item">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/image-7.png"
-                alt="product image"
-              />
-            </div>
-            <div class="image-grid-item-content">
-              <h4 class="image-grid-item-title">Diagram Terminal</h4>
-            </div>
-          </div>
-          <div class="image-grid-item">
-            <div class="image">
-              <img
-                src="https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/image-8.png"
-                alt="product image"
-              />
-            </div>
-            <div class="image-grid-item-content">
-              <h4 class="image-grid-item-title">Chart Plastic Shell</h4>
-            </div>
           </div>
         </div>
       </div>
