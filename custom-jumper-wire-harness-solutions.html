@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
       }
-      .container {
+      .product-container {
         max-width: 1280px;
       }
       .mx-auto {
@@ -41,6 +41,15 @@
         font-family: Alexandria;
         line-height: 28px;
         color: #4b5563;
+      }
+      .product-page-btn {
+        display: flex;
+      }
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
       }
 
       @media only screen and (max-width: 767px) {
@@ -71,17 +80,8 @@
         align-items: center;
         position: relative;
       }
-      /* .hero-area::after {
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: #00000051;
-	} */
-      .hero-area .hero-container {
-        max-width: 1180px;
+      .hero-area .hero-product-container {
+        max-width: 1280px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -94,7 +94,6 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        max-width: 640px;
       }
       .hero-area .section-title {
         margin-bottom: 0;
@@ -104,19 +103,19 @@
       }
       .hero-area .section-title h1 {
         font-family: Alexandria;
-        font-size: 62px;
+        font-size: 52px;
         font-weight: 400;
         line-height: initial;
-        color: #fff;
+        color: #fff; 
       }
       .hero-area .section-title p {
         font-family: Alexandria;
-        font-size: 20px;
+        font-size: 32px;
         font-weight: 300;
-        line-height: 34px;
+        line-height: initial;
         color: #fff;
       }
-      .hero-area .hero-btn-wrapper {
+      .hero-area .hero-product-page-btn {
         display: flex;
       }
 
@@ -129,7 +128,7 @@
           font-size: 48px;
           line-height: 56px;
         }
-        .hero-area .hero-btn-wrapper .popup-form-btn {
+        .hero-area .hero-product-page-btn .popup-form-btn {
           font-size: 16px;
           padding: 10px 16px;
         }
@@ -138,7 +137,7 @@
         .hero-area {
           padding: 20px 16px;
           min-height: 0;
-          background-position: 60% center !important;
+          background-position: 80% center !important;
         }
         .hero-area .section-title h1 {
           font-size: 32px;
@@ -162,7 +161,10 @@
       .product-introduction-area .product-introduction-wrapper {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 120px;
+      }
+      .product-introduction-area.solutions-area .product-introduction-wrapper {
+        gap: 40px;
       }
       .product-introduction-area
         .product-introduction-wrapper
@@ -175,10 +177,27 @@
       .product-introduction-area .section-title {
         text-align: left;
       }
+      .product-introduction-area.solutions-area .section-title {
+        text-align: center;
+      }
       .product-introduction-area .product-introduction-content {
         display: flex;
         flex-direction: column;
         gap: 28px;
+      }
+      .product-introduction-area.solutions-area .product-introduction-content {
+        gap: 10px;
+      }
+      .product-introduction-area .product-introduction-content h3:first-child {
+        margin-top: 0;
+      }
+      .product-introduction-area .product-introduction-content h3 {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: Alexandria;
+        line-height: 36px;
+        color: #4b5563;
+        margin-top: 10px;
       }
       .product-introduction-area .product-introduction-content p {
         font-size: 18px;
@@ -187,11 +206,11 @@
         line-height: 28px;
         color: #4b5563;
       }
-      .product-introduction-area .btn-wrapper {
+      .product-introduction-area .product-page-btn {
         display: flex;
         margin-top: 24px;
       }
-      .product-introduction-area .btn-wrapper .popup-form-btn {
+      .product-introduction-area .product-page-btn .popup-form-btn {
         padding: 14px 30px;
         font-size: 16px;
         font-weight: 400;
@@ -201,8 +220,14 @@
         .product-introduction-wrapper
         .product-introduction-image-wrapper {
         display: flex;
-        width: 100%;
-        padding-left: 20px;
+        width: 560px;
+        flex-shrink: 0;
+      }
+      .product-introduction-area.solutions-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper {
+        flex-shrink: 0;
+        width: 731px;
       }
       .product-introduction-area
         .product-introduction-wrapper
@@ -234,6 +259,12 @@
           width: 100%;
           padding: 0;
         }
+        .product-introduction-area.solutions-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper {
+          flex-shrink: unset;
+          width: 100%;
+        }
         .product-introduction-area
           .product-introduction-wrapper
           .product-introduction-image-wrapper
@@ -257,726 +288,9 @@
           .feature-list-desc {
           width: 55%;
         }
-        .product-introduction-area .btn-wrapper .popup-form-btn {
+        .product-introduction-area .product-page-btn .popup-form-btn {
           padding: 10px 16px;
         }
-      }
-
-      /* Material recommendation Section */
-      .material-recommendation-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-      .material-recommendation-area .icon-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-      }
-      .material-recommendation-area .icon-card-wrapper .icon-card {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        background-color: #f0f0f0;
-        border-radius: 12px;
-      }
-      .material-recommendation-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .material-recommendation-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper
-        .icon-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #16529b;
-      }
-      .material-recommendation-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper
-        .icon-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: justify;
-        color: #4b5563;
-      }
-      .material-recommendation-area .icon-card-btn-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-      .material-recommendation-area .image-grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 20px;
-        row-gap: 20px;
-        margin-top: 40px;
-      }
-      .material-recommendation-area .image-grid-wrapper .image-grid-item {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-      }
-      .material-recommendation-area .image-grid-item .image {
-        display: flex;
-        width: 100%;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-      .material-recommendation-area .image-grid-item .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .material-recommendation-area .image-grid-item .image-grid-item-title {
-        font-family: Alexandria;
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: center;
-        color: #4b5563;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .material-recommendation-area {
-          padding: 50px 0;
-        }
-        .material-recommendation-area .icon-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .material-recommendation-area .image-grid-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .material-recommendation-area .image-grid-wrapper .image-grid-item {
-          align-items: center;
-        }
-        .material-recommendation-area .image-grid-item .image {
-          width: 80%;
-        }
-      }
-
-      /* Products Advantage Section */
-      .products-advantage-area {
-        padding: 70px 0;
-        max-width: 1920px;
-        margin: 0 auto;
-        background-color: #f0f0f0;
-        overflow: hidden;
-      }
-      .products-advantage-area .products-advantage-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: 1fr;
-        gap: 40px;
-        max-width: calc(1920px - 220px);
-      }
-      .products-advantage-area .products-advantage-image {
-        display: flex;
-        width: 750px;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-      .products-advantage-area .products-advantage-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .products-advantage-area .section-title {
-        text-align: left;
-      }
-      .products-advantage-area .info-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 16px;
-        row-gap: 16px;
-      }
-      .products-advantage-area .info-card-wrapper .info-card {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        justify-content: space-between;
-        width: 100%;
-        padding: 16px;
-        border-radius: 12px;
-        background-color: #fff;
-      }
-      .products-advantage-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .products-advantage-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-title {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #16529b;
-      }
-      .products-advantage-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        color: #4b5563;
-      }
-      .products-advantage-area .btn-wrapper {
-        display: flex;
-        margin-top: 28px;
-      }
-      .products-advantage-area .btn-wrapper .popup-form-btn {
-        padding: 14px 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: initial;
-      }
-
-      @media only screen and (max-width: 1399px) {
-        .products-advantage-area .products-advantage-container {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-          padding-right: 16px;
-        }
-        .products-advantage-area .products-advantage-image {
-          width: 100%;
-        }
-      }
-      @media only screen and (max-width: 1024px) {
-        .products-advantage-area {
-          padding: 70px 16px;
-        }
-        .products-advantage-area .products-advantage-container {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 20px;
-          padding: 0;
-        }
-        .products-advantage-area .products-advantage-image {
-          aspect-ratio: 3/1.5;
-        }
-      }
-      @media only screen and (max-width: 767px) {
-        .products-advantage-area {
-          padding: 50px 16px;
-        }
-        .products-advantage-area .info-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-
-      /* Solutions Section */
-      .solutions-area {
-        padding: 70px 0;
-        max-width: 1920px;
-        margin: 0 auto;
-        background-color: #f0f0f0;
-        overflow: hidden;
-      }
-      .solutions-area .info-card-wrapper {
-        display: flex;
-        flex-direction: column;
-      }
-      .solutions-area .info-card-wrapper .info-card-main:last-child .info-card,
-      .solutions-area
-        .info-card-wrapper
-        .info-card-main:first-child
-        .info-card {
-        flex-direction: row-reverse;
-      }
-      .solutions-area .info-card-wrapper .info-card-main:nth-child(2) {
-        background-color: #fff;
-      }
-      .solutions-area .info-card-wrapper .info-card-main {
-        display: flex;
-        width: 100%;
-        padding: 70px 16px;
-        background-color: #f0f0f0;
-      }
-      .solutions-area .info-card-wrapper .info-card {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-        max-width: 1180px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-      .solutions-area .info-card-wrapper .info-card .info-card-image {
-        display: flex;
-        flex-shrink: 0;
-        width: 520px;
-        aspect-ratio: 5.2/3.7;
-        overflow: hidden;
-      }
-      .solutions-area .info-card-wrapper .info-card .info-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .solutions-area .info-card-wrapper .info-card .info-card-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .solutions-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #242424;
-      }
-      .solutions-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: justify;
-        color: #4b5563;
-      }
-      .solutions-area .btn-wrapper {
-        display: flex;
-      }
-      .solutions-area .btn-wrapper .popup-form-btn {
-        padding: 14px 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: initial;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .solutions-area {
-          padding: 50px 0;
-        }
-        .solutions-area .info-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .solutions-area
-          .info-card-wrapper
-          .info-card-main:last-child
-          .info-card,
-        .solutions-area
-          .info-card-wrapper
-          .info-card-main:first-child
-          .info-card {
-          flex-direction: column;
-        }
-        .solutions-area .info-card-wrapper .info-card-main {
-          padding: 40px 16px;
-        }
-        .solutions-area .info-card-wrapper .info-card {
-          flex-direction: column;
-          gap: 20px;
-        }
-      }
-
-      /* Wide-Ranging Section */
-      .wide-ranging-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-      .wide-ranging-area .info-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-      }
-      .wide-ranging-area .info-card-wrapper .info-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        border-radius: 12px;
-        overflow: hidden;
-        background-color: #f0f0f0;
-        box-shadow: 0px 0px 8px 0px #00000014;
-      }
-      .wide-ranging-area .info-card-wrapper .info-card .info-card-image {
-        display: flex;
-        width: 100%;
-        height: 292px;
-        overflow: hidden;
-      }
-      .wide-ranging-area .info-card-wrapper .info-card .info-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .wide-ranging-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding: 24px 20px;
-        gap: 12px;
-        text-align: center;
-      }
-      .wide-ranging-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #4b5563;
-      }
-      .wide-ranging-area
-        .info-card-wrapper
-        .info-card
-        .info-card-content-wrapper
-        .info-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        color: #4b5563;
-      }
-      .wide-ranging-area .btn-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-top: 32px;
-      }
-      .wide-ranging-area .btn-wrapper .popup-form-btn {
-        padding: 14px 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: initial;
-      }
-
-      @media only screen and (max-width: 767px) {
-        .wide-ranging-area {
-          padding: 50px 0;
-        }
-        .wide-ranging-area .info-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .wide-ranging-area .btn-wrapper .popup-form-btn {
-          padding: 10px 16px;
-        }
-      }
-
-      /* Why Choose section */
-      .why-choose-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        background-color: #f0f0f0;
-        overflow: hidden;
-      }
-      .why-choose-area .why-choose-wrapper {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
-      }
-      .why-choose-area .why-choose-wrapper .why-choose-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-      }
-      .why-choose-area .section-title {
-        text-align: left;
-        margin-bottom: 24px;
-      }
-      .why-choose-area .why-choose-content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .why-choose-area .why-choose-content p {
-        font-size: 18px;
-        font-weight: 300;
-        font-family: Alexandria;
-        line-height: 28px;
-        color: #4b5563;
-      }
-      .why-choose-area .btn-wrapper {
-        display: flex;
-        margin-top: 24px;
-      }
-      .why-choose-area .btn-wrapper .popup-form-btn {
-        padding: 14px 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: initial;
-      }
-      .why-choose-area .why-choose-wrapper .why-choose-image-wrapper {
-        display: flex;
-        flex-shrink: 0;
-        width: 480px;
-        height: 100%;
-      }
-      .why-choose-area .why-choose-wrapper .why-choose-image-wrapper .image {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
-      .why-choose-area
-        .why-choose-wrapper
-        .why-choose-image-wrapper
-        .image
-        img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .why-choose-area .why-choose-wrapper {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .why-choose-area .why-choose-wrapper .why-choose-image-wrapper {
-          flex-shrink: unset;
-          width: 100%;
-        }
-      }
-      @media only screen and (max-width: 767px) {
-        .why-choose-area {
-          padding: 50px 0;
-        }
-        .why-choose-area .why-choose-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .why-choose-area .why-choose-wrapper .why-choose-image-wrapper .image {
-          aspect-ratio: 1/1;
-        }
-        .why-choose-area .btn-wrapper .popup-form-btn {
-          padding: 10px 16px;
-        }
-      }
-
-      /* Custom Industrial section */
-      .custom-industrial-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        background-color: #16529b;
-        overflow: hidden;
-      }
-
-      .custom-industrial-area .custom-industrial-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      .custom-industrial-area
-        .custom-industrial-wrapper
-        .custom-industrial-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-      }
-      .custom-industrial-area .section-title {
-        text-align: left;
-        margin-bottom: 24px;
-      }
-      .custom-industrial-area .section-title h2 {
-        color: #fff;
-      }
-      .custom-industrial-area .custom-industrial-content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-      .custom-industrial-area .custom-industrial-content p {
-        font-size: 18px;
-        font-weight: 300;
-        font-family: Alexandria;
-        line-height: 28px;
-        color: #fff;
-      }
-      .custom-industrial-area .btn-wrapper {
-        display: flex;
-        margin-top: 24px;
-      }
-      .custom-industrial-area .btn-wrapper .popup-form-btn {
-        padding: 14px 30px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: initial;
-      }
-      .custom-industrial-area
-        .custom-industrial-wrapper
-        .custom-industrial-image-wrapper {
-        display: flex;
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .custom-industrial-area
-        .custom-industrial-wrapper
-        .custom-industrial-image-wrapper
-        .image {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      .custom-industrial-area
-        .custom-industrial-wrapper
-        .custom-industrial-image-wrapper
-        .image
-        img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .custom-industrial-area .custom-industrial-wrapper {
-          gap: 24px;
-          align-items: center;
-        }
-      }
-      @media only screen and (max-width: 575px) {
-        .custom-industrial-area {
-          padding: 50px 0;
-        }
-        .custom-industrial-area .custom-industrial-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-        .custom-industrial-area .section-title {
-          gap: 16px;
-        }
-        .custom-industrial-area .btn-wrapper .popup-form-btn {
-          padding: 10px 16px;
-        }
-      }
-
-      /* Our Quality section */
-      .our-quality-area {
-        padding: 70px 0;
-        overflow: hidden;
-        background-color: #f0f0f0;
-        max-width: 1920px;
-        margin: 0 auto;
-      }
-      .our-quality-area .section-title {
-        max-width: 961px;
-        margin: 0 auto 40px;
-      }
-      .our-quality-area .info-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 1fr;
-      }
-      .our-quality-area .info-card-wrapper .info-card {
-        width: 100%;
-        height: 100%;
-        padding: 24px 16px;
-        background-color: #16529b;
-      }
-      .our-quality-area .info-card-wrapper .info-card.custom-color {
-        background-color: #00bde7;
-      }
-      .our-quality-area .info-card-wrapper .info-card .info-card-content {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-      }
-      .our-quality-area .info-card-wrapper .info-card .info-card-title {
-        font-family: Alexandria;
-        font-size: 20px;
-        line-height: 1;
-        font-weight: 500;
-        color: #fff;
-      }
-      .our-quality-area .info-card-wrapper .info-card .info-card-desc {
-        font-family: Alexandria;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 300;
-        color: #fff;
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .our-quality-area .info-card-wrapper {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        .our-quality-area .info-image-wrapper .info-image {
-          height: 500px;
-        }
-      }
-      @media only screen and (max-width: 767px) {
-        .our-quality-area .info-card-wrapper {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .our-quality-area .info-image-wrapper .info-image {
-          height: 300px;
-        }
-      }
-      @media only screen and (max-width: 575px) {
-        .our-quality-area .info-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-
-      /*Rakib*/
-      .product-introduction-area .jumper-wire-intro-content-wrapper {
-        flex-direction: row-reverse;
-        gap: 120px;
-      }
-      .product-introduction-area .jumper-wire-details-content-wrapper {
-        gap: 120px;
-      }
-
-      .product-introduction-area p {
-        text-align: justify;
       }
 
       /* Advantages of using our jumper wire harness */
@@ -1072,7 +386,7 @@
       .jumper-wire-recommendation-area .recommend-material-card-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 40px;
       }
 
       .jumper-wire-recommendation-area .material-card {
@@ -1081,17 +395,18 @@
         box-shadow: 0px 0px 8px 0px #0000001a;
         display: flex;
         align-items: center;
-        gap: 2.5rem;
+        gap: 40px;
       }
 
       .jumper-wire-recommendation-area .flex-row-reversed {
         flex-direction: row-reverse;
       }
 
-      .jumper-wire-recommendation-area
-        .material-card
-        .material-card-image-wrapper {
-        flex: 0 0 20%;
+      .jumper-wire-recommendation-area .material-card .material-card-image-wrapper {
+        width: 260px;
+        aspect-ratio: 2.6/2.3;
+        flex-shrink: 0;
+        display: flex;
       }
 
       .jumper-wire-recommendation-area
@@ -1142,15 +457,6 @@
 
         .jumper-wire-recommendation-area .material-card {
           flex-direction: column;
-        }
-
-        .jumper-wire-recommendation-area
-          .material-card
-          .material-card-image-wrapper
-          .image {
-          width: 60%;
-          height: auto;
-          object-fit: cover;
         }
       }
 
@@ -1248,8 +554,8 @@
       }
       .why-ql-custom-area .serial-no {
         font-family: Alexandria;
-        font-size: 4rem;
-        line-height: 3rem;
+        font-size: 48px;
+        line-height: 48px;
         font-weight: 600;
         color: #16529b;
       }
@@ -1341,6 +647,10 @@
       }
 
       @media only screen and (max-width: 1024px) {
+        .quality-testing-area .info-card-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
         .quality-testing-area .quality-testing-wrapper {
           flex-direction: column;
         }
@@ -1356,6 +666,9 @@
       @media only screen and (max-width: 767px) {
         .quality-testing-area {
           padding: 50px 0;
+        }
+        .quality-testing-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
 
@@ -1448,20 +761,19 @@
     <div
       class="hero-area"
       style="
-        background: url('https://cornflowerblue-rhinoceros-500441.hostingersite.com/wp-content/uploads/2025/07/Frame-42670-1-scaled.jpg');
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/07/b9877df8e4d24620b19ed986db6d3922b5e2c9a8.jpg');
       "
     >
-      <div class="hero-container">
+      <div class="hero-product-container">
         <div class="hero-content-wrapper">
           <div class="section-title">
-            <h1>Industrial Wire Harness Solutions</h1>
+            <h1>Custom Jumper Wire Harness Solutions Built for Performance</h1>
             <p>
-              Get Reliable, High-Quality Wire Harnesses for Your Industry.
-              Tailored to Your Equipment, Delivered with Precision.
+              Tailored harnesses with premium terminals and tested for extreme reliability.
             </p>
           </div>
 
-          <div class="hero-btn-wrapper">
+          <div class="hero-product-page-btn">
             <?php
 						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
 					  ?>
@@ -1472,10 +784,13 @@
 
     <!-- Jumper wire Introduction section -->
     <div class="product-introduction-area">
-      <div class="container mx-auto">
-        <div
-          class="product-introduction-wrapper jumper-wire-intro-content-wrapper"
-        >
+      <div class="product-container mx-auto">
+        <div class="product-introduction-wrapper">
+          <div class="product-introduction-image-wrapper">
+            <div class="image">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/1.png" alt="" />
+            </div>
+          </div>
           <div class="product-introduction-content-wrapper">
             <div class="section-title">
               <h2>Introduction of Jumper Wire Harness</h2>
@@ -1492,15 +807,10 @@
                 get the perfect wire harness?
               </p>
             </div>
-            <div class="btn-wrapper">
+            <div class="product-page-btn">
               <?php
-							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-						?>
-            </div>
-          </div>
-          <div class="product-introduction-image-wrapper">
-            <div class="image">
-              <img src="https://i.ibb.co/YBK0dsZy/image.png" alt="" />
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
             </div>
           </div>
         </div>
@@ -1509,9 +819,9 @@
 
     <!-- Jumper wire details Section -->
     <div class="product-introduction-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div
-          class="product-introduction-wrapper jumper-wire-details-content-wrapper"
+          class="product-introduction-wrapper"
         >
           <div class="product-introduction-content-wrapper">
             <div class="section-title">
@@ -1544,7 +854,7 @@
           </div>
           <div class="product-introduction-image-wrapper">
             <div class="image">
-              <img src="https://i.ibb.co/qZmFJ65/image.png" alt="" />
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/2.png" alt="" />
             </div>
           </div>
         </div>
@@ -1554,7 +864,7 @@
     <!-- jumper wire advantage section -->
 
     <div class="jumper-wire-advantage-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Advantages of Using Our Jumper Wire Harness</h2>
           <p>
@@ -1570,7 +880,7 @@
             <div class="icon-card-content-wrapper">
               <div class="jumper-wire-img-wrapper">
                 <img
-                  src="https://i.ibb.co/MDpddBfd/image.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-9.png"
                   alt=""
                   class="image"
                 />
@@ -1590,7 +900,7 @@
             <div class="icon-card-content-wrapper">
               <div class="jumper-wire-img-wrapper">
                 <img
-                  src="https://i.ibb.co/TDpMHhTz/image.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-10.png"
                   alt=""
                   class="image"
                 />
@@ -1611,7 +921,7 @@
             <div class="icon-card-content-wrapper">
               <div class="jumper-wire-img-wrapper">
                 <img
-                  src="https://i.ibb.co/LdTGm2fd/image.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-removebg-preview-14.png"
                   alt=""
                   class="image"
                 />
@@ -1631,7 +941,7 @@
             <div class="icon-card-content-wrapper">
               <div class="jumper-wire-img-wrapper">
                 <img
-                  src="https://i.ibb.co/tpdrXshf/image.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-11.png"
                   alt=""
                   class="image"
                 />
@@ -1648,12 +958,18 @@
             </div>
           </div>
         </div>
+
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
       </div>
     </div>
 
     <!-- Jumper wire material recommendation section -->
     <div class="jumper-wire-recommendation-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Material Recommendations for Jumper Wire Harness</h2>
           <p>
@@ -1670,7 +986,7 @@
           <div class="material-card">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/JFgLH92S/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-12.png"
                 alt="Fork terminal"
                 class="image"
               />
@@ -1699,7 +1015,7 @@
           <div class="material-card flex-row-reversed">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/vC2fsWxV/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/p_bigimg146850935141319797.png"
                 alt="Round terminal"
                 class="image"
               />
@@ -1727,7 +1043,7 @@
           <div class="material-card">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/FbjckcgP/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/c0d4fa031f74648a4c57dbbb64dff938.png"
                 alt="Nylon joint"
                 class="image"
               />
@@ -1756,7 +1072,7 @@
           <div class="material-card flex-row-reversed">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/0SvMmC8/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/013cd81878604c8a8dd02123d31e089c.png"
                 alt="Female insulated joint"
                 class="image"
               />
@@ -1784,7 +1100,7 @@
           <div class="material-card">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/gMvs5QPZ/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-13.png"
                 alt="Female pre-insulated joint"
                 class="image"
               />
@@ -1813,7 +1129,7 @@
           <div class="material-card flex-row-reversed">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/NgF3C3Zr/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-14.png"
                 alt="Sheet-shaped terminal"
                 class="image"
               />
@@ -1842,7 +1158,7 @@
           <div class="material-card">
             <div class="material-card-image-wrapper">
               <img
-                src="https://i.ibb.co/LdTL8dNC/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-15.png"
                 alt="Shoulder-shaped joint"
                 class="image"
               />
@@ -1872,9 +1188,47 @@
       </div>
     </div>
 
+     <!-- solutions section -->
+     <div class="product-introduction-area solutions-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Jumper Wire Harness Solutions Tailored to Your Industry</h2>
+          <p>We know that every industry has special needs. That is why we offer custom jumper wire harness solutions designed just for you. No matter your field, we create harnesses that fit perfectly, work safely, and last long. Here are three custom solutions tailored to different industries.</p>
+        </div>
+        <div class="product-introduction-wrapper">
+          <div class="product-introduction-content-wrapper">
+            <div class="product-introduction-content">
+              <h3>Automotive Industry Solution</h3>
+              <p>
+                Cars and trucks need strong and safe wiring that can handle heat, vibrations, and movement. Our custom harnesses for the automotive industry use high-quality insulated terminals and durable wires. We design them to fit every vehicle model perfectly. This helps prevent shorts and keeps electrical systems working well. Plus, our harnesses are easy to install and repair, saving time in busy workshops.
+              </p>
+              <h3>Industrial Machinery Solution</h3>
+              <p>
+                Factories use big machines that work hard every day. Our custom jumper wire harnesses for industrial machinery are made to survive tough conditions like heat, dust, and shaking. We use strong materials and double crimping terminals to hold wires firmly. Our harnesses help keep machines running without electrical problems. They also make maintenance easier by keeping wires neat and organized.
+              </p>
+              <h3>Consumer Electronics Solution</h3>
+              <p>
+                Small gadgets and devices need tiny, precise wiring to work correctly. Our custom wire harnesses for consumer electronics are designed with care to fit in tight spaces. We use lightweight and flexible wires with pre-insulated joints to protect delicate parts. These harnesses make electronics safer and more reliable while keeping designs sleek and tidy.
+              </p>
+            </div>
+            <div class="product-page-btn">
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
+            </div>
+          </div>
+          <div class="product-introduction-image-wrapper">
+            <div class="image">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/Group-41741.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- section Common Applications -->
     <div class="common-applications-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Common Applications of Jumper Wire Harness</h2>
           <p>
@@ -1892,7 +1246,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://i.ibb.co/XcGLwSZ/image.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/0388b46b6826201f705c0add9cd0e85fe2302a5a.jpg"
                 alt="Automotive application"
                 class="image"
               />
@@ -1913,7 +1267,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://i.ibb.co/vxrjCdz4/64669168f39735bb9ccea26d7378a3678ca2c54a.jpg"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/64669168f39735bb9ccea26d7378a3678ca2c54a.jpg"
                 alt="Industrial machinery"
                 class="image"
               />
@@ -1934,7 +1288,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://i.ibb.co/RpDtxTpT/rrsr.jpg"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/573f0390121810250693fc7a627fb4ff7f364e72.jpg"
                 alt="Home appliances"
                 class="image"
               />
@@ -1955,7 +1309,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://i.ibb.co/fdfCSQf2/759f1fe074d7336805cb5c28c37bdd28fad6a602.jpg"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/759f1fe074d7336805cb5c28c37bdd28fad6a602.jpg"
                 alt="Electronics"
                 class="image"
               />
@@ -1971,12 +1325,18 @@
             </div>
           </div>
         </div>
+
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
       </div>
     </div>
 
     <!-- Section why ql-custom -->
     <div class="why-ql-custom-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Why Choose QL-Custom for Jumper Wire Harness Manufacturing?</h2>
           <p>
@@ -2027,7 +1387,7 @@
 
     <!-- Quality and testing section -->
     <div class="quality-testing-area">
-      <div class="container mx-auto quality-testing-wrapper">
+      <div class="product-container mx-auto quality-testing-wrapper">
         <div class="section-title">
           <h2>Our Quality Standards & Testing Procedures</h2>
           <p>
@@ -2037,6 +1397,11 @@
             follow strict quality standards and testing procedures. Here is how
             we keep our quality high:
           </p>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
 
         <div class="info-card-wrapper">
@@ -2113,11 +1478,11 @@
 
     <!-- Custom Industrial section -->
     <div class="start-custom-industrial-area">
-      <div class="container mx-auto">
+      <div class="product-container mx-auto">
         <div class="custom-industrial-wrapper">
           <div class="custom-industrial-image-wrapper">
             <img
-              src="https://i.ibb.co/Z1XDFKHC/image.png"
+              src="https://www.ql-custom.com/wp-content/uploads/2025/07/3811519b0f74bc243cb4ad76ffc3509ab11a1d22.jpg"
               alt=""
               class="image"
             />
@@ -2140,7 +1505,7 @@
                 solution today!
               </p>
             </div>
-            <div class="btn-wrapper">
+            <div class="product-page-btn">
               <?php
 							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
 						?>
