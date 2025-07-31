@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .product-container {
+        max-width: 1280px;
+      }
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      /* Common Style */
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .section-title p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+      .product-page-btn {
+        display: flex;
+      }
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-title {
+          margin-bottom: 32px;
+        }
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      /* Hero Area */
+      .hero-area {
+        min-height: 560px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .hero-area .hero-product-container {
+        max-width: 1280px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-area .hero-content-wrapper {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-area .section-title {
+        margin-bottom: 0;
+        gap: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .hero-area .section-title h1 {
+        font-family: Alexandria;
+        font-size: 52px;
+        font-weight: 400;
+        line-height: initial;
+        color: #fff; 
+      }
+      .hero-area .section-title p {
+        font-family: Alexandria;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: initial;
+        color: #fff;
+      }
+      .hero-area .hero-product-page-btn {
+        display: flex;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .hero-area {
+          padding: 70px 16px;
+          min-height: 400px;
+        }
+        .hero-area .section-title h1 {
+          font-size: 48px;
+          line-height: 56px;
+        }
+        .hero-area .hero-product-page-btn .popup-form-btn {
+          font-size: 16px;
+          padding: 10px 16px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .hero-area {
+          padding: 20px 16px;
+          min-height: 0;
+          background-position: 80% center !important;
+        }
+        .hero-area .section-title h1 {
+          font-size: 32px;
+          line-height: 42px;
+          text-align: left;
+          max-width: 360px;
+        }
+        .hero-area .section-title p {
+          font-size: 18px;
+          display: none;
+        }
+      }
+
+      /* Product Introduction section */
+      .product-introduction-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .product-introduction-area .product-introduction-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 120px;
+      }
+      .product-introduction-area.solutions-area .product-introduction-wrapper {
+        gap: 40px;
+      }
+      .product-introduction-area
+        .product-introduction-wrapper
+        .product-introduction-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }
+      .product-introduction-area .section-title {
+        text-align: left;
+      }
+      .product-introduction-area.solutions-area .section-title {
+        text-align: center;
+      }
+      .product-introduction-area .product-introduction-content {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .product-introduction-area.solutions-area .product-introduction-content {
+        gap: 10px;
+      }
+      .product-introduction-area .product-introduction-content h3:first-child {
+        margin-top: 0;
+      }
+      .product-introduction-area .product-introduction-content h3 {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: Alexandria;
+        line-height: 36px;
+        color: #4b5563;
+        margin-top: 10px;
+      }
+      .product-introduction-area .product-introduction-content p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+      .product-introduction-area .product-page-btn {
+        display: flex;
+        margin-top: 24px;
+      }
+      .product-introduction-area .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+      .product-introduction-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper {
+        display: flex;
+        width: 560px;
+        flex-shrink: 0;
+      }
+      .product-introduction-area.solutions-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper {
+        flex-shrink: 0;
+        width: 731px;
+      }
+      .product-introduction-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper
+        .image {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+      }
+      .product-introduction-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper
+        .image
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-introduction-area .product-introduction-wrapper {
+          gap: 24px;
+          align-items: center;
+        }
+        .product-introduction-area
+          .product-introduction-wrapper
+          .product-introduction-image-wrapper {
+          flex-shrink: unset;
+          width: 100%;
+          padding: 0;
+        }
+        .product-introduction-area.solutions-area
+        .product-introduction-wrapper
+        .product-introduction-image-wrapper {
+          flex-shrink: unset;
+          width: 100%;
+        }
+        .product-introduction-area
+          .product-introduction-wrapper
+          .product-introduction-image-wrapper
+          .image {
+          aspect-ratio: unset;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        .product-introduction-area {
+          padding: 50px 8px;
+        }
+        .product-introduction-area .product-introduction-wrapper {
+          flex-wrap: wrap;
+        }
+        .product-introduction-area .section-title {
+          gap: 16px;
+        }
+        .product-introduction-area
+          .product-introduction-wrapper
+          .product-introduction-content
+          .feature-list-desc {
+          width: 55%;
+        }
+        .product-introduction-area .product-page-btn .popup-form-btn {
+          padding: 10px 16px;
+        }
+      }
+
+      /* Advantages of using our jumper wire harness */
+
+      .jumper-wire-advantage-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .jumper-wire-advantage-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+
+      .jumper-wire-advantage-area .icon-card-wrapper .icon-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        border-radius: 12px;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper
+        .icon-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .jumper-wire-advantage-area
+        .icon-card-wrapper
+        .icon-card
+        .icon-card-content-wrapper
+        .icon-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      .jumper-wire-advantage-area .jumper-wire-img-wrapper {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+
+      .jumper-wire-advantage-area .jumper-wire-img-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .jumper-wire-advantage-area {
+          padding: 50px 0;
+        }
+        .jumper-wire-advantage-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      /*recommendation jumper wire section*/
+
+      .jumper-wire-recommendation-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .jumper-wire-recommendation-area .recommend-material-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .jumper-wire-recommendation-area .material-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .jumper-wire-recommendation-area .flex-row-reversed {
+        flex-direction: row-reverse;
+      }
+
+      .jumper-wire-recommendation-area .material-card .material-card-image-wrapper {
+        width: 260px;
+        aspect-ratio: 2.6/2.3;
+        flex-shrink: 0;
+        display: flex;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-image-wrapper
+        .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper
+        .material-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .jumper-wire-recommendation-area
+        .material-card
+        .material-card-content-wrapper
+        .material-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .jumper-wire-recommendation-area {
+          padding: 50px 0;
+        }
+
+        .jumper-wire-recommendation-area .material-card {
+          flex-direction: column;
+        }
+      }
+
+      /* section Common Applications*/
+
+      .common-applications-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .common-applications-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+
+      .common-applications-area .info-card {
+        padding: 1rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 8px 0px #0000001a;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .common-applications-area .info-card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .common-applications-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .common-applications-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      .common-applications-area .info-card-image-wrapper {
+        width: 100%;
+        max-height: 320px;
+        border-radius: 12px;
+      }
+
+      .common-applications-area .info-card-image-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .common-applications-area {
+          padding: 50px 0;
+        }
+
+        .common-applications-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*<!--! Section why ql-custom -->*/
+
+      .why-ql-custom-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .why-ql-custom-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .why-ql-custom-area .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        display: flex;
+        gap: 20px;
+      }
+      .why-ql-custom-area .serial-no {
+        font-family: Alexandria;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: 600;
+        color: #16529b;
+      }
+
+      .why-ql-custom-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .why-ql-custom-area {
+          padding: 50px 0;
+        }
+
+        .why-ql-custom-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .why-ql-custom-area .serial-no {
+          font-size: 3rem;
+          line-height: 2rem;
+        }
+        .why-ql-custom-area .info-card-wrapper {
+          gap: 10px;
+        }
+        .why-ql-custom-area .info-card {
+          gap: 10px;
+        }
+      }
+
+      /*Quality and testing section*/
+
+      .quality-testing-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .quality-testing-area .quality-testing-wrapper {
+        display: flex;
+        gap: 20px;
+      }
+
+      .quality-testing-area .section-title {
+        max-width: calc(440 / 1290 * 100%);
+        text-align: start;
+      }
+      .quality-testing-area .section-title p {
+        text-align: justify;
+      }
+
+      .quality-testing-area .info-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .quality-testing-area .info-card-content-wrapper {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+      }
+
+      .quality-testing-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .quality-testing-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        text-align: justify;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .quality-testing-area .info-card-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .quality-testing-area .quality-testing-wrapper {
+          flex-direction: column;
+        }
+        .quality-testing-area .section-title {
+          max-width: 100%;
+          text-align: center;
+        }
+        .quality-testing-area .section-title p {
+          text-align: center;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .quality-testing-area {
+          padding: 50px 0;
+        }
+        .quality-testing-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*Start custom industrial section*/
+
+      .start-custom-industrial-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        background-color: #16529b;
+        overflow: hidden;
+      }
+
+      .start-custom-industrial-area .custom-industrial-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+      }
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .start-custom-industrial-area .section-title {
+        margin-bottom: 0;
+        text-align: left;
+      }
+      .start-custom-industrial-area .section-title h2 {
+        color: #fff;
+      }
+      .start-custom-industrial-area .custom-industrial-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .start-custom-industrial-area .custom-industrial-content p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #fff;
+        text-align: justify;
+      }
+
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        width: calc(520 / 1280 * 100%);
+      }
+      .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper
+        .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .start-custom-industrial-area .custom-industrial-wrapper {
+          gap: 24px;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        .start-custom-industrial-area {
+          padding: 50px .5rem;
+        }
+        .start-custom-industrial-area .custom-industrial-wrapper {
+          flex-direction: column;
+        }
+        .start-custom-industrial-area .section-title {
+          gap: 16px;
+        }
+        .start-custom-industrial-area
+        .custom-industrial-wrapper
+        .custom-industrial-image-wrapper{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="hero-area"
+      style="
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/07/b9877df8e4d24620b19ed986db6d3922b5e2c9a8.jpg');
+      "
+    >
+      <div class="hero-product-container">
+        <div class="hero-content-wrapper">
+          <div class="section-title">
+            <h1>Custom Jumper Wire Harness Solutions Built for Performance</h1>
+            <p>
+              Tailored harnesses with premium terminals and tested for extreme reliability.
+            </p>
+          </div>
+
+          <div class="hero-product-page-btn">
+            <?php
+						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+					  ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumper wire Introduction section -->
+    <div class="product-introduction-area">
+      <div class="product-container mx-auto">
+        <div class="product-introduction-wrapper">
+          <div class="product-introduction-image-wrapper">
+            <div class="image">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/1.png" alt="" />
+            </div>
+          </div>
+          <div class="product-introduction-content-wrapper">
+            <div class="section-title">
+              <h2>Introduction of Jumper Wire Harness</h2>
+            </div>
+            <div class="product-introduction-content">
+              <p>
+                As an expert jumper wire harness manufacturer, QL-Custom
+                Technology Ltd offers reliable and flexible solutions for many
+                cable and wire needs. We use our skills and high-quality
+                materials to make wire harnesses that work well in different
+                devices and machines. Our jumper wire harnesses help connect
+                parts safely and last a long time. Whether you need a simple or
+                custom design, we deliver what fits your project best. Ready to
+                get the perfect wire harness?
+              </p>
+            </div>
+            <div class="product-page-btn">
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumper wire details Section -->
+    <div class="product-introduction-area">
+      <div class="product-container mx-auto">
+        <div
+          class="product-introduction-wrapper"
+        >
+          <div class="product-introduction-content-wrapper">
+            <div class="section-title">
+              <h2>Details of the Jumper Wire Harness</h2>
+            </div>
+            <div class="product-introduction-content">
+              <p>
+                A jumper wire harness is a set of wires grouped to connect
+                different parts of an electrical system. It helps send power or
+                signals from one point to another. You can think of it like a
+                bridge that links different electronic parts so they can work
+                together. Jumper harnesses come in many shapes and sizes. They
+                can be simple or complex, depending on what you need.
+              </p>
+              <p>
+                How does it work? The wires inside the harness carry electricity
+                or data. Each wire has a specific place to connect. When plugged
+                in, the harness keeps the wires organized and safe. This
+                prevents tangled wires and stops damage. Also, jumper wire
+                harnesses make it easy to fix or change connections.
+              </p>
+              <p>
+                People use jumper wire harnesses in cars, machines, and many
+                electronics. They help save time during installation and make
+                systems more reliable. If you want to build or repair
+                electronics, a jumper harness is a handy tool. It keeps your
+                wiring neat and your devices working well.
+              </p>
+            </div>
+          </div>
+          <div class="product-introduction-image-wrapper">
+            <div class="image">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jumper wire advantage section -->
+
+    <div class="jumper-wire-advantage-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Advantages of Using Our Jumper Wire Harness</h2>
+          <p>
+            We take pride in offering the best jumper wire harness for all your
+            wiring needs. Our harnesses are designed to make your work easier,
+            safer, and more reliable. Here are four big advantages of using our
+            wire harness.
+          </p>
+        </div>
+
+        <div class="icon-card-wrapper">
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-9.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Easy and Fast Installation</h4>
+              <p class="icon-card-desc">
+                Our jumper wire harnesses are made to fit perfectly and connect
+                quickly. Because the wires come bundled and labeled, you don’t
+                have to spend hours sorting or guessing where each wire goes.
+                This saves a lot of time during installation. Also, our
+                terminals and joints use double crimping and insulation to make
+                connections strong and safe right from the start.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-10.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Better Safety and Protection</h4>
+
+              <p class="icon-card-desc">
+                Safety is very important in any electrical project. Our jumper
+                wire harness comes with pre-insulated terminals and fully
+                insulated joints. These features protect wires from short
+                circuits and sparks. The insulation also shields the wires from
+                dust, water, and heat. This means your wires last longer and
+                work without problems.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-removebg-preview-14.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Neat and Organized Wiring</h4>
+
+              <p class="icon-card-desc">
+                Messy wires can cause problems and make repairs hard. Our jumper
+                wire harness bundles the wires tightly into one neat unit. This
+                makes your wiring look clean and professional. It also prevents
+                wires from tangling or breaking. When wires are organized, it is
+                easier to find and fix any issue if something goes wrong later.
+              </p>
+            </div>
+          </div>
+          <div class="icon-card">
+            <div class="icon-card-content-wrapper">
+              <div class="jumper-wire-img-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-11.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+              <h4 class="icon-card-title">Strong and Durable Connections</h4>
+
+              <p class="icon-card-desc">
+                Our jumper wire harness uses double crimping on all terminals
+                and joints. This means the wire is held firmly in two spots, so
+                it does not come loose easily. Plus, we use high-quality
+                materials that resist shaking, heat, and wear. This makes our
+                harness last longer even in tough conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumper wire material recommendation section -->
+    <div class="jumper-wire-recommendation-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendations for Jumper Wire Harness</h2>
+          <p>
+            Choosing the right materials for a jumper wire harness is key to
+            making it safe, strong, and reliable. Using the right terminals and
+            joints helps wires connect better and keeps your devices working
+            well. Here are some of our best material recommendations for wire
+            harnesses.
+          </p>
+        </div>
+
+        <div class="recommend-material-card-wrapper">
+          <!-- Card 1 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-12.png"
+                alt="Fork terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Fork-Shaped Pre-Insulated Terminal (TU-JTK Type)
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Connecting wires quickly to screws or posts.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This fork-shaped terminal is designed to
+                slide easily around screws or posts, making connection fast and
+                simple. It uses double crimping, which means the wire is
+                squeezed tightly in two spots for a stronger hold. The
+                pre-insulated cover protects the wire and stops short circuits.
+                Because it holds wires firmly, it prevents loosening caused by
+                shaking or vibrations. This terminal works great in machines or
+                cars where wires must stay connected safely.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/p_bigimg146850935141319797.png"
+                alt="Round terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Round Pre-Insulated Terminal (TO-JTK Type)
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Securing wires to bolts or studs.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> The round, ring-like shape fits perfectly
+                on bolts or studs, giving a solid connection point. Double
+                crimping grips the wire in two places, so it won't slip out
+                easily. The insulation protects the wire and connection from
+                damage or electric shocks. This type is perfect for tight spaces
+                because it sits flat and takes up little room. It keeps
+                connections safe and neat, even in crowded wiring setups.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/c0d4fa031f74648a4c57dbbb64dff938.png"
+                alt="Nylon joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Nylon Pre-Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Joining wires while protecting them from water
+                and dust.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> The nylon cover is strong and keeps dirt,
+                dust, and moisture away from the wire joint. Double crimping
+                holds wires tightly inside the joint so they don't come loose
+                when the harness moves. Nylon is also light and flexible, which
+                helps when wires bend or twist. This joint is easy to use and
+                helps your harness last longer in tough conditions. It is a
+                smart choice for outdoor or machine wiring.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/013cd81878604c8a8dd02123d31e089c.png"
+                alt="Female insulated joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Female Fully Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Safe and secure female terminal connections.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint fully covers the female
+                terminal, blocking any chance of sparks or short circuits. The
+                double crimping inside holds wires firmly so the connection does
+                not break. Its full insulation keeps electricity safely inside
+                the wires, protecting both the device and the user. This joint
+                is very reliable for electronics where safety matters most. It
+                also helps make the wiring look clean and organized.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-13.png"
+                alt="Female pre-insulated joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Female Pre-Insulated Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Reliable female terminal connections with basic
+                insulation.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint offers strong wire holding
+                through double crimping, making sure wires stay fixed. It has
+                pre-insulation to protect the connection from dust and minor
+                moisture. The design is simple yet effective, making it easy to
+                use in many wiring projects. It helps prevent electrical faults
+                while keeping wiring tidy. This joint works well in places where
+                full insulation is not required but safety is still important.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="material-card flex-row-reversed">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-14.png"
+                alt="Sheet-shaped terminal"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Sheet-Shaped Pre-Insulated Terminal
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Reliable female terminal connections with basic
+                insulation.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> This joint offers strong wire holding
+                through double crimping, making sure wires stay fixed. It has
+                pre-insulation to protect the connection from dust and minor
+                moisture. The design is simple yet effective, making it easy to
+                use in many wiring projects. It helps prevent electrical faults
+                while keeping wiring tidy. This joint works well in places where
+                full insulation is not required but safety is still important.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/image-15.png"
+                alt="Shoulder-shaped joint"
+                class="image"
+              />
+            </div>
+            <div class="material-card-content-wrapper">
+              <h4 class="material-card-title">
+                Double Crimping Shoulder-Shaped Male and Female Fully Insulated
+                Joint
+              </h4>
+              <p class="material-card-desc">
+                <b>Best for: </b>Easy-to-connect male and female terminal pairs
+                with full protection.
+              </p>
+              <p class="material-card-desc">
+                <b>Why it works: </b> These male and female terminals have a
+                shoulder shape that locks them tightly when connected. Double
+                crimping inside holds wires firmly, while full insulation covers
+                the whole joint to prevent shorts. This pair allows quick
+                connecting and disconnecting without losing safety or stability.
+                It works well in devices that need regular maintenance or
+                changes. The full insulation also protects users from electric
+                shocks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- solutions section -->
+     <div class="product-introduction-area solutions-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Jumper Wire Harness Solutions Tailored to Your Industry</h2>
+          <p>We know that every industry has special needs. That is why we offer custom jumper wire harness solutions designed just for you. No matter your field, we create harnesses that fit perfectly, work safely, and last long. Here are three custom solutions tailored to different industries.</p>
+        </div>
+        <div class="product-introduction-wrapper">
+          <div class="product-introduction-content-wrapper">
+            <div class="product-introduction-content">
+              <h3>Automotive Industry Solution</h3>
+              <p>
+                Cars and trucks need strong and safe wiring that can handle heat, vibrations, and movement. Our custom harnesses for the automotive industry use high-quality insulated terminals and durable wires. We design them to fit every vehicle model perfectly. This helps prevent shorts and keeps electrical systems working well. Plus, our harnesses are easy to install and repair, saving time in busy workshops.
+              </p>
+              <h3>Industrial Machinery Solution</h3>
+              <p>
+                Factories use big machines that work hard every day. Our custom jumper wire harnesses for industrial machinery are made to survive tough conditions like heat, dust, and shaking. We use strong materials and double crimping terminals to hold wires firmly. Our harnesses help keep machines running without electrical problems. They also make maintenance easier by keeping wires neat and organized.
+              </p>
+              <h3>Consumer Electronics Solution</h3>
+              <p>
+                Small gadgets and devices need tiny, precise wiring to work correctly. Our custom wire harnesses for consumer electronics are designed with care to fit in tight spaces. We use lightweight and flexible wires with pre-insulated joints to protect delicate parts. These harnesses make electronics safer and more reliable while keeping designs sleek and tidy.
+              </p>
+            </div>
+            <div class="product-page-btn">
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
+            </div>
+          </div>
+          <div class="product-introduction-image-wrapper">
+            <div class="image">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/Group-41741.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section Common Applications -->
+    <div class="common-applications-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Common Applications of Jumper Wire Harness</h2>
+          <p>
+            We know how important a good wire harness is for many kinds of
+            projects. Jumper wire harnesses help connect different parts of
+            machines and devices safely and easily. They come in many shapes and
+            sizes, but their job is always the same—to carry power and signals
+            where they are needed. Here are four common applications where wire
+            harnesses play a big role.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/0388b46b6826201f705c0add9cd0e85fe2302a5a.jpg"
+                alt="Automotive application"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Automotive Industry</h4>
+              <p class="info-card-desc">
+                One of the most popular uses of jumper wire harnesses is in cars
+                and trucks. Vehicles have many electrical parts like lights,
+                sensors, and control units. Jumper harnesses connect these parts
+                quickly and keep everything working smoothly. They protect wires
+                from heat and vibration while the vehicle moves.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/64669168f39735bb9ccea26d7378a3678ca2c54a.jpg"
+                alt="Industrial machinery"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Industrial Machines</h4>
+              <p class="info-card-desc">
+                Industrial machines use jumper wire harnesses to connect motors,
+                switches, and control panels. These machines often work in tough
+                places with dust, heat, and strong vibrations. Jumper harnesses
+                keep the wiring safe and organized so the machine runs well
+                without breakdowns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/573f0390121810250693fc7a627fb4ff7f364e72.jpg"
+                alt="Home appliances"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Home Appliances</h4>
+              <p class="info-card-desc">
+                Many home appliances like washing machines, refrigerators, and
+                air conditioners also use jumper wire harnesses. These harnesses
+                help connect the electronic parts inside, making sure they work
+                properly. Because home appliances need to be safe and durable,
+                our pre-insulated wire harnesses are a perfect fit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/759f1fe074d7336805cb5c28c37bdd28fad6a602.jpg"
+                alt="Electronics"
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h4 class="info-card-title">Electronics and Gadgets</h4>
+              <p class="info-card-desc">
+                Small electronic devices and gadgets also rely on jumper wire
+                harnesses. They help link sensors, batteries, switches, and
+                screens inside these devices. A neat and reliable wire harness
+                keeps everything connected without loose wires.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section why ql-custom -->
+    <div class="why-ql-custom-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Why Choose QL-Custom for Jumper Wire Harness Manufacturing?</h2>
+          <p>
+            When you need a reliable jumper wire harness, QL-Custom is the best
+            choice. We have years of experience making wire harnesses that work
+            perfectly in many devices and machines. Our team uses high-quality
+            materials and the latest tools to build strong and safe wire
+            harnesses.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <span class="serial-no">1</span>
+            <p class="info-card-desc">
+              We focus on quality. Every jumper wire harness we make goes
+              through strict tests. This ensures the wires stay connected and
+              safe even in tough conditions. We also use materials like double
+              crimping terminals and full insulation to keep your wiring
+              protected from heat, water, and damage.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <span class="serial-no">2</span>
+            <p class="info-card-desc">
+              We offer custom designs. We understand that every project is
+              different. So, we work closely with you to create a wire harness
+              that fits your exact needs. This saves you time and money while
+              giving you the best performance.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <span class="serial-no">3</span>
+            <p class="info-card-desc">
+              Our customer service is friendly and helpful. We listen carefully
+              to your requirements and answer your questions quickly. You can
+              trust us to deliver on time and support you every step of the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quality and testing section -->
+    <div class="quality-testing-area">
+      <div class="product-container mx-auto quality-testing-wrapper">
+        <div class="section-title">
+          <h2>Our Quality Standards & Testing Procedures</h2>
+          <p>
+            We take quality very seriously. When you buy a jumper wire harness
+            from us, you get a product that meets high standards. We make sure
+            every wire harness is safe, strong, and reliable. To do this, we
+            follow strict quality standards and testing procedures. Here is how
+            we keep our quality high:
+          </p>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Material Inspection</h3>
+            <p class="info-card-desc">
+              We start by checking all materials before production. This means
+              inspecting wires, terminals, and insulation. We only use materials
+              that pass our tests for strength and safety. This helps us build a
+              wire harness that lasts long.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">info-card-wrapper</h3>
+            <p class="info-card-desc">
+              Our skilled team uses advanced machines to make jumper harnesses.
+              We control every step carefully to avoid mistakes. This precision
+              ensures every wire is connected properly and tightly.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Double Crimping Check</h3>
+            <p class="info-card-desc">
+              We test the double crimping on terminals and joints. Double
+              crimping means the wire is squeezed firmly in two spots. This
+              keeps wires from coming loose and improves safety.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Insulation Testing</h3>
+            <p class="info-card-desc">
+              We check that all insulation covers the wires completely. Good
+              insulation protects wires from heat, water, and electric shocks.
+              This testing helps prevent short circuits and other problems.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Electrical Performance Test</h3>
+            <p class="info-card-desc">
+              Every jumper wire harness goes through a test to make sure
+              electricity flows well. We look for breaks, shorts, or weak spots.
+              This step ensures your device will work without electrical faults.
+            </p>
+          </div>
+          <!-- Card 6 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Durability Test</h3>
+            <p class="info-card-desc">
+              We shake, bend, and heat the harness to see if it can handle tough
+              conditions. This makes sure the jumper harness stays strong in
+              real use.
+            </p>
+          </div>
+          <!-- Card 7 -->
+          <div class="info-card info-card-content-wrapper">
+            <h3 class="info-card-title">Final Quality Inspection</h3>
+            <p class="info-card-desc">
+              Before shipping, we inspect each jumper wire harness carefully. We
+              check for neat wiring, correct length, and clean connections.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Industrial section -->
+    <div class="start-custom-industrial-area">
+      <div class="product-container mx-auto">
+        <div class="custom-industrial-wrapper">
+          <div class="custom-industrial-image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/07/3811519b0f74bc243cb4ad76ffc3509ab11a1d22.jpg"
+              alt=""
+              class="image"
+            />
+          </div>
+          <div class="custom-industrial-content-wrapper">
+            <div class="section-title">
+              <h2>Start Your Custom Industrial Wire Harness Today</h2>
+            </div>
+            <div class="custom-industrial-content">
+              <p>
+                Ready to power your machines with a strong and safe solution?
+                Start your custom industrial wire harness today with QL-Custom.
+                We design and build harnesses that fit your needs perfectly.
+                Whether you work in factories, on farms, or in vehicles, we’ve
+                got you covered. Just tell us what you need, and our team will
+                handle the rest—from design to fast delivery. We use top
+                materials and test every product for safety. So, don’t wait.
+                Let’s build a custom wire harness that works just right for you.
+                Contact us now and get started with a smart, simple, and strong
+                solution today!
+              </p>
+            </div>
+            <div class="product-page-btn">
+              <?php
+							echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+						?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
