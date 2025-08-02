@@ -371,7 +371,7 @@
         }
       }
 
-     @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 767px) {
         .benefits-of-service-area {
           padding: 50px 8px;
         }
@@ -495,7 +495,7 @@
         flex-direction: column;
       }
 
-      .super-solution-area .info-card-wrapper  .flex-col-reverse {
+      .super-solution-area .info-card-wrapper .flex-col-reverse {
         flex-direction: column-reverse;
       }
 
@@ -533,21 +533,103 @@
         object-fit: cover;
       }
 
-      @media only screen and (max-width: 1024px){
-        .super-solution-area .info-card-wrapper{
+      @media only screen and (max-width: 1024px) {
+        .super-solution-area .info-card-wrapper {
           gap: 10px;
         }
       }
 
-      @media only screen and (max-width: 767px){
+      @media only screen and (max-width: 767px) {
         .super-solution-area {
           padding: 50px 8px;
         }
         .super-solution-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
-        .super-solution-area .info-card-wrapper  .flex-col-reverse{
+        .super-solution-area .info-card-wrapper .flex-col-reverse {
           flex-direction: column;
+        }
+      }
+
+      .application-appliance-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .application-appliance-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .application-appliance-area .info-card-wrapper .info-card {
+        padding: 16px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background-color: #f0f0f0;
+      }
+
+      .application-appliance-area
+        .info-card-wrapper
+        .info-card
+        .info-card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .application-appliance-area
+        .info-card-wrapper
+        .info-card
+        .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .application-appliance-area
+        .info-card-wrapper
+        .info-card
+        .info-card-desc {
+        font-family: Alexandria;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .application-appliance-area
+        .info-card-wrapper
+        .info-card
+        .info-card-image-wrapper {
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      .application-appliance-area
+        .info-card-wrapper
+        .info-card
+        .info-card-image-wrapper
+        .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .application-appliance-area {
+          padding: 50px 8px;
+        }
+        .application-appliance-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
       
@@ -885,8 +967,8 @@
         </div>
       </div>
     </div>
-    <!--! Super Solution section #first #super  -->
-    <!--! Super Solution section  -->
+
+    <!-- Super Solution section #super  -->
     <div class="super-solution-area">
       <div class="product-container mx-auto">
         <div class="section-title">
@@ -966,6 +1048,101 @@
                 connects all parts the right way. Even in a tight spot, this
                 solution gives clean wiring and better airflow. It helps devices
                 work faster and stay cool.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! Application Appliance Section #application #first -->
+    <div class="application-appliance-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Top Applications of Appliance Wire Harness</h2>
+          <p>
+            Appliance wire harnesses are a big part of how modern machines work.
+            These harnesses are groups of wires bundled together. They help
+            connect parts and send power or signals. Without them, many home and
+            industrial machines would not run. Let’s look at four common ways
+            wire harnesses are used.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4443.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Home Appliances</h3>
+              <p class="info-card-desc">
+                First, wire harnesses are found in everyday home appliances.
+                Think of your washing machine, microwave, or fridge. These
+                machines need power and control signals to work properly. A wire
+                harness connects the motor, buttons, sensors, and display. It
+                keeps the wires safe and in place. This helps your appliance
+                work without errors or fire risks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4444.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">HVAC Systems</h3>
+              <p class="info-card-desc">
+                Next, wire harnesses are used in heating, ventilation, and air
+                conditioning (HVAC) systems. These systems have many parts like
+                fans, heaters, thermostats, and compressors. A wire harness
+                brings all of them together. It sends power and control signals
+                to each part. This makes sure your AC or heater keeps the room
+                comfy, no matter the weather.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4445.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Kitchen Equipment</h3>
+              <p class="info-card-desc">
+                Wire harnesses are also used in large kitchen equipment. Think of ovens, dishwashers, and blenders. These machines need safe and clean wiring inside. A wire harness helps organize wires and prevents them from getting hot or tangled. This means safer cooking and less chance of damage.
+              </p>
+            </div>
+          </div>
+           <!-- Card 4 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4446.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Industrial Machines</h3>
+              <p class="info-card-desc">
+                Lastly, wire harnesses are used in big industrial appliances. These can include packing machines, commercial dryers, and even vending machines. These machines have sensors, motors, and control panels. A wire harness connects all these parts. It helps machines run fast and safely in factories or shops.
               </p>
             </div>
           </div>
