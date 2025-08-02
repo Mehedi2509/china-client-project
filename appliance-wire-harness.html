@@ -290,8 +290,6 @@
         padding-bottom: 8px;
       }
 
-
-
       .benefits-of-service-area
         .info-card-wrapper
         .info-card
@@ -374,7 +372,7 @@
       }
 
       @media only screen and (max-width: 575px) {
-        .benefits-of-service-area{
+        .benefits-of-service-area {
           padding: 50px 8px;
         }
         .benefits-of-service-area .info-card-wrapper .info-card {
@@ -387,6 +385,94 @@
           .info-card-image-wrapper {
           aspect-ratio: unset;
           flex-shrink: unset;
+        }
+      }
+
+      .material-recommendation-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .material-recommendation-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .material-recommendation-area .info-card-wrapper .info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .material-recommendation-area .info-card-content-wrapper {
+        background-color: #f0f0f0;
+        height: 416px;
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .material-recommendation-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .material-recommendation-area .info-card-desc {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 24px;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .material-recommendation-area .info-card-image-wrapper {
+        width: 305px;
+        aspect-ratio: 2/3;
+        border-radius: 12px;
+      }
+
+      .material-recommendation-area .info-card-image-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .material-recommendation-area .info-card-top-margin {
+        margin-top: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .material-recommendation-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 40px;
+        }
+        .material-recommendation-area .info-card-top-margin {
+          margin-top: 0;
+        }
+        .material-recommendation-area .info-card-content-wrapper {
+          height: fit-content;
+        }
+      }
+
+      @media only screen and (max-width: 575px) {
+        .material-recommendation-area {
+          padding: 50px 8px;
+        }
+        .material-recommendation-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .material-recommendation-area .info-card-image-wrapper {
+          aspect-ratio: unset;
         }
       }
     </style>
@@ -480,7 +566,7 @@
       </div>
     </div>
 
-    <!--! Benefits of service section #benefits   -->
+    <!-- Benefits of service section #benefits   -->
 
     <div class="benefits-of-service-area">
       <div class="product-container mx-auto">
@@ -585,13 +671,139 @@
             <div class="info-card-content-wrapper">
               <div class="info-card-title-wrapper">
                 <div class="title-icon"></div>
-                <h4 class="info-card-title">
-                  Safe and Reliable Performance
-                </h4>
+                <h4 class="info-card-title">Safe and Reliable Performance</h4>
               </div>
               <p class="info-card-desc">
-                Safety is key when dealing with electrical parts. Our appliance wire harnesses are made to meet top safety standards. Every product goes through strict testing before it leaves our factory. We check for strength, heat resistance, and proper connection. So, when you use our wire harness, you know it will work safely and reliably.
+                Safety is key when dealing with electrical parts. Our appliance
+                wire harnesses are made to meet top safety standards. Every
+                product goes through strict testing before it leaves our
+                factory. We check for strength, heat resistance, and proper
+                connection. So, when you use our wire harness, you know it will
+                work safely and reliably.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--! Material recommendation  Section #first #recommendation-->
+
+    <div class="material-recommendation-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendations for Appliance Wire Harness</h2>
+          <p>
+            Choosing the right materials is very important when making an
+            appliance wire harness. The right materials help improve safety,
+            make the harness last longer, and keep the appliance working well.
+            Below are four top material recommendations we suggest for your wire
+            harness needs.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card info-card-top-margin">
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">PVC Sheath</h3>
+              <p class="info-card-desc">
+                <b>Best for:</b> Covering and protecting wires in the wire
+                harness.
+                <br />
+                <b>Why it works:</b> PVC (Polyvinyl Chloride) is strong,
+                flexible, and affordable. It gives a smooth outer cover that
+                protects wires from heat, moisture, and wear. This keeps the
+                wires safe from damage and reduces the risk of short circuits.
+                PVC also holds its shape well and is easy to work with. That
+                makes it perfect for many home and industrial appliance wire
+                harnesses.
+              </p>
+            </div>
+
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/PVC-Sheath.png"
+                alt=""
+                class="image"
+              />
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Electronic Wire</h3>
+              <p class="info-card-desc">
+                <b>Best for: </b>Carrying power or signals between appliance
+                parts. <br />
+                <b>Why it works: </b>Electronic wires are designed to carry
+                electric current safely. They are made with copper, which is a
+                great conductor of electricity. These wires are also coated to
+                protect against shocks and heat. Because of this, they help your
+                appliance run smoothly and safely. Using good-quality electronic
+                wire in your appliance wire harness means better performance and
+                fewer problems.
+              </p>
+            </div>
+
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Electronic-Wire.png"
+                alt=""
+                class="image"
+              />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card info-card-top-margin">
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Terminal Wire</h3>
+              <p class="info-card-desc">
+                <b>Best for: </b>Connecting wires to switches, motors, or
+                circuit boards. <br />
+                <b>Why it works: </b>Terminal wires come with special ends, or
+                “terminals,” that make strong connections. These wires are built
+                to handle bending and pulling, which often happens inside
+                appliances. They also help make wiring easier and quicker.
+                Terminals provide tight fits, reducing the chance of loose
+                wires. This makes your appliance's wire harness more stable and
+                safe to use.
+              </p>
+            </div>
+
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Terminal-Wire.png"
+                alt=""
+                class="image"
+              />
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">Transparent Label</h3>
+              <p class="info-card-desc">
+                <b>Best for: </b>Easy identification of wires during and after
+                assembly. <br />
+                <b>Why it works: </b>Transparent labels are simple but very
+                helpful. They allow you to mark wires without covering their
+                colors. That makes it easier to match the right wire to the
+                right spot during setup or repairs. These labels are also
+                waterproof and stick well. This helps technicians save time and
+                avoid mistakes when working with your appliance wire harness.
+              </p>
+            </div>
+
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Transparent-Label.png"
+                alt=""
+                class="image"
+              />
             </div>
           </div>
         </div>
