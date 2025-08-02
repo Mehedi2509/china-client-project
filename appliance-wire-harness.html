@@ -740,7 +740,7 @@
         flex-direction: column;
         gap: 20px;
         background-color: #ffffff;
-        box-shadow: 0px 0px 6px 0px #0000001F;
+        box-shadow: 0px 0px 6px 0px #0000001f;
       }
 
       .maintenance-tips-area .icon-card-wrapper .icon-card .icon-card-title {
@@ -782,6 +782,65 @@
           padding: 50px 8px;
         }
         .maintenance-tips-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .start-your-harness-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: #16529B;
+      }
+
+      .start-your-harness-area .start-your-harness-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .start-your-harness-area .content-wrapper .section-title {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: start;
+      }
+
+      .start-your-harness-area .content-wrapper .section-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        color: #FFFFFF;
+        text-align: justify;
+      }
+
+      .start-your-harness-area .image-wrapper {
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .start-your-harness-area .image-wrapper .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .start-your-harness-area .start-your-harness-wrapper {
+          gap: 20px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .start-your-harness-area {
+          padding: 50px 8px;
+        }
+        .start-your-harness-area .start-your-harness-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
       }
@@ -1466,7 +1525,6 @@
     </div>
 
     <!-- Maintenance Tips section -->
-
     <div class="maintenance-tips-area">
       <div class="product-container mx-auto">
         <div class="section-title">
@@ -1541,10 +1599,43 @@
             <div class="icon-card-content-wrapper">
               <h3 class="icon-card-title">When to Call an Expert</h3>
               <p class="icon-card-desc">
-                If you find burnt wires or melted plastic, stop using the appliance. This can be a serious danger. In this case, call a professional or reach out to us for help. Our expert team can replace the damaged wire harness quickly and safely.
+                If you find burnt wires or melted plastic, stop using the
+                appliance. This can be a serious danger. In this case, call a
+                professional or reach out to us for help. Our expert team can
+                replace the damaged wire harness quickly and safely.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- start-your-harness section -->
+
+    <div class="start-your-harness-area">
+      <div class="product-container mx-auto start-your-harness-wrapper">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4442.png"
+            alt=""
+            class="image"
+          />
+        </div>
+        <div class="content-wrapper">
+          <h2 class="section-title">
+            Start your custom appliance wire harness with us today
+          </h2>
+          <p class="section-desc">
+            Start your custom appliance wire harness with us today and see the
+            difference quality makes. We design each wire harness to fit your
+            appliance needs perfectly. Whether you're making ovens, fridges, or
+            washing machines, we’ve got you covered. Our team uses strong,
+            tested wires for safe and lasting use. We also help you choose the
+            right connectors, lengths, and labels. That way, your machines work
+            better and last longer. Plus, our fast service saves you time. So,
+            don’t wait. Let us help you build the best wire harness for your
+            project. Contact us now and get started today!
+          </p>
         </div>
       </div>
     </div>
