@@ -106,7 +106,7 @@
         font-size: 52px;
         font-weight: 400;
         line-height: initial;
-        color: #fff; 
+        color: #fff;
       }
       .hero-area .section-title p {
         font-family: Alexandria;
@@ -161,11 +161,9 @@
       .product-introduction-area .product-introduction-wrapper {
         display: flex;
         align-items: center;
-        gap: 120px;
-      }
-      .product-introduction-area.solutions-area .product-introduction-wrapper {
         gap: 40px;
       }
+
       .product-introduction-area
         .product-introduction-wrapper
         .product-introduction-content-wrapper {
@@ -177,9 +175,7 @@
       .product-introduction-area .section-title {
         text-align: left;
       }
-      .product-introduction-area.solutions-area .section-title {
-        text-align: center;
-      }
+
       .product-introduction-area .product-introduction-content {
         display: flex;
         flex-direction: column;
@@ -188,24 +184,17 @@
       .product-introduction-area.solutions-area .product-introduction-content {
         gap: 10px;
       }
-      .product-introduction-area .product-introduction-content h3:first-child {
-        margin-top: 0;
-      }
-      .product-introduction-area .product-introduction-content h3 {
-        font-size: 24px;
-        font-weight: 400;
-        font-family: Alexandria;
-        line-height: 36px;
-        color: #4b5563;
-        margin-top: 10px;
-      }
+
       .product-introduction-area .product-introduction-content p {
         font-size: 18px;
         font-weight: 300;
         font-family: Alexandria;
         line-height: 28px;
         color: #4b5563;
+        text-align: justify;
       }
+
+      /*
       .product-introduction-area .product-page-btn {
         display: flex;
         margin-top: 24px;
@@ -216,19 +205,17 @@
         font-weight: 400;
         line-height: initial;
       }
+      */
+
       .product-introduction-area
         .product-introduction-wrapper
         .product-introduction-image-wrapper {
         display: flex;
-        width: 560px;
+        width: 530px;
+        aspect-ratio: 1.043 / 1;
         flex-shrink: 0;
       }
-      .product-introduction-area.solutions-area
-        .product-introduction-wrapper
-        .product-introduction-image-wrapper {
-        flex-shrink: 0;
-        width: 731px;
-      }
+
       .product-introduction-area
         .product-introduction-wrapper
         .product-introduction-image-wrapper
@@ -236,14 +223,6 @@
         display: flex;
         width: 100%;
         overflow: hidden;
-      }
-      .product-introduction-area
-        .product-introduction-wrapper
-        .product-introduction-image-wrapper
-        .image
-        img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
       }
 
@@ -259,12 +238,7 @@
           width: 100%;
           padding: 0;
         }
-        .product-introduction-area.solutions-area
-        .product-introduction-wrapper
-        .product-introduction-image-wrapper {
-          flex-shrink: unset;
-          width: 100%;
-        }
+
         .product-introduction-area
           .product-introduction-wrapper
           .product-introduction-image-wrapper
@@ -282,229 +256,222 @@
         .product-introduction-area .section-title {
           gap: 16px;
         }
-        .product-introduction-area
-          .product-introduction-wrapper
-          .product-introduction-content
-          .feature-list-desc {
-          width: 55%;
-        }
-        .product-introduction-area .product-page-btn .popup-form-btn {
-          padding: 10px 16px;
-        }
-      }
 
-      /* Advantages of using our jumper wire harness */
+        /* Advantages of using our jumper wire harness */
 
-      .jumper-wire-advantage-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-
-      .jumper-wire-advantage-area .icon-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-      }
-
-      .jumper-wire-advantage-area .icon-card-wrapper .icon-card {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        box-shadow: 0px 0px 8px 0px #0000001a;
-        border-radius: 12px;
-      }
-      .jumper-wire-advantage-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .jumper-wire-advantage-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper
-        .icon-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #4b5563;
-      }
-      .jumper-wire-advantage-area
-        .icon-card-wrapper
-        .icon-card
-        .icon-card-content-wrapper
-        .icon-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: justify;
-        color: #4b5563;
-      }
-
-      .jumper-wire-advantage-area .jumper-wire-img-wrapper {
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
-        border-radius: 100%;
-      }
-
-      .jumper-wire-advantage-area .jumper-wire-img-wrapper .image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @media only screen and (max-width: 767px) {
         .jumper-wire-advantage-area {
-          padding: 50px 0;
+          padding: 70px 16px;
+          max-width: 1920px;
+          margin: 0 auto;
+          overflow: hidden;
         }
+
         .jumper-wire-advantage-area .icon-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr;
+          column-gap: 20px;
+          row-gap: 20px;
         }
-      }
-      /*recommendation jumper wire section*/
 
-      .jumper-wire-recommendation-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
+        .jumper-wire-advantage-area .icon-card-wrapper .icon-card {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          box-shadow: 0px 0px 8px 0px #0000001a;
+          border-radius: 12px;
+        }
+        .jumper-wire-advantage-area
+          .icon-card-wrapper
+          .icon-card
+          .icon-card-content-wrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .jumper-wire-advantage-area
+          .icon-card-wrapper
+          .icon-card
+          .icon-card-content-wrapper
+          .icon-card-title {
+          font-family: Alexandria;
+          font-size: 24px;
+          line-height: 36px;
+          font-weight: 400;
+          color: #4b5563;
+        }
+        .jumper-wire-advantage-area
+          .icon-card-wrapper
+          .icon-card
+          .icon-card-content-wrapper
+          .icon-card-desc {
+          font-family: Alexandria;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 300;
+          text-align: justify;
+          color: #4b5563;
+        }
 
-      .jumper-wire-recommendation-area .recommend-material-card-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
+        .jumper-wire-advantage-area .jumper-wire-img-wrapper {
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+          border-radius: 100%;
+        }
 
-      .jumper-wire-recommendation-area .material-card {
-        padding: 1.5rem;
-        border-radius: 20px;
-        box-shadow: 0px 0px 8px 0px #0000001a;
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
+        .jumper-wire-advantage-area .jumper-wire-img-wrapper .image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
-      .jumper-wire-recommendation-area .flex-row-reversed {
-        flex-direction: row-reverse;
-      }
+        @media only screen and (max-width: 767px) {
+          .jumper-wire-advantage-area {
+            padding: 50px 0;
+          }
+          .jumper-wire-advantage-area .icon-card-wrapper {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+        /*recommendation jumper wire section*/
 
-      .jumper-wire-recommendation-area .material-card .material-card-image-wrapper {
-        width: 260px;
-        aspect-ratio: 2.6/2.3;
-        flex-shrink: 0;
-        display: flex;
-      }
-
-      .jumper-wire-recommendation-area
-        .material-card
-        .material-card-image-wrapper
-        .image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .jumper-wire-recommendation-area
-        .material-card
-        .material-card-content-wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .jumper-wire-recommendation-area
-        .material-card
-        .material-card-content-wrapper
-        .material-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #4b5563;
-      }
-
-      .jumper-wire-recommendation-area
-        .material-card
-        .material-card-content-wrapper
-        .material-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: justify;
-        color: #4b5563;
-      }
-
-      @media only screen and (max-width: 767px) {
         .jumper-wire-recommendation-area {
-          padding: 50px 0;
+          padding: 70px 16px;
+          max-width: 1920px;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+
+        .jumper-wire-recommendation-area .recommend-material-card-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
         }
 
         .jumper-wire-recommendation-area .material-card {
-          flex-direction: column;
+          padding: 1.5rem;
+          border-radius: 20px;
+          box-shadow: 0px 0px 8px 0px #0000001a;
+          display: flex;
+          align-items: center;
+          gap: 40px;
         }
-      }
 
-      /* section Common Applications*/
+        .jumper-wire-recommendation-area .flex-row-reversed {
+          flex-direction: row-reverse;
+        }
 
-      .common-applications-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-      .common-applications-area .info-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px;
-        row-gap: 40px;
-      }
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-image-wrapper {
+          width: 260px;
+          aspect-ratio: 2.6/2.3;
+          flex-shrink: 0;
+          display: flex;
+        }
 
-      .common-applications-area .info-card {
-        padding: 1rem;
-        border-radius: 20px;
-        box-shadow: 0px 0px 8px 0px #0000001a;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-image-wrapper
+          .image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
-      .common-applications-area .info-card-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-content-wrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
 
-      .common-applications-area .info-card-title {
-        font-family: Alexandria;
-        font-size: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        color: #4b5563;
-      }
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-content-wrapper
+          .material-card-title {
+          font-family: Alexandria;
+          font-size: 24px;
+          line-height: 36px;
+          font-weight: 400;
+          color: #4b5563;
+        }
 
-      .common-applications-area .info-card-desc {
-        font-family: Alexandria;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 300;
-        text-align: justify;
-        color: #4b5563;
+        .jumper-wire-recommendation-area
+          .material-card
+          .material-card-content-wrapper
+          .material-card-desc {
+          font-family: Alexandria;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 300;
+          text-align: justify;
+          color: #4b5563;
+        }
+
+        @media only screen and (max-width: 767px) {
+          .jumper-wire-recommendation-area {
+            padding: 50px 0;
+          }
+
+          .jumper-wire-recommendation-area .material-card {
+            flex-direction: column;
+          }
+        }
+
+        /* section Common Applications*/
+
+        .common-applications-area {
+          padding: 70px 16px;
+          max-width: 1920px;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+        .common-applications-area .info-card-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 20px;
+          row-gap: 40px;
+        }
+
+        .common-applications-area .info-card {
+          padding: 1rem;
+          border-radius: 20px;
+          box-shadow: 0px 0px 8px 0px #0000001a;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .common-applications-area .info-card-content-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .common-applications-area .info-card-title {
+          font-family: Alexandria;
+          font-size: 24px;
+          line-height: 36px;
+          font-weight: 400;
+          color: #4b5563;
+        }
+
+        .common-applications-area .info-card-desc {
+          font-family: Alexandria;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 300;
+          text-align: justify;
+          color: #4b5563;
+        }
       }
 
       .common-applications-area .info-card-image-wrapper {
@@ -740,7 +707,7 @@
       }
       @media only screen and (max-width: 575px) {
         .start-custom-industrial-area {
-          padding: 50px .5rem;
+          padding: 50px 0.5rem;
         }
         .start-custom-industrial-area .custom-industrial-wrapper {
           flex-direction: column;
@@ -749,8 +716,8 @@
           gap: 16px;
         }
         .start-custom-industrial-area
-        .custom-industrial-wrapper
-        .custom-industrial-image-wrapper{
+          .custom-industrial-wrapper
+          .custom-industrial-image-wrapper {
           width: 100%;
         }
       }
@@ -769,7 +736,8 @@
           <div class="section-title">
             <h1>Custom Jumper Wire Harness Solutions Built for Performance</h1>
             <p>
-              Tailored harnesses with premium terminals and tested for extreme reliability.
+              Tailored harnesses with premium terminals and tested for extreme
+              reliability.
             </p>
           </div>
 
@@ -782,79 +750,62 @@
       </div>
     </div>
 
-    <!-- Jumper wire Introduction section -->
+    <!-- Product Introduction section -->
     <div class="product-introduction-area">
       <div class="product-container mx-auto">
         <div class="product-introduction-wrapper">
           <div class="product-introduction-image-wrapper">
-            <div class="image">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/1.png" alt="" />
-            </div>
+            <img
+              src="./assests/820ed6f20a6af2d0f24e6a5a030e24a756bac23d.png"
+              alt=""
+              class="image"
+            />
           </div>
           <div class="product-introduction-content-wrapper">
             <div class="section-title">
-              <h2>Introduction of Jumper Wire Harness</h2>
+              <h2>Product Introduction</h2>
             </div>
             <div class="product-introduction-content">
               <p>
-                As an expert jumper wire harness manufacturer, QL-Custom
-                Technology Ltd offers reliable and flexible solutions for many
-                cable and wire needs. We use our skills and high-quality
-                materials to make wire harnesses that work well in different
-                devices and machines. Our jumper wire harnesses help connect
-                parts safely and last a long time. Whether you need a simple or
-                custom design, we deliver what fits your project best. Ready to
-                get the perfect wire harness?
+                As a trusted appliance wire harness provider, QL-Custom
+                Technology Ltd delivers reliable and efficient wiring solutions
+                for various home and industrial appliances. We combine expert
+                skills with high-quality materials to create wire harnesses that
+                ensure safe connections and smooth operation. Our wire harnesses
+                are built to last and fit perfectly with your device’s needs.
+                Whether you require standard or customized harnesses, we tailor
+                each product to match your project perfectly. Looking for
+                durable and precise appliance wire harnesses?
               </p>
-            </div>
-            <div class="product-page-btn">
-              <?php
-                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-              ?>
+              <p>
+                An appliance wire harness is a group of wires bundled together
+                to connect different parts inside home or industrial appliances.
+                These wires help send electricity and signals so that the
+                appliance can work properly. Instead of running many loose
+                wires, the harness keeps them organized, safe, and easy to
+                install. You’ll often find wire harnesses in washing machines,
+                refrigerators, ovens, and other machines we use every day.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Jumper wire details Section -->
-    <div class="product-introduction-area">
-      <div class="product-container mx-auto">
-        <div
-          class="product-introduction-wrapper"
-        >
+        <div class="product-introduction-wrapper">
           <div class="product-introduction-content-wrapper">
-            <div class="section-title">
-              <h2>Details of the Jumper Wire Harness</h2>
-            </div>
             <div class="product-introduction-content">
               <p>
-                A jumper wire harness is a set of wires grouped to connect
-                different parts of an electrical system. It helps send power or
-                signals from one point to another. You can think of it like a
-                bridge that links different electronic parts so they can work
-                together. Jumper harnesses come in many shapes and sizes. They
-                can be simple or complex, depending on what you need.
+                This wire harness is made using strong wires, connectors, and
+                plastic covers. Each wire is color-coded for easy use. The wires
+                carry power from one part of the machine to another. For
+                example, in a washing machine, the wire harness links the motor,
+                control panel, and sensors so they work together. The harness
+                also protects the wires from heat, moisture, and shaking. It
+                stops wires from breaking or getting tangled. This helps the
+                appliance last longer and work better.
               </p>
-              <p>
-                How does it work? The wires inside the harness carry electricity
-                or data. Each wire has a specific place to connect. When plugged
-                in, the harness keeps the wires organized and safe. This
-                prevents tangled wires and stops damage. Also, jumper wire
-                harnesses make it easy to fix or change connections.
-              </p>
-              <p>
-                People use jumper wire harnesses in cars, machines, and many
-                electronics. They help save time during installation and make
-                systems more reliable. If you want to build or repair
-                electronics, a jumper harness is a handy tool. It keeps your
-                wiring neat and your devices working well.
-              </p>
-            </div>
-          </div>
-          <div class="product-introduction-image-wrapper">
-            <div class="image">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/2.png" alt="" />
+              <!-- call php button -->
+              <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
             </div>
           </div>
         </div>
@@ -1188,27 +1139,50 @@
       </div>
     </div>
 
-     <!-- solutions section -->
-     <div class="product-introduction-area solutions-area">
+    <!-- solutions section -->
+    <div class="product-introduction-area solutions-area">
       <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Jumper Wire Harness Solutions Tailored to Your Industry</h2>
-          <p>We know that every industry has special needs. That is why we offer custom jumper wire harness solutions designed just for you. No matter your field, we create harnesses that fit perfectly, work safely, and last long. Here are three custom solutions tailored to different industries.</p>
+          <p>
+            We know that every industry has special needs. That is why we offer
+            custom jumper wire harness solutions designed just for you. No
+            matter your field, we create harnesses that fit perfectly, work
+            safely, and last long. Here are three custom solutions tailored to
+            different industries.
+          </p>
         </div>
         <div class="product-introduction-wrapper">
           <div class="product-introduction-content-wrapper">
             <div class="product-introduction-content">
               <h3>Automotive Industry Solution</h3>
               <p>
-                Cars and trucks need strong and safe wiring that can handle heat, vibrations, and movement. Our custom harnesses for the automotive industry use high-quality insulated terminals and durable wires. We design them to fit every vehicle model perfectly. This helps prevent shorts and keeps electrical systems working well. Plus, our harnesses are easy to install and repair, saving time in busy workshops.
+                Cars and trucks need strong and safe wiring that can handle
+                heat, vibrations, and movement. Our custom harnesses for the
+                automotive industry use high-quality insulated terminals and
+                durable wires. We design them to fit every vehicle model
+                perfectly. This helps prevent shorts and keeps electrical
+                systems working well. Plus, our harnesses are easy to install
+                and repair, saving time in busy workshops.
               </p>
               <h3>Industrial Machinery Solution</h3>
               <p>
-                Factories use big machines that work hard every day. Our custom jumper wire harnesses for industrial machinery are made to survive tough conditions like heat, dust, and shaking. We use strong materials and double crimping terminals to hold wires firmly. Our harnesses help keep machines running without electrical problems. They also make maintenance easier by keeping wires neat and organized.
+                Factories use big machines that work hard every day. Our custom
+                jumper wire harnesses for industrial machinery are made to
+                survive tough conditions like heat, dust, and shaking. We use
+                strong materials and double crimping terminals to hold wires
+                firmly. Our harnesses help keep machines running without
+                electrical problems. They also make maintenance easier by
+                keeping wires neat and organized.
               </p>
               <h3>Consumer Electronics Solution</h3>
               <p>
-                Small gadgets and devices need tiny, precise wiring to work correctly. Our custom wire harnesses for consumer electronics are designed with care to fit in tight spaces. We use lightweight and flexible wires with pre-insulated joints to protect delicate parts. These harnesses make electronics safer and more reliable while keeping designs sleek and tidy.
+                Small gadgets and devices need tiny, precise wiring to work
+                correctly. Our custom wire harnesses for consumer electronics
+                are designed with care to fit in tight spaces. We use
+                lightweight and flexible wires with pre-insulated joints to
+                protect delicate parts. These harnesses make electronics safer
+                and more reliable while keeping designs sleek and tidy.
               </p>
             </div>
             <div class="product-page-btn">
@@ -1219,7 +1193,10 @@
           </div>
           <div class="product-introduction-image-wrapper">
             <div class="image">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/07/Group-41741.png" alt="" />
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/07/Group-41741.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
