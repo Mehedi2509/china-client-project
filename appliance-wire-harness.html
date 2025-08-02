@@ -719,6 +719,72 @@
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      .maintenance-tips-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .maintenance-tips-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .maintenance-tips-area .icon-card-wrapper .icon-card {
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 6px 0px #0000001F;
+      }
+
+      .maintenance-tips-area .icon-card-wrapper .icon-card .icon-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .maintenance-tips-area .icon-card-wrapper .icon-card .icon-card-desc {
+        font-family: Alexandria;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .maintenance-tips-area .icon-wrapper {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: #16529b1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .maintenance-tips-area .icon-card-wrapper {
+          gap: 10px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .maintenance-tips-area {
+          padding: 50px 8px;
+        }
+        .maintenance-tips-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -1395,6 +1461,90 @@
             to keep our quality high. Our strict standards and tests help us
             deliver the best wire harnesses every time.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maintenance Tips section -->
+
+    <div class="maintenance-tips-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Maintenance and Troubleshooting Tips</h2>
+          <p>
+            Taking care of your appliance wire harness is very important. A
+            well-maintained wire harness keeps your machines working safely and
+            smoothly. At QL-Custom Technology Ltd, we want to help you get the
+            best performance from your wire harness.
+          </p>
+        </div>
+
+        <div class="icon-card-wrapper">
+          <!-- Card 1 -->
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-1.png"
+                alt=""
+                class="icon"
+              />
+            </div>
+
+            <div class="icon-card-content-wrapper">
+              <h3 class="icon-card-title">Simple Maintenance Tips</h3>
+              <p class="icon-card-desc">
+                Always check the wire harness for signs of damage. Look for
+                cuts, burns, or bent wires. If you see any problems, fix them
+                right away. Next, keep the wire harness clean. Dust and dirt can
+                cause trouble over time. Use a dry cloth to wipe the wires
+                gently. Also, check the connectors. Make sure they are tight and
+                not loose. Loose connections can stop power from flowing and
+                cause the appliance to stop working.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-2.png"
+                alt=""
+                class="icon"
+              />
+            </div>
+
+            <div class="icon-card-content-wrapper">
+              <h3 class="icon-card-title">Helpful Troubleshooting Tips</h3>
+              <p class="icon-card-desc">
+                When your appliance stops working, the wire harness might be the
+                reason. First, check if the wires are plugged in the right way.
+                Sometimes, a simple fix can solve the problem. Next, look for
+                broken or frayed wires. If a wire is broken, the current won’t
+                flow. You can also test the wires using a multimeter. This tool
+                checks if electricity is flowing properly. If the wire harness
+                passes the test, the issue may be somewhere else.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-3.png"
+                alt=""
+                class="icon"
+              />
+            </div>
+
+            <div class="icon-card-content-wrapper">
+              <h3 class="icon-card-title">When to Call an Expert</h3>
+              <p class="icon-card-desc">
+                If you find burnt wires or melted plastic, stop using the appliance. This can be a serious danger. In this case, call a professional or reach out to us for help. Our expert team can replace the damaged wire harness quickly and safely.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
