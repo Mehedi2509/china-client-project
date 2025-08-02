@@ -257,7 +257,7 @@
         }
       }
 
-      @media only screen and (max-width: 575px) {
+      @media only screen and (max-width: 767px) {
         .product-introduction-area {
           padding: 50px 8px;
         }
@@ -371,7 +371,7 @@
         }
       }
 
-      @media only screen and (max-width: 575px) {
+     @media only screen and (max-width: 767px) {
         .benefits-of-service-area {
           padding: 50px 8px;
         }
@@ -464,7 +464,7 @@
         }
       }
 
-      @media only screen and (max-width: 575px) {
+      @media only screen and (max-width: 767px) {
         .material-recommendation-area {
           padding: 50px 8px;
         }
@@ -475,6 +475,82 @@
           aspect-ratio: unset;
         }
       }
+
+      .super-solution-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .super-solution-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .super-solution-area .info-card-wrapper .info-card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      .super-solution-area .info-card-wrapper  .flex-col-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .super-solution-area .info-card-content-wrapper {
+        padding: 8px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .super-solution-area .info-card-title {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      .super-solution-area .info-card-desc {
+        font-family: Alexandria;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .super-solution-area .info-card-image-wrapper {
+        width: 100%;
+      }
+
+      .super-solution-area .info-card-image-wrapper .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px){
+        .super-solution-area .info-card-wrapper{
+          gap: 10px;
+        }
+      }
+
+      @media only screen and (max-width: 767px){
+        .super-solution-area {
+          padding: 50px 8px;
+        }
+        .super-solution-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .super-solution-area .info-card-wrapper  .flex-col-reverse{
+          flex-direction: column;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -687,7 +763,7 @@
       </div>
     </div>
 
-    <!--! Material recommendation  Section #first #recommendation-->
+    <!-- Material recommendation Section #recommendation-->
 
     <div class="material-recommendation-area">
       <div class="product-container mx-auto">
@@ -804,6 +880,93 @@
                 alt=""
                 class="image"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--! Super Solution section #first #super  -->
+    <!--! Super Solution section  -->
+    <div class="super-solution-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Appliance Wire Harness Super Solutions</h2>
+          <p>
+            Appliance wire harnesses are super helpful. They keep wires neat and
+            make machines work better. No matter your industry, there’s a wire
+            harness solution that fits just right. Let’s look at three smart
+            solutions made to meet your needs.
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Custom-Wire-Harness-for-Home-Appliances.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">
+                Custom Wire Harness for Home Appliances
+              </h3>
+              <p class="info-card-desc">
+                For home appliance makers, a custom wire harness is a great
+                pick. It fits the exact size and shape of each machine. So, it
+                keeps all wires in place and lowers the chance of damage.
+                Whether it’s for a fridge, washing machine, or microwave, a
+                custom harness boosts safety and performance. It also makes
+                repairs and replacements easy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card flex-col-reverse">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Heavy-Duty-Wire-Harness-for-Industrial-Equipment.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">
+                Heavy-Duty Wire Harness for Industrial Equipment
+              </h3>
+              <p class="info-card-desc">
+                If you’re in the industrial field, your machines work hard.
+                That’s why you need a heavy-duty wire harness. It handles high
+                power and tough conditions. These harnesses resist heat, oil,
+                and heavy vibrations. So, they last longer and protect your
+                equipment from failure. This solution keeps your machines
+                running strong and safe.
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Compact-Wire-Harness-for-Small-Electronics.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title">
+                Compact Wire Harness for Small Electronics
+              </h3>
+              <p class="info-card-desc">
+                For smaller gadgets like fans, coffee makers, or blenders, a
+                compact wire harness is best. It fits tiny spaces but still
+                connects all parts the right way. Even in a tight spot, this
+                solution gives clean wiring and better airflow. It helps devices
+                work faster and stay cool.
+              </p>
             </div>
           </div>
         </div>
