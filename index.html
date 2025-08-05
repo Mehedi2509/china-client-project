@@ -201,6 +201,8 @@
         .sm-flex-col {
           flex-direction: column;
         }
+
+       
       }
 
       /* Hero Area */
@@ -511,10 +513,63 @@
           gap: 16px;
         }
 
-        .methods-area .build-info-section-wrapper .info-cards-wrapper{
+        .methods-area .build-info-section-wrapper .info-cards-wrapper {
           grid-template-columns: repeat(1, 1fr);
           gap: 16px;
         }
+      }
+
+      .customization-area .info-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+      }
+
+      .customization-area .info-cards-wrapper .info-card {
+        background-color: #eff3f8;
+        padding: 16px;
+        border-radius: 12px;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .customization-area .info-cards-wrapper .info-card .info-card-title {
+        text-align: center;
+      }
+      .customization-area .info-cards-wrapper .info-card .info-card-desc {
+        text-align: center;
+      }
+
+      .customization-area .info-card-image-wrapper {
+        width: 150px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customization-area .info-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+        grid-column: span 4;
+      }
+
+      .customization-area .column-span-6 {
+        grid-column: span 6;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customization-area .info-cards-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 16px;
+        }
+        .customization-area .column-span-6 {
+        grid-column: span 4;
+      }
       }
     </style>
   </head>
@@ -919,6 +974,180 @@
                 We take time to listen to you. We ask the right questions and
                 follow your plan. Then we build the harness just how you want
                 it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- customization area -->
+
+    <div class="customization-area section-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Customization Options We Offer You</h2>
+        </div>
+
+        <div class="info-cards-wrapper">
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/9c4cc81e35a098b616bae802e5a71a5463c8b59a.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Pick from Many Wire Colours
+              </h3>
+              <p class="info-card-desc desc-1">
+                You can choose from many wire colours. These help you tell the
+                wires apart easily. It saves time when setting up and makes
+                repairs quicker.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/d462ee97ad30df890e8f199cf6e3d40170098679.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Add Custom Labels on Wires
+              </h3>
+              <p class="info-card-desc desc-1">
+                We can add labels to each wire to show where it starts and ends.
+                This helps you during setup and makes fixing things easy later.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/a4e8fca7d781bf44da39b26f76bbed9dbad50e92.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Choose How the Wires Are Wrapped
+              </h3>
+              <p class="info-card-desc desc-1">
+                We offer tape, tubing, and braided wraps. These protect your
+                wires from wear and make them look clean and neat.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/69fc0348fcae8a0876021b6b63966671cfe66975.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Extra Protection for Tough Jobs
+              </h3>
+              <p class="info-card-desc desc-1">
+                If your project needs more safety, we offer heat-proof and
+                water-proof wraps. These keep your wires safe in hot, wet, or
+                dirty places.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 5 -->
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/3048c0d2a93e139834918204bd8aae17050d4ccf.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Smart Wire Grouping
+              </h3>
+              <p class="info-card-desc desc-1">
+                We can group your wires into small spaces or tight spots. This
+                makes your machines more organised and easier to fix.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 6 -->
+          <div class="info-card ">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/8540b37b33ca6ed5acd8ee3b3f41895654f1ef02.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Any Size You Need
+              </h3>
+              <p class="info-card-desc desc-1">
+                We build wire harnesses in any size you want short, long, big,
+                or small. You tell us what you need, and we make it.
+              </p>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="info-card column-span-6">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/6d1ad134cb8ddca90fe1604cabd5b77c990a1bf6.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Flat Harness for Small Spaces
+              </h3>
+              <p class="info-card-desc desc-1">
+                If your space is small, we offer flat wire harnesses that fit
+                easily in tight areas. These are great for electronics or small
+                tools.
+              </p>
+            </div>
+          </div>
+
+          <!-- card 8 -->
+          <div class="info-card column-span-6">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/6d1ad134cb8ddca90fe1604cabd5b77c990a1bf6.png"
+                alt=""
+                class="image"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3 class="info-card-title desc-2 semi-bold">
+                Built Just for You
+              </h3>
+              <p class="info-card-desc desc-1">
+                Tell us exactly what you want, and we'll build your harness to
+                match. We are trusted by many because we keep the process simple
+                and give you what you need quickly and right.
               </p>
             </div>
           </div>
