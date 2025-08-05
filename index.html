@@ -158,6 +158,26 @@
         margin-bottom: 12px;
       }
 
+      .mb-16px {
+        margin-bottom: 16px;
+      }
+
+      .mb-20px {
+        margin-bottom: 20px;
+      }
+
+      .mtb-24px {
+        margin: 24px 0;
+      }
+
+      .semi-bold {
+        font-weight: 500;
+      }
+
+      .text-primary {
+        color: var(--primary-color);
+      }
+
       .border-radius-12 {
         border-radius: 12px;
       }
@@ -176,9 +196,6 @@
         .section-title p {
           font-size: 16px;
           line-height: 24px;
-        }
-        .grid-column-1 {
-          grid-template-columns: repeat(1, 1fr);
         }
 
         .sm-flex-col {
@@ -421,6 +438,84 @@
           margin-bottom: 16px;
         }
       }
+
+      .material-recommend-area {
+        background-color: #eff3f8;
+      }
+
+      .material-recommend-area .material-card-image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .application-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .application-area .icon-card {
+        background-color: #eff3f8;
+        padding: 16px;
+        border-radius: 12px;
+      }
+
+      .application-area .icon-card .icon {
+        height: 40px;
+        width: 40px;
+      }
+      @media only screen and (max-width: 1024px) {
+        .application-area .icon-card-wrapper {
+          gap: 8px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .application-area .icon-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+      }
+
+      .methods-area {
+        background-color: #eff3f8;
+      }
+
+      .methods-area .info-section-wrapper .info-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .methods-area .info-section-wrapper .info-cards-wrapper .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
+
+      .methods-area .build-info-section-wrapper .info-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .methods-area .build-info-section-wrapper .info-cards-wrapper .info-card {
+        padding: 12px;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .methods-area .info-section-wrapper .info-cards-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 16px;
+        }
+
+        .methods-area .build-info-section-wrapper .info-cards-wrapper{
+          grid-template-columns: repeat(1, 1fr);
+          gap: 16px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -616,6 +711,215 @@
                 busbars that help control where the power goes. It sends po...
               </p>
               <button class="btn-read">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="material-recommend-area section-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
+          <p>
+            We use strong and simple parts that help turnkey wire harness work
+            better and last a long time. Fork terminals help hold the wires in
+            the right place, so they do not move or fall out. Jumper wires help
+            carry power from one place to another in a quick and easy way. Ring
+            terminal jumper cables help make strong and safe wire links that
+            stay in place. Mixed fork and ring terminal wires give more choices
+            when you need to join wires together. These parts help make the full
+            wire system safe, strong, and easy to use. We build safe and clean
+            electrical wiring harness tools that are used in cars, home tools,
+            and big machines. Every wire is tested to make sure it works well
+            and fits where it should. As a custom turnkey wire harness supplier,
+            we do all the work in one place to make it faster and easier for
+            you. Our affordable turnkey wiring harness solutions help save you
+            time and money while still doing a great job.
+          </p>
+        </div>
+
+        <div class="material-card-wrapper">
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Frame-42128.png"
+                alt=""
+                class="image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- industries application section -->
+    <div class="application-area section-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Industries and Applications</h2>
+          <p>
+            We support many fields. Our turnkey wire harnesses work in all types
+            of gear. You can pick your harness as your work:
+          </p>
+        </div>
+        <div class="icon-card-wrapper">
+          <div class="icon-card flex flex-col gap-12px">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-2-1.png"
+              alt=""
+              class="icon"
+            />
+            <p class="desc-2">Automotive</p>
+            <p class="desc-1">
+              Almost every automotive section uses these harnesses. These are
+              vital parts of automotive systems.
+            </p>
+          </div>
+          <div class="icon-card flex flex-col gap-12px">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-4.png"
+              alt=""
+              class="icon"
+            />
+            <p class="desc-2">Industrial</p>
+            <p class="desc-1">
+              Many machines and robots use these harnesses for connection and
+              power supply.
+            </p>
+          </div>
+          <!-- card 3 -->
+          <div class="icon-card flex flex-col gap-12px">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-3-1.png"
+              alt=""
+              class="icon"
+            />
+            <p class="desc-2">Consumer Electronics</p>
+            <p class="desc-1">
+              Smart houses and offices use turnkey harnesses for many vital
+              daily works.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div class="icon-card flex flex-col gap-12px">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42166.png"
+              alt=""
+              class="icon"
+            />
+            <p class="desc-2">Medical and Aerospace</p>
+            <p class="desc-1">
+              Clean and safe wiring for high-risk tools and environments, with
+              care in every step. We design each harness to fit your industry's
+              space, power, and safety needs with detailed care and expert
+              support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methods section -->
+
+    <div class="methods-area section-area">
+      <div class="container mx-auto">
+        <div class="section-title">
+          <h2>Methods to Ensure You The Best Harness</h2>
+        </div>
+        <div class="info-section-wrapper">
+          <h3 class="card-heading-secondary mb-20px">
+            Proper Mathematical Planning
+          </h3>
+          <div class="info-cards-wrapper">
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-16px">
+                We Always Start with a Smart Plan
+              </h3>
+              <p class="desc-1">
+                When building your wire harness, we always begin with a
+                brilliant plan. We think carefully about what you need and draw
+                a clear map that shows how the wires should go. This helps us do
+                the job right from the beginning and makes things easier to fix
+                later if needed.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-16px">
+                Clean and Safe Wiring Every Time
+              </h3>
+              <p class="desc-1">
+                We place each wire in the best spot to keep everything neat,
+                safe, and easy to follow. Neat wires help machines work better
+                and make it simple to fix problems. We always find the cleanest
+                way to set up the cables, so everything fits just right.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section-wrapper mtb-24px">
+          <h3 class="card-heading-secondary mb-20px">Selecting Process</h3>
+          <div class="info-cards-wrapper">
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-16px">
+                All Wires Are Tested Again and Again
+              </h3>
+              <p class="desc-1">
+                We test every wire harness many times to make sure it works
+                well. We check the wires while building and test again after
+                it's done. This helps us find and fix any minor problems early.
+                That way, your harness is ready to use when it arrives.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-16px">
+                Only Strong and Long-Lasting Parts
+              </h3>
+              <p class="desc-1">
+                We pick strong parts like clips, ties, and wraps that last a
+                long time. These parts help the harness stay strong even in hot,
+                dusty, or busy places like factories or big machines.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="build-info-section-wrapper">
+          <h3 class="card-heading-secondary mb-20px">
+            Building According to the Plan
+          </h3>
+          <div class="info-cards-wrapper">
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-12px">
+                We Use Modern Tools and Software
+              </h3>
+              <p class="desc-1">
+                We use innovative tools and software that help us build your
+                wire harness faster and better. These tools allow us to avoid
+                mistakes and keep everything neat and right.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-12px">
+                Built to Meet All Safety Rules
+              </h3>
+              <p class="desc-1">
+                All our wire harnesses follow the correct safety rules and
+                standards. Whether for cars, machines, or anything else, we
+                ensure it's safe, strong, and ready to use.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h3 class="desc-2 semi-bold text-primary mb-12px">
+                We Listen and Build Just What You Need
+              </h3>
+              <p class="desc-1">
+                We take time to listen to you. We ask the right questions and
+                follow your plan. Then we build the harness just how you want
+                it.
+              </p>
             </div>
           </div>
         </div>
