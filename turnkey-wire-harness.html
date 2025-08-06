@@ -8,37 +8,16 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
-     
-
-      .btn {
-        padding: 12px 30px;
-        background-color: #00bde7;
-        color: #ffffff;
-        border-radius: 30px;
-        font-size: 16px;
-        line-height: 100%;
-        font-weight: 400;
-        border: none;
-        margin-top: 24px;
-      }
-
-      .btn-read {
-        height: 29px;
-        width: 91px;
-        padding: 8px 0;
-        background-color: #00bde7;
-        border: none;
-      }
 
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-      .container {
+      .ql-ps-container {
         max-width: 1280px;
       }
-      .mx-auto {
+      .ql-ps-mx-auto {
         margin: 0 auto;
       }
 
@@ -78,6 +57,29 @@
         line-height: initial;
       }
 
+      .popup-form-btn {
+        padding: 12px 30px;
+        background-color: #00bde7;
+        color: #ffffff;
+        border-radius: 30px;
+        font-size: 16px;
+        line-height: 100%;
+        font-weight: 400;
+        border: none;
+        margin-top: 24px;
+      }
+
+      .ql-ps-btn-read {
+        padding: 7px 13px;
+        background-color: #00BDE7;
+        color: #ffffff;
+        border: none;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: Alexandria;
+        line-height: initial;
+      }
+
       .desc-1 {
         font-size: 16px;
         line-height: 24px;
@@ -114,21 +116,21 @@
         overflow: hidden;
       }
 
-      .image {
+      .ql-ps-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .flex-col {
+      .ql-ps-flex-col {
         flex-direction: column;
       }
 
-      .flex {
+      .ql-ps-flex {
         display: flex;
       }
 
-      .flex-row-reversed {
+      .ql-ps-flex-row-reversed {
         flex-direction: row-reverse;
       }
 
@@ -164,11 +166,11 @@
         margin: 24px 0;
       }
 
-      .semi-bold {
+      .ql-ps-semi-bold {
         font-weight: 500;
       }
 
-      .text-primary {
+      .ql-ps-text-primary {
         color: #00bde7;
       }
 
@@ -192,7 +194,7 @@
           line-height: 24px;
         }
 
-        .sm-flex-col {
+        .ql-ps-sm-flex-col {
           flex-direction: column;
         }
       }
@@ -202,6 +204,7 @@
         min-height: 560px;
         max-width: 1920px;
         margin: 0 auto;
+        padding: 0 16px;
         overflow: hidden;
         background-repeat: no-repeat !important;
         background-position: center center !important;
@@ -227,15 +230,13 @@
         text-align: center;
       }
       .hero-area .section-title {
-        margin-bottom: 0;
-        gap: 20px;
-        margin-bottom: 20px;
+        gap: 40px;
         text-align: left;
       }
       .hero-area .section-title h1 {
         font-family: Alexandria;
         font-size: 52px;
-        font-weight: 400;
+        font-weight: 600;
         line-height: initial;
         color: #fff;
       }
@@ -253,7 +254,8 @@
       @media only screen and (max-width: 1024px) {
         .hero-area {
           padding: 70px 16px;
-          min-height: 400px;
+          min-height: unset;
+          background-position: right center !important;
         }
         .hero-area .section-title h1 {
           font-size: 48px;
@@ -314,18 +316,18 @@
         max-width: 570px;
       }
 
-      .product-intro-area .container {
+      .product-intro-area .ql-ps-container {
         gap: 80px;
         align-items: center;
       }
 
       @media only screen and (max-width: 1024px) {
-        .product-intro-area .container {
+        .product-intro-area .ql-ps-container {
           gap: 20px;
         }
       }
       @media only screen and (max-width: 767px) {
-        .product-intro-area .container {
+        .product-intro-area .ql-ps-container {
           gap: 16px;
         }
 
@@ -336,14 +338,18 @@
         }
       }
 
-      .product-advantage-area .advantage-image-wrapper .image {
+      /* Product Advantage Area */
+      .product-advantage-area {
+        background-color: #EFF3F8;
+      }
+      .product-advantage-area .advantage-image-wrapper .ql-ps-image {
         width: 480px;
         height: auto;
         aspect-ratio: 8/9;
       }
 
       @media only screen and (max-width: 767px) {
-        .product-advantage-area .advantage-image-wrapper .image {
+        .product-advantage-area .advantage-image-wrapper .ql-ps-image {
           width: 100%;
           height: auto;
           aspect-ratio: unset;
@@ -356,14 +362,19 @@
         }
       }
 
+      /* Solution Area */
       .solution-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
+        padding-top: 100px;
       }
 
       .solution-area .info-card {
         position: relative;
+      }
+      .solution-area .info-card:nth-child(2) {
+        top: -100px;
       }
 
       .solution-area .info-card-image-wrapper {
@@ -396,6 +407,12 @@
       }
 
       @media screen and (max-width: 1024px) {
+        .solution-area .info-card-wrapper {
+          padding-top: unset;
+        }
+        .solution-area .info-card:nth-child(2) {
+          top: unset;
+        }
         .solution-area .info-card-content-wrapper {
           padding: 0 16px;
           bottom: 80px;
@@ -433,8 +450,12 @@
         }
       }
 
+      /* Material Recommendation Area */
       .material-recommend-area {
         background-color: #eff3f8;
+      }
+      .material-recommend-area .product-page-btn {
+        margin-top: 40px;
       }
 
       .material-recommend-area .material-card-image-wrapper {
@@ -442,7 +463,13 @@
         height: 100%;
         overflow: hidden;
       }
+      @media only screen and (max-width: 767px) {
+        .material-recommend-area .product-page-btn {
+          margin-top: 24px;
+        }
+      }
 
+      /* Application Area */
       .application-area .icon-card-wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -466,7 +493,7 @@
 
       @media only screen and (max-width: 767px) {
         .application-area .icon-card-wrapper {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1, 1fr);
           gap: 8px;
         }
       }
@@ -497,6 +524,9 @@
         padding: 12px;
         border-radius: 12px;
         background-color: #ffffff;
+      }
+      .methods-area .desc-2 {
+        text-align: left;
       }
 
       @media only screen and (max-width: 767px) {
@@ -580,6 +610,12 @@
         gap: 16px;
         border-right: 1px solid #00bde7;
       }
+      .why-us-area .icon-card-wrapper .icon-card:first-child {
+        padding-left: 0;
+      }
+      .why-us-area .icon-card-wrapper .icon-card:last-child {
+        padding-right: 0;
+      }
 
       .why-us-area .icon-card-wrapper .lg-border-none {
         border-right: none;
@@ -594,17 +630,33 @@
         height: 100%;
         width: auto;
       }
+      .why-us-area .desc-1 {
+        text-align: left;
+      }
+      .why-us-area .product-page-btn {
+        margin-top: 40px;
+      }
 
       @media only screen and (max-width: 767px) {
         .why-us-area .icon-card-wrapper {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 24px;
         }
         .why-us-area .icon-card-wrapper .sm-border-none {
           border-right: none;
         }
-        .why-us-area .icon-card-wrapper .column-span-2 {
-          grid-column: span 2;
+        .why-us-area .icon-card-wrapper .icon-card {
+          border-right: none;
+          padding: 0;
+          padding-bottom: 24px;
+          border-bottom: 1px solid #00bde7;
+        }
+        .why-us-area .icon-card-wrapper .icon-card:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        .why-us-area .product-page-btn {
+          margin-top: 24px;
         }
       }
 
@@ -612,7 +664,7 @@
         background-color: #16529b;
       }
 
-      .request-quote-area .container {
+      .request-quote-area .ql-ps-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
@@ -620,13 +672,15 @@
 
       .request-quote-area .image-wrapper {
         height: 315px;
-        width: auto;
+        width: 100%;
         border-radius: 12px;
         overflow: hidden;
       }
 
       .request-quote-area .content-wrapper .section-title {
         text-align: start;
+        margin-bottom: 24px;
+        gap: 25px;
       }
 
       .request-quote-area .content-wrapper .section-title h2 {
@@ -637,16 +691,155 @@
       }
 
       @media only screen and (max-width: 767px) {
-        .request-quote-area .container {
+        .request-quote-area .ql-ps-container {
           grid-template-columns: repeat(1, 1fr);
           gap: 16px;
+        }
+      }
+
+      /* Custom Braided Wire Section */
+      .customer-reviews-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        background-color: #EFF3F8;
+        overflow: hidden;
+      }
+      .customer-reviews-area .custom-container {
+        max-width: 1580px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-rating {
+        display: flex;
+        align-items: center;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #b1b100;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-image {
+        display: flex;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-image
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .review-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-name {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .review-card-content
+        .review-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+      .customer-reviews-area .btn-wrapper {
+        display: flex;
+        margin-top: 40px;
+      }
+
+      @media only screen and (max-width: 1199px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media only screen and (max-width: 992px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area {
+          padding: 50px 16px;
+        }
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
   </head>
   <body>
+
+    <!-- Hero Section -->
+    <div class="hero-area" style="background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/Turnkey-wire-harness-banner.jpg');">
+     <div class="hero-product-container">
+       <div class="hero-content-wrapper">
+         <div class="section-title">
+           <h1>Turnkey wire harness</h1>
+           <p>
+            Easy, ready-to-use Turnkey Wire Harnesses made just for your needs, with no steps left out. We do everything from the first design to the last test, so you don't have to worry.
+           </p>
+         </div>
+
+         <div class="hero-product-page-btn">
+           <?php
+             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+           ?>
+         </div>
+       </div>
+     </div>
+    </div>
+
+    <!-- Product Introduction section -->
     <div class="product-intro-area section-area">
-      <div class="container mx-auto flex sm-flex-col">
+      <div class="ql-ps-container ql-ps-mx-auto ql-ps-flex ql-ps-sm-flex-col">
         <div class="intro-image-wrapper">
           <img
             src="https://www.ql-custom.com/wp-content/uploads/2025/08/turnkey-wire-into-1.png"
@@ -683,31 +876,34 @@
             </p>
 
             <div class="product-page-btn">
-              <button class="btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Product Advantage section -->
     <div class="product-advantage-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Product Advantage</h2>
         </div>
 
         <div
-          class="product-advantage-wrapper flex flex-row-reversed gap-70px sm-flex-col"
+          class="product-advantage-wrapper ql-ps-flex ql-ps-flex-row-reversed gap-70px ql-ps-sm-flex-col"
         >
           <div class="advantage-image-wrapper image-wrapper">
             <img
               src="https://www.ql-custom.com/wp-content/uploads/2025/08/turnkey-wire-advantage-image.png"
               alt="turnkey wire"
-              class="image"
+              class="ql-ps-image"
             />
           </div>
 
-          <div class="info-card-wrapper flex flex-col gap-16px">
+          <div class="info-card-wrapper ql-ps-flex ql-ps-flex-col gap-16px">
             <div class="info-card">
               <h3 class="card-heading-secondary mb-12px">
                 Cost and Time Efficiency
@@ -755,8 +951,9 @@
       </div>
     </div>
 
+    <!-- Solution section -->
     <div class="solution-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Solution</h2>
           <p>
@@ -779,7 +976,7 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/a11a44813e4a2f6978055b153d5a20b9371a1a1c.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
 
@@ -792,7 +989,7 @@
                 carry power or signals from one place to another. These wires
                 are...
               </p>
-              <button class="btn-read">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
 
@@ -802,7 +999,7 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/13ff806d4b7433bb2025128fd5c280c845898ff1.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
 
@@ -814,7 +1011,7 @@
                 A harness cable with ring and fork connectors is made to link
                 power to other parts safely and efficiently. These connecto...
               </p>
-              <button class="btn-read">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
 
@@ -824,7 +1021,7 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/093a9db43842439754a42e862ab477f3e4dfb70d.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
 
@@ -836,44 +1033,51 @@
                 An electrical control panel is a box with circuit breakers and
                 busbars that help control where the power goes. It sends po...
               </p>
-              <button class="btn-read">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Material Recommendation section -->
     <div class="material-recommend-area section-area">
-      <div class="container mx-auto">
-        <div class="section-title">
-          <h2>Material Recommendation</h2>
-          <p>
-            We use strong and simple parts that help turnkey wire harness work
-            better and last a long time. Fork terminals help hold the wires in
-            the right place, so they do not move or fall out. Jumper wires help
-            carry power from one place to another in a quick and easy way. Ring
-            terminal jumper cables help make strong and safe wire links that
-            stay in place. Mixed fork and ring terminal wires give more choices
-            when you need to join wires together. These parts help make the full
-            wire system safe, strong, and easy to use. We build safe and clean
-            electrical wiring harness tools that are used in cars, home tools,
-            and big machines. Every wire is tested to make sure it works well
-            and fits where it should. As a custom turnkey wire harness supplier,
-            we do all the work in one place to make it faster and easier for
-            you. Our affordable turnkey wiring harness solutions help save you
-            time and money while still doing a great job.
-          </p>
-        </div>
-
-        <div class="material-card-wrapper">
-          <div class="material-card">
-            <div class="material-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Frame-42128.png"
-                alt=""
-                class="image"
-              />
+      <div class="ql-ps-container ql-ps-mx-auto">
+        <div class="material-recommend-wrapper">
+          <div class="section-title">
+            <h2>Material Recommendation</h2>
+            <p>
+              We use strong and simple parts that help turnkey wire harness work
+              better and last a long time. Fork terminals help hold the wires in
+              the right place, so they do not move or fall out. Jumper wires help
+              carry power from one place to another in a quick and easy way. Ring
+              terminal jumper cables help make strong and safe wire links that
+              stay in place. Mixed fork and ring terminal wires give more choices
+              when you need to join wires together. These parts help make the full
+              wire system safe, strong, and easy to use. We build safe and clean
+              electrical wiring harness tools that are used in cars, home tools,
+              and big machines. Every wire is tested to make sure it works well
+              and fits where it should. As a custom turnkey wire harness supplier,
+              we do all the work in one place to make it faster and easier for
+              you. Our affordable turnkey wiring harness solutions help save you
+              time and money while still doing a great job.
+            </p>
+          </div>
+          <div class="material-card-wrapper">
+            <div class="material-card">
+              <div class="material-card-image-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/Frame-42128.png"
+                  alt=""
+                  class="ql-ps-image"
+                />
+              </div>
             </div>
+          </div>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
           </div>
         </div>
       </div>
@@ -881,7 +1085,7 @@
 
     <!-- industries application section -->
     <div class="application-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Industries and Applications</h2>
           <p>
@@ -890,7 +1094,7 @@
           </p>
         </div>
         <div class="icon-card-wrapper">
-          <div class="icon-card flex flex-col gap-12px">
+          <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
             <img
               src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-2-1.png"
               alt=""
@@ -902,7 +1106,7 @@
               vital parts of automotive systems.
             </p>
           </div>
-          <div class="icon-card flex flex-col gap-12px">
+          <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
             <img
               src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-4.png"
               alt=""
@@ -915,7 +1119,7 @@
             </p>
           </div>
           <!-- card 3 -->
-          <div class="icon-card flex flex-col gap-12px">
+          <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
             <img
               src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-3-1.png"
               alt=""
@@ -928,7 +1132,7 @@
             </p>
           </div>
           <!-- card 4 -->
-          <div class="icon-card flex flex-col gap-12px">
+          <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
             <img
               src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42166.png"
               alt=""
@@ -947,9 +1151,8 @@
     </div>
 
     <!-- Methods section -->
-
     <div class="methods-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Methods to Ensure You The Best Harness</h2>
         </div>
@@ -959,7 +1162,7 @@
           </h3>
           <div class="info-cards-wrapper">
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-16px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
                 We Always Start with a Smart Plan
               </h3>
               <p class="desc-1">
@@ -971,7 +1174,7 @@
               </p>
             </div>
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-16px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
                 Clean and Safe Wiring Every Time
               </h3>
               <p class="desc-1">
@@ -988,7 +1191,7 @@
           <h3 class="card-heading-secondary mb-20px">Selecting Process</h3>
           <div class="info-cards-wrapper">
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-16px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
                 All Wires Are Tested Again and Again
               </h3>
               <p class="desc-1">
@@ -999,7 +1202,7 @@
               </p>
             </div>
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-16px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
                 Only Strong and Long-Lasting Parts
               </h3>
               <p class="desc-1">
@@ -1017,7 +1220,7 @@
           </h3>
           <div class="info-cards-wrapper">
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-12px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
                 We Use Modern Tools and Software
               </h3>
               <p class="desc-1">
@@ -1027,7 +1230,7 @@
               </p>
             </div>
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-12px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
                 Built to Meet All Safety Rules
               </h3>
               <p class="desc-1">
@@ -1038,7 +1241,7 @@
             </div>
 
             <div class="info-card">
-              <h3 class="desc-2 semi-bold text-primary mb-12px">
+              <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
                 We Listen and Build Just What You Need
               </h3>
               <p class="desc-1">
@@ -1054,7 +1257,7 @@
 
     <!-- customization area -->
     <div class="customization-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Customization Options We Offer You</h2>
         </div>
@@ -1065,11 +1268,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/9c4cc81e35a098b616bae802e5a71a5463c8b59a.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Pick from Many Wire Colours
               </h3>
               <p class="info-card-desc desc-1">
@@ -1086,11 +1289,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/d462ee97ad30df890e8f199cf6e3d40170098679.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Add Custom Labels on Wires
               </h3>
               <p class="info-card-desc desc-1">
@@ -1106,11 +1309,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/a4e8fca7d781bf44da39b26f76bbed9dbad50e92.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Choose How the Wires Are Wrapped
               </h3>
               <p class="info-card-desc desc-1">
@@ -1126,11 +1329,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/69fc0348fcae8a0876021b6b63966671cfe66975.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Extra Protection for Tough Jobs
               </h3>
               <p class="info-card-desc desc-1">
@@ -1147,11 +1350,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/3048c0d2a93e139834918204bd8aae17050d4ccf.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Smart Wire Grouping
               </h3>
               <p class="info-card-desc desc-1">
@@ -1167,11 +1370,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/8540b37b33ca6ed5acd8ee3b3f41895654f1ef02.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Any Size You Need
               </h3>
               <p class="info-card-desc desc-1">
@@ -1186,11 +1389,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/6d1ad134cb8ddca90fe1604cabd5b77c990a1bf6.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Flat Harness for Small Spaces
               </h3>
               <p class="info-card-desc desc-1">
@@ -1207,11 +1410,11 @@
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/2968c997bac1941cc9c79d3132922e2ce67c07e1-1.png"
                 alt=""
-                class="image"
+                class="ql-ps-image"
               />
             </div>
             <div class="info-card-content-wrapper">
-              <h3 class="info-card-title desc-2 semi-bold">
+              <h3 class="info-card-title desc-2 ql-ps-semi-bold">
                 Built Just for You
               </h3>
               <p class="info-card-desc desc-1">
@@ -1227,7 +1430,7 @@
 
     <!-- Why us section -->
     <div class="why-us-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="section-title">
           <h2>Why QL-Custom is A Wise Choice</h2>
           <p>
@@ -1311,18 +1514,22 @@
             </p>
           </div>
         </div>
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
       </div>
     </div>
 
     <!-- Request a quote section -->
-
     <div class="request-quote-area section-area">
-      <div class="container mx-auto">
+      <div class="ql-ps-container ql-ps-mx-auto">
         <div class="image-wrapper">
           <img
             src="https://www.ql-custom.com/wp-content/uploads/2025/08/36b497dfabee67344d7f80e4829bc840bcb7d994.jpg"
             alt=""
-            class="image"
+            class="ql-ps-image"
           />
         </div>
         <div class="content-wrapper">
@@ -1338,8 +1545,313 @@
               answers.
             </p>
           </div>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
       </div>
     </div>
+
+     <!-- Customer Reviews section -->
+     <div class="customer-reviews-area">
+      <div class="custom-container">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "Our factory tools needed new wiring systems. QL-Custom helped us from day one. They made strong harnesses that handle heat, dust, and shaking. Everything was labelled clearly, which made setup fast and simple."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/51a2667788ebcdbeeab9f107b69a80d1053e1aa1.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Mike</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "We needed wire harnesses for our electric vans. QL-Custom made it all so easy. They built the harness just right, and we didn't have to change a thing. It was ready to plug in and use. Great service and speedy support too!"
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/773f90938c4c6cfc92be609465a02420cc7095e0.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Sarah Lin</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "I work with smart home tools, and space is always tight. QL-Custom-built ribbon cable harnesses that fit perfectly. They listened to our needs and made changes quickly. The wires were neat, safe, and easy to connect."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/2dbaebd7fc220e2024bf1254e156e8f712b04595.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Angela</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "This team is great! I only needed a few custom cable harnesses to test a new gadget, and they treated my order carefully. Fast shipping, great support, and the build was just what we needed."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b9cbe34325f5b9852308c72dd68e2b446454903.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Rachel</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
