@@ -18,16 +18,6 @@
       }
 
       /* Need to remove this btn style*/
-      .btn {
-        padding: 12px 30px;
-        border-radius: 30px;
-        background-color: #00bde7;
-        border: none;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: Alexandria;
-        color: white;
-      }
 
       body {
         font-family: Alexandria;
@@ -766,6 +756,123 @@
           width: 40%;
         }
       }
+
+      /* Custom Braided Wire Section */
+      .customer-reviews-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .customer-reviews-area .custom-container {
+        max-width: 1580px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #EFF3F8;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-rating {
+        display: flex;
+        align-items: center;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #F9CC04;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-image {
+        display: flex;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-image
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .review-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .author-name {
+        font-family: Alexandria;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .customer-reviews-area
+        .customer-reviews-wrapper
+        .review-card
+        .review-card-content
+        .review-card-desc {
+        font-family: Alexandria;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+      .customer-reviews-area .btn-wrapper {
+        display: flex;
+        margin-top: 40px;
+      }
+
+      @media only screen and (max-width: 1199px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media only screen and (max-width: 992px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area {
+          padding: 50px 16px;
+        }
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -801,7 +908,9 @@
               </div>
             </div>
             <div class="hero-product-page-btn">
-              <button class="btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
             </div>
 
 
@@ -844,8 +953,7 @@
               return a working sample. It saves you time, money, and trouble.
             </p>
 
-            <button class="btn">Get a Quick Quote</button>
-            <div class="btn-wrapper">
+            <div class="product-page-btn">
               <?php
                 echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
               ?>
@@ -951,7 +1059,11 @@
                 harm. We provide tracking, handle all customs papers, and ensure
                 your order gets to you easily.
               </p>
-              <button class="btn">Get a Quick Quote</button>
+              <div class="product-page-btn">
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
             </div>
 
             <div class="info-card-image-wrapper">
@@ -973,7 +1085,11 @@
                 service includes help from the same engineer from start to end.
                 You always know who to talk to.
               </p>
-              <button class="btn">Get a Quick Quote</button>
+              <div class="product-page-btn">
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
             </div>
 
             <div class="info-card-image-wrapper">
@@ -995,7 +1111,11 @@
                 prototype manufacturing fast, safe, and low-cost. Even small
                 jobs are done with top quality.
               </p>
-              <button class="btn">Get a Quick Quote</button>
+              <div class="product-page-btn">
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
             </div>
 
             <div class="info-card-image-wrapper">
@@ -1054,7 +1174,11 @@
               </p>
             </div>
           </div>
-          <button class="btn">Get a Quick Quote</button>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
         <div class="material-recommend-image-wrapper">
           <img
@@ -1218,8 +1342,10 @@
             </div>
           </div>
         </div>
-        <div class="btn-wrapper">
-          <button class="btn">Get a Quick Quote</button>
+        <div class="product-page-btn">
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
     </div>
@@ -1413,8 +1539,306 @@
       </div>
     </div>
 
-    <!-- Request-quote section -->
+    <!-- Customer Reviews section -->
+    <div class="customer-reviews-area">
+      <div class="custom-container">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
 
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "The wires were strong and fit just right. My project worked great. I will come back for more. I am satisfied with their great service!"
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/51a2667788ebcdbeeab9f107b69a80d1053e1aa1.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Dan Murr</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "The service was high-speed. The wire harness prototypes looked nice and clean. They worked well. I was pleased with everything. I am looking forward to working with them again!"
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/773f90938c4c6cfc92be609465a02420cc7095e0.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Sarah Jones</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "They offer me the best service. They also promised to offer me services after buying the items. Thank you so much!"
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/2dbaebd7fc220e2024bf1254e156e8f712b04595.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Mike Limo</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="review-card-desc">
+                "I had no plan, just an idea. They helped me turn it into a real wire harness. It worked great!" 
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b9cbe34325f5b9852308c72dd68e2b446454903.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="author-name">Ken Denburg</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Request-quote section -->
     <div class="request-quote-area section-area">
       <div class="product-container mx-auto">
         <div class="request-quote-content-wrapper">
@@ -1432,7 +1856,11 @@
             </p>
           </div>
 
-          <div><button class="btn">Get a Quick Quote</button></div>
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
 
         <div class="request-quote-image-wrapper">
