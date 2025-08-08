@@ -460,13 +460,13 @@
 
       /*Industries application area. */
 
-      .industries-application-area .icon-card-wrapper {
+      .industries-application-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
       }
 
-      .industries-application-area .icon-card-wrapper .icon-card {
+      .industries-application-area .info-card-wrapper .info-card {
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -475,19 +475,32 @@
         border-radius: 12px;
       }
 
-      .industries-application-area .icon-card .icon-wrapper .icon {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
+      .industries-application-area .info-card-image-wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
       }
 
-      @media only screen and (max-width: 767px) {
-        .industries-application-area .icon-card-wrapper {
+      .industries-application-area .info-card-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+       @media only screen and (max-width: 767px) {
+        .industries-application-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
       }
 
-      /* smart-techniques-area.  every style will start with .smart-techniques-area / not too much class nesting. only smart-techniques-area then the target element class */
+      /* smart-techniques-area. */
 
       .smart-techniques-area .info-card-wrapper {
         display: flex;
@@ -528,7 +541,7 @@
       }
 
       .smart-techniques-area .btn-wrapper {
-        display: flex ;
+        display: flex;
         justify-content: center;
         margin-top: 40px;
       }
@@ -547,7 +560,7 @@
         }
       }
 
-      /* prototype-area . every style will start with    .prototype-area / not too much class nesting. only prototype-area then the target element class*/
+      /* prototype-area .*/
 
       .prototype-area .icon-card-wrapper {
         display: grid;
@@ -595,7 +608,7 @@
         }
       }
 
-      /*working process section . every style will start with .working-process-area / not too much class nesting. only working-process-area then the target element class*/
+      /*working process section*/
 
       .working-process-area .info-card-wrapper {
         display: flex;
@@ -625,7 +638,7 @@
         font-weight: 500;
       }
 
-      /* request-quote-area . every style will start with .request-quote-area / not too much class nesting. only request-quote-area then the target element class*/
+      /* request-quote-area .*/
 
       .request-quote-area {
         background-color: #16529b;
@@ -768,8 +781,6 @@
         </div>
 
         <div class="info-card-wrapper">
-          <!-- Note: didn’t add the title and content inside a separate wrapper because we want a 20px gap between the image, title, and content. 
-          So we used one flex container with gap instead of nesting extra divs. -->
           <div class="info-card rounded-left">
             <div class="info-card-image-wrapper">
               <img
@@ -917,7 +928,6 @@
     </div>
 
     <!-- Material recommendation section -->
-
     <div class="material-recommend-area section-area">
       <div class="product-container mx-auto">
         <div class="material-recommend-content-wrapper">
@@ -980,14 +990,13 @@
           <h2>Industries and Application</h2>
         </div>
 
-        <div class="icon-card-wrapper">
+        <div class="info-card-wrapper">
           <!-- card 1 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-2-1.png"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/4ddcd90640d6002cd68fae966cbf9ede8be61351.png"
                 alt=""
-                class="icon"
               />
             </div>
 
@@ -1000,12 +1009,10 @@
           </div>
 
           <!-- card 2 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-4.png"
-                alt="icon"
-                class="icon"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/9d866a592d94ef538fd25eb439d121e6da36c4cb.png"
               />
             </div>
 
@@ -1017,12 +1024,10 @@
           </div>
 
           <!-- card 3 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-3-1.png"
-                alt="icon"
-                class="icon"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/2a5f3ac1f1eba14b3679c7cd78d9dc851928afc5.png"
               />
             </div>
 
@@ -1034,12 +1039,10 @@
           </div>
 
           <!-- card 4 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-11.png"
-                alt="icon"
-                class="icon"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/a95538e8ac4a9e8b86b993d24200d56395cb15be-1.png"
               />
             </div>
 
@@ -1051,12 +1054,10 @@
           </div>
 
           <!-- card 5 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42166.png"
-                alt="icon"
-                class="icon"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/8c65ce8c5ece13cc12b4dfe60fddad2cff15fb96-1.png"
               />
             </div>
 
@@ -1068,12 +1069,10 @@
           </div>
 
           <!-- card 6 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42167.png"
-                alt="icon"
-                class="icon"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/1cc82ff176966f5833d77cc373ab27e2a74a26a2-1.png"
               />
             </div>
 
@@ -1154,11 +1153,9 @@
         <div class="icon-card-wrapper">
           <!-- card 1 -->
           <div class="icon-card">
-            <div class="icon-wrapper">
+            <div class="info-card-image-wrapper">
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-2-1.png"
-                alt="icon"
-                class="icon"
               />
             </div>
             <h3 class="body-b1">Custom Builds Made for You</h3>
@@ -1176,8 +1173,6 @@
             <div class="icon-wrapper">
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-12.png"
-                alt="icon"
-                class="icon"
               />
             </div>
             <h3 class="body-b1">Protected from Static Power</h3>
@@ -1194,8 +1189,6 @@
             <div class="icon-wrapper">
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-13.png"
-                alt="icon"
-                class="icon"
               />
             </div>
             <h3 class="body-b1">Harnesses Ready for Cars</h3>
@@ -1211,8 +1204,6 @@
             <div class="icon-wrapper">
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42168.png"
-                alt="icon"
-                class="icon"
               />
             </div>
             <h3 class="body-b1">Wires That Go to Circuit Boards</h3>
