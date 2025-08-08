@@ -8,6 +8,9 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
+      /*font inter*/
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -140,15 +143,15 @@
       }
       .hero-area .section-title {
         margin-bottom: 0;
-        gap: 40px;
-        margin-bottom: 40px;
+        gap: 32px;
+        margin-bottom: 20px;
         text-align: left;
-        max-width: 900px;
+        
       }
       .hero-area .section-title h1 {
         font-family: Alexandria;
         font-size: 52px;
-        font-weight: 400;
+        font-weight: 600;
         line-height: initial;
         color: #fff;
       }
@@ -156,9 +159,48 @@
         font-family: Alexandria;
         font-size: 32px;
         font-weight: 300;
-        line-height: initial;
+        line-height: 32px;
         color: #fff;
       }
+
+      .hero-area .hero-bottom-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 60px;
+        border-radius: 20px;
+        background-color: #16529B;
+      }
+
+      .hero-area .hero-state-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .hero-area .hero-state-wrapper .state {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        color: #ffffff;
+      }
+
+      .hero-area .hero-state-wrapper .state span:nth-child(1) {
+        font-family: "Inter", sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 36px;
+      }
+      .hero-area .hero-state-wrapper .state span:nth-child(2) {
+        font-family: Alexandria;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 16px;
+      }
+      
       .hero-area .hero-product-page-btn {
         display: flex;
       }
@@ -175,6 +217,15 @@
         .hero-area .hero-product-page-btn .popup-form-btn {
           font-size: 16px;
           padding: 10px 16px;
+        }
+        .hero-area .hero-state-wrapper {
+          gap: 16px;
+        }
+
+        .hero-area .hero-bottom-wrapper {
+          padding: 24px 32px;
+          gap: 24px;
+          flex-direction: column;
         }
       }
       @media only screen and (max-width: 767px) {
@@ -193,6 +244,21 @@
           font-size: 18px;
           display: none;
         }
+
+        .hero-area .hero-state-wrapper .state{
+          width: auto;
+          gap: 8px;
+        }
+
+        .hero-area .hero-state-wrapper .state span:nth-child(1) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .hero-area .hero-state-wrapper .state span:nth-child(2) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+        
       }
 
       /*Product intro area */
@@ -493,8 +559,8 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
-      
-       @media only screen and (max-width: 767px) {
+
+      @media only screen and (max-width: 767px) {
         .industries-application-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
@@ -641,7 +707,7 @@
       /* request-quote-area .*/
 
       .request-quote-area {
-        background-color: #16529b;
+        background-color: #eff3f8;
       }
 
       .request-quote-area .product-container {
@@ -661,11 +727,11 @@
         text-align: start;
       }
       .request-quote-area .section-title h2 {
-        color: #fff;
+        color: #242424;
       }
 
       .request-quote-area .request-quote-content .body-b1 {
-        color: #fff;
+        color: #242424;
       }
 
       .request-quote-area .request-quote-image-wrapper {
@@ -707,24 +773,40 @@
     <div
       class="hero-area"
       style="
-        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/Appliance-wire-harness-Banner.jpg');
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/wire-harness-prototypes-hero-image.jpg');
       "
     >
       <div class="hero-product-container">
         <div class="hero-content-wrapper">
           <div class="section-title">
-            <h1>Appliance wire harness</h1>
+            <h1>Wire harness prototypes</h1>
             <p>
-              QL-Custom Technology Ltd delivers reliable and efficient wiring
-              solutions for various home and industrial appliances.
+             Every wire, plug, and part is carefully placed in the Wire Harness Prototypes. Our trained team checks everything from the start to the end. We make wire harnesses that work very well.
             </p>
           </div>
 
-          <div class="hero-product-page-btn">
-            <?php
-						  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-					  ?>
+          <div class="hero-bottom-wrapper">
+            <div class="hero-state-wrapper">
+              <div class="state">
+                <span>20+</span>
+                <span>Solid Years of Experience</span>
+              </div>
+              <div class="state">
+                <span>1200+</span>
+                <span>Satisfied Customers</span>
+              </div>
+              <div class="state">
+                <span>9000+</span>
+                <span>Successful Cases</span>
+              </div>
+            </div>
+            <div class="hero-product-page-btn">
+              <button class="btn">Get a Quick Quote</button>
+            </div>
+
+
           </div>
+         
         </div>
       </div>
     </div>
@@ -1098,8 +1180,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/3d-modeling.jpg"
-                alt="3D Modeling"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/43a348d66bbd68404c962e6cf75b9ebb9b1ba659.png"
               />
             </div>
 
@@ -1118,7 +1199,7 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/digital-twin.jpg"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/ee9f78ec45f6029b84a7b4eb73b781719f3aa900.png"
                 alt="Digital Twin"
               />
             </div>
@@ -1356,7 +1437,7 @@
 
         <div class="request-quote-image-wrapper">
           <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/77f74c445f35caf6bea08ace12b23ec117e74259.png"
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/ad72231216b8e6b74585adadb43bc1c3b8de3895.png"
             alt="prototype wire harness"
           />
         </div>
