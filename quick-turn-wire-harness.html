@@ -15,7 +15,7 @@
       }
 
       .product-container {
-        max-width: 1280px;
+        max-width: 1180px;
       }
       .mx-auto {
         margin: 0 auto;
@@ -78,6 +78,14 @@
         line-height: initial;
       }
 
+      .info-card-content-wrapper h3 {
+        font-family: Alexandria;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #16529B;
+      }
+
       @media only screen and (max-width: 767px) {
         .section-area {
           padding: 50px 16px;
@@ -100,6 +108,7 @@
         min-height: 560px;
         max-width: 1920px;
         margin: 0 auto;
+        padding: 0 16px;
         overflow: hidden;
         background-repeat: no-repeat !important;
         background-position: center center !important;
@@ -110,7 +119,7 @@
         position: relative;
       }
       .hero-area .hero-product-container {
-        max-width: 1280px;
+        max-width: 1560px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -128,7 +137,7 @@
         margin-bottom: 0;
         gap: 40px;
         text-align: left;
-        
+        max-width: 700px;
       }
       .hero-area .section-title h1 {
         font-family: Alexandria;
@@ -210,12 +219,16 @@
         gap: 60px;
         align-items: end;
       }
+      .product-intro-area .product-intro-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
       .product-intro-area .product-intro-image-wrapper {
-        width: 480px;
-        border-radius: 50%;
-        height: auto;
-        flex-shrink: 0;
-        aspect-ratio: 1/1;
+        display: flex;
+        width: 100%;
+        border-radius: 20px;
+        height: 100%;
         overflow: hidden;
       }
       .product-intro-area .product-intro-image-wrapper img {
@@ -231,24 +244,14 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .product-intro-area .product-container {
-          gap: 40px;
-        }
-        .product-intro-area .product-container {
-          align-items: center;
-        }
-        .product-intro-area .product-intro-image-wrapper {
-          width: 40%;
-          height: auto;
-          aspect-ratio: 1/1;
-          overflow: hidden;
+        .product-intro-area .product-intro-wrapper {
+          gap: 20px;
         }
       }
 
-      @media only screen and (max-width: 767px) {
-        .product-intro-area .product-container {
-          flex-direction: column;
-          gap: 32px;
+      @media only screen and (max-width: 768px) {
+        .product-intro-area .product-intro-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
         .product-intro-area .product-intro-image-wrapper {
           width: 100%;
@@ -262,21 +265,22 @@
       .product-advantage-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        gap: 20px;
       }
 
       .product-advantage-area .info-card-wrapper .info-card {
-        padding: 32px 16px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
-        text-align: center;
-        background-color: #eff3f8;
+        background-color: #F0F0F0;
+        border-radius: 12px;
       }
 
       .product-advantage-area .info-card-image-wrapper {
-        width: 280px;
+        display: flex;
+        width: 100%;
         height: auto;
         aspect-ratio: 1/1;
         overflow: hidden;
@@ -291,40 +295,10 @@
 
       .product-advantage-area .info-card-title {
         font-family: Alexandria;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 36px;
-        color: #242424;
-      }
-
-      .product-advantage-area .info-card-content {
-        text-align: center;
-      }
-
-      /* Add rounded corners to the left and right sides of cards 
-        starting from medium screens (768px and up) */
-      @media only screen and (min-width: 768px) {
-        .product-advantage-area .info-card-wrapper .rounded-left {
-          border-top-left-radius: 80px;
-          border-bottom-left-radius: 80px;
-        }
-
-        .product-advantage-area .info-card-wrapper .rounded-right {
-          border-top-right-radius: 80px;
-          border-bottom-right-radius: 80px;
-        }
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .product-advantage-area .info-card-wrapper {
-          gap: 20px;
-        }
-        .product-advantage-area .info-card-image-wrapper {
-          width: 100%;
-          height: auto;
-          aspect-ratio: 1/1;
-          overflow: hidden;
-        }
+        line-height: 28px;
+        color: #16529B;
       }
 
       @media only screen and (max-width: 767px) {
@@ -341,34 +315,46 @@
         gap: 40px;
       }
 
+      .solution-area .info-card-wrapper .info-card.info-card-reverse {
+        flex-direction: row-reverse;
+      }
       .solution-area .info-card-wrapper .info-card {
-        padding: 30px 30px 30px 70px;
         display: flex;
-        gap: 60px;
+        gap: 32px;
         align-items: center;
-        background-color: #eff3f8;
-        border-radius: 300px;
       }
 
+      .solution-area .info-card-reverse .info-card-content-wrapper {
+        margin-left: 0;
+        margin-right: -112px;
+        position: relative;
+        z-index: 1;
+      }
+      .solution-area .info-card-content-wrapper {
+        width: 100%;
+        margin-left: -112px;
+        min-height: 300px ;
+        padding: 40px 50px;
+        border-radius: 16px;
+        background-color: #FFFFFF;
+        box-shadow: 4px 4px 20px 0px #00000040;
+      }
       .solution-area .info-card-content-wrapper h3 {
+        font-family: Alexandria;
         font-weight: 400;
         font-size: 24px;
         line-height: 36px;
-        color: #242424;
-        margin-bottom: 13px;
-      }
-
-      .solution-area .info-card-content-wrapper p {
-        margin-bottom: 19px;
+        color: #16529B;
+        margin-bottom: 12px;
       }
 
       .solution-area .info-card-wrapper .info-card-image-wrapper {
-        width: 300px;
+        width: 600px;
         height: auto;
-        aspect-ratio: 1/1;
+        aspect-ratio: 6/4;
         overflow: hidden;
         flex-shrink: 0;
-        border-radius: 50%;
+        border-radius: 40px;
       }
 
       .solution-area .info-card-image-wrapper img {
@@ -378,17 +364,24 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .solution-area .info-card-wrapper .info-card {
-          gap: 30px;
+        .solution-area .info-card-wrapper .info-card-image-wrapper {
+          width: 500px;
+        }
+        .solution-area .info-card-reverse .info-card-content-wrapper {
+          margin-right: -90px;
+        }
+        .solution-area .info-card-content-wrapper {
+          margin-left: -90px;
+          padding: 24px;
+          min-height: 280px;
         }
       }
 
-      @media only screen and (max-width: 767px) {
-        .solution-area .info-card-wrapper .info-card {
-          flex-direction: column-reverse;
-          padding: 20px;
-          border-bottom-left-radius: 12px;
-          border-bottom-right-radius: 12px;
+      @media only screen and (max-width: 768px) {
+        .solution-area .info-card-wrapper .info-card,
+        .solution-area .info-card-wrapper .info-card.info-card-reverse {
+          flex-direction: column;
+          gap: 24px;
         }
         .solution-area .info-card-wrapper .info-card-image-wrapper {
           width: 100%;
@@ -396,97 +389,85 @@
           aspect-ratio: 1/1;
           overflow: hidden;
         }
+        .solution-area .info-card-content-wrapper,
+        .solution-area .info-card-reverse .info-card-content-wrapper {
+          margin: 0;
+        }
       }
 
       /* material-recommend-area.*/
-
-      .material-recommend-area .product-container {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-      }
-
-      .material-recommend-area .material-recommend-image-wrapper {
-        width: 600px;
-        height: auto;
-        aspect-ratio: 1/1;
-        overflow: hidden;
-        flex-shrink: 0;
-        border-radius: 50%;
-      }
-
-      .material-recommend-area .material-recommend-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .material-recommend-area .section-title {
-        text-align: left;
-      }
-
       .material-recommend-area .info-card-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .material-recommend-area .info-card .card-title {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 36px;
-        color: #16529b;
-        margin-bottom: 12px;
-      }
-
-      /* #edit material btn margin top*/
-
-      .material-recommend-area .btn {
-        margin-top: 40px;
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .material-recommend-area .material-recommend-image-wrapper {
-          width: 40%;
-          height: auto;
-          aspect-ratio: 1/1;
-          overflow: hidden;
-        }
-      }
-
-      @media only screen and (max-width: 767px) {
-        .material-recommend-area .product-container {
-          flex-direction: column;
-          gap: 32px;
-        }
-        .material-recommend-area .material-recommend-image-wrapper {
-          width: 100%;
-          height: auto;
-          aspect-ratio: unset;
-        }
-      }
-
-      /*Industries application area. */
-
-      .industries-application-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
       }
 
-      .industries-application-area .info-card-wrapper .info-card {
-        padding: 16px;
+      .material-recommend-area .info-card-wrapper .info-card {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        background-color: #eff3f8;
+      }
+
+      .material-recommend-area .info-card-image-wrapper {
+        display: flex;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .material-recommend-area .info-card-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .material-recommend-area .info-card-content-wrapper {
+        padding: 12px;
+        text-align: center;
+      }
+      .material-recommend-area .info-card-content-wrapper p {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .material-recommend-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .material-recommend-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*Industries application area. */
+      .industries-application-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .industries-application-area .info-card-wrapper .info-card:last-child {
+        grid-column: span 2;
+      }
+      .industries-application-area .info-card-wrapper .info-card {
+        padding: 16px 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #F0F0F0;
         border-radius: 12px;
       }
 
       .industries-application-area .info-card-image-wrapper {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
+        flex-shrink: 0;
+        display: flex;
+        width: 172px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
         overflow: hidden;
       }
 
@@ -496,32 +477,45 @@
         object-fit: cover;
       }
 
+      .industries-application-area .info-card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
       @media only screen and (max-width: 1024px) {
         .industries-application-area .info-card-wrapper {
           grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .industries-application-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
+        }
+        .industries-application-area .info-card-wrapper .info-card:last-child {
+          grid-column: unset;
+        }
+        .industries-application-area .info-card-wrapper .info-card {
+          flex-direction: column;
         }
       }
 
       /* smart-techniques-area. */
-
       .smart-techniques-area .info-card-wrapper {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
       }
 
+      .smart-techniques-area .info-card-wrapper .info-card:last-child {
+        grid-column: span 2;
+      }
+
       .smart-techniques-area .info-card-wrapper .info-card {
-        padding: 20px 32px;
+        padding: 20px;
         display: flex;
-        align-items: center;
-        gap: 40px;
-        background-color: #eff3f8;
+        background-color: #F0F0F0;
         border-radius: 12px;
       }
 
@@ -530,41 +524,20 @@
         font-size: 24px;
         line-height: 36px;
         color: #16529b;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
 
-      .smart-techniques-area .info-card .info-card-image-wrapper {
-        width: 200px;
-        height: auto;
-        aspect-ratio: 1/1;
-        overflow: hidden;
-        border-radius: 50%;
-        flex-shrink: 0;
-      }
-
-      .smart-techniques-area .info-card .info-card-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .smart-techniques-area .btn-wrapper {
-        display: flex;
+      .smart-techniques-area .product-page-btn {
         justify-content: center;
         margin-top: 40px;
       }
 
-      @media only screen and (max-width: 767px) {
-        .smart-techniques-area .info-card-wrapper .info-card {
-          flex-direction: column;
-          text-align: center;
-          padding: 20px 16px;
+      @media only screen and (max-width: 768px) {
+        .smart-techniques-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
-      }
-
-      @media only screen and (max-width: 1024px) {
-        .smart-techniques-area .info-card-wrapper .info-card {
-          gap: 20px;
+        .smart-techniques-area .info-card-wrapper .info-card:last-child {
+          grid-column: unset;
         }
       }
 
@@ -618,36 +591,128 @@
 
       /*working process section*/
 
+      .working-process-area .working-process-wrapper {
+        display: flex;
+        gap: 20px;
+      }
+      .working-process-area .working-process-image-wrapper {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 480px;
+      }
+      .working-process-area .working-process-image-wrapper img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4.8/4.6;
+        object-fit: cover;
+      }
       .working-process-area .info-card-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 12px;
       }
-
+      .working-process-area .info-card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
       .working-process-area .info-card-wrapper .info-card {
-        padding: 24px 32px;
-        background-color: #eff3f8;
+        padding: 16px 12px;
+        background-color: #F0F0F0;
         border-radius: 12px;
       }
 
-      .working-process-area .info-card-wrapper .info-card .card-title {
-        font-weight: 400;
+      @media only screen and (max-width: 768px) {
+        .working-process-area .working-process-wrapper {
+          flex-direction: column;
+          gap: 32px;
+        }
+        .working-process-area .working-process-image-wrapper {
+          width: 100%;
+          gap: 24px;
+        }
+      }
+
+      /* Recommended Components section */
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        background-color: #F0F0F0;
+        padding: 20px;
+        border-bottom: 0.5px solid #37373750;
+        min-height: 80px;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card:last-child {
+        border-bottom-color: transparent;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card.feature-list-card-header {
+        background-color: #00BDE7;
+        min-height: 64px;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-title {
+        flex-shrink: 0;
+        width: 200px;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-desc {
+        width: 100%;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-end {
+        flex-shrink: 0;
+        width: 240px;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card h3 {
+        font-family: Alexandria;
         font-size: 24px;
         line-height: 36px;
-        color: #4b5563;
-        margin-bottom: 20px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card p {
+        font-family: Alexandria;
+        font-size: 16px;
+        line-height: initial;
+        font-weight: 300;
+        color: #4B5563;
+      }
+      .recommended-components-area .feature-list-main-wrapper .feature-list-card p:first-child {
+        font-weight: 400;
       }
 
-      .working-process-area .info-card .card-list {
-        padding-left: 24px;
+      @media only screen and (max-width: 1024px) {
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+          gap: 20px;
+        }
       }
-
-      .working-process-area .info-card .card-list li .bold {
-        font-weight: 500;
+      @media only screen and (max-width: 767px) {
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card-wrapper .feature-list-card {
+          padding: 12px;
+          gap: 12px;
+        }
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-title {
+          width: 100px;
+        }
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card .feature-list-end {
+          width: 100px;
+        }
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card h3 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .recommended-components-area .feature-list-main-wrapper .feature-list-card p {
+          font-size: 14px;
+        }
       }
 
       /* request-quote-area .*/
-
       .request-quote-area {
         background-color: #eff3f8;
       }
@@ -709,7 +774,7 @@
         }
       }
 
-      /* Custom Braided Wire Section */
+      /* Customer Reviews */
       .customer-reviews-area {
         padding: 70px 16px;
         max-width: 1920px;
@@ -832,7 +897,7 @@
     <div
       class="hero-area"
       style="
-        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/wire-harness-prototypes-hero-image.jpg');
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/9459ded444e049b805a5a590241667a7a94f72b3.jpg');
       "
     >
       <div class="hero-product-container">
@@ -855,40 +920,26 @@
     <!-- Product introduction Section -->
     <div class="product-intro-area section-area">
       <div class="product-container mx-auto">
-        <div class="product-intro-image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/wire-harness-prototypes-product-intro.png"
-            alt=" product intro wire harness prototypes"
-          />
-        </div>
-        <div class="product-intro-content-wrapper">
-          <div class="section-title">
-            <h2>Product Introduction</h2>
+        <div class="product-intro-wrapper">
+          <div class="product-intro-image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/1aa7da9a6033020bd53c7ab36a3aa3df285eeee5.jpg"
+              alt="product intro Quick turn wire harness" >
           </div>
-          <div class="product-intro-content">
-            <p class="body-b1">
-              Wire harness prototypes are early versions of wiring systems.
-              These are used in cars, machines, robots, and electronics. They
-              are built to test new ideas before making the whole batch. We use
-              real wires, real plugs, and strong parts. Wires are cut, the outer
-              cover is removed, and the ends are attached carefully. We do this
-              by hand or with machines. We follow your plans. Every wire goes in
-              the right spot. Every plug fits just right. After building, we
-              test each one. If something fails, we fix it. These harnesses are
-              ready to work in real engines, machines, or boards. You can see
-              what works and what needs changes. We help you find and fix
-              problems early, making the final build faster. We take all kinds
-              of custom wire harness prototype jobs. We can help if you only
-              need one or a few. Our low volume wire harness prototype work is
-              excellent for small runs. Even one is okay. We do wire harness
-              prototype assembly for every build. You send your idea, and we
-              return a working sample. It saves you time, money, and trouble.
-            </p>
-
-            <div class="product-page-btn">
-              <?php
-                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-              ?>
+          <div class="product-intro-content-wrapper">
+            <div class="section-title">
+              <h2>Product Introduction</h2>
+            </div>
+            <div class="product-intro-content">
+              <p class="body-b1">
+                Our quick turn wire harness service factory works day and night without stopping. It is full of modern tools and intelligent machines. As a trusted quick turn wire harness manufacturer, we serve many industries like cars, machines, home tools, and more. Raw wires come in one side, and strong finished harnesses go out the other. Each step is tracked on bright screens to ensure all cables are safe and on track. If something goes wrong, we fix it fast without delay. Our trained team is always ready to work. We don't waste time. Late or urgent jobs are easy for us. We efficiently handle 24-hour wire harness turn, from planning and building to testing and shipping all done quickly and smoothly.
+              </p>
+  
+              <div class="product-page-btn">
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
             </div>
           </div>
         </div>
@@ -906,22 +957,15 @@
           <div class="info-card rounded-left">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Automotive-Waterproof-Connector-Wire-Harness.png"
-                alt="Automotive Waterproof Connector Wire Harness"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/image-9.png"
+                alt="High-Precision Wire Stripping and Crimping Machine"
               />
             </div>
             <h3 class="info-card-title">
-              Automotive Waterproof Connector Wire Harness
+              High-Precision Wire Stripping and Crimping Machine
             </h3>
             <p class="info-card-content body-b2">
-              Cars and trucks need wires that work in hard places wet, hot, and
-              dirty. We make automotive wire harness prototype systems that can
-              handle it all. Our special sealed plugs keep water and dirt out.
-              These go in doors, under hoods, and near wheels. Even when it
-              shakes or gets hot, it keeps working. We use plugs that lock
-              tightly. The wires stay dry and safe. They never fall out. The
-              power keeps flowing without breaks. These samples help you test
-              your car parts and ensure they will work in real life.
+              This high-tech machine is thoughtful and careful. It strips and crimps wires fast without making mistakes. Every wire is cut and shaped to the correct size. No part is wasted. It handles wires of many sizes and types. Built-in sensors guide each step to make sure cables are smooth and clean. This gives strong and safe harnesses every time. It can do every size job fast. This innovative tool is key to our expedited wire harness assembly, providing quick and perfect results.
             </p>
           </div>
 
@@ -929,20 +973,13 @@
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/JST-XH-2-Pin-Connector-Cable.png"
-                alt="JST XH 2-Pin Connector Cable"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/image-10.png"
+                alt="Terminal Insertion or Connector Assembly Machine"
               />
             </div>
-            <h3 class="info-card-title">JST XH 2-Pin Connector Cable</h3>
+            <h3 class="info-card-title">Terminal Insertion or Connector Assembly Machine</h3>
             <p class="info-card-content body-b2">
-              The JST XH 2-pin connector cable is small but essential. It fits
-              in tiny spaces and connects small devices like lights or
-              batteries. We make these with great care. Each plug is clean. Each
-              wire is cut just right. We crimp the ends neatly. These go in
-              small boards, toys, battery packs, and sensors. The plug clicks in
-              and stays. No loose wires. No weak signals. They are simple but
-              strong. Our prototype cable harness build is made to work well,
-              even in small spaces.
+              This machine is fast, smart, and hands-free. It adds wire ends and connectors all on its own. A smart camera watches each move to avoid any mistakes. If anything goes wrong, it stops immediately to keep the work safe. It handles many types of connectors and works on two wires simultaneously. This saves lots of time. It helps us provide same day wire harness assembly. All cables look clean, neat, and ready to use done fast and right.
             </p>
           </div>
 
@@ -950,22 +987,15 @@
           <div class="info-card rounded-right">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Pre-crimped-Female-Spade-Terminal-Wire.png"
-                alt="Pre-crimped Female Spade Terminal Wire"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/image-11.png"
+                alt="Automatic Wire Stripping Machine Blade Assembly"
               />
             </div>
             <h3 class="info-card-title">
-              Pre-crimped Female Spade Terminal Wire
+              Automatic Wire Stripping Machine Blade Assembly
             </h3>
             <p class="info-card-content body-b2">
-              These wires are made for fast and easy use. Each has a female
-              spade end already attached. You just plug it into the male part,
-              no tools needed. It fits tightly and won't fall out. The end is
-              pressed with a machine, so it is always strong. These are used in
-              cars, test panels, and machines. The wires are all the same size.
-              That means no mix-ups. They are fast to use and great for wire
-              harness prototype testing when you need to work quickly and stay
-              safe.
+              This tool does two jobs cutting and stripping wires. It does many wires at once and moves fast without slowing down. It checks each cut to make sure it's the right length. Wires come out perfect every time. This tool works all day without breaks. Even for a prototype quick turn wire harness, it works very fast. It's the first step in the line, making the whole job quicker and smoother.
             </p>
           </div>
         </div>
@@ -977,84 +1007,50 @@
       <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Solution</h2>
+          <p>Our shop does everything planning, making, testing, and packing. No waiting on outside parts. Our machines work fast and clean. They shape, cut, crimp, and finish each wire harness. We have a skilled team that checks every step to make sure it's perfect. You get wires that are safe, clean, and work great. We are known for top quick turn wire harness assembly across many fields and jobs.</p>
         </div>
 
         <div class="info-card-wrapper">
-          <!-- Card 1 -->
           <div class="info-card">
-            <div class="info-card-content-wrapper">
-              <h3>Professional Cross-border Shipping</h3>
-              <p class="body-b2">
-                We ship our harnesses to countries like Europe, Asia, and the
-                USA. Your custom wire harness prototype will arrive fast and
-                safe. We pack each one in ESD-safe wraps to protect it from
-                harm. We provide tracking, handle all customs papers, and ensure
-                your order gets to you easily.
-              </p>
-              <div class="product-page-btn">
-                <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
-              </div>
-            </div>
-
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Professional-Cross-border-Shipping.png"
-                alt="Professional Cross-border Shipping"
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/dd9ed02bda8025e27c2cff77b2f1f83498632148.jpg"
+              alt="Fully Automatic Terminal Double-Head Shell Inserting Machine"
               />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Fully Automatic Terminal Double-Head Shell Inserting Machine</h3>
+              <p class="body-b2">
+                This tool is fast, strong, and smart. It adds ends to two wires at the same time without stopping. It works nonstop, even when changing wire types. Smart sensors guide every move and track all actions. This tool is a vital part of our fast turn wire harness service. It helps us finish large orders quickly while still keeping the quality high. It works fast and never lets the quality drop.
+              </p>
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="info-card">
-            <div class="info-card-content-wrapper">
-              <h3>1v1 Engineer Connection</h3>
-              <p class="body-b2">
-                You will work directly with one of our skilled engineers. You
-                tell us your idea, and we help improve it. We warn you about
-                risks and give smart tips. Our wire harness design prototype
-                service includes help from the same engineer from start to end.
-                You always know who to talk to.
-              </p>
-              <div class="product-page-btn">
-                <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
-              </div>
-            </div>
-
+          <div class="info-card info-card-reverse">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/1v1-Engineer-Connection.png"
-                alt="1v1 Engineer Connection"
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/66e526a2f856830c5939e7ec0795452463d787a3.jpg"
+              alt="Precision Mold"
               />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Precision Mold</h3>
+              <p class="body-b2">
+                This system checks the pressure between wire parts. If it presses too hard or too soft, it immediately stops and alerts us. The team can then fix it fast. This keeps all wires safe and working well. No bad parts are sent out. This tool also helps speed things up by stopping problems before they grow. It's perfect for rush wire harness fabrication, where we need fast and perfect results.
+              </p>
             </div>
           </div>
-
-          <!-- Card 3 -->
           <div class="info-card">
-            <div class="info-card-content-wrapper">
-              <h3>Wire Harness Automated Production</h3>
-              <p class="body-b2">
-                We use intelligent machines that fast cut, strip, crimp, and
-                test wires. This gives clean and even work. If you need many
-                harnesses, this helps a lot. It also makes wire harness
-                prototype manufacturing fast, safe, and low-cost. Even small
-                jobs are done with top quality.
-              </p>
-              <div class="product-page-btn">
-                <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
-              </div>
-            </div>
-
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Wire-Harness-Automated-Production.png"
-                alt="Wire Harness Automated Production"
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/59d9fc399941fc6efb6bf3c3bacaf70955b398ad.jpg"
+              alt="Pressure Detection System"
               />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Pressure Detection System</h3>
+              <p class="body-b2">
+                These molds shape wire ends, plugs, and covers. They are strong, detailed, and very exact. Each mold keeps a perfect shape, giving the wires a clean and strong finish. They help parts last longer and work safely. We can switch molds quickly to save time. This lets us make many different wire types. These molds help us keep top quality in express wire harness production every day.
+              </p>
             </div>
           </div>
         </div>
@@ -1064,59 +1060,95 @@
     <!-- Material recommendation section -->
     <div class="material-recommend-area section-area">
       <div class="product-container mx-auto">
-        <div class="material-recommend-content-wrapper">
-          <div class="section-title">
-            <h2>Material Recommendation</h2>
-          </div>
-
-          <div class="info-card-wrapper">
-            <!-- Card 1 -->
-            <div class="info-card">
-              <h3 class="card-title">High-Quality PVC Raw Materials</h3>
-              <p class="body-b2">
-                We use strong but soft PVC to cover wires. It stops heat, oil,
-                and sharp edges from hurting the cables. It can bend without
-                breaking. It works in both hot and cold places. PVC makes your
-                harness last longer. It blocks water and dirt. It keeps wires
-                safe and keeps power flowing. It's great for cars, machines, and
-                test units.
-              </p>
-            </div>
-            <!-- Card 2 -->
-            <div class="info-card">
-              <h3 class="card-title">Electronic Wire</h3>
-              <p class="body-b2">
-                Our wires are made for real use. They bend without breaking.
-                They send power without getting too hot. They carry signals with
-                no noise. We cut and strip them neatly. We crimp or solder them
-                with care. Every wire is safe, clean, and ready. Your wire
-                harness design prototype will be easy to test and ready to use.
-              </p>
-            </div>
-            <!-- Card 3 -->
-            <div class="info-card">
-              <h3 class="card-title">High Purity Copper Wire</h3>
-              <p class="body-b2">
-                We use copper because it carries power better than other metals.
-                We only use pure copper. That means cooler wires and better
-                flow. These wires bend well and stay strong. They pass top
-                safety tests. They help your parts like motors, lights, or
-                sensors work better. It's smart to choose copper for top
-                performance.
-              </p>
-            </div>
-          </div>
-          <div class="product-page-btn">
-            <?php
-              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-            ?>
-          </div>
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
         </div>
-        <div class="material-recommend-image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/图片.png"
-            alt="raw material"
-          />
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/850e33e592e15a1660ae48f1c7dc5d50b724dbef.jpg"
+                alt="Ultra-Quiet Terminal Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Ultra-Quiet Terminal Machine</h3>
+              <p class="body-b2">
+                This machine adds wire ends but stays very quiet. It uses electric power instead of air, making it great for places where noise is a problem. Even though it's peaceful, it is strong and quick. It makes clean, tight wire ends fast and without noise.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/5338b1b2f1a46bef6f558f5ad689a960ab7c5eab.jpg"
+                alt="Fully Automatic Double-Head Terminal Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Fully Automatic Double-Head Terminal Machine</h3>
+              <p class="body-b2">
+                This machine works on two wires at once and moves fast. It ends quickly and does not make mistakes. It checks itself during each step. It works with many wire sizes and adjusts on its own. It's excellent for vital jobs and helps us finish many wires quickly.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/29813439843fd0839f069046835dafc9b7627aeb.jpg"
+                alt="Automatic Single-Head Casing Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Automatic Single-Head Casing Machine</h3>
+              <p class="body-b2">
+                This machine adds covers to wires one at a time. While a bit slower, it is clean and clean. It works best on soft and thin wires. It checks each step to make sure the cover is correct. We use this machine for jobs that need extra care and perfect looks.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/15c54fcf56b014031a6fdb108cb48b1c2e62267d.jpg"
+                alt="Automatic Wire Cutting Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Automatic Wire Cutting Machine</h3>
+              <p class="body-b2">
+                This is often the first tool we use. It pulls, cuts, and strips wires fast and without help. It knows what wire it's working on. It keeps the whole line moving. Wires come out quickly and are ready for the next steps. It helps save time from the very beginning.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/bcbcec9b99e948c46f057b27b5e0e90dc77a3cbf.jpg"
+                alt="Semi-Automatic Soldering Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Semi-Automatic Soldering Machine</h3>
+              <p class="body-b2">
+                Some wires need to be soldered to work well. This machine helps with that. It holds wires steady, then heats and solders them cleanly. Our team guides it if needed. It's great for small or detailed jobs. It helps speed things up while staying neat and safe. It also works well with our other tools.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/5108cf545046d2dc13d81fcae29ce4ad28c9812d.jpg"
+                alt="Plastic Vertical Molding Machine"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Plastic Vertical Molding Machine</h3>
+              <p class="body-b2">
+                This machine makes plastic parts that go on wires. It saves floor space and works fast. It adds plugs, seals, and covers right in our shop. This means we don't wait for parts to come in. We build, test, and finish wires faster. It also lets us make custom parts when needed.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1129,147 +1161,154 @@
         </div>
 
         <div class="info-card-wrapper">
-          <!-- card 1 -->
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/4ddcd90640d6002cd68fae966cbf9ede8be61351.png"
-                alt=""
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602.png"
+                alt="Automotive"
               />
             </div>
-
-            <h3 class="body-b1">Automotive</h3>
-            <p class="body-b2">
-              Our harnesses are available for every vehicle system. And these
-              harnesses are vital for every vehicle. We make weatherproof
-              harnesses.
-            </p>
-          </div>
-
-          <!-- card 2 -->
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/9d866a592d94ef538fd25eb439d121e6da36c4cb.png"
-              />
-            </div>
-
-            <h3 class="body-b1">Industrial Machines</h3>
-            <p class="body-b2">
-              Wires for robots, tools, and heavy machines. They run all day and
-              stay safe.
-            </p>
-          </div>
-
-          <!-- card 3 -->
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/2a5f3ac1f1eba14b3679c7cd78d9dc851928afc5.png"
-              />
-            </div>
-
-            <h3 class="body-b1">Electronics & Telecom</h3>
-            <p class="body-b2">
-              Wires for computers, servers, and networks. Every plug is matched.
-              Signals stay clean.
-            </p>
-          </div>
-
-          <!-- card 4 -->
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/a95538e8ac4a9e8b86b993d24200d56395cb15be-1.png"
-              />
-            </div>
-
-            <h3 class="body-b1">Aerospace</h3>
-            <p class="body-b2">
-              Almost all aircraft use harnesses. They are strong, light, and
-              safe from noise.
-            </p>
-          </div>
-
-          <!-- card 5 -->
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/8c65ce8c5ece13cc12b4dfe60fddad2cff15fb96-1.png"
-              />
-            </div>
-
-            <h3 class="body-b1">Medical Devices</h3>
-            <p class="body-b2">
-              Many machines and robots use these harnesses for connection and
-              power supply.
-            </p>
-          </div>
-
-          <!-- card 6 -->
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/1cc82ff176966f5833d77cc373ab27e2a74a26a2-1.png"
-              />
-            </div>
-
-            <h3 class="body-b1">Custom Products</h3>
-            <p class="body-b2">
-              If your idea is new or different, we can build for that, too. One
-              piece or many, we can help.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Smart techniques section -->
-
-    <div class="smart-techniques-area section-area">
-      <div class="product-container mx-auto">
-        <div class="section-title">
-          <h2>Smart Techniques We Use</h2>
-        </div>
-
-        <div class="info-card-wrapper">
-          <div class="info-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/43a348d66bbd68404c962e6cf75b9ebb9b1ba659.png"
-              />
-            </div>
-
             <div class="info-card-content-wrapper">
-              <h3 class="card-title">3D Modeling</h3>
-              <p class="body-b1">
-                3D modeling lets us build a computer version of your wire
-                harness before we make it for real. This model shows us every
-                wire, bend, and connector in full shape. We can turn it, zoom
-                in, and check it from all sides. We can see how it fits in your
-                space and if anything will get in the way. We can change the
-                design or parts if there is any issue.
+              <h3>Automotive</h3>
+              <p class="body-b2">
+                Fast, quick turn automotive wire harness for lights, power, doors, and safety parts in cars and trucks.
               </p>
             </div>
           </div>
           <div class="info-card">
             <div class="info-card-image-wrapper">
               <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/ee9f78ec45f6029b84a7b4eb73b781719f3aa900.png"
-                alt="Digital Twin"
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-1.png"
+                alt="Aerospace & Defense"
               />
             </div>
-
             <div class="info-card-content-wrapper">
-              <h3 class="card-title">Digital Twin</h3>
+              <h3>Aerospace & Defense</h3>
+              <p class="body-b2">
+                Tough wires for planes and tools. Built to be safe, strong, and last long.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-2.png"
+                alt="Medical Devices"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Medical Devices</h3>
+              <p class="body-b2">
+                Clean, fast wires for health tools and care machines. Built quickly for urgent needs.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-3.png"
+                alt="Industrial Machinery"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Industrial Machinery</h3>
+              <p class="body-b2">
+                Long and tough wires for big machines. Handle heat and extended use. Made fast.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-4.png"
+                alt="Consumer Electronics"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Consumer Electronics</h3>
+              <p class="body-b2">
+                Small wires for smart devices. Built with care and speed for every quick turn cable assembly.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-5.png"
+                alt="Energy & Renewables"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Energy & Renewables</h3>
+              <p class="body-b2">
+                The harnesses and the wires for the energy system are designed to be earth friendly.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Ellipse-1602-6.png"
+                alt="Telecom & Networking"
+              />
+            </div>
+            <div class="info-card-content-wrapper">
+              <h3>Telecom & Networking</h3>
+              <p class="body-b2">
+                Wires for phones, internet tools, and more. Packed, tagged, and shipped fast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smart techniques section -->
+    <div class="smart-techniques-area section-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Our Abilities and Standards</h2>
+          <p>We make many types of quick turn wire harnesses for all kinds of needs. Every harness is made to fit precisely what you need, so it works right the first time. We check each harness carefully to ensure it is strong, safe, and ready to last long without trouble.</p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="card-title">Supported Harness Types from Simple to Complex</h3>
               <p class="body-b1">
-                A digital twin is like a smart twin of your genuine harness.
-                It's not just a picture; it acts like the real thing. We can run
-                tests on it. We can check if power flows the right way. We can
-                also see how it handles heat or shaking. It helps us catch
-                problems early. That means your genuine harness works better the
-                first time. We use digital twin tech to ensure your wire harness
-                prototype design is strong, thoughtful, and ready for real work.
+                We can make a simple harness with only one wire for a basic job. We can also make large harnesses with many cables, branches, and connectors going in different directions. Some harnesses are built to fit into small, tight spaces where it is hard to work. Others are made to link to various kinds of machines or tools simultaneously. Every design is built to match your project, so it works how you need it to.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="card-title">Wire Gauges, Covers, and Shielding Choices</h3>
+              <p class="body-b1">
+                There are wires in many sizes, from very thin to very thick. Thin cables are light and work well for smaller jobs, while thick wires are stronger and suitable for heavy-duty work. There are always high quality covers to protect the wires because we add the best quality items to it. We can also add shields around the wires to stop outside signals or noise from causing problems. Every choice is made so the harness works well where it will be used.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="card-title">Best Connector Types for Strong and Safe Links</h3>
+              <p class="body-b1">
+                The plugs and connectors for each harness are always high quality. Some connectors are round to fit into small spaces. Others are flat for vast areas. Some are shaped in a special way to fit specific machines. Every connector is made to lock in tightly so it stays in place, even after prolonged use. Good connectors keep the harness working safely and reliably. We only use high-quality connectors to ensure they last and give the best results.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="card-title">Rules, Standards, and Careful Testing</h3>
+              <p class="body-b1">
+                We follow trusted rules like IPC/WHMA-A-620, so every harness is made correctly. Each harness goes through careful testing before it leaves our shop. We check that power flows from one end to the other without breaks. We look for any weak spots or loose wires and fix them.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-content-wrapper">
+              <h3 class="card-title">Support for CAD Files, Drawings, and Reverse Design</h3>
+              <p class="body-b1">
+                We can work from many plans, such as CAD files, printed drawings, or simple hand sketches. If you do not have a plan, we can copy an old harness and make a new one. This process is called reverse design. We carefully study each part of the old harness, then create a new version that works the same or better. This is useful when a harness is no longer made or the original maker is unavailable.
               </p>
             </div>
           </div>
@@ -1282,190 +1321,132 @@
       </div>
     </div>
 
-    <!-- Prototype section -->
-    <div class="prototype-area section-area">
+    <!-- working-process section -->
+    <div class="working-process-area section-area">
       <div class="product-container mx-auto">
         <div class="section-title">
-          <h2>Advanced Services for Wire Harness Prototypes</h2>
+          <h2>Process to Making & Shipping the Harness</h2>
         </div>
-
-        <div class="icon-card-wrapper">
-          <!-- card 1 -->
-          <div class="icon-card">
-            <div class="info-card-image-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-2-1.png"
-              />
+        <div class="working-process-wrapper">
+          <div class="working-process-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4490.jpg" alt="Process to Making & Shipping the Harness">
+            <div class="product-page-btn">
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
             </div>
-            <h3 class="body-b1">Custom Builds Made for You</h3>
-            <p class="body-b2">
-              Every harness we make is different, because every project is not
-              the same. We offer custom wire harness prototypes to fit your
-              special job. Tell us what you need, and we'll choose the correct
-              wires, coverings, and ends. We ensure it fits well in your space
-              and works the way it should. Whether for a car, machine, or robot,
-              we can carefully build the right one for you.
-            </p>
           </div>
-          <!-- card 2 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-12.png"
-              />
+          <div class="info-card-wrapper">
+            <!-- card 1 -->
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Consultation & Design</h4>
+                <p class="body-b2">
+                  You send your sketch or idea. We review and improve it. Once you agree, we begin right away.
+                </p>
+              </div>
             </div>
-            <h3 class="body-b1">Protected from Static Power</h3>
-            <p class="body-b2">
-              Some parts can break if they get shocked by static. So, we make
-              safe wire harness prototypes in a static-free place. Our team
-              wears special clothes and uses safe tools. The tables and work
-              areas are also safe from static. This keeps your parts from
-              getting hurt.
-            </p>
-          </div>
-          <!-- card 3 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-13.png"
-              />
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Material Procurement</h4>
+                <p class="body-b2">
+                  We collect all needed parts. Most are ready in stock. Others come fast from our trusted partners.
+                </p>
+              </div>
             </div>
-            <h3 class="body-b1">Harnesses Ready for Cars</h3>
-            <p class="body-b2">
-              Wires in cars need to be strong. Our automotive wire harness
-              prototypes can handle heat, cold, shaking, and bumps. We use wires
-              made just for cars. We follow the safety rules for vehicles too.
-              These harnesses are ready to go on the road.
-            </p>
-          </div>
-          <!-- card 4 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42168.png"
-              />
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Cutting & Stripping</h4>
+                <p class="body-b2">
+                  Wires are cut and stripped to size. Each one is checked to make sure it is clean and neat.
+                </p>
+              </div>
             </div>
-            <h3 class="body-b1">Wires That Go to Circuit Boards</h3>
-            <p class="body-b2">
-              When you need wires to go to a circuit board, we build PCB wire
-              harness prototypes that connect neatly. We use soft cables and
-              miniature connectors. We make sure each one goes to the right spot
-              on the board. These are strong, small, and easy to use for showing
-              to others, trying out a new design, or making changes before a
-              whole order.
-            </p>
-          </div>
-          <!-- card 5 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42169.png"
-                alt="icon"
-                class="icon"
-              />
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Crimping & Assembly</h4>
+                <p class="body-b2">
+                  We crimp wires and add ends. If needed, we also solder them. Fast tools help us. Your quick turn assembly wire harness is built fast.
+                </p>
+              </div>
             </div>
-            <h3 class="body-b1">Quick Builds That Still Get Checked</h3>
-            <p class="body-b2">
-              Need something fast? We can help with our rapid wire harness
-              prototyping. We use innovative tools that cut wires fast and join
-              them in less time. But we don't rush the checking part. We look at
-              each wire and every part. That way, nothing gets missed. You get a
-              working harness fast, but it goes through all the checks.
-            </p>
-          </div>
-          <!-- card 6 -->
-          <div class="icon-card">
-            <div class="icon-wrapper">
-              <img
-                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42170.png"
-                alt="icon"
-                class="icon"
-              />
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Testing & Inspection</h4>
+                <p class="body-b2">
+                  We test each harness. Only the best ones go forward.
+                </p>
+              </div>
             </div>
-            <h3 class="body-b1">Wires Stay Neat and Safe</h3>
-            <p class="body-b2">
-              Wire harness prototypes help keep all your wires neat and in
-              place. They don't let wires tangle, rub, or break. This allows
-              your machine to run better and keeps things much safer.
-            </p>
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Labeling & Packaging</h4>
+                <p class="body-b2">
+                  We tag, label, and pack your wires. Reports are added.
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-content-wrapper">
+                <h4 class="body-b1">Shipping</h4>
+                <p class="body-b2">
+                  We ship fast. Your same-day wire harness assembly gets to you quickly.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- working-process section -->
-
-    <div class="working-process-area section-area">
+     <!-- Recommended Components section -->
+    <div class="recommended-components-area section-area">
       <div class="product-container mx-auto">
         <div class="section-title">
-          <h2>Our Smooth Working Process With You</h2>
+          <h2>We are Better & Quicker than Others</h2>
         </div>
-
-        <div class="info-card-wrapper">
-          <!-- card 1 -->
-          <div class="info-card">
-            <h3 class="card-title">Communication</h3>
-            <ul class="card-list">
-              <li class="body-b1">
-                <span class="bold">You Send Your Plans: </span>
-                <span
-                  >You send us your ideas or drawings. We study them and help
-                  improve them. And if you are not sure about the wire harness
-                  prototypes then we offer you some of our plans. After that you
-                  select the design. You can also change the design or add some
-                  things if you want. We give you every update of your project
-                  during the work.</span
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- card 2 -->
-          <div class="info-card">
-            <h3 class="card-title">Building & Checking</h3>
-            <ul class="card-list">
-              <li class="body-b1">
-                <span class="bold">We Choose Good Materials: </span>
-                <span
-                  >We pick your project's best wires, plugs, and tools.
-                </span>
-              </li>
-              <li class="body-b1">
-                <span class="bold">We Cut and Build: </span>
-                <span>
-                  Our team or machines carefully build your harness. We follow
-                  the rules and the plan for the best outcome.
-                </span>
-              </li>
-              <li class="body-b1">
-                <span class="bold">We Test Everything: </span>
-                <span> We check each harness's power, heat, and safety. </span>
-              </li>
-              <li class="body-b1">
-                <span class="bold">We Inspect It All: </span>
-                <span>Every crimp, wire path, and plug is reviewed.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- card 3 -->
-          <div class="info-card">
-            <h3 class="card-title">Packing & Shipping</h3>
-            <ul class="card-list">
-              <li class="body-b1">
-                <span class="bold">We Pack It Safely: </span>
-                <span>
-                  Anti-static wraps keep your harness safe during travel.
-                </span>
-              </li>
-              <li class="body-b1">
-                <span class="bold">We Ship It Fast: </span>
-                <span>
-                  You choose shipping speed. We add tracking and send updates.
-                  And you receive a genuine, tested wire harness ready to use
-                  immediately.
-                </span>
-              </li>
-            </ul>
+        <div class="feature-list-main-wrapper">
+          <div class="feature-list-card-wrapper">
+            <li class="feature-list-card feature-list-card-header">
+              <h3 class="feature-list-title">Feature</h3>
+              <h3 class="feature-list-desc">QL-Custom (Fast Turn)</h3>
+              <h3 class="feature-list-end">Typical Competitors</h3>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Turnaround Time</p>
+              <p class="feature-list-desc">24-hour wire harness turn; same day if needed</p>
+              <p class="feature-list-end">1–2 weeks</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Minimum Order Quantity</p>
+              <p class="feature-list-desc">1 unit (prototypes and low-volume quick-turn wire harness)</p>
+              <p class="feature-list-end">100+ units</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Cost Efficiency</p>
+              <p class="feature-list-desc">Low-cost, quick-turn wire harness from lean work</p>
+              <p class="feature-list-end">Higher cost, slower</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Customization</p>
+              <p class="feature-list-desc">Full quick-turn custom wire harness design</p>
+              <p class="feature-list-end">Mostly standard</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Automation Level</p>
+              <p class="feature-list-desc">High (robots, testers, smart tools)</p>
+              <p class="feature-list-end">Medium (some manual)</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Industry Experience</p>
+              <p class="feature-list-desc">Covers quick-turn automotive wire harness and more</p>
+              <p class="feature-list-end">Often just one industry</p>
+            </li>
+            <li class="feature-list-card">
+              <p class="feature-list-title">Customer Support</p>
+              <p class="feature-list-desc">Fast-track team for expedited wire harness assembly</p>
+              <p class="feature-list-end">Standard only</p>
+            </li>
           </div>
         </div>
       </div>
@@ -1537,17 +1518,17 @@
             </div>
             <div class="review-card-content">
               <p class="review-card-desc">
-                "The wires were strong and fit just right. My project worked great. I will come back for more. I am satisfied with their great service!"
+                "I got my wires fast, in only two days. They looked good and worked just right. Ordering was simple and quick. Very happy with everything."
               </p>
             </div>
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/51a2667788ebcdbeeab9f107b69a80d1053e1aa1.jpg"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/00b454538bef8aea72e0b08fcc1b1fce417afafc.png"
                   alt=""
                 />
               </div>
-              <h4 class="author-name">Dan Murr</h4>
+              <h4 class="author-name">John Graham</h4>
             </div>
           </div>
           <div class="review-card">
@@ -1609,17 +1590,17 @@
             </div>
             <div class="review-card-content">
               <p class="review-card-desc">
-                "The service was high-speed. The wire harness prototypes looked nice and clean. They worked well. I was pleased with everything. I am looking forward to working with them again!"
+                "I had a rough idea for my project. They helped me fix my plan and made it better. The wires were done quickly and worked well."
               </p>
             </div>
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/773f90938c4c6cfc92be609465a02420cc7095e0.jpg"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/87fe8d4a27356f1be044cba6df283d9934d6fd6e.png"
                   alt=""
                 />
               </div>
-              <h4 class="author-name">Sarah Jones</h4>
+              <h4 class="author-name">Lisa Ann</h4>
             </div>
           </div>
           <div class="review-card">
@@ -1681,17 +1662,17 @@
             </div>
             <div class="review-card-content">
               <p class="review-card-desc">
-                "They offer me the best service. They also promised to offer me services after buying the items. Thank you so much!"
+                "The wires were strong and looked neat. I had some questions, and they helped me fast. I will order again."
               </p>
             </div>
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/2dbaebd7fc220e2024bf1254e156e8f712b04595.jpg"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/1e88f786e2326611e5ecdb62e697538bb0c88b06.png"
                   alt=""
                 />
               </div>
-              <h4 class="author-name">Mike Limo</h4>
+              <h4 class="author-name">Carlos Dave</h4>
             </div>
           </div>
           <div class="review-card">
@@ -1753,17 +1734,17 @@
             </div>
             <div class="review-card-content">
               <p class="review-card-desc">
-                "I had no plan, just an idea. They helped me turn it into a real wire harness. It worked great!" 
+                "My project was running late. I needed wires fast. And then I told them about my project and they helped me like a friend by sending the products."
               </p>
             </div>
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b9cbe34325f5b9852308c72dd68e2b446454903.jpg"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/ec24c2077e0cf0c554e254ea6b15e82684714de5.png"
                   alt=""
                 />
               </div>
-              <h4 class="author-name">Ken Denburg</h4>
+              <h4 class="author-name">Nina Ron</h4>
             </div>
           </div>
         </div>
@@ -1780,11 +1761,7 @@
 
           <div class="request-quote-content">
             <p class="body-b1">
-              Do you want to build wire harness prototypes? QL-Custom Technology
-              Ltd. is ready to help. We give fast answers and reasonable prices.
-              We serve many kinds of work cars, machines, labs, and more. We do
-              everything from ESD safe wire harness prototype to cost wire
-              harness prototyping. Let’s build your idea together.
+              Do you need quick turn wire harnesses fast and done right? QL-Custom Technology Ltd. can help you! We make it easy to start and finish your job without delay. Send your plan, sketch, or idea, and we'll check it and reply quickly. Need a price? We'll send you a quote fast. Do you need your harness fast? Just let us know. We are ready to help you. We are ready to be your trusted quick turn wire harness manufacturer for fast, safe, and smart builds.
             </p>
           </div>
 
@@ -1797,8 +1774,8 @@
 
         <div class="request-quote-image-wrapper">
           <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/ad72231216b8e6b74585adadb43bc1c3b8de3895.png"
-            alt="prototype wire harness"
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/ae845aebe0fc55730f731a8523118f9564017ac3.png"
+            alt="Quick Turn Wire Harness"
           />
         </div>
       </div>
