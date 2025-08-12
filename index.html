@@ -663,7 +663,7 @@
         margin-bottom: 20px;
       }
 
-      .fine-feature-area .info-card h3{
+      .fine-feature-area .info-card h3 {
         margin-bottom: 12px;
       }
 
@@ -702,6 +702,79 @@
           width: 100%;
         }
       }
+
+      /*customer-experience-area*/
+      .customer-experience-area .content-wrapper {
+        display: flex;
+        gap: 20px;
+      }
+
+      .customer-experience-area .left-content {
+        width: 847px;
+        flex-shrink: 0;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+      }
+
+      .customer-experience-area .left-content h3{
+        margin-bottom: 20px;
+      }
+
+      .customer-experience-area ul {
+        list-style: disc;
+        padding-left: 32px;
+      }
+
+      .customer-experience-area ul .bold {
+        font-weight: 400;
+      }
+
+      .customer-experience-area .right-content .right-content-card{
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #F0F0F0;
+      }
+
+      .customer-experience-area .right-content .right-content-card:nth-child(1){
+        margin-bottom: 20px;
+      }
+
+      .customer-experience-area .right-content .right-content-card h3{
+        margin-bottom: 10px;
+      }
+
+      .customer-experience-area .highlight-text{
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #EFF3F8;
+        margin: 40px 0;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-experience-area .content-wrapper {
+          flex-direction: column;
+        }
+        .customer-experience-area .left-content {
+          width: 100%;
+        }
+        .customer-experience-area .right-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        .customer-experience-area .right-content .right-content-card:nth-child(1){
+          margin-bottom: 0;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customer-experience-area .right-content {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -1316,6 +1389,79 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="customer-experience-area section-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Real-life Experiences of Our Custom Harness</h2>
+        </div>
+        <div class="content-wrapper">
+          <div class="left-content">
+            <h3 class="heading-h3">
+              Real-life Experiences of Our Custom harness
+            </h3>
+
+            <ul class="body-b1">
+              <li>
+                <span class="bold">Repair Shop:</span> Large random wire bundles
+                were hard to fix. Now they use small custom sets to replace only
+                bad wires.
+              </li>
+              <li>
+                <span class="bold">Car Garage:</span> One car had engine
+                problems over and over. A new custom engine harness solved it.
+              </li>
+              <li>
+                <span class="bold">Hospital:</span> Monitors gave wrong
+                readings. Now with shielded wires, the problem is gone.
+              </li>
+              <li>
+                <span class="bold">Airplane Maker:</span> Wires were too heavy.
+                Custom wires fixed that and blocked signal noise.
+              </li>
+              <li>
+                <span class="bold">Boat Use:</span> Salt water wrecked old
+                wires. A sealed marine harness fixed that.
+              </li>
+            </ul>
+          </div>
+          <div class="right-content">
+            <div class="right-content-card">
+              <h3 class="heading-h3">Results</h3>
+              <ul class="body-b1">
+                <li>20% less machine stop time</li>
+                <li>15% better energy use</li>
+                <li>35% fewer service calls</li>
+              </ul>
+            </div>
+            <div class="right-content-card">
+              <h3 class="heading-h3">
+                Before vs. After
+              </h3>
+              <ul class="body-b1">
+                <li>
+                  <span class="bold">Before: </span>
+                   Messy wires, errors, repairs.
+                </li>
+                <li>
+                  <span class="bold">After: </span>
+                   Neat setup, strong signals, steady work.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-text">
+          <p class="body-b1">Custom Wiring harness make your machine safer, stronger, and better. The proper wiring matters greatly if you work with cars, planes, tools, or machines. If you need wiring that you can trust, visit our site.</p>
+        </div>
+
+        <div class="btn-wrapper" style="display: flex; justify-content: center">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+
       </div>
     </div>
   </body>
