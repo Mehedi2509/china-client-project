@@ -58,6 +58,7 @@
         font-size: 24px;
         line-height: 36px;
         letter-spacing: 0%;
+        color: #4b5563;
       }
 
       .body-b1 {
@@ -124,7 +125,6 @@
           font-size: 16px;
           line-height: 24px;
         }
-
         .heading-h2 {
           font-size: 28px;
           line-height: 40px;
@@ -448,7 +448,6 @@
 
       .compare-standards-area .table-wrapper table tbody tr {
         border-bottom: 0.5px solid #4b556333;
-        
       }
       .compare-standards-area .table-wrapper table tbody tr td {
         padding: 10px;
@@ -468,6 +467,56 @@
       @media only screen and (max-width: 767px) {
         .compare-standards-area .table-wrapper {
           text-align: start;
+        }
+      }
+
+      /*must-go-custom-area*/
+
+      .must-go-custom-area .product-container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .must-go-custom-area .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .must-go-custom-area .content-wrapper ul {
+        padding-left: 32px;
+      }
+
+      .must-go-custom-area .image-wrapper {
+        width: 523px;
+        height: auto;
+        aspect-ratio: 1.39/1;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .must-go-custom-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .must-go-custom-area .image-wrapper {
+          width: 40%;
+          height: auto;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .must-go-custom-area .product-container {
+          flex-direction: column;
+        }
+        .must-go-custom-area .image-wrapper {
+          width: 100%;
+          height: auto;
         }
       }
       
@@ -763,6 +812,29 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="must-go-custom-area section-area">
+      <div class="product-container mx-auto">
+        <div class="content-wrapper">
+          <h2 class="heading-h2">When You Must Go Custom</h2>
+          <p class="body-b1">Use a custom harness if:</p>
+          <ul class="heading-h3">
+            <li>Your machines work in very hot or cold places.</li>
+            <li>The space is tight or hard to reach.</li>
+            <li>Safety is a top need.</li>
+            <li>You're building something new or small in number.</li>
+            <li>You can't afford to stop your machine often.</li>
+          </ul>
+          <p class="body-b1">
+            A custom engine harness protects each wire from heat, water, and
+            damage. That way, it lasts longer and works better.
+          </p>
+        </div>
+        <div class="image-wrapper">
+          <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/185615fe330b91d6ab9cd851aad8e434e0c3f317.png" alt="">
         </div>
       </div>
     </div>
