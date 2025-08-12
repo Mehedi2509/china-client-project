@@ -137,7 +137,7 @@
         margin-bottom: 0;
         gap: 40px;
         text-align: left;
-        max-width: 700px;
+        max-width: 660px;
       }
       .hero-area .section-title h1 {
         font-family: Alexandria;
@@ -149,7 +149,7 @@
         font-family: Alexandria;
         font-size: 32px;
         font-weight: 300;
-        line-height: 32px;
+        line-height: 40px;
         color: #242424;
       }
       .hero-area .hero-product-page-btn {
@@ -308,7 +308,9 @@
       }
 
       /*solution-area.*/
-
+      .solution-area .section-title p {
+        text-align: left;
+      }
       .solution-area .info-card-wrapper {
         display: flex;
         flex-direction: column;
@@ -775,51 +777,58 @@
       }
 
       /* Customer Reviews */
-      .customer-reviews-area {
-        padding: 70px 16px;
-        max-width: 1920px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-      .customer-reviews-area .custom-container {
-        max-width: 1580px;
-        width: 100%;
-        margin: 0 auto;
-      }
-
       .customer-reviews-area .customer-reviews-wrapper {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 32px;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .image-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .customer-reviews-area .customer-reviews-wrapper .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .customer-reviews-area .customer-reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
         row-gap: 20px;
       }
-      .customer-reviews-area .customer-reviews-wrapper .review-card {
+      .customer-reviews-area .customer-reviews-grid .review-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 16px;
+        gap: 20px;
         width: 100%;
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 12px;
         overflow: hidden;
-        background-color: #EFF3F8;
+        background-color: #ffffff;
+        border: 1px solid #16529B80;
       }
-      .customer-reviews-area .customer-reviews-wrapper .review-rating {
+      .customer-reviews-area .customer-reviews-grid .review-rating {
         display: flex;
         align-items: center;
       }
-      .customer-reviews-area .customer-reviews-wrapper .review-rating svg {
+      .customer-reviews-area .customer-reviews-grid .review-rating svg {
         width: 32px;
         height: 32px;
         fill: #F9CC04;
       }
-      .customer-reviews-area .customer-reviews-wrapper .author-info {
+      .customer-reviews-area .customer-reviews-grid .author-info {
         display: flex;
         align-items: center;
         gap: 16px;
       }
       .customer-reviews-area
-        .customer-reviews-wrapper
+        .customer-reviews-grid
         .review-card
         .author-image {
         display: flex;
@@ -829,7 +838,7 @@
         overflow: hidden;
       }
       .customer-reviews-area
-        .customer-reviews-wrapper
+        .customer-reviews-grid
         .review-card
         .author-image
         img {
@@ -838,7 +847,7 @@
         object-fit: cover;
       }
       .customer-reviews-area
-        .customer-reviews-wrapper
+        .customer-reviews-grid
         .review-card
         .review-card-content {
         display: flex;
@@ -846,7 +855,7 @@
         gap: 4px;
       }
       .customer-reviews-area
-        .customer-reviews-wrapper
+        .customer-reviews-grid
         .review-card
         .author-name {
         font-family: Alexandria;
@@ -856,7 +865,7 @@
         color: #4b5563;
       }
       .customer-reviews-area
-        .customer-reviews-wrapper
+        .customer-reviews-grid
         .review-card
         .review-card-content
         .review-card-desc {
@@ -865,28 +874,22 @@
         line-height: 28px;
         font-weight: 300;
         color: #4b5563;
-        text-align: justify;
       }
       .customer-reviews-area .btn-wrapper {
         display: flex;
         margin-top: 40px;
       }
 
-      @media only screen and (max-width: 1199px) {
+      @media only screen and (max-width: 1024px) {
         .customer-reviews-area .customer-reviews-wrapper {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(1, 1fr);
         }
-      }
-      @media only screen and (max-width: 992px) {
-        .customer-reviews-area .customer-reviews-wrapper {
+        .customer-reviews-area .customer-reviews-grid {
           grid-template-columns: repeat(2, 1fr);
         }
       }
       @media only screen and (max-width: 767px) {
-        .customer-reviews-area {
-          padding: 50px 16px;
-        }
-        .customer-reviews-area .customer-reviews-wrapper {
+        .customer-reviews-area .customer-reviews-grid {
           grid-template-columns: repeat(1, 1fr);
         }
       }
@@ -1453,298 +1456,303 @@
     </div>
 
     <!-- Customer Reviews section -->
-    <div class="customer-reviews-area">
-      <div class="custom-container">
+    <div class="customer-reviews-area section-area">
+      <div class="product-container mx-auto">
         <div class="section-title">
           <h2>Customer Reviews</h2>
         </div>
         <div class="customer-reviews-wrapper">
-          <div class="review-card">
-            <div class="review-rating">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-            </div>
-            <div class="review-card-content">
-              <p class="review-card-desc">
-                "I got my wires fast, in only two days. They looked good and worked just right. Ordering was simple and quick. Very happy with everything."
-              </p>
-            </div>
-            <div class="author-info">
-              <div class="author-image">
-                <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/00b454538bef8aea72e0b08fcc1b1fce417afafc.png"
-                  alt=""
-                />
-              </div>
-              <h4 class="author-name">John Graham</h4>
-            </div>
+          <div class="image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4490.jpg" alt="Customer Reviews Image">
           </div>
-          <div class="review-card">
-            <div class="review-rating">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-            </div>
-            <div class="review-card-content">
-              <p class="review-card-desc">
-                "I had a rough idea for my project. They helped me fix my plan and made it better. The wires were done quickly and worked well."
-              </p>
-            </div>
-            <div class="author-info">
-              <div class="author-image">
-                <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/87fe8d4a27356f1be044cba6df283d9934d6fd6e.png"
-                  alt=""
-                />
+          <div class="customer-reviews-grid">
+            <div class="review-card">
+              <div class="review-rating">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
               </div>
-              <h4 class="author-name">Lisa Ann</h4>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="review-rating">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-            </div>
-            <div class="review-card-content">
-              <p class="review-card-desc">
-                "The wires were strong and looked neat. I had some questions, and they helped me fast. I will order again."
-              </p>
-            </div>
-            <div class="author-info">
-              <div class="author-image">
-                <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/1e88f786e2326611e5ecdb62e697538bb0c88b06.png"
-                  alt=""
-                />
+              <div class="review-card-content">
+                <p class="review-card-desc">
+                  "I got my wires fast, in only two days. They looked good and worked just right. Ordering was simple and quick. Very happy with everything."
+                </p>
               </div>
-              <h4 class="author-name">Carlos Dave</h4>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="review-rating">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
-                />
-              </svg>
-            </div>
-            <div class="review-card-content">
-              <p class="review-card-desc">
-                "My project was running late. I needed wires fast. And then I told them about my project and they helped me like a friend by sending the products."
-              </p>
-            </div>
-            <div class="author-info">
-              <div class="author-image">
-                <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/ec24c2077e0cf0c554e254ea6b15e82684714de5.png"
-                  alt=""
-                />
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/00b454538bef8aea72e0b08fcc1b1fce417afafc.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="author-name">John Graham</h4>
               </div>
-              <h4 class="author-name">Nina Ron</h4>
+            </div>
+            <div class="review-card">
+              <div class="review-rating">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card-content">
+                <p class="review-card-desc">
+                  "I had a rough idea for my project. They helped me fix my plan and made it better. The wires were done quickly and worked well."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/87fe8d4a27356f1be044cba6df283d9934d6fd6e.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="author-name">Lisa Ann</h4>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-rating">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card-content">
+                <p class="review-card-desc">
+                  "The wires were strong and looked neat. I had some questions, and they helped me fast. I will surely order again. Recommended!"
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/1e88f786e2326611e5ecdb62e697538bb0c88b06.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="author-name">Carlos Dave</h4>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-rating">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                  />
+                </svg>
+              </div>
+              <div class="review-card-content">
+                <p class="review-card-desc">
+                  "My project was running late. I needed wires fast. And then I told them about my project and they helped me like a friend by sending the products.”
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/ec24c2077e0cf0c554e254ea6b15e82684714de5.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="author-name">Nina Ron</h4>
+              </div>
             </div>
           </div>
         </div>
