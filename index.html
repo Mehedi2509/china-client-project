@@ -308,7 +308,7 @@
         aspect-ratio: 662/448;
         flex-shrink: 0;
         overflow: hidden;
-        border: 8px;
+        border-radius: 8px;
       }
 
       .harness-excellence-area .harness-durability-section .image-wrapper img {
@@ -344,6 +344,64 @@
           flex-direction: column-reverse;
         }
         .harness-excellence-area .harness-durability-section .image-wrapper {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      /*test-certification-area*/
+
+      .test-certification-area {
+        padding: 0;
+      }
+
+      .test-certification-area .product-container {
+        padding: 40px;
+        background-color: #f0f0f0;
+        border-radius: 12px;
+        display: flex;
+        gap: 40px;
+      }
+
+      .test-certification-area .product-container .image-wrapper {
+        width: 519px;
+        height: auto;
+        aspect-ratio: 519/335;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .test-certification-area .product-container .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .test-certification-area .product-container .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .test-certification-area .product-container .content-wrapper ul {
+        padding-left: 32px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        
+        .test-certification-area .product-container .image-wrapper {
+          width: 40%;
+          margin: 0 auto;
+          aspect-ratio: unset;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .test-certification-area .product-container {
+          flex-direction: column;
+        }
+        .test-certification-area .product-container .image-wrapper {
           width: 100%;
           height: auto;
         }
@@ -410,7 +468,9 @@
             <p class="body-b1">
               Fixing these takes time and money. One small problem can shut down
               a whole machine. A strong
-              <a href="https://www.ql-custom.com/custom-auto-wire-harness" class="body-b1"
+              <a
+                href="https://www.ql-custom.com/custom-auto-wire-harness"
+                class="body-b1"
                 >custom wiring harness</a
               >
               helps avoid these risks.
@@ -544,6 +604,32 @@
               />
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-certification-area section-area">
+      <div class="product-container mx-auto">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/e0bdf8e5aa830deb733f6e8903e6a20631edf6e8.png"
+            alt=""
+          />
+        </div>
+        <div class="content-wrapper">
+          <h2 class="heading-h2">Safety Tests and Quality Certifications</h2>
+          <p class="body-b1">The best harness follow trusted rules, like:</p>
+          <ul class="body-b1">
+            <li>ISO 9001 for quality.</li>
+            <li>IATF 16949 for cars.</li>
+            <li>AS9100 for planes.</li>
+            <li>IPC/WHMA-A-620 for wire building rules.</li>
+          </ul>
+          <p class="body-b1">
+            Harness are tested for power flow, insulation, high voltage, and how
+            they handle shaking, salt, or water. These tests show how they will
+            work in real life. A good harness passes all tests.
+          </p>
         </div>
       </div>
     </div>
