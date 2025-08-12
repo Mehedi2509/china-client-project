@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mock-btn{
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #00BDE7;
+        color: #FFF;
+      }
+
+      body {
+        font-family: Alexandria;
+      }
+
+      .product-container {
+        max-width: 1280px;
+      }
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      .section-area {
+        padding: 40px 0px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .heading-h2 {
+        font-family: Alexandria;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 51px;
+        letter-spacing: 0%;
+        color: #4b5563;
+      }
+
+      .heading-h3 {
+        font-family: Alexandria;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0%;
+      }
+
+      .body-b1 {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .body-b2 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      /* Common Style */
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+      .section-title p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+
+      .product-page-btn {
+        display: flex;
+      }
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-area {
+          padding: 32px 16px;
+        }
+        .section-title {
+          margin-bottom: 32px;
+        }
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .heading-h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+
+      /*here all style will start with .product-intro-area*/
+
+      .product-intro-area .product-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .product-intro-area .image-wrapper {
+        width: 413px;
+        height: 100%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 8px;
+      }
+
+      .product-intro-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-intro-area .content-wrapper .heading-h2 {
+        margin-bottom: 20px;
+      }
+
+      .product-intro-area .content-wrapper .body-b1 span:nth-child(1) {
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-intro-area .product-container {
+          flex-direction: column;
+        }
+        .product-intro-area .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      /*cheap harness problem area. all style will start with .cheap-harness-problem-area*/
+
+      .cheap-harness-problem-area {
+        padding: 0px;
+      }
+
+      .cheap-harness-problem-area .product-container {
+        padding: 40px;
+        background-color: #ff00000a;
+        border-radius: 12px;
+      }
+
+      .cheap-harness-problem-area .major-problem-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .cheap-harness-problem-area .major-problem-card .image-wrapper {
+        width: 413px;
+        height: auto;
+        aspect-ratio: 413/386;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .cheap-harness-problem-area .major-problem-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .cheap-harness-problem-area .major-problem-card .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .cheap-harness-problem-area .major-problem-card .content-wrapper ul {
+        padding-left: 32px;
+      }
+
+      .cheap-harness-problem-area .fail-example-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .cheap-harness-problem-area .fail-example-content ul{
+        padding-left: 32px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="product-intro-area section-area">
+      <div class="product-container mx-auto">
+        <div class="content-wrapper">
+          <h2 class="heading-h2">What Is a Wiring Harness?</h2>
+          <p class="body-b1">
+            <span>
+              A Custom Wiring Harness is a bundle of wires, cables, and
+              connectors. These wires send power or data to different parts of a
+              machine. The harness helps keep wires in order and makes machines
+              easier to build and fix.
+            </span>
+            <span>
+              Wiring harness keeps everything clean and easy to follow. They
+              protect wires from heat, water, shaking, and damage. In heavy
+              machines, they help workers fix problems fast. They also help make
+              sure everything runs without problems. A good custom wire harness
+              is made to last. It is easy to install and fits just right. This
+              saves space and makes the machine run smoothly. A custom harness
+              also makes fixing things later easier, saving time and money.
+            </span>
+          </p>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/620c41b79f108eec7388d8fd043e6534d2588de3.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="cheap-harness-problem-area section-area">
+      <div class="product-container mx-auto">
+        <div class="major-problem-card">
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/73009f32013353784214b74f386bb74499ef6ffe.png"
+              alt=""
+            />
+          </div>
+          <div class="content-wrapper">
+            <h3 class="heading-h3">
+              Major Problems with Cheap Custom Wiring Harness
+            </h3>
+            <p class="body-b1">
+              Cheap wiring harness breaks fast and can stop your machine from
+              working. Here are some common problems that happen when using
+              low-quality harness:
+            </p>
+            <ul class="body-b1">
+              <li>Loose plugs that make power or signals stop.</li>
+              <li>Cracked wires that cause power to go out or get lost.</li>
+              <li>Broken wires from bending or poor parts.</li>
+              <li>Can cause major dangerous situations like fire.</li>
+            </ul>
+
+            <!--! Remove Under Line and add this link on text -->
+            <!-- https://www.ql-custom.com/custom-auto-wire-harness -->
+            <p class="body-b1">
+              Fixing these takes time and money. One small problem can shut down
+              a whole machine. A strong <u>custom wiring harness</u> helps avoid
+              these risks.
+            </p>
+          </div>
+        </div>
+
+        <div class="fail-example-content">
+          <h3 class="heading-h3">
+            Major Problems with Cheap Custom Wiring Harness
+          </h3>
+          <p class="body-b1">
+            The damage can be significant if a harness fails in a car, airplane,
+            or factory. Here are some real examples:
+          </p>
+          <ul class="body-b1">
+            <li>
+              A car maker had to recall vehicles because wires broke and airbags
+              did not work.
+            </li>
+            <li>A plane company had to redesign wires that got too hot.</li>
+            <li>
+              A factory lost time because cables were too short, stopping
+              machines repeatedly.
+            </li>
+          </ul>
+
+          <p class="body-b1">
+            Bad wiring can hurt machines, people's trust, and your business. A
+            good harness can stop this from happening. Investing in strong
+            wiring keeps your work safe and your machines running.
+          </p>
+        </div>
+
+        <div ><button class="mock-btn">Get a Quick Quote</button></div>
+      </div>
+    </div>
+  </body>
+</html>
