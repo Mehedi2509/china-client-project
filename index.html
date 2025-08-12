@@ -546,10 +546,10 @@
         font-weight: 400;
       }
 
-      .industries-use-custom-harness-area .highlight-text{
+      .industries-use-custom-harness-area .highlight-text {
         padding: 20px;
         border-radius: 8px;
-        background-color: #EFF3F8;
+        background-color: #eff3f8;
         margin: 40px 0;
       }
 
@@ -564,6 +564,57 @@
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      /*harness-helps-machine-area*/
+
+      .harness-helps-machine-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .harness-helps-machine-area .info-card .image-wrapper{
+        width: 305px;
+        height: auto;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 23px;
+      }
+
+      .harness-helps-machine-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .harness-helps-machine-area .info-card .bold{
+        font-weight: 400;
+      }
+
+      .harness-helps-machine-area .highlight-text{
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #eff3f8;
+        margin-top: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .harness-helps-machine-area .info-card .image-wrapper{
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .harness-helps-machine-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .harness-helps-machine-area .info-card .image-wrapper{
+          width: 100%;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -955,12 +1006,79 @@
           </div>
         </div>
         <div class="highlight-text">
-          <p class="body-b1">Custom cable harness for boats and planes use sealed, light, and strong parts that meet safety rules. These last longer and keep people safe.</p>
+          <p class="body-b1">
+            Custom cable harness for boats and planes use sealed, light, and
+            strong parts that meet safety rules. These last longer and keep
+            people safe.
+          </p>
         </div>
         <div style="display: flex; justify-content: center">
-          <button class="mock-btn " >
-            Get a Quick Quote
-          </button>
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="harness-helps-machine-area section-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Custom harness helps machines Last Longer</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/7c0f7ca05643f5b5e4df004a047458b2033fb2bb.png"
+                alt=""
+              />
+            </div>
+            <p class="body-b1">
+              <span class="bold">Better Fit = Less Damage: </span>Right-sized wires don't
+              bend too much or rub. This means less stress and heat. Less heat
+              means parts last longer and break less. Things like clips and
+              sleeves keep wires in place so they last longer. This makes the
+              machine more reliable.
+            </p>
+          </div>
+
+          <!-- card 2 -->
+           <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/3893940d3d163da04329578124b03970b02ab44b.png"
+                alt=""
+              />
+            </div>
+            <p class="body-b1">
+              <span class="bold">Better Fit = Less Damage: </span>Right-sized wires don't
+              bend too much or rub. This means less stress and heat. Less heat
+              means parts last longer and break less. Things like clips and
+              sleeves keep wires in place so they last longer. This makes the
+              machine more reliable.
+            </p>
+          </div>
+          <!-- card 3 -->
+           <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/befc4efa30ac5cf25ea5cb9dcf33c3be47f90b4b.png"
+                alt=""
+              />
+            </div>
+            <p class="body-b1">
+              <span class="bold">Better Fit = Less Damage: </span>Right-sized wires don't
+              bend too much or rub. This means less stress and heat. Less heat
+              means parts last longer and break less. Things like clips and
+              sleeves keep wires in place so they last longer. This makes the
+              machine more reliable.
+            </p>
+          </div>
+        </div>
+        <div class="highlight-text">
+          <p class="body-b1">
+            Custom cable harness for boats and planes use sealed, light, and
+            strong parts that meet safety rules. These last longer and keep
+            people safe.
+          </p>
         </div>
       </div>
     </div>
