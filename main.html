@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Alexandria;
+      }
+
+      .mock-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #00bde7;
+        color: #fff;
+        margin: 0 auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .section-container {
+        max-width: 1280px;
+      }
+
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      .section-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .body-b1 {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      .body-b2 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #4b5563;
+        text-align: justify;
+      }
+
+      /* Common Style */
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .section-title p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+
+      .product-page-btn {
+        display: flex;
+      }
+
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-area {
+          padding: 50px 16px;
+        }
+
+        .section-title {
+          margin-bottom: 32px;
+        }
+
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      /* Hero Area */
+      .hero-area {
+        min-height: 560px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-area .hero-product-container {
+        max-width: 1280px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-area .hero-content-wrapper {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-area .section-title {
+        margin-bottom: 0;
+        gap: 32px;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .hero-area .section-title h1 {
+        font-family: Alexandria;
+        font-size: 52px;
+        font-weight: 600;
+        line-height: initial;
+        color: #fff;
+      }
+
+      .hero-area .section-title p {
+        font-family: Alexandria;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 32px;
+        color: #fff;
+      }
+
+      .hero-area .hero-bottom-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 36px 60px;
+        border-radius: 20px;
+        background-color: #16529b;
+      }
+
+      .hero-area .hero-state-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .hero-area .hero-state-wrapper .state {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        color: #ffffff;
+      }
+
+      .hero-area .hero-state-wrapper .state span:nth-child(1) {
+        font-family: "Inter", sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 36px;
+      }
+
+      .hero-area .hero-state-wrapper .state span:nth-child(2) {
+        font-family: Alexandria;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      .hero-area .hero-product-page-btn {
+        display: flex;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .hero-area {
+          padding: 70px 16px;
+          background-position: 90% center !important;
+        }
+
+        .hero-area .section-title h1 {
+          font-size: 48px;
+          line-height: 56px;
+        }
+
+        .hero-area .hero-product-page-btn .popup-form-btn {
+          font-size: 16px;
+          padding: 10px 16px;
+        }
+
+        .hero-area .hero-state-wrapper {
+          gap: 16px;
+        }
+
+        .hero-area .hero-bottom-wrapper {
+          padding: 24px 32px;
+          gap: 24px;
+          flex-direction: column;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .hero-area {
+          padding: 20px 16px;
+          min-height: 0;
+          background-position: 90% center !important;
+        }
+
+        .hero-area .section-title h1 {
+          font-size: 32px;
+          line-height: 42px;
+          text-align: left;
+          max-width: 360px;
+        }
+
+        .hero-area .section-title p {
+          font-size: 18px;
+          display: none;
+        }
+
+        .hero-area .hero-state-wrapper .state {
+          width: auto;
+          gap: 8px;
+        }
+
+        .hero-area .hero-state-wrapper .state span:nth-child(1) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .hero-area .hero-state-wrapper .state span:nth-child(2) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
+
+      .product-intro-area .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .product-intro-area .divider .divider-line {
+        width: 80px;
+        height: 4px;
+        background-color: #16529b;
+      }
+
+      .product-intro-area .divider .divider-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #16529b;
+      }
+
+      .product-intro-area .product-intro-image-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin: 40px 0;
+      }
+
+      .product-intro-area .product-intro-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="hero-area"
+      style="
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/wire-harness-prototypes-hero-image.jpg');
+      "
+    >
+      <div class="hero-product-container">
+        <div class="hero-content-wrapper">
+          <div class="section-title">
+            <h1>Wire harness prototypes</h1>
+            <p>
+              Every wire, plug, and part is carefully placed in the Wire Harness
+              Prototypes. Our trained team checks everything from the start to
+              the end. We make wire harnesses that work very well.
+            </p>
+          </div>
+
+          <div class="hero-bottom-wrapper">
+            <div class="hero-state-wrapper">
+              <div class="state">
+                <span>20+</span>
+                <span>Solid Years of Experience</span>
+              </div>
+              <div class="state">
+                <span>1200+</span>
+                <span>Satisfied Customers</span>
+              </div>
+              <div class="state">
+                <span>9000+</span>
+                <span>Successful Cases</span>
+              </div>
+            </div>
+            <div class="hero-product-page-btn">
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product intro area -->
+
+    <div class="product-intro-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h1>Product Introduction</h1>
+          <p>
+            We make control wire harness assemblies for many machines, from
+            small tools to large factory systems. These harnesses link important
+            parts like sensors, motors, switches, and controllers to work
+            together. We can create a control panel wire harness, a PLC control
+            wire harness, or a custom harness built just for you. Our industrial
+            control wire harness is perfect for large plants. In contrast, our
+            machine control wire harness works with heavy-duty tools and
+            machines. Every wire is measured carefully, cut to the exact length,
+            crimped tight, and labeled clearly so installation is quick and
+            straightforward. The outside layer protects the cables from heat,
+            oil, dirt, and water. We thoroughly test every harness before it
+            leaves our factory. We can make small orders or unique custom
+            designs. Our goal is to make wiring safe, easy, and built to last.
+          </p>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="product-intro-image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/d852da42d5287b3c0eba0d8d99fc836964bc4487.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/4502aa188c2dbd94a3d85265d43797af64e92691.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/f45741f73e2ea22f6ebb8dfb332fae027c10e330.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
