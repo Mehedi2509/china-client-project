@@ -389,7 +389,6 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        
         .test-certification-area .product-container .image-wrapper {
           width: 40%;
           margin: 0 auto;
@@ -406,6 +405,72 @@
           height: auto;
         }
       }
+
+      /*compare-standards-area*/
+
+      .compare-standards-area {
+        padding: 0;
+      }
+
+      .compare-standards-area .product-container {
+        padding: 40px;
+        display: flex;
+        gap: 40px;
+        border-radius: 12px;
+      }
+
+      .compare-standards-area .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .compare-standards-area .title-wrapper h2 {
+        margin-bottom: 12px;
+      }
+
+      .compare-standards-area .table-wrapper table {
+        overflow-x: auto;
+        width: 738px;
+        border-collapse: collapse;
+        background-color: #eff3f8;
+      }
+
+      .compare-standards-area .table-wrapper table thead {
+        background-color: #16529b;
+      }
+      .compare-standards-area .table-wrapper table thead th {
+        padding: 10px;
+        color: white;
+        font-weight: 300;
+      }
+
+      .compare-standards-area .table-wrapper table tbody tr {
+        border-bottom: 0.5px solid #4b556333;
+        
+      }
+      .compare-standards-area .table-wrapper table tbody tr td {
+        padding: 10px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .compare-standards-area .product-container {
+          padding: 40px 16px;
+          flex-direction: column;
+        }
+        .compare-standards-area .table-wrapper table {
+          width: 100%;
+          overflow-x: scroll;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .compare-standards-area .table-wrapper {
+          text-align: start;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -630,6 +695,74 @@
             they handle shaking, salt, or water. These tests show how they will
             work in real life. A good harness passes all tests.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare-standards-area section-area">
+      <div class="product-container mx-auto">
+        <div class="header-wrapper">
+          <div class="title-wrapper">
+            <h2 class="heading-h2">
+              Compare Standard harness & Custom Wiring Harness
+            </h2>
+            <p class="body-b1">
+              Custom ones are made for a perfect fit. They are great for
+              demanding jobs and special machines.
+            </p>
+          </div>
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper body-b1">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Standard Harness</th>
+                <th>Custom Harness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Design</td>
+                <td>Fits many machines</td>
+                <td>Made for one job</td>
+              </tr>
+              <tr>
+                <td>Speed</td>
+                <td>Ships fast</td>
+                <td>Takes time to make with good quality</td>
+              </tr>
+              <tr>
+                <td>Cost</td>
+                <td>Cheaper at first, but costs later</td>
+                <td>Costs more at the start but saves more later</td>
+              </tr>
+              <tr>
+                <td>Life</td>
+                <td>Simple materials</td>
+                <td>Stronger parts for longer use</td>
+              </tr>
+              <tr>
+                <td>Fit</td>
+                <td>May not fit just right</td>
+                <td>Fits perfect</td>
+              </tr>
+              <tr>
+                <td>Changes</td>
+                <td>Hard to change</td>
+                <td>Easy to adjust</td>
+              </tr>
+              <tr>
+                <td>Best Use</td>
+                <td>Easy machines</td>
+                <td>Complex or important systems</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
