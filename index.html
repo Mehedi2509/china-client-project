@@ -14,15 +14,15 @@
         padding: 0;
       }
 
-      .mock-btn{
+      .mock-btn {
         padding: 14px 30px;
         font-size: 16px;
         font-weight: 400;
         border-radius: 30px;
         border: none;
         cursor: pointer;
-        background-color: #00BDE7;
-        color: #FFF;
+        background-color: #00bde7;
+        color: #fff;
       }
 
       body {
@@ -82,7 +82,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
       }
       .section-title h2 {
         font-family: Alexandria;
@@ -128,6 +128,12 @@
         .heading-h2 {
           font-size: 28px;
           line-height: 40px;
+        }
+      }
+
+      @media only screen and (max-width: 1023px) {
+        .section-area {
+          padding: 40px 16px;
         }
       }
 
@@ -224,10 +230,124 @@
         margin-bottom: 40px;
       }
 
-      .cheap-harness-problem-area .fail-example-content ul{
+      .cheap-harness-problem-area .fail-example-content ul {
         padding-left: 32px;
       }
-      
+
+      @media only screen and (max-width: 767px) {
+        .cheap-harness-problem-area .major-problem-card {
+          flex-direction: column-reverse;
+        }
+        .cheap-harness-problem-area .major-problem-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      /*Harness excellence area */
+
+      .harness-excellence-area
+        .content-section-wrapper
+        .materials-build-section {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 10px;
+      }
+
+      .harness-excellence-area .materials-build-section .image-wrapper {
+        width: 662px;
+        height: auto;
+        aspect-ratio: 39/34;
+        flex-shrink: 0;
+        overflow: hidden;
+        border: 8px;
+      }
+
+      .harness-excellence-area .materials-build-section .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .harness-excellence-area
+        .materials-build-section
+        .good-material-content
+        h3 {
+        margin-bottom: 20px;
+      }
+
+      .harness-excellence-area .material-build-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .harness-excellence-area .material-build-content ul {
+        padding-left: 32px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .harness-excellence-area .materials-build-section {
+          flex-direction: column;
+        }
+        .harness-excellence-area .materials-build-section .image-wrapper {
+          width: 40%;
+          margin: 0 auto;
+          aspect-ratio: unset;
+        }
+      }
+
+      .harness-excellence-area .harness-durability-section {
+        display: flex;
+        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .harness-excellence-area .harness-durability-section .image-wrapper {
+        width: 662px;
+        height: auto;
+        aspect-ratio: 662/448;
+        flex-shrink: 0;
+        overflow: hidden;
+        border: 8px;
+      }
+
+      .harness-excellence-area .harness-durability-section .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .harness-excellence-area .harness-durability-section .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .harness-excellence-area .harness-durability-section .content-wrapper ul {
+        padding-left: 32px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .harness-excellence-area .harness-durability-section {
+          flex-direction: column-reverse;
+        }
+        .harness-excellence-area .harness-durability-section .image-wrapper {
+          width: 40%;
+          height: 60vh;
+          margin: 0 auto;
+          aspect-ratio: unset;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .harness-excellence-area .harness-durability-section {
+          flex-direction: column-reverse;
+        }
+        .harness-excellence-area .harness-durability-section .image-wrapper {
+          width: 100%;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -287,12 +407,13 @@
               <li>Can cause major dangerous situations like fire.</li>
             </ul>
 
-            <!--! Remove Under Line and add this link on text -->
-            <!-- https://www.ql-custom.com/custom-auto-wire-harness -->
             <p class="body-b1">
               Fixing these takes time and money. One small problem can shut down
-              a whole machine. A strong <u>custom wiring harness</u> helps avoid
-              these risks.
+              a whole machine. A strong
+              <a href="https://www.ql-custom.com/custom-auto-wire-harness" class="body-b1"
+                >custom wiring harness</a
+              >
+              helps avoid these risks.
             </p>
           </div>
         </div>
@@ -324,7 +445,106 @@
           </p>
         </div>
 
-        <div ><button class="mock-btn">Get a Quick Quote</button></div>
+        <div><button class="mock-btn">Get a Quick Quote</button></div>
+      </div>
+    </div>
+
+    <div class="harness-excellence-area section-area">
+      <div class="product-container mx-auto">
+        <div class="section-title">
+          <h2>Things that Makes a Harness Excellent</h2>
+          <p>
+            A good harness offers the best features and works well in all
+            situations. Good wires, parts, and care in building all help make it
+            strong. Custom harness are made to face all these challenging
+            conditions.
+          </p>
+        </div>
+        <div class="content-section-wrapper">
+          <div class="materials-build-section">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/c9f5e8c731250633482596151b2ed65444d94bf0.png"
+                alt=""
+              />
+            </div>
+
+            <div class="content-wrapper">
+              <div class="good-material-content">
+                <h3 class="heading-h3">Choosing Good Materials</h3>
+                <p class="body-b1">
+                  Great harness start with real copper. It bends well, lasts
+                  long, and carries power smoothly. If used in wet or dirty
+                  places, copper is coated in tin. That way, it won’t rust or go
+                  bad fast. The outside cover must fight heat, water, sun, and
+                  cuts. Covers like silicone or PVC are chosen based on the job.
+                  If the harness will bend a lot, it needs extra protection like
+                  wraps or sleeves to stay strong and safe.
+                </p>
+              </div>
+
+              <div class="material-build-content">
+                <h3 class="heading-h3">How Good harness Are Built</h3>
+                <p class="body-b1">
+                  Making a good harness takes skill and the right tools.
+                  Everything is done carefully:
+                </p>
+
+                <ul class="body-b1">
+                  <li>Computers measure and cut wires.</li>
+                  <li>Machines crimp ends tightly.</li>
+                  <li>Workers build and check the harness step by step.</li>
+                  <li>Tests are done to make sure everything works.</li>
+                </ul>
+                <p class="body-b1">
+                  Each step is checked and recorded. Nothing is left to luck.
+                  This helps the harness work better and last longer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="harness-durability-section">
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                What Makes a custom wiring Harness strong and durable
+              </h3>
+
+              <ul class="body-b1">
+                <li>
+                  <span class="bold">Copper wires: </span>They carry power well
+                  and bend without breaking.
+                </li>
+                <li>
+                  <span class="bold">Good jackets: </span>Covers like PVC or
+                  Teflon protect wires from heat, water, and oil.
+                </li>
+                <li>
+                  <span class="bold">Extra layers: </span>Wraps or sleeves block
+                  unwanted signals and protect wires.
+                </li>
+                <li>
+                  <span class="bold">Good plugs: </span>They must be tight and
+                  made from metals that won’t rust.
+                </li>
+                <li>
+                  <span class="bold">Careful building: </span>Machines cut wires
+                  just right. Workers check everything with care.
+                </li>
+              </ul>
+              <p class="body-b1">
+                Every custom harness is tested before it ships out. That way, it
+                works right when you use it.
+              </p>
+            </div>
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/612409382683e26f04f6f878590b5ef777dd361c.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
