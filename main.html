@@ -56,7 +56,7 @@
 
       .body-b2 {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 26px;
         font-weight: 300;
         color: #4b5563;
         text-align: justify;
@@ -278,27 +278,29 @@
         }
       }
 
-      /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
+     
 
-      .product-intro-area .divider {
+      .divider {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
       }
 
-      .product-intro-area .divider .divider-line {
+      .divider .divider-line {
         width: 80px;
         height: 4px;
         background-color: #16529b;
       }
 
-      .product-intro-area .divider .divider-circle {
+      .divider .divider-circle {
         width: 10px;
         height: 10px;
         border-radius: 50%;
         background-color: #16529b;
       }
+
+       /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
 
       .product-intro-area .product-intro-image-wrapper {
         display: grid;
@@ -312,6 +314,84 @@
         height: 100%;
         object-fit: cover;
       }
+
+      @media only screen and (max-width: 1024px) {
+        .product-intro-area .product-intro-image-wrapper {
+          gap: 24px;
+        }
+      }
+
+      /*product-advantage-area*/
+
+      .product-advantage-area .section-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+
+      .product-advantage-area .image-wrapper {
+        width: 440px;
+        height: auto;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .product-advantage-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      
+
+      .product-advantage-area .section-title h2 {
+        text-align: start;
+        font-size: 34px;
+        line-height: 41px;
+        font-weight: 400;
+        border-left: 4px solid #16529b;
+        padding-left: 20px;
+      }
+
+      .product-advantage-area .info-card {
+        margin-bottom: 20px;
+      }
+
+      .product-advantage-area .info-card:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      .product-advantage-area .info-card .card-title {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-bottom: 10px;
+      }
+
+      .product-advantage-area .info-card .card-title h3{
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+        color: #4B5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-advantage-area .section-container {
+          gap: 40px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-advantage-area .section-container {
+          flex-direction: column;
+        }
+
+        .product-advantage-area .image-wrapper {
+          width: 100%;
+          flex-shrink: unset;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -363,7 +443,7 @@
     <div class="product-intro-area section-area">
       <div class="section-container mx-auto">
         <div class="section-title">
-          <h1>Product Introduction</h1>
+          <h2>Product Introduction</h2>
           <p>
             We make control wire harness assemblies for many machines, from
             small tools to large factory systems. These harnesses link important
@@ -408,6 +488,123 @@
       </div>
     </div>
 
-    
+    <!-- Product advantage Section -->
+
+    <div class="product-advantage-area section-area">
+      <div class="section-container mx-auto">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/8abfb02019d6c15e27ae853a4bcd994611279ac8.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Product Advantages</h2>
+          </div>
+          <div class="info-card-wrapper">
+            <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>Automotive wiring harness with corrugated Loom</h3>
+              </div>
+              <p class="body-b2">
+                This control wire harness has a strong but bendable cover shielding the wires inside. It protects them from sharp edges, dirt, dust, water, and weather. Sunlight and rain won't make it crack or break. Inside, the wires are neat, tidy, and labeled, so setup is faster and easier. The cover also helps block noise from vibrations and makes the harness last many years without trouble.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+             <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>12-Pin Heavy-Duty Equipment Wiring Harness</h3>
+              </div>
+              <p class="body-b2">
+                This harness has twelve pins, so it can carry both power and data at the same time. The solid metal shell locks firmly in place, while seals block dust, dirt, and oil. Each wire is colored and numbered to make installation quick and correct. We test it to handle heat, cold, and hard daily use, so your machines keep running even in harsh conditions.
+              </p>
+            </div>
+            <!-- Card 3 -->
+             <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>Motorcycle wiring harness</h3>
+              </div>
+              <p class="body-b2">
+                This small, light harness is also strong, fitting into tight motorcycle spaces. It can handle bumps, shakes, rain, and temperature changes. Sealed connectors keep out dirt and water so your ride stays safe. You can also add extra features like lights or chargers with ease. It links every circuit so your bike works smoothly all year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
