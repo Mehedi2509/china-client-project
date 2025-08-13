@@ -161,87 +161,31 @@
         position: relative;
       }
 
-      .hero-area .hero-product-container {
-        max-width: 1280px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 70px;
-        position: relative;
-        z-index: 1;
-      }
-
       .hero-area .hero-content-wrapper {
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
+        max-width: 940px;
         text-align: center;
-      }
-
-      .hero-area .section-title {
-        margin-bottom: 0;
-        gap: 32px;
-        margin-bottom: 20px;
-        text-align: left;
-      }
-
-      .hero-area .section-title h1 {
-        font-family: Alexandria;
-        font-size: 52px;
-        font-weight: 600;
-        line-height: initial;
         color: #fff;
       }
 
-      .hero-area .section-title p {
-        font-family: Alexandria;
-        font-size: 32px;
-        font-weight: 300;
-        line-height: 32px;
-        color: #fff;
-      }
-
-      .hero-area .hero-bottom-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 36px 60px;
-        border-radius: 20px;
-        background-color: #16529b;
-      }
-
-      .hero-area .hero-state-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
-
-      .hero-area .hero-state-wrapper .state {
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 12px;
-        color: #ffffff;
-      }
-
-      .hero-area .hero-state-wrapper .state span:nth-child(1) {
-        font-family: "Inter", sans-serif;
-        font-size: 36px;
+      .hero-area .title-top{
+        font-size: 40px;
         font-weight: 400;
-        line-height: 36px;
+        line-height: 49px;
+        margin-bottom: 20px;
       }
 
-      .hero-area .hero-state-wrapper .state span:nth-child(2) {
-        font-family: Alexandria;
+      .hero-area .hero-title{
+        font-size: 52px;
+        line-height: 63px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .hero-area .hero-subtitle{
+        font-size: 32px;
+        line-height: 44px;
         font-weight: 300;
-        font-size: 16px;
-        line-height: 16px;
-      }
-
-      .hero-area .hero-product-page-btn {
-        display: flex;
+        margin-bottom: 40px;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -250,24 +194,19 @@
           background-position: 90% center !important;
         }
 
-        .hero-area .section-title h1 {
+        .hero-area .title-top {
+          font-size: 32px;
+          line-height: 42px;
+        }
+
+        .hero-area .hero-title {
           font-size: 48px;
           line-height: 56px;
         }
 
-        .hero-area .hero-product-page-btn .popup-form-btn {
-          font-size: 16px;
-          padding: 10px 16px;
-        }
-
-        .hero-area .hero-state-wrapper {
-          gap: 16px;
-        }
-
-        .hero-area .hero-bottom-wrapper {
-          padding: 24px 32px;
-          gap: 24px;
-          flex-direction: column;
+        .hero-area .hero-subtitle {
+          font-size: 28px;
+          line-height: 36px;
         }
       }
 
@@ -278,35 +217,25 @@
           background-position: 90% center !important;
         }
 
-        .hero-area .section-title h1 {
+        .hero-area .title-top {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .hero-area .hero-title {
           font-size: 32px;
           line-height: 42px;
           text-align: left;
           max-width: 360px;
         }
 
-        .hero-area .section-title p {
+        .hero-area .hero-subtitle  {
           font-size: 18px;
           display: none;
         }
-
-        .hero-area .hero-state-wrapper .state {
-          width: auto;
-          gap: 8px;
-        }
-
-        .hero-area .hero-state-wrapper .state span:nth-child(1) {
-          font-size: 24px;
-          line-height: 32px;
-        }
-
-        .hero-area .hero-state-wrapper .state span:nth-child(2) {
-          font-size: 12px;
-          line-height: 12px;
-        }
       }
 
-      /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
+      /* product-intro-area.*/
 
       .product-intro-area .product-intro-image-wrapper {
         display: grid;
@@ -766,47 +695,24 @@
     <!-- Hero Section -->
     <div
       class="hero-area"
-      style="
-        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/wire-harness-prototypes-hero-image.jpg');
-      "
+      style="background: url('https://i.ibb.co.com/fzc6qw1Y/banner.jpg')"
     >
       <div class="hero-product-container">
         <div class="hero-content-wrapper">
-          <div class="section-title">
-            <h1>Wire harness prototypes</h1>
-            <p>
-              Every wire, plug, and part is carefully placed in the Wire Harness
-              Prototypes. Our trained team checks everything from the start to
-              the end. We make wire harnesses that work very well.
-            </p>
-          </div>
+          <p class="title-top">Custom to</p>
+          <h1 class="hero-title">Control wire harness</h1>
+          <p class="hero-subtitle">
+            Keep your machines running at their best with expert quality control
+            wire harness every time, in any weather or condition. We focus on
+            strength, safety, and ease of use.
+          </p>
 
-          <div class="hero-bottom-wrapper">
-            <div class="hero-state-wrapper">
-              <div class="state">
-                <span>20+</span>
-                <span>Solid Years of Experience</span>
-              </div>
-              <div class="state">
-                <span>1200+</span>
-                <span>Satisfied Customers</span>
-              </div>
-              <div class="state">
-                <span>9000+</span>
-                <span>Successful Cases</span>
-              </div>
-            </div>
-            <div class="hero-product-page-btn">
-              <?php
-                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-              ?>
-            </div>
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Product intro area -->
 
     <div class="product-intro-area section-area">
       <div class="section-container mx-auto">
@@ -855,8 +761,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Product advantage Section -->
 
     <div class="product-advantage-area section-area">
       <div class="section-container mx-auto">
@@ -1485,21 +1389,21 @@
             </div>
             <div class="content-divider">
               <div class="review-card-content">
-              <p class="body-b1">
-                "I got my wires fast, in only two days. They looked good and
-                worked just right. Ordering was simple and quick. Very happy
-                with everything."
-              </p>
-            </div>
-            <div class="author-info">
-              <div class="author-image">
-                <img
-                  src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
-                  alt=""
-                />
+                <p class="body-b1">
+                  "I got my wires fast, in only two days. They looked good and
+                  worked just right. Ordering was simple and quick. Very happy
+                  with everything."
+                </p>
               </div>
-              <h4 class="heading-h3 author-name">John Graham</h4>
-            </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">John Graham</h4>
+              </div>
             </div>
           </div>
           <div class="review-card">
