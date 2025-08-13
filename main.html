@@ -552,20 +552,20 @@
 
       /*reliability-area*/
 
-      .reliability-area .info-card{
+      .reliability-area .info-card {
         padding: 20px 24px;
         border-radius: 12px;
         display: flex;
         align-items: center;
         gap: 20px;
         margin-bottom: 40px;
-        background-color: #F0F0F0;
+        background-color: #f0f0f0;
       }
-      .reliability-area .info-card:nth-last-child(1){
+      .reliability-area .info-card:nth-last-child(1) {
         margin-bottom: 0;
       }
 
-      .reliability-area .info-card .image-wrapper{
+      .reliability-area .info-card .image-wrapper {
         width: 320px;
         height: auto;
         flex-shrink: 0;
@@ -574,25 +574,69 @@
         border-radius: 50%;
       }
 
-      .reliability-area .info-card .image-wrapper img{
+      .reliability-area .info-card .image-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .reliability-area .info-card .content-wrapper h3{
+      .reliability-area .info-card .content-wrapper h3 {
         margin-bottom: 20px;
       }
 
       @media only screen and (max-width: 767px) {
-        .reliability-area .info-card{
+        .reliability-area .info-card {
           flex-direction: column;
         }
-        .reliability-area .info-card .image-wrapper{
+        .reliability-area .info-card .image-wrapper {
           width: 100%;
         }
       }
-      
+
+      /*vital-benefits-area*/
+
+      .vital-benefits-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .vital-benefits-area .icon-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .vital-benefits-area .icon-card .icon-wrapper {
+        height: 60px;
+        width: fit-content;
+      }
+
+      .vital-benefits-area .icon-card .icon-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .vital-benefits-area .icon-card h3 {
+        font-weight: 400;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .vital-benefits-area .icon-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .vital-benefits-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -1140,7 +1184,17 @@
                 Vibration Protection for Heavy Machinery
               </h3>
               <p class="body-b1">
-               Machines like those used in farms, building sites, and factories often shake a lot when working. They also get hit with firm bumps and shocks that weaken wires over time. If the cables are not held still, they can bend and rub repeatedly until they break. To prevent this, the harness is built with extra-strong parts. Firm clips keep the wires in one place so they do not move when the machine shakes. Extra wraps are put around the cables to stop them from rubbing against metal or other wires. In some places, soft pads soak up the shock and protect the wires even more. This helps the cables last longer and keeps the machine running without problems.
+                Machines like those used in farms, building sites, and factories
+                often shake a lot when working. They also get hit with firm
+                bumps and shocks that weaken wires over time. If the cables are
+                not held still, they can bend and rub repeatedly until they
+                break. To prevent this, the harness is built with extra-strong
+                parts. Firm clips keep the wires in one place so they do not
+                move when the machine shakes. Extra wraps are put around the
+                cables to stop them from rubbing against metal or other wires.
+                In some places, soft pads soak up the shock and protect the
+                wires even more. This helps the cables last longer and keeps the
+                machine running without problems.
               </p>
             </div>
           </div>
@@ -1149,14 +1203,89 @@
               <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
             </div>
             <div class="content-wrapper">
-              <h3 class="heading-h3">
-                Heat and Cold-Resistant Wire Harnesses
-              </h3>
+              <h3 class="heading-h3">Heat and Cold-Resistant Wire Harnesses</h3>
               <p class="body-b1">
-              Some machines have to work in places where it is very cold, like snowy fields or icy roads. Others run in hot areas, like inside engines or under the sun. A good wire harness must work in both environments without breaking. We use materials that stay soft in cold places and do not crack when the temperature drops very low. We use parts that do not melt, bend, or weaken in hot areas, even when it gets hot. These wires can handle freezing cold and burning heat without losing strength. They can also deal with sudden changes, like quickly moving from a hot area to a cold one. This prepares them for any weather, place, and time of year.
+                Some machines have to work in places where it is very cold, like
+                snowy fields or icy roads. Others run in hot areas, like inside
+                engines or under the sun. A good wire harness must work in both
+                environments without breaking. We use materials that stay soft
+                in cold places and do not crack when the temperature drops very
+                low. We use parts that do not melt, bend, or weaken in hot
+                areas, even when it gets hot. These wires can handle freezing
+                cold and burning heat without losing strength. They can also
+                deal with sudden changes, like quickly moving from a hot area to
+                a cold one. This prepares them for any weather, place, and time
+                of year.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vital-benefits-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Vital Benefits You Will Have</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="icon-card-wrapper">
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Lasts much longer than standard harnesses</h3>
+            <p class="body-b2">
+              We use high quality materials for your harnesses. The control wire
+              harnesses are also weatherproofed and can resist the water, dirt
+              or the fire. And because of that our harness lasts much longer
+              than the others harnesses.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Wastes less electrical power</h3>
+            <p class="body-b2">
+              We use pure high transferable copper wires and most durable PVC
+              parts for the connectors. We also use a braided cover for the
+              harness to keep it safe from the scratches and other outer issues.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Has fewer wiring-related problems</h3>
+            <p class="body-b2">
+              The wires are shouldered to the terminals strongly and because of
+              that there are always less issues. The wires are separated from
+              other wires by the different colors and that's why it is easy to
+              find out the exact wire type.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Fair rate and friendly support</h3>
+            <p class="body-b2">
+              We offer our customers the best and fair price. We also help them
+              after buying the control wire harnesses. So if you need any help
+              with the harnesses then we are always available.
+            </p>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
         </div>
       </div>
     </div>
