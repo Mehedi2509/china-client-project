@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Alexandria;
+      }
+
+      .mock-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #00bde7;
+        color: #fff;
+        margin: 0 auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .section-container {
+        max-width: 1280px;
+      }
+
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      .section-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .body-b1 {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 300;
+        color: #4b5563;
+      }
+
+      .body-b2 {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        color: #4b5563;
+      }
+
+      /* Common Style */
+
+      .heading-h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: #16529b;
+      }
+
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .section-title p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .divider .divider-line {
+        width: 80px;
+        height: 4px;
+        background-color: #16529b;
+      }
+
+      .divider .divider-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #16529b;
+      }
+
+      .product-page-btn {
+        display: flex;
+      }
+
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-area {
+          padding: 50px 16px;
+        }
+
+        .section-title {
+          margin-bottom: 32px;
+        }
+
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      /* Hero Area */
+      .hero-area {
+        min-height: 560px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-area .hero-content-wrapper {
+        max-width: 940px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero-area .title-top {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 49px;
+        margin-bottom: 20px;
+      }
+
+      .hero-area .hero-title {
+        font-size: 52px;
+        line-height: 63px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .hero-area .hero-subtitle {
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 300;
+        margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .hero-area {
+          padding: 70px 16px;
+          background-position: 90% center !important;
+        }
+
+        .hero-area .title-top {
+          font-size: 32px;
+          line-height: 42px;
+        }
+
+        .hero-area .hero-title {
+          font-size: 48px;
+          line-height: 56px;
+        }
+
+        .hero-area .hero-subtitle {
+          font-size: 28px;
+          line-height: 36px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .hero-area {
+          padding: 20px 16px;
+          min-height: 0;
+          background-position: 90% center !important;
+        }
+
+        .hero-area .title-top {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .hero-area .hero-title {
+          font-size: 32px;
+          line-height: 42px;
+          text-align: left;
+          max-width: 360px;
+        }
+
+        .hero-area .hero-subtitle {
+          font-size: 18px;
+          display: none;
+        }
+      }
+
+      /* product-intro-area.*/
+
+      .product-intro-area .product-intro-image-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin: 40px 0;
+      }
+
+      .product-intro-area .product-intro-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-intro-area .product-intro-image-wrapper {
+          gap: 24px;
+        }
+      }
+
+      /*product-advantage-area*/
+
+      .product-advantage-area .section-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+      }
+
+      .product-advantage-area .image-wrapper {
+        width: 440px;
+        height: auto;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .product-advantage-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-advantage-area .section-title h2 {
+        text-align: start;
+        font-size: 34px;
+        line-height: 41px;
+        font-weight: 400;
+        border-left: 4px solid #16529b;
+        padding-left: 20px;
+      }
+
+      .product-advantage-area .info-card {
+        margin-bottom: 20px;
+      }
+
+      .product-advantage-area .info-card:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      .product-advantage-area .info-card .card-title {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-bottom: 10px;
+      }
+
+      .product-advantage-area .info-card .card-title h3 {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-advantage-area .section-container {
+          gap: 40px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-advantage-area .section-container {
+          flex-direction: column;
+        }
+
+        .product-advantage-area .image-wrapper {
+          width: 100%;
+          flex-shrink: unset;
+        }
+      }
+
+      /*materials-recommendation-area*/
+
+      .materials-recommendation-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-bottom: -278px;
+      }
+
+      .materials-recommendation-area .info-card {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
+      }
+
+      .materials-recommendation-area .info-card-wrapper .bt-card {
+        transform: translate(55%, -278px);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        overflow: hidden;
+      }
+
+      .materials-recommendation-area .info-card .content-wrapper {
+        padding: 12px 8px;
+        background: #f0f0f0;
+        text-align: center;
+      }
+      .materials-recommendation-area .info-card .content-wrapper h3 {
+        margin-bottom: 12px;
+      }
+
+      .materials-recommendation-area .info-card .image-wrapper {
+        width: 100%;
+        height: 308px;
+        overflow: hidden;
+      }
+
+      .materials-recommendation-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1280px) {
+        .materials-recommendation-area .info-card-wrapper .bt-card {
+          transform: translate(55%, -22vw);
+        }
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .materials-recommendation-area .info-card-wrapper {
+          gap: 16px;
+          margin-bottom: -220px;
+        }
+
+        .materials-recommendation-area .info-card-wrapper .bt-card {
+          transform: translate(55%, -20vw);
+        }
+        .materials-recommendation-area .info-card-wrapper .content-wrapper {
+          min-height: 472px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .materials-recommendation-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          margin-bottom: unset;
+        }
+        .materials-recommendation-area .info-card .image-wrapper {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        .materials-recommendation-area .info-card-wrapper .content-wrapper {
+          min-height: unset;
+        }
+
+        .materials-recommendation-area .info-card-wrapper .bt-card {
+          transform: translate(0,0);
+        }
+      }
+
+      /*solution-area*/
+      .solution-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .solution-area .info-card .image-wrapper {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .solution-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .solution-area .content-wrapper {
+        padding: 12px;
+      }
+
+      .solution-area .content-wrapper h3 {
+        color: #16529b;
+        margin-bottom: 18px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .solution-area .info-card-wrapper {
+          gap: 24px;
+        }
+        .solution-area .content-wrapper {
+          padding: 8px;
+          min-height: ;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .solution-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*industries-application-area */
+
+      .industries-application-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .industries-application-area .info-card {
+        padding: 16px 12px;
+        border-radius: 12px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .industries-application-area .info-card .image-wrapper {
+        width: 260px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .industries-application-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .industries-application-area .info-card h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      .industries-application-area .info-card p {
+        text-align: start;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .industries-application-area .info-card {
+          flex-direction: column;
+        }
+        .industries-application-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      /*making-method-area*/
+
+      .making-method-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .making-method-area .info-card {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+      }
+
+      .making-method-area .info-card ul {
+        list-style: disc;
+        padding-left: 32px;
+      }
+
+      .making-method-area .info-card .image-wrapper {
+        width: 400px;
+        height: auto;
+        flex-shrink: 0;
+        aspect-ratio: 1.54/1;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .making-method-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .making-method-area .info-card-wrapper {
+          gap: 24px;
+        }
+
+        .making-method-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .making-method-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*reliability-area*/
+
+      .reliability-area .info-card {
+        padding: 20px 24px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        background-color: #f0f0f0;
+      }
+      .reliability-area .info-card:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      .reliability-area .info-card .image-wrapper {
+        width: 320px;
+        height: auto;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      .reliability-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .reliability-area .info-card .content-wrapper h3 {
+        margin-bottom: 20px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .reliability-area .info-card {
+          flex-direction: column;
+        }
+        .reliability-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      /*vital-benefits-area*/
+
+      .vital-benefits-area .icon-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .vital-benefits-area .icon-card {
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .vital-benefits-area .icon-card .icon-wrapper {
+        height: 60px;
+        width: fit-content;
+      }
+
+      .vital-benefits-area .icon-card .icon-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .vital-benefits-area .icon-card h3 {
+        font-weight: 400;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .vital-benefits-area .icon-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .vital-benefits-area .icon-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      /*request-quote-area*/
+
+      .request-quote-area .section-container {
+        position: relative;
+        padding: 40px;
+        border-radius: 12px;
+        height: fit-content;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      /* Background image layer */
+      .request-quote-area .section-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("https://i.ibb.co.com/Hfb88kBH/ds.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: 0;
+      }
+
+      /* Color overlay layer */
+      .request-quote-area .section-container::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #4b556399;
+        z-index: 1;
+      }
+
+      /* Ensure content is above pseudo-elements */
+      .request-quote-area .section-container > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .request-quote-area .section-title h2,
+      .request-quote-area .section-title p {
+        color: #ffffff;
+      }
+
+      .request-quote-area .section-title {
+        gap: 20px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .request-quote-area .section-container {
+          padding: 20px;
+        }
+      }
+
+      /*customer-reviews-area*/
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .customer-reviews-area .review-card {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #eff3f8;
+      }
+
+      .customer-reviews-area .review-card .review-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+      }
+      .customer-reviews-area .review-card .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #f9cc04;
+      }
+
+      .customer-reviews-area .review-card .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .customer-reviews-area .review-card .content-divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 2px;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-name {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="hero-area"
+      style="background: url('https://i.ibb.co.com/fzc6qw1Y/banner.jpg')"
+    >
+      <div class="hero-product-container">
+        <div class="hero-content-wrapper">
+          <p class="title-top">Custom to</p>
+          <h1 class="hero-title">Control wire harness</h1>
+          <p class="hero-subtitle">
+            Keep your machines running at their best with expert quality control
+            wire harness every time, in any weather or condition. We focus on
+            strength, safety, and ease of use.
+          </p>
+
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-intro-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Product Introduction</h2>
+          <p>
+            We make control wire harness assemblies for many machines, from
+            small tools to large factory systems. These harnesses link important
+            parts like sensors, motors, switches, and controllers to work
+            together. We can create a control panel wire harness, a PLC control
+            wire harness, or a custom harness built just for you. Our industrial
+            control wire harness is perfect for large plants. In contrast, our
+            machine control wire harness works with heavy-duty tools and
+            machines. Every wire is measured carefully, cut to the exact length,
+            crimped tight, and labeled clearly so installation is quick and
+            straightforward. The outside layer protects the cables from heat,
+            oil, dirt, and water. We thoroughly test every harness before it
+            leaves our factory. We can make small orders or unique custom
+            designs. Our goal is to make wiring safe, easy, and built to last.
+          </p>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="product-intro-image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/d852da42d5287b3c0eba0d8d99fc836964bc4487.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/4502aa188c2dbd94a3d85265d43797af64e92691.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/f45741f73e2ea22f6ebb8dfb332fae027c10e330.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-advantage-area section-area">
+      <div class="section-container mx-auto">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/8abfb02019d6c15e27ae853a4bcd994611279ac8.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Product Advantages</h2>
+          </div>
+          <div class="info-card-wrapper">
+            <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>Automotive wiring harness with corrugated Loom</h3>
+              </div>
+              <p class="body-b2">
+                This control wire harness has a strong but bendable cover
+                shielding the wires inside. It protects them from sharp edges,
+                dirt, dust, water, and weather. Sunlight and rain won't make it
+                crack or break. Inside, the wires are neat, tidy, and labeled,
+                so setup is faster and easier. The cover also helps block noise
+                from vibrations and makes the harness last many years without
+                trouble.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>12-Pin Heavy-Duty Equipment Wiring Harness</h3>
+              </div>
+              <p class="body-b2">
+                This harness has twelve pins, so it can carry both power and
+                data at the same time. The solid metal shell locks firmly in
+                place, while seals block dust, dirt, and oil. Each wire is
+                colored and numbered to make installation quick and correct. We
+                test it to handle heat, cold, and hard daily use, so your
+                machines keep running even in harsh conditions.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="info-card">
+              <div class="card-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1485_489)">
+                    <path
+                      d="M16.2514 12.5C16.2518 12.6166 16.2279 12.7319 16.1813 12.8388C16.1347 12.9456 16.0663 13.0416 15.9806 13.1206L10.4606 18.2891C10.2976 18.4417 10.0807 18.5232 9.85755 18.5158C9.63443 18.5084 9.4234 18.4127 9.27086 18.2497C9.11832 18.0867 9.03678 17.8698 9.04417 17.6467C9.05157 17.4236 9.14729 17.2125 9.31029 17.06L14.1703 12.5L9.30857 7.94C9.22306 7.86586 9.15339 7.77524 9.1037 7.67356C9.05402 7.57187 9.02536 7.46122 9.01942 7.3482C9.01348 7.23518 9.0304 7.12213 9.06915 7.0158C9.10791 6.90947 9.16771 6.81205 9.24498 6.72936C9.32225 6.64667 9.4154 6.58042 9.51886 6.53455C9.62232 6.48869 9.73397 6.46416 9.84713 6.46243C9.96028 6.4607 10.0726 6.48181 10.1774 6.5245C10.2823 6.56718 10.3774 6.63057 10.4571 6.71086L16.0011 11.8486C16.0871 11.9329 16.154 12.0347 16.1971 12.1471C16.2403 12.2595 16.2588 12.3798 16.2514 12.5ZM12 0.5C15.1826 0.5 18.2348 1.76428 20.4853 4.01472C22.7357 6.26516 24 9.3174 24 12.5C24 15.6826 22.7357 18.7348 20.4853 20.9853C18.2348 23.2357 15.1826 24.5 12 24.5C8.8174 24.5 5.76516 23.2357 3.51472 20.9853C1.26428 18.7348 0 15.6826 0 12.5C0 9.3174 1.26428 6.26516 3.51472 4.01472C5.76516 1.76428 8.8174 0.5 12 0.5ZM12 2.19029C9.62296 2.19078 7.31926 3.01348 5.47963 4.51884C3.64 6.0242 2.3777 8.11954 1.90683 10.4495C1.43596 12.7794 1.7855 15.2005 2.89617 17.3021C4.00685 19.4037 5.81027 21.0565 8.00057 21.98C10.2033 22.9187 12.6643 23.0606 14.9604 22.3813C17.2565 21.702 19.2441 20.2439 20.5815 18.2578C21.9189 16.2717 22.5225 13.8816 22.2885 11.4986C22.0546 9.11564 20.9976 6.88864 19.2994 5.20057C18.3415 4.24559 17.2046 3.48903 15.9538 2.97423C14.703 2.45943 13.3629 2.19652 12.0103 2.20057L12 2.19029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1485_489">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(0 0.5)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3>Motorcycle wiring harness</h3>
+              </div>
+              <p class="body-b2">
+                This small, light harness is also strong, fitting into tight
+                motorcycle spaces. It can handle bumps, shakes, rain, and
+                temperature changes. Sealed connectors keep out dirt and water
+                so your ride stays safe. You can also add extra features like
+                lights or chargers with ease. It links every circuit so your
+                bike works smoothly all year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Materials recommendation needs to add later -->
+    <div class="materials-recommendation-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="double-card-wrapper">
+            <!-- top card 1 -->
+            <div class="info-card">
+              <div class="content-wrapper">
+                <h3 class="heading-h3">High-purity oxygen-free copper</h3>
+                <p class="body-b2">
+                  Oxygen-free copper is very pure and clean. This makes power
+                  move faster and smoother, with very little loss. It also stays
+                  strong for many years without breaking down or wearing out.
+                  This type of copper works great for powerful machines, sound
+                  systems, and essential tools. Using oxygen-free copper ensures
+                  your machines run better, last longer, and your wiring stays
+                  safe and strong for a long time.
+                </p>
+              </div>
+              <div class="image-wrapper">
+                <img src="https://i.ibb.co.com/pv4tKvqd/rk.png" alt="" />
+              </div>
+            </div>
+            <!-- bottom card 1 -->
+            <div class="info-card bt-card">
+              <div class="image-wrapper">
+                <img src="https://i.ibb.co.com/WNLWRy83/PVC.png" alt="" />
+              </div>
+              <div class="content-wrapper">
+                <h3 class="heading-h3">PVC raw materials</h3>
+                <p class="body-b2">
+                  PVC jackets wrap around each wire, keeping it safe in almost
+                  any weather. They can handle the hot heat in the summer and
+                  the cold chill in the winter without a problem. They also
+                  protect the wires from fire, intense sunlight, oil, and even
+                  harsh chemicals that could harm them. This means the cables
+                  can keep working for many years without wearing out. The soft,
+                  bendy coating makes the cables easy to move and install
+                  without cracking or peeling. The smooth outside lets wires
+                  slide into small or tight spaces without getting stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="double-card-wrapper">
+            <!-- top card 2 -->
+            <div class="info-card">
+              <div class="content-wrapper">
+                <h3 class="heading-h3">Shielded Braided Network Tube</h3>
+                <p class="body-b2">
+                  We use braided copper tubes that act like strong shields
+                  around the wires. They block unwanted noise and stop it from
+                  messing up the signal. This keeps power steady, sound, or data
+                  clear, even when the wires are near loud machines or busy
+                  electronics. The shield also strengthens the wire and helps
+                  protect it from cuts, crushing, or damage. By stopping
+                  interference, these shields help machines run smoothly without
+                  glitches, static, or delays.
+                </p>
+              </div>
+              <div class="image-wrapper">
+                <img src="https://i.ibb.co.com/pv4tKvqd/rk.png" alt="" />
+              </div>
+            </div>
+            <!-- bottom card 2 -->
+            <div class="info-card bt-card">
+              <div class="image-wrapper">
+                <img src="https://i.ibb.co.com/WNLWRy83/PVC.png" alt="" />
+              </div>
+              <div class="content-wrapper">
+                <h3 class="heading-h3">High Quality Cable</h3>
+                <p class="body-b2">
+                  Our copper wires carry power and signals smoothly and quickly. They do not waste energy and keep the signal strong and clear. These wires are soft enough to bend and shape during setup but tough enough to last many years in homes, factories, cars, and more. Each wire is color-coded, so connecting the right ones together is easy. This saves time, prevents mistakes, and makes fixing things much easier. It also helps stop problems that come from wrong connections.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- top card 3 -->
+          <div class="">
+            <div class="info-card">
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Terminal Connector</h3>
+              <p class="body-b2">
+                We use connectors made from brass or bronze with a special coating to stop rust and moisture. Each connector is pressed on very tightly to stay in place, even if pulled or shaken. Every connector is tested to make sure it stays secure and keeps the signal or power flowing without breaks. This gives a safe and long-lasting connection between the wires and the devices they power.
+              </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/13SR7yC/7e95a1305d73f9220dd7adf53785827cc0d10c16.png" alt="" />
+            </div>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Solution</h2>
+          <p>
+            We listen to your needs first. Then we make a clear plan. We build a
+            sample, test it, and improve it if needed. We use only the
+            best-quality parts. Before sending, we check every detail. You get a
+            harness ready to install and use without delays.
+          </p>
+        </div>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/19bdc6391bf921dcb73e139bda8c7995d5433297.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Custom appliance or electronics wire harness
+              </h3>
+              <p class="body-b2">
+                We make harnesses for home appliances and electronics. They are
+                shaped to match your device exactly. We choose the correct wires
+                for low voltage and safe use. Connectors are strong, easy to
+                attach, and built to last. Clear labels make setup fast and
+                simple.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/C3TRqKGf/5692253a16d66124d9c02ca4b4005d15df3fc9c3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Automotive Auxiliary Light Wiring Harness
+              </h3>
+              <p class="body-b2">
+                We design harnesses to power extra lights for cars and trucks.
+                They include fuses, relays, and switches for safety, and the
+                wires are cut to the correct length and sealed to block water.
+                They work with 12V and 24V systems, keeping lights bright and
+                steady.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/p6fct3X1/76efd95acb707967c4d886f3ba9a51b2f7511691.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Car stereo or audio system wiring harness
+              </h3>
+              <p class="body-b2">
+                We make harnesses for car stereos and amplifiers. They carry
+                power and sound without interference. Shielded cables keep your
+                music clear. Gold connectors stop rust and keep signals strong.
+                Wires are labeled so installation is quick.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="industries-application-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Industries and Applications</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Industrial Automation</h3>
+              <p class="body-b2">
+                Powers robots, conveyors, and machines with safe, well-organized
+                wiring that reduces breakdowns, improves efficiency, and boosts
+                workplace safety. Works in busy factories, assembly lines, and
+                automated warehouses.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Automotive Manufacturing</h3>
+              <p class="body-b2">
+                Handles high heat, constant vibration, and tight installation
+                spaces in production lines. Keeps vehicles running with
+                reliable, long-lasting connections that reduce maintenance
+                costs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Aerospace and Defense</h3>
+              <p class="body-b2">
+                Provides strong, lightweight wiring systems for airplanes,
+                satellites, drones, and military gear. Functions in extreme
+                temperatures, high altitudes, and intense operational
+                conditions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Home Appliances</h3>
+              <p class="body-b2">
+                Supplies compact, efficient wiring for home appliances like
+                ovens, washers, dryers, and televisions. Meets strict safety
+                standards and improves product reliability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Telecommunications</h3>
+              <p class="body-b2">
+                Organizes and shields network cables to keep data transmission
+                fast, clear, and stable even in high-traffic environments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Energy and Utilities</h3>
+              <p class="body-b2">
+                Supports equipment in power plants, wind farms, solar fields,
+                and charging stations. Works outdoors in rain, sun, snow, and
+                other harsh environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="making-method-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Control Wire Harness Making Method</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/GfdFW9MG/1830d90317e155530776d5a4d96a70ecf775c2e8.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">
+              Quality Checks: Every step is checked and tracked carefully
+            </h3>
+
+            <ul class="body-b1">
+              <li>Continuity tests ensure each wire connects perfectly.</li>
+              <li>Pull tests check crimp strength.</li>
+              <li>High-voltage tests detect faults.</li>
+              <li>Heat and cold tests show durability.</li>
+              <li>Vibration tests prove strength under movement.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/GfdFW9MG/1830d90317e155530776d5a4d96a70ecf775c2e8.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Engineering for Real Use</h3>
+
+            <ul class="body-b1">
+              <li>CAD drawings: check fit and layout.</li>
+              <li>3D routing avoids moving parts.</li>
+              <li>Custom labels and colors make setup faster.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reliability-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Environmental & Operational Reliability</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Strong Protection Against Dust, Water, and Chemicals
+              </h3>
+              <p class="body-b1">
+                Wire harnesses are made to work in many hard and rough places.
+                They often have to deal with dirt, mud, water, oil, and even
+                strong chemicals every day. Without the proper protection, the
+                wires inside can weaken and stop working too soon. To prevent
+                this, we use many innovative ways to seal them. Rubber grommets
+                close small holes where the wires pass through, so nothing can
+                sneak in. Over-molding covers the harness with a thick, strong
+                coat that blocks dust and dirt. It also stops water and oil from
+                touching the wires. In open spots where it is easier for dirt or
+                water to get in, we add extra layers for better safety. All
+                these steps work together to keep the wires dry, clean, and
+                strong for many years. This means the machine has to stop fewer
+                times, requires less repair work, and has lower costs in the
+                long run.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Vibration Protection for Heavy Machinery
+              </h3>
+              <p class="body-b1">
+                Machines like those used in farms, building sites, and factories
+                often shake a lot when working. They also get hit with firm
+                bumps and shocks that weaken wires over time. If the cables are
+                not held still, they can bend and rub repeatedly until they
+                break. To prevent this, the harness is built with extra-strong
+                parts. Firm clips keep the wires in one place so they do not
+                move when the machine shakes. Extra wraps are put around the
+                cables to stop them from rubbing against metal or other wires.
+                In some places, soft pads soak up the shock and protect the
+                wires even more. This helps the cables last longer and keeps the
+                machine running without problems.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Heat and Cold-Resistant Wire Harnesses</h3>
+              <p class="body-b1">
+                Some machines have to work in places where it is very cold, like
+                snowy fields or icy roads. Others run in hot areas, like inside
+                engines or under the sun. A good wire harness must work in both
+                environments without breaking. We use materials that stay soft
+                in cold places and do not crack when the temperature drops very
+                low. We use parts that do not melt, bend, or weaken in hot
+                areas, even when it gets hot. These wires can handle freezing
+                cold and burning heat without losing strength. They can also
+                deal with sudden changes, like quickly moving from a hot area to
+                a cold one. This prepares them for any weather, place, and time
+                of year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vital-benefits-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Vital Benefits You Will Have</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="icon-card-wrapper">
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Lasts much longer than standard harnesses</h3>
+            <p class="body-b2">
+              We use high quality materials for your harnesses. The control wire
+              harnesses are also weatherproofed and can resist the water, dirt
+              or the fire. And because of that our harness lasts much longer
+              than the others harnesses.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Wastes less electrical power</h3>
+            <p class="body-b2">
+              We use pure high transferable copper wires and most durable PVC
+              parts for the connectors. We also use a braided cover for the
+              harness to keep it safe from the scratches and other outer issues.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Has fewer wiring-related problems</h3>
+            <p class="body-b2">
+              The wires are shouldered to the terminals strongly and because of
+              that there are always less issues. The wires are separated from
+              other wires by the different colors and that's why it is easy to
+              find out the exact wire type.
+            </p>
+          </div>
+          <div class="icon-card">
+            <div class="icon-wrapper">
+              <img src="https://i.ibb.co.com/4nxdftwB/Group-42172.png" alt="" />
+            </div>
+            <h3 class="body-b1">Fair rate and friendly support</h3>
+            <p class="body-b2">
+              We offer our customers the best and fair price. We also help them
+              after buying the control wire harnesses. So if you need any help
+              with the harnesses then we are always available.
+            </p>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="customer-reviews-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "I got my wires fast, in only two days. They looked good and
+                  worked just right. Ordering was simple and quick. Very happy
+                  with everything."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">John Graham</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "Good price and great parts. It was packed safely and arrived
+                  in perfect shape. I used it right away, and it worked
+                  perfectly. Very pleased."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">David Green</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "They answered my questions fast. The control wire harness
+                  looks clean, is made well, and works as promised. I am very
+                  happy with my order."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Emma Brown</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "Great quality and easy to use. All the wires fit just right,
+                  and it was simple to set up. Everything worked the first time.
+                  I'll tell my friends about this."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Sarah Lopez</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "This is the best harness I have used so far. No problems at
+                  all, and the work is elegant. I will order again soon."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Mark Wilson</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "The control wire harness is strong, safe, and passed all the
+                  tests. I trust this company and the helpful people who work
+                  there."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">James Scott</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="request-quote-area section-area">
+      <div class="section-container mx-auto">
+        <div class="content-container">
+          <div class="section-title">
+            <h2>Request a Quote</h2>
+            <p>
+              Tell us exactly what you need. We will design and build your
+              control wire harness and send it ready for quick and easy use.
+              QL-Custom Technology Ltd. offers you the best and the exact type
+              of harness for your project. You just need to send your idea,
+              drawing or the design to us then we will take care of it. Or if
+              you need any help we are here to help you. You can ask for a quote
+              from us before the order.
+            </p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
