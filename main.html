@@ -637,6 +637,129 @@
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      /*request-quote-area*/
+
+      .request-quote-area .section-container {
+        position: relative;
+        padding: 40px;
+        border-radius: 12px;
+        height: fit-content;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      /* Background image layer */
+      .request-quote-area .section-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("https://i.ibb.co.com/Hfb88kBH/ds.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: 0;
+      }
+
+      /* Color overlay layer */
+      .request-quote-area .section-container::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #4b556399;
+        z-index: 1;
+      }
+
+      /* Ensure content is above pseudo-elements */
+      .request-quote-area .section-container > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .request-quote-area .section-title h2,
+      .request-quote-area .section-title p {
+        color: #ffffff;
+      }
+
+      .request-quote-area .section-title {
+        gap: 20px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .request-quote-area .section-container {
+          padding: 20px;
+        }
+      }
+
+      /*customer-reviews-area*/
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .customer-reviews-area .review-card {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #eff3f8;
+      }
+
+      .customer-reviews-area .review-card .review-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+      }
+      .customer-reviews-area .review-card .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #f9cc04;
+      }
+
+      .customer-reviews-area .review-card .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .customer-reviews-area .review-card .content-divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 2px;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-name {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -1286,6 +1409,501 @@
 
         <div class="btn-wrapper">
           <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="customer-reviews-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+              <p class="body-b1">
+                "I got my wires fast, in only two days. They looked good and
+                worked just right. Ordering was simple and quick. Very happy
+                with everything."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">John Graham</h4>
+            </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "Good price and great parts. It was packed safely and arrived
+                  in perfect shape. I used it right away, and it worked
+                  perfectly. Very pleased."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">David Green</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "They answered my questions fast. The control wire harness
+                  looks clean, is made well, and works as promised. I am very
+                  happy with my order."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Emma Brown</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "Great quality and easy to use. All the wires fit just right,
+                  and it was simple to set up. Everything worked the first time.
+                  I'll tell my friends about this."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Sarah Lopez</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "This is the best harness I have used so far. No problems at
+                  all, and the work is elegant. I will order again soon."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Mark Wilson</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  "The control wire harness is strong, safe, and passed all the
+                  tests. I trust this company and the helpful people who work
+                  there."
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://i.ibb.co.com/239xNyyG/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">James Scott</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="request-quote-area section-area">
+      <div class="section-container mx-auto">
+        <div class="content-container">
+          <div class="section-title">
+            <h2>Request a Quote</h2>
+            <p>
+              Tell us exactly what you need. We will design and build your
+              control wire harness and send it ready for quick and easy use.
+              QL-Custom Technology Ltd. offers you the best and the exact type
+              of harness for your project. You just need to send your idea,
+              drawing or the design to us then we will take care of it. Or if
+              you need any help we are here to help you. You can ask for a quote
+              from us before the order.
+            </p>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
         </div>
       </div>
     </div>
