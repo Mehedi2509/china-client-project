@@ -51,7 +51,6 @@
         line-height: 28px;
         font-weight: 300;
         color: #4b5563;
-        text-align: justify;
       }
 
       .body-b2 {
@@ -59,7 +58,6 @@
         line-height: 26px;
         font-weight: 300;
         color: #4b5563;
-        text-align: justify;
       }
 
       /* Common Style */
@@ -69,7 +67,7 @@
         font-size: 24px;
         line-height: 36px;
         letter-spacing: 0%;
-        color: #4b5563;
+        color: #16529b;
       }
 
       .section-title {
@@ -498,7 +496,59 @@
         }
       }
 
-      
+      /*making-method-area*/
+
+      .making-method-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .making-method-area .info-card {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+      }
+
+      .making-method-area .info-card ul {
+        list-style: disc;
+        padding-left: 32px;
+      }
+
+      .making-method-area .info-card .image-wrapper {
+        width: 400px;
+        height: auto;
+        flex-shrink: 0;
+        aspect-ratio: 1.54/1;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .making-method-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .making-method-area .info-card-wrapper {
+          gap: 24px;
+        }
+
+        .making-method-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .making-method-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        
+      }
     </style>
   </head>
   <body>
@@ -938,6 +988,57 @@
                 other harsh environments.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="making-method-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Control Wire Harness Making Method</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/GfdFW9MG/1830d90317e155530776d5a4d96a70ecf775c2e8.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">
+              Quality Checks: Every step is checked and tracked carefully
+            </h3>
+
+            <ul class="body-b1">
+              <li>Continuity tests ensure each wire connects perfectly.</li>
+              <li>Pull tests check crimp strength.</li>
+              <li>High-voltage tests detect faults.</li>
+              <li>Heat and cold tests show durability.</li>
+              <li>Vibration tests prove strength under movement.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/GfdFW9MG/1830d90317e155530776d5a4d96a70ecf775c2e8.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Engineering for Real Use</h3>
+
+            <ul class="body-b1">
+              <li>CAD drawings: check fit and layout.</li>
+              <li>3D routing avoids moving parts.</li>
+              <li>Custom labels and colors make setup faster.</li>
+            </ul>
           </div>
         </div>
       </div>
