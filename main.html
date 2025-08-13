@@ -426,6 +426,21 @@
         color: #16529b;
         margin-bottom: 18px;
       }
+
+      @media only screen and (max-width: 1024px) {
+        .solution-area .info-card-wrapper {
+          gap: 24px;
+        }
+        .solution-area .content-wrapper {
+          padding: 8px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .solution-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -729,7 +744,10 @@
                 Car stereo or audio system wiring harness
               </h3>
               <p class="body-b2">
-                We make harnesses for car stereos and amplifiers. They carry power and sound without interference. Shielded cables keep your music clear. Gold connectors stop rust and keep signals strong. Wires are labeled so installation is quick.
+                We make harnesses for car stereos and amplifiers. They carry
+                power and sound without interference. Shielded cables keep your
+                music clear. Gold connectors stop rust and keep signals strong.
+                Wires are labeled so installation is quick.
               </p>
             </div>
           </div>
@@ -738,7 +756,6 @@
         <div class="btn-wrapper">
           <button class="mock-btn">Get a Quick Quote</button>
         </div>
-        
       </div>
     </div>
   </body>
