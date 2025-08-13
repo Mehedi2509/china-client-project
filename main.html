@@ -502,6 +502,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+        margin-bottom: 40px;
       }
 
       .making-method-area .info-card {
@@ -547,8 +548,51 @@
         .making-method-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
-        
       }
+
+      /*reliability-area*/
+
+      .reliability-area .info-card{
+        padding: 20px 24px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        background-color: #F0F0F0;
+      }
+      .reliability-area .info-card:nth-last-child(1){
+        margin-bottom: 0;
+      }
+
+      .reliability-area .info-card .image-wrapper{
+        width: 320px;
+        height: auto;
+        flex-shrink: 0;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      .reliability-area .info-card .image-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .reliability-area .info-card .content-wrapper h3{
+        margin-bottom: 20px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .reliability-area .info-card{
+          flex-direction: column;
+        }
+        .reliability-area .info-card .image-wrapper{
+          width: 100%;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -1039,6 +1083,79 @@
               <li>3D routing avoids moving parts.</li>
               <li>Custom labels and colors make setup faster.</li>
             </ul>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reliability-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Environmental & Operational Reliability</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Strong Protection Against Dust, Water, and Chemicals
+              </h3>
+              <p class="body-b1">
+                Wire harnesses are made to work in many hard and rough places.
+                They often have to deal with dirt, mud, water, oil, and even
+                strong chemicals every day. Without the proper protection, the
+                wires inside can weaken and stop working too soon. To prevent
+                this, we use many innovative ways to seal them. Rubber grommets
+                close small holes where the wires pass through, so nothing can
+                sneak in. Over-molding covers the harness with a thick, strong
+                coat that blocks dust and dirt. It also stops water and oil from
+                touching the wires. In open spots where it is easier for dirt or
+                water to get in, we add extra layers for better safety. All
+                these steps work together to keep the wires dry, clean, and
+                strong for many years. This means the machine has to stop fewer
+                times, requires less repair work, and has lower costs in the
+                long run.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Vibration Protection for Heavy Machinery
+              </h3>
+              <p class="body-b1">
+               Machines like those used in farms, building sites, and factories often shake a lot when working. They also get hit with firm bumps and shocks that weaken wires over time. If the cables are not held still, they can bend and rub repeatedly until they break. To prevent this, the harness is built with extra-strong parts. Firm clips keep the wires in one place so they do not move when the machine shakes. Extra wraps are put around the cables to stop them from rubbing against metal or other wires. In some places, soft pads soak up the shock and protect the wires even more. This helps the cables last longer and keeps the machine running without problems.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://i.ibb.co.com/JjSDdd1P/d.jpg" alt="" />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Heat and Cold-Resistant Wire Harnesses
+              </h3>
+              <p class="body-b1">
+              Some machines have to work in places where it is very cold, like snowy fields or icy roads. Others run in hot areas, like inside engines or under the sun. A good wire harness must work in both environments without breaking. We use materials that stay soft in cold places and do not crack when the temperature drops very low. We use parts that do not melt, bend, or weaken in hot areas, even when it gets hot. These wires can handle freezing cold and burning heat without losing strength. They can also deal with sudden changes, like quickly moving from a hot area to a cold one. This prepares them for any weather, place, and time of year.
+              </p>
+            </div>
           </div>
         </div>
       </div>
