@@ -441,6 +441,64 @@
           grid-template-columns: repeat(1, 1fr);
         }
       }
+
+      /*industries-application-area */
+
+      .industries-application-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .industries-application-area .info-card {
+        padding: 16px 12px;
+        border-radius: 12px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .industries-application-area .info-card .image-wrapper {
+        width: 260px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .industries-application-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .industries-application-area .info-card h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      .industries-application-area .info-card p {
+        text-align: start;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .industries-application-area .info-card {
+          flex-direction: column;
+        }
+        .industries-application-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      
     </style>
   </head>
   <body>
@@ -755,6 +813,132 @@
 
         <div class="btn-wrapper">
           <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="industries-application-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Industries and Applications</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- Card 1 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Industrial Automation</h3>
+              <p class="body-b2">
+                Powers robots, conveyors, and machines with safe, well-organized
+                wiring that reduces breakdowns, improves efficiency, and boosts
+                workplace safety. Works in busy factories, assembly lines, and
+                automated warehouses.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Automotive Manufacturing</h3>
+              <p class="body-b2">
+                Handles high heat, constant vibration, and tight installation
+                spaces in production lines. Keeps vehicles running with
+                reliable, long-lasting connections that reduce maintenance
+                costs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Aerospace and Defense</h3>
+              <p class="body-b2">
+                Provides strong, lightweight wiring systems for airplanes,
+                satellites, drones, and military gear. Functions in extreme
+                temperatures, high altitudes, and intense operational
+                conditions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Home Appliances</h3>
+              <p class="body-b2">
+                Supplies compact, efficient wiring for home appliances like
+                ovens, washers, dryers, and televisions. Meets strict safety
+                standards and improves product reliability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Telecommunications</h3>
+              <p class="body-b2">
+                Organizes and shields network cables to keep data transmission
+                fast, clear, and stable even in high-traffic environments.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/PsXqx0F5/5c6bc4eab322a932ad3cde6d04e3d6afabf84268-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Energy and Utilities</h3>
+              <p class="body-b2">
+                Supports equipment in power plants, wind farms, solar fields,
+                and charging stations. Works outdoors in rain, sun, snow, and
+                other harsh environments.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
