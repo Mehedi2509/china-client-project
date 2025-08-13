@@ -63,6 +63,15 @@
       }
 
       /* Common Style */
+
+      .heading-h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: #4b5563;
+      }
+
       .section-title {
         margin-bottom: 40px;
         text-align: center;
@@ -85,6 +94,27 @@
         font-family: Alexandria;
         line-height: 28px;
         color: #4b5563;
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .divider .divider-line {
+        width: 80px;
+        height: 4px;
+        background-color: #16529b;
+      }
+
+      .divider .divider-circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #16529b;
       }
 
       .product-page-btn {
@@ -278,29 +308,7 @@
         }
       }
 
-     
-
-      .divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .divider .divider-line {
-        width: 80px;
-        height: 4px;
-        background-color: #16529b;
-      }
-
-      .divider .divider-circle {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #16529b;
-      }
-
-       /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
+      /* product-intro-area. all style will start with the product-intro-area. don't nest too much selectors */
 
       .product-intro-area .product-intro-image-wrapper {
         display: grid;
@@ -342,8 +350,6 @@
         object-fit: cover;
       }
 
-      
-
       .product-advantage-area .section-title h2 {
         text-align: start;
         font-size: 34px;
@@ -368,11 +374,11 @@
         margin-bottom: 10px;
       }
 
-      .product-advantage-area .info-card .card-title h3{
+      .product-advantage-area .info-card .card-title h3 {
         font-size: 24px;
         line-height: 29px;
         font-weight: 400;
-        color: #4B5563;
+        color: #4b5563;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -392,6 +398,34 @@
         }
       }
 
+      /*solution-area*/
+      .solution-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .solution-area .info-card .image-wrapper {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .solution-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .solution-area .content-wrapper {
+        padding: 12px;
+      }
+
+      .solution-area .content-wrapper h3 {
+        color: #16529b;
+        margin-bottom: 18px;
+      }
     </style>
   </head>
   <body>
@@ -532,12 +566,18 @@
                 <h3>Automotive wiring harness with corrugated Loom</h3>
               </div>
               <p class="body-b2">
-                This control wire harness has a strong but bendable cover shielding the wires inside. It protects them from sharp edges, dirt, dust, water, and weather. Sunlight and rain won't make it crack or break. Inside, the wires are neat, tidy, and labeled, so setup is faster and easier. The cover also helps block noise from vibrations and makes the harness last many years without trouble.
+                This control wire harness has a strong but bendable cover
+                shielding the wires inside. It protects them from sharp edges,
+                dirt, dust, water, and weather. Sunlight and rain won't make it
+                crack or break. Inside, the wires are neat, tidy, and labeled,
+                so setup is faster and easier. The cover also helps block noise
+                from vibrations and makes the harness last many years without
+                trouble.
               </p>
             </div>
 
             <!-- Card 2 -->
-             <div class="info-card">
+            <div class="info-card">
               <div class="card-title">
                 <svg
                   width="24"
@@ -566,11 +606,16 @@
                 <h3>12-Pin Heavy-Duty Equipment Wiring Harness</h3>
               </div>
               <p class="body-b2">
-                This harness has twelve pins, so it can carry both power and data at the same time. The solid metal shell locks firmly in place, while seals block dust, dirt, and oil. Each wire is colored and numbered to make installation quick and correct. We test it to handle heat, cold, and hard daily use, so your machines keep running even in harsh conditions.
+                This harness has twelve pins, so it can carry both power and
+                data at the same time. The solid metal shell locks firmly in
+                place, while seals block dust, dirt, and oil. Each wire is
+                colored and numbered to make installation quick and correct. We
+                test it to handle heat, cold, and hard daily use, so your
+                machines keep running even in harsh conditions.
               </p>
             </div>
             <!-- Card 3 -->
-             <div class="info-card">
+            <div class="info-card">
               <div class="card-title">
                 <svg
                   width="24"
@@ -599,11 +644,101 @@
                 <h3>Motorcycle wiring harness</h3>
               </div>
               <p class="body-b2">
-                This small, light harness is also strong, fitting into tight motorcycle spaces. It can handle bumps, shakes, rain, and temperature changes. Sealed connectors keep out dirt and water so your ride stays safe. You can also add extra features like lights or chargers with ease. It links every circuit so your bike works smoothly all year.
+                This small, light harness is also strong, fitting into tight
+                motorcycle spaces. It can handle bumps, shakes, rain, and
+                temperature changes. Sealed connectors keep out dirt and water
+                so your ride stays safe. You can also add extra features like
+                lights or chargers with ease. It links every circuit so your
+                bike works smoothly all year.
               </p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Materials recommendation needs to add later -->
+
+    <div class="solution-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Solution</h2>
+          <p>
+            We listen to your needs first. Then we make a clear plan. We build a
+            sample, test it, and improve it if needed. We use only the
+            best-quality parts. Before sending, we check every detail. You get a
+            harness ready to install and use without delays.
+          </p>
+        </div>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/19bdc6391bf921dcb73e139bda8c7995d5433297.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Custom appliance or electronics wire harness
+              </h3>
+              <p class="body-b2">
+                We make harnesses for home appliances and electronics. They are
+                shaped to match your device exactly. We choose the correct wires
+                for low voltage and safe use. Connectors are strong, easy to
+                attach, and built to last. Clear labels make setup fast and
+                simple.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/C3TRqKGf/5692253a16d66124d9c02ca4b4005d15df3fc9c3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Automotive Auxiliary Light Wiring Harness
+              </h3>
+              <p class="body-b2">
+                We design harnesses to power extra lights for cars and trucks.
+                They include fuses, relays, and switches for safety, and the
+                wires are cut to the correct length and sealed to block water.
+                They work with 12V and 24V systems, keeping lights bright and
+                steady.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/p6fct3X1/76efd95acb707967c4d886f3ba9a51b2f7511691.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Car stereo or audio system wiring harness
+              </h3>
+              <p class="body-b2">
+                We make harnesses for car stereos and amplifiers. They carry power and sound without interference. Shielded cables keep your music clear. Gold connectors stop rust and keep signals strong. Wires are labeled so installation is quick.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+        
       </div>
     </div>
   </body>
