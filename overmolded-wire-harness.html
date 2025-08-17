@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Alexandria;
+      }
+
+      .mock-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #00bde7;
+        color: #fff;
+        margin: 0 auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .section-container {
+        max-width: 1280px;
+      }
+
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      .section-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .body-b1 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        font-weight: 300 !important;
+        color: #4b5563 !important;
+      }
+
+      .body-b2 {
+        font-size: 16px !important;
+        line-height: 26px !important;
+        font-weight: 300 !important;
+        color: #4b5563 !important;
+      }
+
+      /* Common Style */
+
+      .heading-h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: #16529b;
+      }
+
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #4b5563;
+      }
+
+      .section-title p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: Alexandria;
+        line-height: 28px;
+        color: #4b5563;
+      }
+
+      .product-page-btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-area {
+          padding: 50px 16px;
+        }
+
+        .section-title {
+          margin-bottom: 32px;
+        }
+
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      /* Hero Area */
+      .hero-area {
+        min-height: 560px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-area .hero-content-wrapper {
+        position: relative;
+        z-index: 1;
+        max-width: 940px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero-area .title-top {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 49px;
+        margin-bottom: 20px;
+      }
+
+      .hero-area .hero-title {
+        font-size: 52px;
+        line-height: 63px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .hero-area .hero-subtitle {
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 300;
+        margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .hero-area {
+          min-height: unset;
+          padding: 70px 16px;
+          background-position: 90% center !important;
+        }
+
+        .hero-area .title-top {
+          font-size: 32px;
+          line-height: 42px;
+        }
+
+        .hero-area .hero-title {
+          font-size: 48px;
+          line-height: 56px;
+        }
+
+        .hero-area .hero-subtitle {
+          font-size: 28px;
+          line-height: 36px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .hero-area {
+          padding: 20px 16px;
+          min-height: 0;
+          background-position: center !important;
+        }
+
+        .hero-area .title-top {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 16px;
+        }
+
+        .hero-area .hero-title {
+          font-size: 32px;
+          line-height: 42px;
+          text-align: left;
+          max-width: 360px;
+        }
+
+        .hero-area .hero-subtitle {
+          font-size: 18px;
+          display: none;
+        }
+      }
+
+      /* product-intro-area.*/
+
+      .product-intro-area .section-container {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .product-intro-area .section-title {
+        gap: 40px;
+        margin-bottom: 24px;
+      }
+
+      .product-intro-area .section-title h2 {
+        text-align: start;
+      }
+
+      .product-intro-area .section-title p {
+        text-align: start;
+      }
+
+      .product-intro-area .image-wrapper {
+        width: 570px;
+        height: auto;
+        aspect-ratio: 570/500;
+        flex-shrink: 0;
+      }
+
+      .product-intro-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-intro-area .section-container {
+          gap: 32px;
+        }
+
+        .product-intro-area .image-wrapper {
+          width: 450px;
+          height: auto;
+          aspect-ratio: 450/400;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-intro-area .section-container {
+          flex-direction: column;
+        }
+
+        .product-intro-area .image-wrapper {
+          width: 100%;
+          height: auto;
+          aspect-ratio: unset;
+        }
+      }
+
+      /* product-advantage-area */
+
+      .product-advantage-area .ql-product-advantage-container {
+        display: flex;
+      }
+
+      .product-advantage-area .image-wrapper {
+        width: 720px;
+        height: auto;
+        aspect-ratio: 720/863;
+        flex-shrink: 0;
+      }
+
+      .product-advantage-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-advantage-area .section-title {
+        padding-left: 20px;
+        text-align: start;
+        border-left: 4px solid #16529b;
+      }
+
+      .product-advantage-area .content-wrapper {
+        padding: 50px 100px 50px 80px;
+        background-color: #f0f0f080;
+      }
+
+      .product-advantage-area .content-wrapper .icon-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      .product-advantage-area .content-wrapper .icon-card .card-title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-bottom: 12px;
+      }
+      .product-advantage-area
+        .content-wrapper
+        .icon-card
+        .card-title-wrapper
+        h3 {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-advantage-area .image-wrapper {
+          width: 40%;
+          height: auto;
+          aspect-ratio: 5/6;
+        }
+        .product-advantage-area .content-wrapper {
+          padding: 50px 40px 50px 40px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-advantage-area .ql-product-advantage-container {
+          flex-direction: column;
+        }
+        .product-advantage-area .image-wrapper {
+          width: 100%;
+          height: auto;
+          aspect-ratio: unset;
+        }
+        .product-advantage-area .content-wrapper {
+          padding: 50px 16px 50px 16px;
+        }
+      }
+
+      .manufacturing-process-area .section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+
+      .manufacturing-process-area .section-container .section-title {
+        text-align: left;
+      }
+
+      .manufacturing-process-area .manufacturing-feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .manufacturing-process-area .manufacturing-feature-card {
+        padding: 12px;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+      }
+
+      .manufacturing-process-area
+        .manufacturing-right
+        .manufacturing-feature-card
+        .body-b1 {
+        color: #16529b !important;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .manufacturing-process-area .section-container {
+          grid-template-columns: 1fr;
+        }
+
+        .manufacturing-process-area .manufacturing-right {
+          order: -1;
+        }
+      }
+
+      .material-recommend-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .material-recommend-area .info-card .image-wrapper {
+        height: 483px;
+        width: 100%;
+        margin-bottom: 40px;
+        border-radius: 180px;
+        overflow: hidden;
+      }
+      .material-recommend-area .info-card .bottom-img {
+        margin-top: 140px;
+      }
+      .material-recommend-area .info-card .top-img {
+        margin-bottom: 180px;
+      }
+
+      .material-recommend-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .material-recommend-area .info-card .content-wrapper {
+        padding: 12px;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+      }
+
+      .material-recommend-area .info-card .content-wrapper h3 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 12px;
+        font-weight: 400;
+        color: #16529b;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .material-recommend-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .material-recommend-area .info-card .image-wrapper {
+          width: 302.24px;
+          margin: 0 auto;
+          margin-bottom: 24px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .material-recommend-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Solution Area */
+      .solution-area {
+        display: flex;
+        background-color: #f0f0f080;
+      }
+
+      .solution-area .section-container {
+        display: flex;
+        gap: 50px;
+      }
+
+      .solution-area .section-header {
+        width: 340px;
+        flex-shrink: 0;
+      }
+
+      .solution-area .section-title {
+        text-align: start;
+      }
+
+      .solution-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .solution-area .info-card-wrapper .info-card {
+        background-color: #fff;
+        padding: 20px 30px;
+        border-radius: 20px;
+        box-shadow: 4px 4px 20px 0 #00000033;
+      }
+
+      .solution-area .info-card-wrapper .info-card .image-wrapper {
+        width: 300px;
+        height: auto;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .solution-area .info-card-wrapper .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .solution-area .info-card h3 {
+        font-size: 24px;
+        line-height: 24px;
+        font-size: 400;
+        color: #242424;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .solution-area .section-container {
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        .solution-area .section-header {
+          width: 100%;
+        }
+
+        .solution-area .section-title h2{
+          text-align: center;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .solution-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Industries and Applications Area */
+      .industries-application-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .industries-application-area .info-card-wrapper .info-card {
+        background-color: #f0f0f0;
+        padding: 16px;
+        border-radius: 12px;
+      }
+
+      .industries-application-area .info-card-wrapper .info-card .body-b1 {
+        color: #16529b !important;
+      }
+
+      .industries-application-area
+        .info-card-wrapper
+        .info-card
+        .image-wrapper {
+        width: 100px;
+        height: auto;
+        aspect-ratio: 300/300;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .industries-application-area
+        .info-card-wrapper
+        .info-card
+        .image-wrapper
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+      .industries-application-area
+        .info-card-wrapper
+        .info-card
+        .card-content-wrapper
+        h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .making-method-area {
+        background-color: #f0f0f0;
+      }
+
+      .making-method-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .making-method-area .info-card-wrapper .info-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .making-method-area .info-card-wrapper .info-card .image-wrapper {
+        width: 373.33px;
+        height: auto;
+        aspect-ratio: 373.33/200;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 32px;
+      }
+
+      .making-method-area .info-card-wrapper .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .making-method-area
+        .info-card-wrapper
+        .info-card
+        .card-content-wrapper
+        h3 {
+        margin-bottom: 12px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .making-method-area .info-card-wrapper .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .making-method-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .future-innovation-area .section-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+
+        align-items: center;
+      }
+
+      .future-innovation-area .image-wrapper {
+        width: 590px;
+        height: auto;
+        aspect-ratio: 590/500;
+        border-radius: 12px;
+        flex-shrink: 0;
+      }
+
+      .future-innovation-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .future-innovation-area .section-title {
+        text-align: start;
+      }
+
+      .future-innovation-area .section-title h2 {
+        margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .future-innovation-area .image-wrapper {
+          width: 40%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .future-innovation-area .section-container {
+          flex-direction: column;
+        }
+        .future-innovation-area .image-wrapper {
+          width: 100%;
+        }
+      }
+
+      .maintenance-area {
+        padding: 70px;
+        display: flex;
+        gap: 40px;
+        background-color: #16529b;
+      }
+
+      .maintenance-area .image-wrapper {
+        width: 355px;
+        height: auto;
+        aspect-ratio: 1/1;
+        flex-shrink: 0;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .maintenance-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .maintenance-area .section-title h2 {
+        text-align: center;
+        color: white;
+      }
+      .maintenance-area .body-b1 {
+        text-align: center;
+        color: white !important;
+        margin-bottom: 24px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .maintenance-area {
+          flex-direction: column;
+          padding: 40px 16px;
+        }
+        .maintenance-area .image-wrapper {
+          width: 300px;
+          aspect-ratio: 1/1;
+          margin: 0 auto;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="hero-area"
+      style="
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/dc69f8f7e3983de416bb80bfb752ae6fddefd11d.jpg');
+      "
+    >
+      <div class="hero-product-container">
+        <div class="hero-content-wrapper">
+          <p class="title-top">Custom to</p>
+          <h1 class="hero-title">Control wire harness</h1>
+          <p class="hero-subtitle">
+            Keep your machines running at their best with expert quality control
+            wire harness every time, in any weather or condition. We focus on
+            strength, safety, and ease of use.
+          </p>
+
+          <div class="product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-intro-area section-area">
+      <div class="section-container mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Product Introduction</h2>
+            <p>
+              With an overmolded wire harness you can accurately connect the
+              plugs and wires. With this process you can remove the errors from
+              the harness and you can always have a smooth connection with these
+              harnesses. When making the harness the wires and the connectors
+              stay inside the mold and the plastic or the cover material covers
+              them. After this process the plastic gets cold and the harness is
+              ready for use.
+            </p>
+            <p>
+              An OBD-II to serial cable used for making links between a repair
+              tool and vehicles computer. The OBD-II plug has 16 pins to be
+              connected to the vehicle's computer system. An overmolded splitter
+              that plugs into various DB9 serial outputs can be split. With it
+              you can easily use multiple ports without issues. Because of the
+              overmolding vehicles cables, the connection system always stays
+              still. There are also customized options available for creating
+              exact size and shape. The outer covers are also made to resist the
+              rough conditions.
+            </p>
+          </div>
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/87ab9441e6af780c77cda3283595a649cee83f36.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="product-advantage-area section-area">
+      <div class="ql-product-advantage-container">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/44e8daa5af19b089ceff2d172464d83be4f35ae1.png"
+            alt=""
+          />
+        </div>
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Product Advantages</h2>
+          </div>
+          <div class="icon-card-wrapper">
+            <!-- Card 1 -->
+            <div class="icon-card">
+              <div class="card-title-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1783_497)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1783_497">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">One-Piece Build</h3>
+              </div>
+              <p class="body-b1">
+                Plug and wire are made together in one step, creating a solid,
+                single unit. No extra boots or glue are needed, removing weak
+                points and saving time.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="icon-card">
+              <div class="card-title-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1783_497)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1783_497">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">Complete Seal</h3>
+              </div>
+              <p class="body-b1">
+                Mold covers the plug and cable joint completely, blocking water,
+                dust, and dirt. This helps meet IP67 ratings for outdoor or
+                marine use.
+              </p>
+            </div>
+
+            <!-- Card 3  -->
+            <div class="icon-card">
+              <div class="card-title-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1783_497)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1783_497">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">Protected Joints</h3>
+              </div>
+              <p class="body-b1">
+                All joints are sealed inside and are safe from rust and wear.
+                The outside layer resists cuts and scrapes, letting the
+                overmolded wire harness bend and flex without harm.
+              </p>
+            </div>
+
+            <!-- Card 4  -->
+            <div class="icon-card">
+              <div class="card-title-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1783_497)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1783_497">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">Custom Shapes</h3>
+              </div>
+              <p class="body-b1">
+                Molds can make special shapes like angled plugs, grips, or
+                flanges, even with a logo. This helps fit tight spaces and gives
+                a pro look.
+              </p>
+            </div>
+            <!-- Card 5  -->
+            <div class="icon-card">
+              <div class="card-title-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1783_497)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1783_497">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">Fast Making</h3>
+              </div>
+              <p class="body-b1">
+                One-step molding removes extra work, saves time, and makes every
+                overmolded wire harness the same quality.
+              </p>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="manufacturing-process-area section-area">
+      <div class="section-container mx-auto">
+        <!-- Left Column -->
+        <div class="manufacturing-left section-title">
+          <h2>Cable Assembly Manufacturing Process</h2>
+          <p>
+            The process starts by cutting and stripping wires to the correct
+            length. Wires are then crimped or soldered to connectors for a
+            strong link. The plug and wires are set inside a mold, and heated
+            plastic is injected under careful pressure. It fills all gaps and
+            locks parts together. When the plastic cools, the unit is strong and
+            ready to use. This process is quicker and more accurate than older
+            ways, giving a more durable result.
+          </p>
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+
+        <!-- Right Column -->
+        <div class="manufacturing-right">
+          <div class="section-title">
+            <h2>Advanced Molding Techniques and Tooling</h2>
+          </div>
+          <div class="manufacturing-feature-list">
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">Multi-Shot</h3>
+              <p class="body-b2">
+                Makes a hard inside and soft outside for better hold.
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">Low-Pressure</h3>
+              <p class="body-b2">Gentle for protecting delicate electronics.</p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">3D-Printed Molds</h3>
+              <p class="body-b2">Used for fast test molds before mass runs.</p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">Complex Molds</h3>
+              <p class="body-b2">Can make shapes, simple molds cannot.</p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">Automation</h3>
+              <p class="body-b2">
+                Robots load and run machines for speed and accuracy.
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <h3 class="body-b1">Multi-Cavity</h3>
+              <p class="body-b2">
+                Makes several harnesses in one run to save time and cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="material-recommend-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper bottom-img">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/8622616e3a83ff560ead1e67c64bed04c5c55914.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>PE raw material</h3>
+              <p class="body-b2">
+                PE is a robust plastic that can handle many types of damage. It
+                does not let water, oil, or chemicals get through, so it works
+                well in wet or dirty places. It is also suitable for underground
+                cables because it does not rot or break down. PE is more complex
+                than PVC or TPU, so it can be used as a strong inner layer with
+                a softer outer layer for extra safety. It does not get damaged
+                by acids or salt, so it is excellent for places near the ocean,
+                in the soil, or in areas with bad weather. This makes PE one of
+                the best choices for hard and heavy jobs where cables must last
+                long.
+              </p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="info-card">
+            <div class="image-wrapper top-img">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/aadd2a751ba9fbc47364b3f06a8c4c7b0937dedb.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>PVC raw materials</h3>
+              <p class="body-b2">
+                PVC is a low-cost plastic that people often use to make cables.
+                It is soft enough to bend without breaking, which helps it last
+                longer when the cable is moved around. PVC also slows down fire,
+                which makes it safer to use. It sticks very well to the cable
+                cover, so the outside layer stays in place for many years. The
+                cover makes a tight seal that keeps out water, dirt, and even
+                sunlight, so the inside parts remain safe. This is why PVC works
+                well both inside buildings and outside in the open. But if the
+                cable is bent repeatedly in the same spot, PVC can start to
+                crack.
+              </p>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="info-card">
+            <div class="image-wrapper bottom-img">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/b5f83607b4c30b61efa0dd70afa7b2053d51f253.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>Connector material</h3>
+              <p class="body-b2">
+                The parts that connect cables to other things are made from
+                strong materials so they can work well and last for years. Many
+                waterproof connectors are covered in metal, often nickel-coated
+                brass, which stops rust and damage from water. Some connectors
+                are made from rigid plastic called nylon, which is strong but
+                light. The outside cover of the cable needs to match the
+                connector so the join between them stays tight and sealed. A
+                good seal keeps water, dirt, and dust out, which helps the cable
+                remain safe and work well.
+              </p>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="info-card">
+            <div class="image-wrapper top-img">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/27f91a85f7ec401dd0a82aa48178bace2845893b.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>Copper Conductors</h3>
+              <p class="body-b2">
+                Inside every cable, the wires that carry power or signals are
+                usually made from copper. Copper is one of the best materials
+                for moving power and signals because it works with very little
+                loss. It can bend without breaking, essential for cables that
+                need to move. Sometimes the copper is coated with tin or silver,
+                which stops rust and makes it last even longer. This coating
+                also keeps the wires clean and working well, even in bad
+                weather. Copper wires help ensure that power and signals move
+                smoothly and safely, whether the distance is short or long.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-header">
+          <div class="section-title">
+            <h2>Solution</h2>
+            <p>
+              Overmolded cable assemblies fix many wiring problems by joining
+              the connector and the cable into one strong, solid, sealed piece.
+              This means the part is not easy to break and can last long, even
+              if used daily. They can keep working on machines that shake, get
+              wet, or are handled roughly. They stay reliable because there are
+              no small, loose pins or parts that can fall apart. They are also
+              very easy to set up. You just plug in one cable, and it is ready.
+              This saves time and helps stop mistakes during installation.
+              Overmolds can also have clear labels, bright colors, or custom
+              marks to make the proper connection quick and straightforward.
+              Because they do not break often, you spend less time and money on
+              repairs.
+            </p>
+          </div>
+          <div class="btn-wrapper">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/4fbf6a0c441697f91cf3a749f703aba96b714a5a.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>M8 and M12 Circular Connectors</h3>
+              <p class="body-b1">
+                M8 and M12 connectors are small, round plugs in many machines,
+                tools, and automation systems. The M8 is tiny, often with 3 or 4
+                pins, perfect for tight spaces and small sensors. The M12 is
+                larger and has up to 12 pins, so it can carry more signals or
+                power. Both types can be made in different coding styles, such
+                as A-coding for standard sensors and D-coding for data signals.
+                They are built to block dust and water, often rated IP65 or
+                IP67, so they can work in tough places. When they are
+                overmolded, the plug and cable are sealed together as one
+                waterproof part. The smooth way the cable leaves the connector
+                stops leaks, avoids bending damage, and helps the connector last
+                longer.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/9542f787c26504674b0a3a745155ddb39d15684c.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>M8/M12 Multi-Connector Cable Assembly</h3>
+              <p class="body-b1">
+                Some machines need more than one M8 or M12 connector in the same cable harness. Overmolding can join all these connectors into one solid block. This block is sealed to stop water from getting in and gives the whole piece more strength. The cables can be shaped to come out at different angles to fit into tight spaces in equipment. Color-coded plugs and clear labels help workers connect things fast and without mistakes. These assemblies are built to last for many years, even in tough places like factories, farms, or boats.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/bf13ae96305ae970404bdbdbb15d90523dac4ebb.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>Waterproof Y-Splitter Housing for M8/M12</h3>
+              <p class="body-b1">
+                Overmolded housings for Y-splitters seal the spot where cables join together. Some use resin to fill every small gap, while others use a molded shell that fits tightly around the parts. Both styles are tested to keep out water, oil, and dust. Overmolding also makes the splitter look clean and professional, protecting it from cracks and wear.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/496b9afc4ad6a5714f8aff5d5cf1efb035c5e637.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3>M12 Y-Splitter Cable</h3>
+              <p class="body-b1">
+                An M12 Y-splitter turns one connector into two connectors. This means you can send the signal from one sensor to two different devices or controllers at the same time. If the splitter is not overmolded, the joint can be weak and let water in. Overmolding covers the split with thick, strong plastic, giving it extra strength and waterproofing. This means it can keep working well even if the area shakes, gets hit, or is exposed to rain and bad weather.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="industries-application-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Industries and Applications</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/cSnx24BH/783f7ebec67f230874d5ad379c9f895a8106a9fb.png"
+                alt=""
+              />
+            </div>
+
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Automotive</h3>
+              <p class="body-b2">
+                Used for sensors, cameras, and lights. Works in high heat,
+                around oil, and with lots of shaking.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/RGCNzwHm/a7f4b404f3730c9224d93735197d0d55383ab1ed.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Industrial</h3>
+              <p class="body-b2">
+                Connects sensors and machines while keeping out dust and oil.
+                These are best for industrial tough situations.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/NdyZL3qR/f3c2635c7cd6f28da70816905571e4114f263f83.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Renewable Energy</h3>
+              <p class="body-b2">
+                Handles sunlight, rain, wind, and temperature changes. Saves
+                energy and lets you save more.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/Kp8ZDym3/cc35323e946e65c48414a1545caf0b3a65714be8.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Medical</h3>
+              <p class="body-b2">
+                Safe, clean plastics and seals keep things hygienic. These
+                products keep all the tools secure and germs free.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/xqKJx3Xw/9c7788aa888be7deb0cb0de07fef2a5dd4c7a55b.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Marine</h3>
+              <p class="body-b2">
+                Resists rust from saltwater and keeps working in high humidity.
+                These are especially customized for different types of weather.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/d4Wc3DzN/7244ffa3c6aa50ba7279462f614fb1f68f23fd88.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="body-b1">Aerospace</h3>
+              <p class="body-b2">
+                Meets strict safety rules and resists heat and heavy vibration.
+                Accurately designed for high and low air pressure areas. Secure
+                for many kinds of applications.p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="making-method-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Advanced Working Process</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/mVPR3HGG/8dbf62aafee8dbc99e233e09a16c247ec18ea07d.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="heading-h3">Quality Assurance</h3>
+              <p class="body-b2">
+                Every overmolded wire harness is checked very carefully. 3D
+                scanners check the exact size and shape. Electrical tests make
+                sure each wire is connected the right way. Pull tests check that
+                cables are strong and do not come loose. Special cameras look
+                for any minor defects. Barcodes track the harness through every
+                step of production so nothing is missed.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/8Lh5Dyd8/be7d5aced2b9a916a9c4eca80e1eb9a39e9419ee.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="heading-h3">Mechanical Strain Relief</h3>
+              <p class="body-b1">
+                Overmolding holds the cable tight so it does not get pulled
+                apart. It spreads out the pulling force so no one part is
+                damaged. Special shapes in the design stop the wires from
+                bending too much, which helps them last longer.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://i.ibb.co.com/8WQ3Wts/ff3c35086c455a25a2f134f7f45eded42777a2cf.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content-wrapper">
+              <h3 class="heading-h3">Design Flexibility</h3>
+              <p class="body-b2">
+                Overmolding can make almost any bend, curve, or angle to fit
+                into small or tricky spaces. This means you do not need, bulky
+                boxes. It keeps the whole system neat, easy to work with, and
+                safe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="future-innovation-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Future Innovations in Overmolded Cable Technology</h2>
+
+          <p>
+            Overmolding is changing very fast, and new ideas are coming every
+            year. Many new types of plastics are now made from recycled waste or
+            plants, which helps protect our planet. These new materials make
+            cables safer for people and nature. 3D printing also makes the
+            process much faster. In the past, companies had to wait many weeks
+            for heavy metal molds, but now they can print light test molds in
+            only a few hours. This lets them check the size, the shape, and how
+            the cable will work before making an order.
+          </p>
+          <p>
+            Today, intelligent robots and strong machines do much of the work,
+            so the cables are stronger and made more carefully. Soon, cables may
+            have tiny sensors inside them. These sensors could check the heat,
+            watch for movement, or even send information to other devices. This
+            would turn regular cables into smart cables that can talk to
+            different machines and work as part of a connected system.
+          </p>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/13a55149759d315e9dbdc813ad26b6fb8cd108fd.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="maintenance-area section-area">
+      <div class="image-wrapper">
+        <img
+          src="https://www.ql-custom.com/wp-content/uploads/2025/08/b9e9c9965eb93d7a73b5a8277c4f849c9709d62d.png"
+          alt=""
+        />
+      </div>
+      <div class="content-wrapper">
+        <div class="section-title">
+          <h2>Cost Efficiency Through Reduced Maintenance</h2>
+        </div>
+        <p class="body-b1">
+          Overmolded wire harnesses can cost more initially, but they save much
+          money later. In a standard cable, the point where the cable meets the
+          connector is often the weakest spot. In an overmolded wire harness,
+          that part is covered in strong, thick plastic, so it is tough to
+          break. This means fewer fixes, fewer replacements, and fewer times
+          when the machines have to stop working. These overmolded wire
+          harnesses can last for many more years compared to standard cables.
+          This saves repair costs, lowers warranty claims, and keeps work going
+          without delays. Some designs can be used in many machines, so you do
+          not need to store as many spare parts. Even though they may cost more
+          initially, they quickly pay for themselves with the money saved over
+          time.
+        </p>
+        <div class="btn-wrapper">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          src="https://www.ql-custom.com/wp-content/uploads/2025/08/068b00c924843db68faa9431ed88a230c4f32fc6.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
