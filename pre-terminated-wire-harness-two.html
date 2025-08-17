@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ql-ps-container {
+      max-width: 1280px;
+    }
+
+    .ql-ps-mx-auto {
+      margin: 0 auto;
+    }
+
+    body {
+      font-family: Alexandria;
+    }
+
+    /* Common Style */
+    .section-title {
+      margin-bottom: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .section-title h2 {
+      font-family: Alexandria;
+      font-size: 34px;
+      line-height: 51px;
+      font-weight: 400;
+      color: #4b5563;
+    }
+
+    .section-title p {
+      font-size: 18px;
+      font-weight: 300;
+      font-family: Alexandria;
+      line-height: 28px;
+      color: #4b5563;
+    }
+
+    .product-page-btn {
+      display: flex;
+    }
+
+    .product-page-btn .popup-form-btn {
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: initial;
+    }
+
+    .popup-form-btn {
+      padding: 12px 30px;
+      background-color: #00bde7;
+      color: #ffffff;
+      border-radius: 30px;
+      font-size: 16px;
+      line-height: 100%;
+      font-weight: 400;
+      border: none;
+      margin-top: 24px;
+    }
+
+    .ql-ps-btn-read {
+      padding: 7px 13px;
+      background-color: #00BDE7;
+      color: #ffffff;
+      border: none;
+      font-size: 12px;
+      font-weight: 400;
+      font-family: Alexandria;
+      line-height: initial;
+    }
+
+    .desc-1 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      color: #4b5563;
+      text-align: justify;
+    }
+
+    .desc-2 {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 300;
+      color: #4b5563;
+      text-align: justify;
+    }
+
+    .card-heading-primary {
+      font-size: 24px;
+      line-height: 36px;
+      color: #00bde7;
+      font-weight: 400;
+    }
+
+    .card-heading-secondary {
+      font-size: 24px;
+      line-height: 36px;
+      color: #16529b;
+      font-weight: 400;
+    }
+
+    .section-area {
+      padding: 70px 16px;
+      max-width: 1920px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .ql-ps-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ql-ps-flex-col {
+      flex-direction: column;
+    }
+
+    .ql-ps-flex {
+      display: flex;
+    }
+
+    .ql-ps-flex-row-reversed {
+      flex-direction: row-reverse;
+    }
+
+    .gap-12px {
+      gap: 12px;
+    }
+
+    .gap-16px {
+      gap: 16px;
+    }
+
+    .gap-24px {
+      gap: 24px;
+    }
+
+    .gap-80px {
+      gap: 80px;
+    }
+
+    .gap-70px {
+      gap: 70px;
+    }
+
+    .mb-12px {
+      margin-bottom: 12px;
+    }
+
+    .mb-16px {
+      margin-bottom: 16px;
+    }
+
+    .mb-20px {
+      margin-bottom: 20px;
+    }
+
+    .mtb-24px {
+      margin: 24px 0;
+    }
+
+    .ql-ps-semi-bold {
+      font-weight: 500;
+    }
+
+    .ql-ps-text-primary {
+      color: #00bde7;
+    }
+
+    .border-radius-12 {
+      border-radius: 12px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .section-area {
+        padding: 50px 16px;
+      }
+
+      .section-title {
+        margin-bottom: 32px;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .section-title p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .ql-ps-sm-flex-col {
+        flex-direction: column;
+      }
+    }
+
+    /* Hero Area */
+    .hero-area {
+      min-height: 560px;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 16px;
+      overflow: hidden;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-area .hero-product-container {
+      max-width: 1280px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-area .hero-content-wrapper {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-area .section-title {
+      gap: 40px;
+      text-align: left;
+    }
+
+    .hero-area .section-title h1 {
+      font-family: Alexandria;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: initial;
+      color: #fff;
+    }
+
+    .hero-area .section-title p {
+      font-family: Alexandria;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: initial;
+      color: #fff;
+    }
+
+    .hero-area .hero-product-page-btn {
+      display: flex;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .hero-area {
+        padding: 70px 16px;
+        min-height: unset;
+        background-position: right center !important;
+      }
+
+      .hero-area .section-title h1 {
+        font-size: 48px;
+        line-height: 56px;
+      }
+
+      .hero-area .hero-product-page-btn .popup-form-btn {
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .hero-area {
+        padding: 20px 16px;
+        min-height: 0;
+        background-position: 80% center !important;
+      }
+
+      .hero-area .section-title h1 {
+        font-size: 32px;
+        line-height: 42px;
+        text-align: left;
+        max-width: 360px;
+      }
+
+      .hero-area .section-title p {
+        font-size: 18px;
+        display: none;
+      }
+    }
+
+    .product-intro-area .section-title h2 {
+      text-align: start;
+    }
+
+    .product-intro-area .intro-image-wrapper {
+      position: relative;
+      width: 49.22%;
+      aspect-ratio: 32/29;
+      flex-shrink: 0;
+    }
+
+    .product-intro-area .intro-image-wrapper img:nth-child(1) {
+      position: absolute;
+      width: 66.67%;
+      aspect-ratio: 1/1;
+
+      top: 0;
+      right: 0;
+    }
+
+    .product-intro-area .intro-image-wrapper img:nth-child(2) {
+      position: absolute;
+      width: 50.79%;
+      aspect-ratio: 1/1;
+      bottom: 0;
+      left: 0;
+      border: 6px solid #ffffff;
+    }
+
+    .product-intro-area .intro-content-wrapper {
+      max-width: 570px;
+    }
+
+    .product-intro-area .ql-ps-container {
+      gap: 80px;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .product-intro-area .ql-ps-container {
+        gap: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .product-intro-area .ql-ps-container {
+        gap: 16px;
+      }
+
+      .product-intro-area .intro-image-wrapper {
+        width: 100%;
+        aspect-ratio: 32/29;
+        flex-shrink: 0;
+      }
+    }
+
+    /* Product Advantage Area */
+    .product-advantage-area .advantage-image-wrapper {
+      flex-shrink: 0;
+      display: flex;
+      width: 550px;
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .product-advantage-area .advantage-image-wrapper .ql-ps-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: unset;
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .product-advantage-area .product-advantage-wrapper {
+        gap: 20px;
+      }
+    }
+
+    /* Solution Area */
+    .solution-area .info-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding-top: 100px;
+    }
+
+    .solution-area .info-card {
+      position: relative;
+    }
+
+    .solution-area .info-card:nth-child(2) {
+      top: -100px;
+    }
+
+    .solution-area .info-card-image-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .solution-area .info-card-content-wrapper {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 120px;
+      padding: 0 30px;
+    }
+
+    .solution-area .info-card-content-wrapper .info-card-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .solution-area .info-card-desc {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .solution-area .info-card-wrapper {
+        padding-top: unset;
+      }
+
+      .solution-area .info-card:nth-child(2) {
+        top: unset;
+      }
+
+      .solution-area .info-card-content-wrapper {
+        padding: 0 16px;
+        bottom: 80px;
+      }
+
+      .solution-area .info-card-content-wrapper .info-card-title {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      .solution-area .info-card-desc {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .solution-area .info-card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .solution-area .info-card-content-wrapper .info-card-title {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      .solution-area .info-card-content-wrapper {
+        padding: 0 30px;
+        bottom: 120px;
+      }
+
+      .solution-area .info-card-desc {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+    }
+
+    /* Material Recommendation Area */
+    .material-recommend-area {
+      background-color: #eff3f8;
+    }
+
+    .material-recommend-area .product-page-btn {
+      margin-top: 40px;
+    }
+
+    .material-recommend-area .material-card-image-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .material-recommend-area .product-page-btn {
+        margin-top: 24px;
+      }
+    }
+
+    /* Application Area */
+    .application-area .icon-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .application-area .icon-card {
+      background-color: #eff3f8;
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .application-area .icon-card .icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .application-area .icon-card-wrapper {
+        gap: 8px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .application-area .icon-card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 8px;
+      }
+    }
+
+    .methods-area {
+      background-color: #eff3f8;
+    }
+
+    .methods-area .info-section-wrapper .info-cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .methods-area .info-section-wrapper .info-cards-wrapper .info-card {
+      padding: 20px;
+      border-radius: 12px;
+      background-color: #ffffff;
+    }
+
+    .methods-area .build-info-section-wrapper .info-cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .methods-area .build-info-section-wrapper .info-cards-wrapper .info-card {
+      padding: 12px;
+      border-radius: 12px;
+      background-color: #ffffff;
+    }
+
+    .methods-area .desc-2 {
+      text-align: left;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .methods-area .info-section-wrapper .info-cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+
+      .methods-area .build-info-section-wrapper .info-cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .customization-area .info-cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .customization-area .info-cards-wrapper .info-card {
+      background-color: #eff3f8;
+      padding: 16px;
+      border-radius: 12px;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .customization-area .info-cards-wrapper .info-card .info-card-title {
+      text-align: center;
+    }
+
+    .customization-area .info-cards-wrapper .info-card .info-card-desc {
+      text-align: center;
+    }
+
+    .customization-area .info-card-image-wrapper {
+      width: 150px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .customization-area .info-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+      grid-column: span 4;
+    }
+
+    .customization-area .column-span-6 {
+      grid-column: span 6;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .customization-area .info-cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+
+      .customization-area .column-span-6 {
+        grid-column: span 4;
+      }
+    }
+
+    .why-us-area {
+      background-color: #eff3f8;
+    }
+
+    .why-us-area .icon-card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .why-us-area .icon-card-wrapper .icon-card {
+      padding: 0 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-right: 1px solid #00bde7;
+    }
+
+    .why-us-area .icon-card-wrapper .icon-card:first-child {
+      padding-left: 0;
+    }
+
+    .why-us-area .icon-card-wrapper .icon-card:last-child {
+      padding-right: 0;
+    }
+
+    .why-us-area .icon-card-wrapper .lg-border-none {
+      border-right: none;
+    }
+
+    .why-us-area .icon-card-wrapper .icon-card .icon-wrapper {
+      height: 40px;
+      width: fit-content;
+    }
+
+    .why-us-area .icon-card-wrapper .icon-card .icon {
+      height: 100%;
+      width: auto;
+    }
+
+    .why-us-area .desc-1 {
+      text-align: left;
+    }
+
+    .why-us-area .product-page-btn {
+      margin-top: 40px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .why-us-area .icon-card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+      }
+
+      .why-us-area .icon-card-wrapper .sm-border-none {
+        border-right: none;
+      }
+
+      .why-us-area .icon-card-wrapper .icon-card {
+        border-right: none;
+        padding: 0;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #00bde7;
+      }
+
+      .why-us-area .icon-card-wrapper .icon-card:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .why-us-area .product-page-btn {
+        margin-top: 24px;
+      }
+    }
+
+    .request-quote-area {
+      background-color: #16529b;
+    }
+
+    .request-quote-area .ql-ps-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .request-quote-area .image-wrapper {
+      height: 315px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .request-quote-area .content-wrapper .section-title {
+      text-align: start;
+      margin-bottom: 24px;
+      gap: 25px;
+    }
+
+    .request-quote-area .content-wrapper .section-title h2 {
+      color: #fff;
+    }
+
+    .request-quote-area .content-wrapper .section-title p {
+      color: #fff;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .request-quote-area .ql-ps-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+      }
+    }
+
+    /* Custom Braided Wire Section */
+    .customer-reviews-area {
+      padding: 70px 16px;
+      max-width: 1920px;
+      margin: 0 auto;
+      background-color: #EFF3F8;
+      overflow: hidden;
+    }
+
+    .customer-reviews-area .custom-container {
+      max-width: 1580px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      padding: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-rating {
+      display: flex;
+      align-items: center;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-rating svg {
+      width: 32px;
+      height: 32px;
+      fill: #b1b100;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .author-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card .author-image {
+      display: flex;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card .author-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card .review-card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card .author-name {
+      font-family: Alexandria;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 400;
+      color: #4b5563;
+    }
+
+    .customer-reviews-area .customer-reviews-wrapper .review-card .review-card-content .review-card-desc {
+      font-family: Alexandria;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 300;
+      color: #4b5563;
+      text-align: justify;
+    }
+
+    .customer-reviews-area .btn-wrapper {
+      display: flex;
+      margin-top: 40px;
+    }
+
+    @media only screen and (max-width: 1199px) {
+      .customer-reviews-area .customer-reviews-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      .customer-reviews-area .customer-reviews-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .customer-reviews-area {
+        padding: 50px 16px;
+      }
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-area"
+    style="background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/Turnkey-wire-harness-banner.jpg');">
+    <div class="hero-product-container">
+      <div class="hero-content-wrapper">
+        <div class="section-title">
+          <h1>Turnkey wire harness</h1>
+          <p>
+            Easy, ready-to-use Turnkey Wire Harnesses made just for your needs, with no steps left out. We do everything
+            from the first design to the last test, so you don't have to worry.
+          </p>
+        </div>
+
+        <div class="hero-product-page-btn">
+          <?php
+             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+           ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Introduction section -->
+  <div class="product-intro-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto ql-ps-flex ql-ps-sm-flex-col">
+      <div class="intro-image-wrapper">
+        <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/turnkey-wire-into-1.png" alt="turnkey wire" />
+        <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/turnkey-wire-into-2.png" alt="turnkey wire" />
+      </div>
+
+      <div class="intro-content-wrapper">
+        <div class="section-title">
+          <h2>Product Introduction</h2>
+        </div>
+        <div class="product-introduction-content">
+          <p class="desc-2">
+            Our turnkey wire harness is not just a bundle of wires. It is a
+            complete system to help your machines run better, faster, and
+            longer. We make every harness to match your needs, whether for a
+            car, machine, tool, or other device. Every wire in the system is
+            put exactly where it should be to carry power and send signals
+            correctly. People in many industries use our cable harnesses in
+            cars, factories, offices, homes, and even outdoor machines. These
+            organised wire systems help keep everything clean, strong, and
+            safe. We use the best copper wires with strong coatings that can
+            resist heat, dust, shaking, and bending. Our team makes each
+            turnkey wire harness fit perfectly, no wires too short or too
+            long, no guesswork. We do the whole job from start to finish. We
+            help you design the system, find the right parts, build the
+            harness, and test it. You don't need to talk to many suppliers or
+            deal with different vendors. You just work with us from start to
+            finish.
+          </p>
+
+          <div class="product-page-btn">
+            <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+              ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Advantage section -->
+  <div class="product-advantage-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Product Advantage</h2>
+      </div>
+
+      <div class="product-advantage-wrapper ql-ps-flex  gap-70px ql-ps-sm-flex-col">
+        <div class="advantage-image-wrapper image-wrapper">
+          <img src="https://i.ibb.co.com/xt4YMw6r/Group-41997.png" alt="turnkey wire" class="ql-ps-image" />
+        </div>
+
+        <div class="info-card-wrapper ql-ps-flex ql-ps-flex-col gap-24px">
+          <div class="info-card">
+            <h3 class="card-heading-secondary mb-12px">
+              Plug-and-Play Setup (Saves Time)
+            </h3>
+            <p class="desc-1">
+              Our plug-and-play pre terminated harnesses make jobs super fast. Each wire is cut, ended, and labeled in
+              the factory. All workers need to do is match plugs to the right parts. There is no wasted time cutting or
+              stripping wires. Experts say these harnesses can “cut setup time in half.” They also save money because no
+              tools like soldering irons or crimpers are needed. This cuts labor, reduces mistakes, and avoids delays,
+              especially in big projects.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3 class="card-heading-secondary mb-12px">
+              Strong and Reliable Joints
+            </h3>
+            <p class="desc-1">
+              Each harness can be made to fit your needs. You can choose the wire size, the type of cover, and the end
+              style. We can add heat shrink or braided sleeves if you need extra protection. We can build short jumpers
+              or long power lines. You can also choose connector brands like TE, Deutsch, Molex, or Binder. The layouts
+              and pin counts can change, too. With our vast range of ends (AMP, JST, Deutsch, and more), we can build
+              custom harnesses for almost any use. This means your harness will fit your box, sensor, or machine with no
+              changes.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3 class="card-heading-secondary mb-12px">
+              Custom and Flexible
+            </h3>
+            <p class="desc-1">
+              Every wire harness is made just for your needs. No two are the
+              same. Tell us what shape, length, wires, or plugs you need. We
+              are a custom turnkey wire harness supplier who fits each product
+              to your job. Want extra parts like zip ties, heat shrink tubes,
+              fuses, or relays? We can add those too. Do you need some when
+              you are working? That's fine, we adjust fast. We are here to
+              make your job smooth and straightforward.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solution section -->
+  <div class="solution-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Solution</h2>
+        <p>
+          Our harnesses fix your wiring problems before they even start. You
+          don't need to look for parts or figure out how to wire them. With
+          our turnkey wire harness design and sourcing, you get everything
+          done in one place. We send you a harness that fits right, works
+          great, and lasts long. You won't need to crimp, cut, or test
+          anything. Just plug it in. That saves time and reduces errors. We
+          support you from idea to final product. Our expert team helps with
+          each step. And you get a ready-to-use wiring solution that makes
+          your job easier.
+        </p>
+      </div>
+
+      <div class="info-card-wrapper">
+        <!-- card 1 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/a11a44813e4a2f6978055b153d5a20b9371a1a1c.png"
+              alt="" class="ql-ps-image" />
+          </div>
+
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title">
+              Solution Multi-Core Electrical Wiring Harness
+            </h3>
+            <p class="info-card-desc">
+              A multi-core electrical wiring harness is a group of wires that
+              carry power or signals from one place to another. These wires
+              are...
+            </p>
+            <button class="ql-ps-btn-read">Read more</button>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/13ff806d4b7433bb2025128fd5c280c845898ff1.png"
+              alt="" class="ql-ps-image" />
+          </div>
+
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title">
+              Power Cable with Terminal Connectors (Ring & Fork Terminals)
+            </h3>
+            <p class="info-card-desc">
+              A harness cable with ring and fork connectors is made to link
+              power to other parts safely and efficiently. These connecto...
+            </p>
+            <button class="ql-ps-btn-read">Read more</button>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/093a9db43842439754a42e862ab477f3e4dfb70d.png"
+              alt="" class="ql-ps-image" />
+          </div>
+
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title">
+              Electrical Control Panel with Circuit Breakers & Busbars
+            </h3>
+            <p class="info-card-desc">
+              An electrical control panel is a box with circuit breakers and
+              busbars that help control where the power goes. It sends po...
+            </p>
+            <button class="ql-ps-btn-read">Read more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Material Recommendation section -->
+  <div class="material-recommend-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="material-recommend-wrapper">
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
+          <p>
+            We use strong and simple parts that help turnkey wire harness work
+            better and last a long time. Fork terminals help hold the wires in
+            the right place, so they do not move or fall out. Jumper wires help
+            carry power from one place to another in a quick and easy way. Ring
+            terminal jumper cables help make strong and safe wire links that
+            stay in place. Mixed fork and ring terminal wires give more choices
+            when you need to join wires together. These parts help make the full
+            wire system safe, strong, and easy to use. We build safe and clean
+            electrical wiring harness tools that are used in cars, home tools,
+            and big machines. Every wire is tested to make sure it works well
+            and fits where it should. As a custom turnkey wire harness supplier,
+            we do all the work in one place to make it faster and easier for
+            you. Our affordable turnkey wiring harness solutions help save you
+            time and money while still doing a great job.
+          </p>
+        </div>
+        <div class="material-card-wrapper">
+          <div class="material-card">
+            <div class="material-card-image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Frame-42128.png" alt=""
+                class="ql-ps-image" />
+            </div>
+          </div>
+        </div>
+        <div class="product-page-btn">
+          <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- industries application section -->
+  <div class="application-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Industries and Applications</h2>
+        <p>
+          We support many fields. Our turnkey wire harnesses work in all types
+          of gear. You can pick your harness as your work:
+        </p>
+      </div>
+      <div class="icon-card-wrapper">
+        <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
+          <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-2-1.png" alt="" class="icon" />
+          <p class="desc-2">Automotive</p>
+          <p class="desc-1">
+            Almost every automotive section uses these harnesses. These are
+            vital parts of automotive systems.
+          </p>
+        </div>
+        <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
+          <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-4.png" alt="" class="icon" />
+          <p class="desc-2">Industrial</p>
+          <p class="desc-1">
+            Many machines and robots use these harnesses for connection and
+            power supply.
+          </p>
+        </div>
+        <!-- card 3 -->
+        <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
+          <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-3-1.png" alt="" class="icon" />
+          <p class="desc-2">Consumer Electronics</p>
+          <p class="desc-1">
+            Smart houses and offices use turnkey harnesses for many vital
+            daily works.
+          </p>
+        </div>
+        <!-- card 4 -->
+        <div class="icon-card ql-ps-flex ql-ps-flex-col gap-12px">
+          <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-42166.png" alt="" class="icon" />
+          <p class="desc-2">Medical and Aerospace</p>
+          <p class="desc-1">
+            Clean and safe wiring for high-risk tools and environments, with
+            care in every step. We design each harness to fit your industry's
+            space, power, and safety needs with detailed care and expert
+            support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methods section -->
+  <div class="methods-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Methods to Ensure You The Best Harness</h2>
+      </div>
+      <div class="info-section-wrapper">
+        <h3 class="card-heading-secondary mb-20px">
+          Proper Mathematical Planning
+        </h3>
+        <div class="info-cards-wrapper">
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
+              We Always Start with a Smart Plan
+            </h3>
+            <p class="desc-1">
+              When building your wire harness, we always begin with a
+              brilliant plan. We think carefully about what you need and draw
+              a clear map that shows how the wires should go. This helps us do
+              the job right from the beginning and makes things easier to fix
+              later if needed.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
+              Clean and Safe Wiring Every Time
+            </h3>
+            <p class="desc-1">
+              We place each wire in the best spot to keep everything neat,
+              safe, and easy to follow. Neat wires help machines work better
+              and make it simple to fix problems. We always find the cleanest
+              way to set up the cables, so everything fits just right.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section-wrapper mtb-24px">
+        <h3 class="card-heading-secondary mb-20px">Selecting Process</h3>
+        <div class="info-cards-wrapper">
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
+              All Wires Are Tested Again and Again
+            </h3>
+            <p class="desc-1">
+              We test every wire harness many times to make sure it works
+              well. We check the wires while building and test again after
+              it's done. This helps us find and fix any minor problems early.
+              That way, your harness is ready to use when it arrives.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-16px">
+              Only Strong and Long-Lasting Parts
+            </h3>
+            <p class="desc-1">
+              We pick strong parts like clips, ties, and wraps that last a
+              long time. These parts help the harness stay strong even in hot,
+              dusty, or busy places like factories or big machines.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="build-info-section-wrapper">
+        <h3 class="card-heading-secondary mb-20px">
+          Building According to the Plan
+        </h3>
+        <div class="info-cards-wrapper">
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
+              We Use Modern Tools and Software
+            </h3>
+            <p class="desc-1">
+              We use innovative tools and software that help us build your
+              wire harness faster and better. These tools allow us to avoid
+              mistakes and keep everything neat and right.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
+              Built to Meet All Safety Rules
+            </h3>
+            <p class="desc-1">
+              All our wire harnesses follow the correct safety rules and
+              standards. Whether for cars, machines, or anything else, we
+              ensure it's safe, strong, and ready to use.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3 class="desc-2 ql-ps-semi-bold ql-ps-text-primary mb-12px">
+              We Listen and Build Just What You Need
+            </h3>
+            <p class="desc-1">
+              We take time to listen to you. We ask the right questions and
+              follow your plan. Then we build the harness just how you want
+              it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- customization area -->
+  <div class="customization-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Customization Options We Offer You</h2>
+      </div>
+
+      <div class="info-cards-wrapper">
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/9c4cc81e35a098b616bae802e5a71a5463c8b59a.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Pick from Many Wire Colours
+            </h3>
+            <p class="info-card-desc desc-1">
+              You can choose from many wire colours. These help you tell the
+              wires apart easily. It saves time when setting up and makes
+              repairs quicker.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/d462ee97ad30df890e8f199cf6e3d40170098679.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Add Custom Labels on Wires
+            </h3>
+            <p class="info-card-desc desc-1">
+              We can add labels to each wire to show where it starts and ends.
+              This helps you during setup and makes fixing things easy later.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/a4e8fca7d781bf44da39b26f76bbed9dbad50e92.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Choose How the Wires Are Wrapped
+            </h3>
+            <p class="info-card-desc desc-1">
+              We offer tape, tubing, and braided wraps. These protect your
+              wires from wear and make them look clean and neat.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/69fc0348fcae8a0876021b6b63966671cfe66975.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Extra Protection for Tough Jobs
+            </h3>
+            <p class="info-card-desc desc-1">
+              If your project needs more safety, we offer heat-proof and
+              water-proof wraps. These keep your wires safe in hot, wet, or
+              dirty places.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/3048c0d2a93e139834918204bd8aae17050d4ccf.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Smart Wire Grouping
+            </h3>
+            <p class="info-card-desc desc-1">
+              We can group your wires into small spaces or tight spots. This
+              makes your machines more organised and easier to fix.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 6 -->
+        <div class="info-card">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/8540b37b33ca6ed5acd8ee3b3f41895654f1ef02.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Any Size You Need
+            </h3>
+            <p class="info-card-desc desc-1">
+              We build wire harnesses in any size you want short, long, big,
+              or small. You tell us what you need, and we make it.
+            </p>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div class="info-card column-span-6">
+          <div class="info-card-image-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/6d1ad134cb8ddca90fe1604cabd5b77c990a1bf6.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Flat Harness for Small Spaces
+            </h3>
+            <p class="info-card-desc desc-1">
+              If your space is small, we offer flat wire harnesses that fit
+              easily in tight areas. These are great for electronics or small
+              tools.
+            </p>
+          </div>
+        </div>
+
+        <!-- card 8 -->
+        <div class="info-card column-span-6">
+          <div class="info-card-image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/2968c997bac1941cc9c79d3132922e2ce67c07e1-1.png"
+              alt="" class="ql-ps-image" />
+          </div>
+          <div class="info-card-content-wrapper">
+            <h3 class="info-card-title desc-2 ql-ps-semi-bold">
+              Built Just for You
+            </h3>
+            <p class="info-card-desc desc-1">
+              Tell us exactly what you want, and we'll build your harness to
+              match. We are trusted by many because we keep the process simple
+              and give you what you need quickly and right.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why us section -->
+  <div class="why-us-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="section-title">
+        <h2>Why QL-Custom is A Wise Choice</h2>
+        <p>
+          We're the wise choice for turnkey wire harness work. Here's why you
+          should feel good after selecting us for your turnkey wire harnesses:
+        </p>
+      </div>
+      <div class="icon-card-wrapper">
+        <!-- card 1 -->
+        <div class="icon-card">
+          <div class="icon-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-5.png" alt="" class="icon" />
+          </div>
+          <h3 class="icon-card-title card-heading-secondary">Experience</h3>
+          <p class="desc-1">
+            25+ years in wire harness work for many industries worldwide
+          </p>
+        </div>
+
+        <!-- card 2 -->
+        <div class="icon-card sm-border-none">
+          <div class="icon-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-6.png" alt="" class="icon" />
+          </div>
+          <h3 class="icon-card-title card-heading-secondary">Quality</h3>
+          <p class="desc-1">Tested, safe, and ISO9001:2015 approved wiring</p>
+        </div>
+
+        <!-- card 3 -->
+        <div class="icon-card">
+          <div class="icon-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-7.png" alt="" class="icon" />
+          </div>
+          <h3 class="icon-card-title card-heading-secondary">Flexible</h3>
+          <p class="desc-1">
+            We handle all sizes for small or large jobs, from a single piece
+            to thousands
+          </p>
+        </div>
+
+        <!-- card 4 -->
+        <div class="icon-card sm-border-none">
+          <div class="icon-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-8.png" alt="" class="icon" />
+          </div>
+          <h3 class="icon-card-title card-heading-secondary">Auto Expert</h3>
+          <p class="desc-1">
+            We work with top car wire harness manufacturers and meet their
+            high standards
+          </p>
+        </div>
+
+        <!-- card 5 -->
+        <div class="icon-card sm-border-none column-span-2 lg-border-none">
+          <div class="icon-wrapper">
+            <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/Vector-8.png" alt="" class="icon" />
+          </div>
+          <h3 class="icon-card-title card-heading-secondary">Support</h3>
+          <p class="desc-1">
+            Fast answers, real help, and complete project follow-up
+          </p>
+        </div>
+      </div>
+      <div class="product-page-btn">
+        <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+      </div>
+    </div>
+  </div>
+
+  <!-- Request a quote section -->
+  <div class="request-quote-area section-area">
+    <div class="ql-ps-container ql-ps-mx-auto">
+      <div class="image-wrapper">
+        <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/36b497dfabee67344d7f80e4829bc840bcb7d994.jpg"
+          alt="" class="ql-ps-image" />
+      </div>
+      <div class="content-wrapper">
+        <div class="section-title">
+          <h2>Request a Quote</h2>
+          <p>
+            Tell us your needs. What is the job, and where is the harness you
+            will use? Give us your drawing or idea on a turnkey wire harness.
+            We will help you with your design. We'll suggest what works best
+            based on power, space, safety, and cost. Get a Fast quote from us.
+            We give price, lead time, and part info clearly and quickly. Ask
+            anything about the harness. We reply fast and guide you with real
+            answers.
+          </p>
+        </div>
+        <div class="product-page-btn">
+          <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Reviews section -->
+  <div class="customer-reviews-area">
+    <div class="custom-container">
+      <div class="section-title">
+        <h2>Customer Reviews</h2>
+      </div>
+      <div class="customer-reviews-wrapper">
+        <div class="review-card">
+          <div class="review-rating">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+          </div>
+          <div class="review-card-content">
+            <p class="review-card-desc">
+              "Our factory tools needed new wiring systems. QL-Custom helped us from day one. They made strong harnesses
+              that handle heat, dust, and shaking. Everything was labelled clearly, which made setup fast and simple."
+            </p>
+          </div>
+          <div class="author-info">
+            <div class="author-image">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/51a2667788ebcdbeeab9f107b69a80d1053e1aa1.jpg"
+                alt="" />
+            </div>
+            <h4 class="author-name">Mike</h4>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-rating">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+          </div>
+          <div class="review-card-content">
+            <p class="review-card-desc">
+              "We needed wire harnesses for our electric vans. QL-Custom made it all so easy. They built the harness
+              just right, and we didn't have to change a thing. It was ready to plug in and use. Great service and
+              speedy support too!"
+            </p>
+          </div>
+          <div class="author-info">
+            <div class="author-image">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/773f90938c4c6cfc92be609465a02420cc7095e0.jpg"
+                alt="" />
+            </div>
+            <h4 class="author-name">Sarah Lin</h4>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-rating">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+          </div>
+          <div class="review-card-content">
+            <p class="review-card-desc">
+              "I work with smart home tools, and space is always tight. QL-Custom-built ribbon cable harnesses that fit
+              perfectly. They listened to our needs and made changes quickly. The wires were neat, safe, and easy to
+              connect."
+            </p>
+          </div>
+          <div class="author-info">
+            <div class="author-image">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/2dbaebd7fc220e2024bf1254e156e8f712b04595.jpg"
+                alt="" />
+            </div>
+            <h4 class="author-name">Angela</h4>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-rating">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z" />
+            </svg>
+          </div>
+          <div class="review-card-content">
+            <p class="review-card-desc">
+              "This team is great! I only needed a few custom cable harnesses to test a new gadget, and they treated my
+              order carefully. Fast shipping, great support, and the build was just what we needed."
+            </p>
+          </div>
+          <div class="author-info">
+            <div class="author-image">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b9cbe34325f5b9852308c72dd68e2b446454903.jpg"
+                alt="" />
+            </div>
+            <h4 class="author-name">Rachel</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
