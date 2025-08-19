@@ -70,7 +70,7 @@
         font-size: 24px;
         line-height: 36px;
         letter-spacing: 0%;
-        color: #16529b;
+        color: #242424;
       }
 
       .section-title {
@@ -152,8 +152,8 @@
         z-index: 1;
         max-width: 1029px;
         display: flex;
-        gap: 20px;
         align-items: center;
+        gap: 20px;
       }
 
       .hero-area .hero-content {
@@ -206,17 +206,16 @@
         }
       }
 
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .hero-area {
           padding: 20px 16px;
           min-height: 0;
           background-position: center !important;
         }
 
-        .hero-area .title-top {
-          font-size: 18px;
-          line-height: 24px;
-          margin-bottom: 16px;
+        .hero-area .hero-content-wrapper {
+          flex-direction: column;
+          align-items: start;
         }
 
         .hero-area .hero-title {
@@ -264,8 +263,8 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .product-intro-area .product-intro-wrapper {
-          gap: 20px;
+        .product-intro-area .product-intro-content-wrapper {
+          padding: 24px;
         }
       }
 
@@ -273,10 +272,8 @@
         .product-intro-area .product-intro-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
-        .product-intro-area .product-intro-image-wrapper {
-          width: 100%;
-          height: auto;
-          aspect-ratio: unset;
+        .product-intro-area .product-intro-content-wrapper {
+          padding: 16px;
         }
       }
 
@@ -302,6 +299,9 @@
         object-fit: cover;
       }
 
+      .product-advantage-area .info-card-wrapper {
+        width: 100%;
+      }
       .product-advantage-area .info-card {
         margin-bottom: 30px;
       }
@@ -319,19 +319,18 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .product-advantage-area .section-container {
-          gap: 24px;
+        .product-advantage-area .product-advantage-wrapper {
+          gap: 32px;
+        }
+        .product-advantage-area .image-wrapper {
+          flex-shrink: unset;
+          width: 100%;
         }
       }
 
       @media only screen and (max-width: 767px) {
-        .product-advantage-area .section-container {
+        .product-advantage-area .product-advantage-wrapper {
           flex-direction: column;
-        }
-
-        .product-advantage-area .image-wrapper {
-          width: 100%;
-          flex-shrink: unset;
         }
       }
 
@@ -398,9 +397,12 @@
         max-height: 500px;
       }
 
-      @media only screen and (max-width: 1280px) {
+      @media only screen and (max-width: 1024px) {
+        .materials-recommendation-wrapper {
+          flex-direction: column;
+        }
         .materials-recommendation-wrapper .materials-recommendation-image-wrapper{
-          width: 100%;
+          margin: 0 auto;
           flex-shrink: unset;
         }
       }
@@ -481,16 +483,17 @@
 
       @media only screen and (max-width: 1024px) {
         .solution-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
           gap: 24px;
-        }
-        .solution-area .content-wrapper {
-          padding: 8px;
         }
       }
 
       @media only screen and (max-width: 767px) {
         .solution-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
+        }
+        .solution-area .info-card {
+          padding: 16px;
         }
       }
 
@@ -543,145 +546,234 @@
         }
       }
 
-      /*making-method-area*/
-
-      .making-method-area .info-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        margin-bottom: 40px;
-      }
-
-      .making-method-area .info-card {
-        padding: 20px;
+      /* documentation-support-area  */
+      .documentation-support-area .section-container {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row-reverse;
+        gap: 40px;
+      }
+
+      .documentation-support-area .image-wrapper {
+        width: 550px;
         border-radius: 12px;
-        background-color: #f0f0f0;
-      }
-
-      .making-method-area .info-card ul {
-        list-style: disc;
-        padding-left: 32px;
-      }
-
-      .making-method-area .info-card .image-wrapper {
-        width: 400px;
-        height: auto;
         flex-shrink: 0;
-        aspect-ratio: 1.54/1;
-        overflow: hidden;
-        border-radius: 8px;
       }
 
-      .making-method-area .info-card .image-wrapper img {
+      .documentation-support-area .image-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
+      .documentation-support-area .section-title {
+        width: 100%;
+        text-align: start;
+        margin-bottom: 0;
+        gap: 40px;
+        background-color: #F0F0F0;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
       @media only screen and (max-width: 1024px) {
-        .making-method-area .info-card-wrapper {
+        .documentation-support-area .image-wrapper {
+          width: 100%;
+          flex-shrink: unset;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .documentation-support-area .section-container {
+          flex-direction: column;
           gap: 24px;
         }
-
-        .making-method-area .info-card .image-wrapper {
+        .documentation-support-area .image-wrapper {
           width: 100%;
         }
-      }
-
-      @media only screen and (max-width: 767px) {
-        .making-method-area .info-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
+        .documentation-support-area .section-title {
+          gap: 24px;
         }
       }
 
-      /*reliability-area*/
+      /* manufacturing-process-area */
+      .manufacturing-process-area .section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: start;
+      }
 
-      .reliability-area .info-card {
-        padding: 20px 24px;
-        border-radius: 12px;
+      .manufacturing-process-area .section-container .section-title {
+        gap: 40px;
+        text-align: left;
+      }
+
+      .manufacturing-process-area .manufacturing-feature-list {
         display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 40px;
-        background-color: #f0f0f0;
-      }
-      .reliability-area .info-card:nth-last-child(1) {
-        margin-bottom: 0;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
       }
 
-      .reliability-area .info-card .image-wrapper {
-        width: 320px;
+      .manufacturing-process-area .manufacturing-feature-card {
+        padding: 12px;
+        border-radius: 8px;
+        background-color: #16529B1A;
+      }
+
+      .manufacturing-process-area .manufacturing-right {
+        max-width: 580px;
+      }
+      .manufacturing-process-area
+        .manufacturing-right
+        .manufacturing-feature-card
+        p {
+        color: #16529b !important;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .manufacturing-process-area .section-container {
+          gap: 32px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .manufacturing-process-area .section-container {
+          grid-template-columns: 1fr;
+        }
+
+        .manufacturing-process-area .section-container .section-title {
+          gap: 24px;
+        }
+      }
+
+      /* maintenance-area */
+      .maintenance-area {
+        padding: 70px;
+        display: flex;
+        gap: 40px;
+        background-color: #EFF3F8;
+      }
+
+      .maintenance-area .image-wrapper {
+        width: 355px;
         height: auto;
-        flex-shrink: 0;
         aspect-ratio: 1/1;
+        flex-shrink: 0;
+        border-radius: 12px;
         overflow: hidden;
-        border-radius: 50%;
       }
 
-      .reliability-area .info-card .image-wrapper img {
+      .maintenance-area .image-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .reliability-area .info-card .content-wrapper h3 {
-        margin-bottom: 20px;
+      .maintenance-area .section-title h2 {
+        text-align: center;
       }
-
-      @media only screen and (max-width: 767px) {
-        .reliability-area .info-card {
-          flex-direction: column;
-        }
-        .reliability-area .info-card .image-wrapper {
-          width: 100%;
-        }
-      }
-
-      /*vital-benefits-area*/
-
-      .vital-benefits-area .icon-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        margin-bottom: 40px;
-      }
-
-      .vital-benefits-area .icon-card {
-        padding: 20px;
-        border-radius: 12px;
-        background-color: #f0f0f0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .vital-benefits-area .icon-card .icon-wrapper {
-        height: 60px;
-        width: fit-content;
-      }
-
-      .vital-benefits-area .icon-card .icon-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      .vital-benefits-area .icon-card h3 {
-        font-weight: 400;
+      .maintenance-area .body-b1 {
+        text-align: center;
+        margin-bottom: 24px;
       }
 
       @media only screen and (max-width: 1024px) {
-        .vital-benefits-area .icon-card-wrapper {
-          grid-template-columns: repeat(2, 1fr);
+        .maintenance-area {
+          flex-direction: column;
+          padding: 40px 16px;
+        }
+        .maintenance-area .image-wrapper {
+          width: 300px;
+          aspect-ratio: 1/1;
+          margin: 0 auto;
+        }
+      }
+
+      /* future-innovation-area  */
+      .future-innovation-area .section-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+      }
+
+      .future-innovation-area .image-wrapper {
+        width: 600px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 12px;
+        flex-shrink: 0;
+      }
+
+      .future-innovation-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .future-innovation-area .section-title {
+        width: 100%;
+        text-align: start;
+        margin-bottom: 0;
+        gap: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .future-innovation-area .image-wrapper {
+          width: 100%;
+          flex-shrink: unset;
         }
       }
 
       @media only screen and (max-width: 767px) {
-        .vital-benefits-area .icon-card-wrapper {
-          grid-template-columns: repeat(1, 1fr);
+        .future-innovation-area .section-container {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .future-innovation-area .section-title {
+          gap: 24px;
+        }
+      }
+
+      /* maintenance-area */
+      .maintenance-area {
+        padding: 70px;
+        display: flex;
+        gap: 40px;
+        background-color: #EFF3F8;
+      }
+
+      .maintenance-area .image-wrapper {
+        width: 355px;
+        height: auto;
+        aspect-ratio: 1/1;
+        flex-shrink: 0;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .maintenance-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .maintenance-area .section-title h2 {
+        text-align: center;
+      }
+      .maintenance-area .body-b1 {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .maintenance-area {
+          flex-direction: column;
+          padding: 40px 16px;
+        }
+        .maintenance-area .image-wrapper {
+          width: 300px;
+          aspect-ratio: 1/1;
+          margin: 0 auto;
         }
       }
 
@@ -702,9 +794,14 @@
         width: 100%;
       }
       .request-quote-area .image-wrapper {
+        display: flex;
         width: 100%;
         border-radius: 12px;
         overflow: hidden;
+      }
+      .request-quote-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
       }
 
       .request-quote-area .content-wrapper .section-title {
@@ -714,9 +811,12 @@
       }
 
       @media only screen and (max-width: 767px) {
-        .request-quote-area .ql-ps-container {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 16px;
+        .request-quote-area.section-area {
+          padding-right: 16px;
+        }
+        .request-quote-area .section-container {
+          flex-direction: column;
+          gap: 24px;
         }
       }
 
@@ -901,17 +1001,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
                     </svg>
-                    High-purity oxygen-free copper
+                    TE Connectivity Female Crimp Terminals
                   </h3>
                   <div class="accordion-content-wrapper">
                     <p class="body-b2">
-                      Oxygen-free copper is very pure and clean. This makes power
-                      move faster and smoother, with very little loss. It also stays
-                      strong for many years without breaking down or wearing out.
-                      This type of copper works great for powerful machines, sound
-                      systems, and essential tools. Using oxygen-free copper ensures
-                      your machines run better, last longer, and your wiring stays
-                      safe and strong for a long time.
+                      These female crimp terminals from TE Connectivity are simple, safe, and easy to use. They are often called FASTON female or socket terminals. They let you connect or remove wires very fast without needing extra tools. A widespread size is 0.250” (6.35mm). These parts are made from strong tin-plated brass, which does not rust easily. They are tested and certified for safety (UL/CSA). Small ones can carry about 7 amps of power, while bigger ones carry more. Some have nylon covers that protect against touch. Inline female terminals are also used in many harness jobs. They all give tight and steady joins, which keep the power flowing smoothly. Because of this, they are used in cars, machines, and home devices where safe and strong wiring is needed.
                     </p>
                   </div>
               </div>
@@ -920,17 +1014,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
                     </svg>
-                    High-purity oxygen-free copper
+                    TE Connectivity Male Crimp Terminals
                   </h3>
                   <div class="accordion-content-wrapper">
                     <p class="body-b2">
-                      Oxygen-free copper is very pure and clean. This makes power
-                      move faster and smoother, with very little loss. It also stays
-                      strong for many years without breaking down or wearing out.
-                      This type of copper works great for powerful machines, sound
-                      systems, and essential tools. Using oxygen-free copper ensures
-                      your machines run better, last longer, and your wiring stays
-                      safe and strong for a long time.
+                      These are the matching male tabs for the female sockets. They are also called FASTON male connectors. They are made of tin-plated brass, which makes them last longer and stay safe from rust. The most used sizes are 0.250” (6.35mm) and 0.187” (4.75mm). One well-known type is the FASTIN-FASTON tab. Smaller 0.187” tabs are used when space is tight or the job is lighter. Some come with insulation covers for extra safety. TE makes both insulated and bare types in many wire sizes. They fit tightly into housings, so they will not loosen with movement or vibration. The closed-barrel crimp style grips wires all around, holding them firm and safe.
                     </p>
                   </div>
               </div>
@@ -939,17 +1027,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
                     </svg>
-                    High-purity oxygen-free copper
+                    Male Open-Barrel Crimp Terminals (Pin Terminals)
                   </h3>
                   <div class="accordion-content-wrapper">
                     <p class="body-b2">
-                      Oxygen-free copper is very pure and clean. This makes power
-                      move faster and smoother, with very little loss. It also stays
-                      strong for many years without breaking down or wearing out.
-                      This type of copper works great for powerful machines, sound
-                      systems, and essential tools. Using oxygen-free copper ensures
-                      your machines run better, last longer, and your wiring stays
-                      safe and strong for a long time.
+                      These connectors are used when a firm wire hold is needed. They are shaped with small wings that fold around the bare wire and its cover. They are often used in cars, planes, and heavy machines because they do not loosen when things shake. They are usually made of copper alloys and coated with tin, nickel, or gold to make them strong and long-lasting. They come in different shapes, like round pins or flat tabs. Special crimp tools press them into neat “B” or “F” shaped crimps. These crimps make powerful bonds. They fit inside housings to form large, safe, and reliable multi-wire plugs.
                     </p>
                   </div>
               </div>
@@ -958,17 +1040,11 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
                     </svg>
-                    High-purity oxygen-free copper
+                    Female Open-Barrel Crimp Terminals (Receptacle Terminals)
                   </h3>
                   <div class="accordion-content-wrapper">
                     <p class="body-b2">
-                      Oxygen-free copper is very pure and clean. This makes power
-                      move faster and smoother, with very little loss. It also stays
-                      strong for many years without breaking down or wearing out.
-                      This type of copper works great for powerful machines, sound
-                      systems, and essential tools. Using oxygen-free copper ensures
-                      your machines run better, last longer, and your wiring stays
-                      safe and strong for a long time.
+                      These connectors are made to join with male open-barrel pins. They are tin-plated copper alloy and grip wires very well. Small wings fold over the wire and its cover to lock it tightly. When placed inside housings, they snap onto the male pins and make a safe and firm join. These connectors do not loosen even in cars or machines that shake a lot. They are certified for safety and used in car ECUs, sensors, and other block plugs where many wires must join.
                     </p>
                   </div>
               </div>
@@ -977,17 +1053,37 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
                     </svg>
-                    High-purity oxygen-free copper
+                    Female Spade Crimp Terminals (Tin-Plated)
                   </h3>
                   <div class="accordion-content-wrapper">
                     <p class="body-b2">
-                      Oxygen-free copper is very pure and clean. This makes power
-                      move faster and smoother, with very little loss. It also stays
-                      strong for many years without breaking down or wearing out.
-                      This type of copper works great for powerful machines, sound
-                      systems, and essential tools. Using oxygen-free copper ensures
-                      your machines run better, last longer, and your wiring stays
-                      safe and strong for a long time.
+                      Spade connectors are standard because they are quick to use. These TE FASTON parts can be plain or insulated. They are made of brass with a tin coat, which keeps them strong and stops rust. They come in 187 and 250 series, with small 2.8mm (0.110”) types for light jobs. They slide onto studs, fuse blades, or relay tabs with ease. They are often used for ground wires or power ends. The push-on style makes them very fast to connect or remove, saving time during repair or setup.
+                    </p>
+                  </div>
+              </div>
+              <div class="accordion-card">
+                  <h3 class="accordion-title heading-h3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
+                    </svg>
+                    Female Blade Crimp Terminals (2.8 mm Series)
+                  </h3>
+                  <div class="accordion-content-wrapper">
+                    <p class="body-b2">
+                      Small spade types for tight spots. They fit onto 0.110” male tabs. Even though they are small, they carry enough current for many jobs. Many come with insulation for added safety. They are used in LED lights, small harnesses, home appliances, and telecom devices. They meet global safety rules and are good where space is short, but a safe and strong connection is still needed.
+                    </p>
+                  </div>
+              </div>
+              <div class="accordion-card">
+                  <h3 class="accordion-title heading-h3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 16.2514C11.8834 16.2518 11.7681 16.2279 11.6612 16.1813C11.5544 16.1347 11.4584 16.0663 11.3794 15.9806L6.21086 10.4606C6.05832 10.2976 5.97678 10.0807 5.98417 9.85755C5.99157 9.63443 6.08729 9.4234 6.25029 9.27086C6.41328 9.11832 6.63019 9.03678 6.85331 9.04417C7.07642 9.05157 7.28746 9.14729 7.44 9.31029L12 14.1703L16.56 9.30857C16.6341 9.22306 16.7248 9.15339 16.8264 9.1037C16.9281 9.05402 17.0388 9.02536 17.1518 9.01942C17.2648 9.01348 17.3779 9.0304 17.4842 9.06915C17.5905 9.10791 17.6879 9.16771 17.7706 9.24498C17.8533 9.32225 17.9196 9.4154 17.9654 9.51886C18.0113 9.62232 18.0358 9.73397 18.0376 9.84713C18.0393 9.96028 18.0182 10.0726 17.9755 10.1774C17.9328 10.2823 17.8694 10.3774 17.7891 10.4571L12.6514 16.0011C12.5671 16.0871 12.4653 16.154 12.3529 16.1971C12.2405 16.2403 12.1202 16.2588 12 16.2514ZM24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76515 22.7357 3.51472 20.4853C1.26428 18.2348 1.81051e-07 15.1826 1.43099e-07 12C1.05146e-07 8.8174 1.26428 5.76516 3.51472 3.51472C5.76515 1.26428 8.8174 1.81051e-07 12 1.43099e-07C15.1826 1.05146e-07 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12ZM22.3097 12C22.3092 9.62296 21.4865 7.31926 19.9812 5.47963C18.4758 3.64 16.3805 2.3777 14.0505 1.90683C11.7206 1.43596 9.29948 1.7855 7.19788 2.89617C5.09627 4.00685 3.44354 5.81027 2.52 8.00057C1.58127 10.2033 1.43936 12.6643 2.11867 14.9604C2.79799 17.2565 4.25608 19.2441 6.2422 20.5815C8.22833 21.9189 10.6184 22.5225 13.0014 22.2885C15.3844 22.0546 17.6114 20.9976 19.2994 19.2994C20.2544 18.3415 21.011 17.2046 21.5258 15.9538C22.0406 14.703 22.3035 13.3629 22.2994 12.0103L22.3097 12Z" fill="#16529B"/>
+                    </svg>
+                    Male Round Pin Crimp Terminals
+                  </h3>
+                  <div class="accordion-content-wrapper">
+                    <p class="body-b2">
+                      These are also known as bullet connectors. They are round brass pins, often plated with tin or nickel for strength and rust resistance. The wire is crimped to the pin and then pushed into a matching socket. They come in many sizes, with 0.18” being common. They can be used in housings or as single connectors. They are widely used in lights and add-on parts. They make quick and safe joins and carry high currents. Many are sold in kits, and some have insulation covers. They are strong and last a long time when made from good materials.
                     </p>
                   </div>
               </div>
@@ -1160,115 +1256,121 @@
 
     <!-- Documentation & Support section -->
     <div class="documentation-support-area section-area">
-      <div class="section-container ql-ps-mx-auto">
-        <div class="content-wrapper">
-          <div class="section-title">
-            <h2>Documentation & CAD Support for Design Integration</h2>
-            <p>
-              We provide complete design files so pre-terminated harnesses fit easily into your system. Our team makes 2D wire maps, pin charts, and harness layouts. We also give 3D CAD files (STEP/IGES) so engineers can place them in product models. Tools like Harnessware help us make these files fast. These tools have big part libraries and can make part lists, wire maps, and even test files. This support allows teams to save costs, avoid mistakes, and move from design to production faster.
-            </p>
-          </div>
-          <div class="product-page-btn">
-            <?php
-            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-            ?>
-          </div>
-        </div>
+      <div class="section-container mx-auto">
         <div class="image-wrapper">
           <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.png"
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Frame-42959.png"
             alt=""
-            class="ql-ps-image"
           />
+        </div>
+        <div class="section-title">
+          <h2>Documentation & CAD Support for Design Integration</h2>
+          <p>
+            We provide complete design files so pre-terminated harnesses fit easily into your system. Our team makes 2D wire maps, pin charts, and harness layouts. We also give 3D CAD files (STEP/IGES) so engineers can place them in product models. Tools like Harnessware help us make these files fast. These tools have big part libraries and can make part lists, wire maps, and even test files. This support allows teams to save costs, avoid mistakes, and move from design to production faster.
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Customized Pre-Terminated section -->
-    <div class="customized-pre-terminated-area section-area">
-      <div class="section-container ql-ps-mx-auto">
-        <div class="content-wrapper">
+    <div class="manufacturing-process-area section-area">
+      <div class="section-container mx-auto">
+        <!-- Left Column -->
+        <div class="manufacturing-left section-title">
+          <h2>Made for Your Project</h2>
+          <p>
+            Our pre-terminated harnesses can be used in many ways, whether your project is small, big, simple, or complex. You can choose the right connector, the correct number of pins, the wire size, and the length you need. If you need a jacket like PVC, Teflon, or rubber for safety and longer use, we can add that. We can wrap wires with braid or foil if you need to block outside noise or signals. If you want wires in transparent colors or with labels so you know where each one goes, we can make it that way.
+            <br>
+            <br>
+            Harness makers keep many types of cables in stock, from thin wires like 40 AWG used for signals to thick wires like 2 AWG used for heavy power. We use top brands like TE, Molex, Amphenol, and Deutsch to keep each harness strong and safe. This lets us make one design that can fit many products by changing the size or length. We can also add sleeves, shrink tubes, molded covers, clips, and ties to keep wires safe and in place. Whether you need one harness for testing or a large number for daily use, we can build and ship it fast.
+          </p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="manufacturing-right">
           <div class="section-title">
-            <h2>Made for Your Project</h2>
-            <p>
-              Our pre-terminated harnesses can be used in many ways, whether your project is small, big, simple, or complex. You can choose the right connector, the correct number of pins, the wire size, and the length you need. If you need a jacket like PVC, Teflon, or rubber for safety and longer use, we can add that. We can wrap wires with braid or foil if you need to block outside noise or signals. If you want wires in transparent colors or with labels so you know where each one goes, we can make it that way. 
-              <br/>
-              <br/>
-              Harness makers keep many types of cables in stock, from thin wires like 40 AWG used for signals to thick wires like 2 AWG used for heavy power. We use top brands like TE, Molex, Amphenol, and Deutsch to keep each harness strong and safe. This lets us make one design that can fit many products by changing the size or length. We can also add sleeves, shrink tubes, molded covers, clips, and ties to keep wires safe and in place. Whether you need one harness for testing or a large number for daily use, we can build and ship it fast.
-            </p>
+            <h3 class="heading-h3">Customized Pre-Terminated Harness Options</h3>
+          </div>
+          <div class="manufacturing-feature-list">
+            <div class="manufacturing-feature-card">
+              <p class="body-b2">
+                Pre-Crimped Jumper Wire Set - Male to Female / Female to Female
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <p class="body-b2">
+                Crimped Wire Leads / One-End Crimped Terminal Wire Sets
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <p class="body-b2">
+                Mixed-color single-ended pre-crimped wires
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <p class="body-b2">
+                Bundled single-ended pre-crimped wires grouped by color
+              </p>
+            </div>
+            <div class="manufacturing-feature-card">
+              <p class="body-b2">
+                Bundled double-ended pre-crimped wires
+              </p>
+            </div>
           </div>
           <div class="product-page-btn">
             <?php
             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
             ?>
           </div>
-        </div>
-        <div class="image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.png"
-            alt=""
-            class="ql-ps-image"
-          />
         </div>
       </div>
     </div>
 
     <!-- Exact Fit section -->
-    <div class="exact-fit-area section-area">
-      <div class="section-container ql-ps-mx-auto">
-        <div class="content-wrapper">
-          <div class="section-title">
-            <h2>Pre-Made Harnesses with Exact Fit for OEM Use</h2>
-            <p>
-              Our pre-terminated harnesses are built to last and handle tough jobs. They are not just wires; they follow strict rules that OEMs trust. Each harness is built in plants that meet rules like IPC/WHMA-A-620, which gives step-by-step directions for harness work. To save time, we use Pro Design Tools. A tool called HarnWare can make plans and price quotes much faster than manual work. It ensures each detail matches your plan, like crimp size, wire length, and color. In real use, our harnesses give steady results that OEM systems need daily. They are used in cars, trucks, farm tools, machines, power plants, and control systems. Each harness is made to fit well and to last a long time.
-            </p>
-          </div>
-          <div class="product-page-btn">
-            <?php
-            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-            ?>
-          </div>
-        </div>
+    <div class="future-innovation-area section-area">
+      <div class="section-container mx-auto">
         <div class="image-wrapper">
           <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.png"
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/485e82b76352d464e22f5e4979c871aa61970ffc.jpg"
             alt=""
-            class="ql-ps-image"
           />
+        </div>
+        <div class="section-title">
+          <h2>Pre-Made Harnesses with Exact Fit for OEM Use</h2>
+          <p>
+            Our pre-terminated harnesses are built to last and handle tough jobs. They are not just wires; they follow strict rules that OEMs trust. Each harness is built in plants that meet rules like IPC/WHMA-A-620, which gives step-by-step directions for harness work. To save time, we use Pro Design Tools. A tool called HarnWare can make plans and price quotes much faster than manual work. It ensures each detail matches your plan, like crimp size, wire length, and color. In real use, our harnesses give steady results that OEM systems need daily. They are used in cars, trucks, farm tools, machines, power plants, and control systems. Each harness is made to fit well and to last a long time.
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Certified Quality section -->
-    <div class="certified-quality-area section-area">
-      <div class="section-container ql-ps-mx-auto">
-        <div class="image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.png"
-            alt=""
-            class="ql-ps-image"
-          />
+    <div class="maintenance-area section-area">
+      <div class="image-wrapper">
+        <img
+          src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4499.jpg"
+          alt=""
+        />
+      </div>
+      <div class="content-wrapper">
+        <div class="section-title">
+          <h2>Certified Quality in Pre-Made Harnesses</h2>
         </div>
-        <div class="content-wrapper">
-          <div class="section-title">
-            <h2>Certified Quality in Pre-Made Harnesses</h2>
-            <p>
-              If you need pre-terminated harnesses, QL-Custom Technology Ltd. is a wise choice. We have many years of skill and a strong record of on-time work. Our team helps you from your first idea to the final test. We keep a big stock of wires and ends (AMP, JST, TE, etc.) so we can build your harness quickly, but still with care. Each harness is built to match your plan and checked individually. Each crimp and wire is tested before shipping. We focus only on harnesses, so our team has deep knowledge. You will always talk to someone who understands design and parts. In short, QL-Custom gives you safe, strong, and stress-free pre-terminated harnesses. Contact us today to get your harness made right the first time.
-            </p>
-          </div>
-          <div class="product-page-btn">
-            <?php
-            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-            ?>
-          </div>
+        <p class="body-b1">
+          If you need pre-terminated harnesses, QL-Custom Technology Ltd. is a wise choice. We have many years of skill and a strong record of on-time work. Our team helps you from your first idea to the final test. We keep a big stock of wires and ends (AMP, JST, TE, etc.) so we can build your harness quickly, but still with care. Each harness is built to match your plan and checked individually. Each crimp and wire is tested before shipping. We focus only on harnesses, so our team has deep knowledge. You will always talk to someone who understands design and parts. In short, QL-Custom gives you safe, strong, and stress-free pre-terminated harnesses. Contact us today to get your harness made right the first time.
+        </p>
+        <div class="product-page-btn">
+          <?php
+          echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
-        <div class="image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.png"
-            alt=""
-            class="ql-ps-image"
-          />
-        </div>
+      </div>
+      <div class="image-wrapper">
+        <img
+          src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4500.jpg"
+          alt=""
+        />
       </div>
     </div>
 
@@ -1376,7 +1478,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b3f84ca3130b5b5e260698e48a3e80147d5a60a.png"
                   alt=""
                 />
               </div>
@@ -1448,7 +1550,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/68536bdac1773565013a4466d714abe88198d952.png"
                   alt=""
                 />
               </div>
@@ -1520,7 +1622,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/9a097003b1d0f959da41f87b6031751f71800388.png"
                   alt=""
                 />
               </div>
@@ -1592,7 +1694,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/484eaa413d991c34c66aa46f61019f8c9cfd4672.png"
                   alt=""
                 />
               </div>
@@ -1664,7 +1766,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/80763c94e86fb29f6c0e0c96b2ca4cf2d2afa91f.png"
                   alt=""
                 />
               </div>
@@ -1736,7 +1838,7 @@
             <div class="author-info">
               <div class="author-image">
                 <img
-                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/1f920e9257a815e558f6a151c9b755a93e7b2297.png"
                   alt=""
                 />
               </div>

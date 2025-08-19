@@ -144,26 +144,21 @@
       .hero-area .hero-content-wrapper {
         position: relative;
         z-index: 1;
-        max-width: 940px;
-        text-align: center;
+        max-width: 1280px;
         color: #fff;
       }
 
-      .hero-area .title-top {
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 49px;
-        margin-bottom: 20px;
-      }
 
       .hero-area .hero-title {
+        font-family: Alexandria;
         font-size: 52px;
         line-height: 63px;
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 20px;
       }
 
       .hero-area .hero-subtitle {
+        font-family: Alexandria;
         font-size: 32px;
         line-height: 44px;
         font-weight: 300;
@@ -279,6 +274,10 @@
 
       /* product-advantage-area */
 
+      .product-advantage-area.section-area {
+        padding-left: 0;
+        padding-right: 0;
+      }
       .product-advantage-area .ql-product-advantage-container {
         display: flex;
       }
@@ -340,6 +339,10 @@
       }
 
       @media only screen and (max-width: 767px) {
+        .product-advantage-area.section-area {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
         .product-advantage-area .ql-product-advantage-container {
           flex-direction: column;
         }
@@ -728,6 +731,123 @@
           margin: 0 auto;
         }
       }
+
+      /*request-quote-area*/
+      .request-quote-area.section-area {
+        padding-right: 0;
+      }
+
+      .request-quote-area .section-container {
+        max-width: 1600px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .request-quote-area .content-wrapper {
+        width: 100%;
+      }
+      .request-quote-area .image-wrapper {
+        display: flex;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .request-quote-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .request-quote-area .content-wrapper .section-title {
+        text-align: start;
+        margin-bottom: 24px;
+        gap: 25px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .request-quote-area.section-area {
+          padding-right: 16px;
+        }
+        .request-quote-area .section-container {
+          flex-direction: column;
+          gap: 32px;
+        }
+      }
+
+      /*customer-reviews-area*/
+      .customer-reviews-area {
+        background-color: #F0F0F0;
+      }
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .customer-reviews-area .review-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
+
+      .customer-reviews-area .review-card .review-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .customer-reviews-area .review-card .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #f9cc04;
+      }
+
+      .customer-reviews-area .review-card-content {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .customer-reviews-area .review-card .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: auto;
+        padding: 8px 12px;
+        background-color: #F0F0F0;
+        width: fit-content;
+        border-radius: 8px;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-name {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
       
     </style>
   </head>
@@ -736,17 +856,14 @@
     <div
       class="hero-area"
       style="
-        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/dc69f8f7e3983de416bb80bfb752ae6fddefd11d.jpg');
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/image-2.jpg');
       "
     >
       <div class="hero-product-container">
         <div class="hero-content-wrapper">
-          <p class="title-top">Custom to</p>
-          <h1 class="hero-title">Control wire harness</h1>
+          <h1 class="hero-title">Overmolded wire harness</h1>
           <p class="hero-subtitle">
-            Keep your machines running at their best with expert quality control
-            wire harness every time, in any weather or condition. We focus on
-            strength, safety, and ease of use.
+            Use Overmolded Wire Harness that are accurately built to prevent the errors of connections. Get smooth power & signal pass through the harnesses.
           </p>
 
           <div class="product-page-btn">
@@ -784,8 +901,10 @@
               rough conditions.
             </p>
           </div>
-          <div class="btn-wrapper">
-            <button class="mock-btn">Get a Quick Quote</button>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
           </div>
         </div>
         <div class="image-wrapper">
@@ -963,14 +1082,16 @@
               </p>
             </div>
           </div>
-          <div class="btn-wrapper">
-            <button class="mock-btn">Get a Quick Quote</button>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="manufacturing-process-area section-area">
+    <div class="manufacturing-process-area section-area">
       <div class="section-container mx-auto">
         <!-- Left Column -->
         <div class="manufacturing-left section-title">
@@ -984,7 +1105,11 @@
             ready to use. This process is quicker and more accurate than older
             ways, giving a more durable result.
           </p>
-          <button class="mock-btn">Get a Quick Quote</button>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
 
         <!-- Right Column -->
@@ -1026,7 +1151,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="material-recommend-area section-area">
       <div class="section-container mx-auto">
@@ -1151,8 +1276,10 @@
               repairs.
             </p>
           </div>
-          <div class="btn-wrapper">
-            <button class="mock-btn">Get a Quick Quote</button>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
           </div>
         </div>
 
@@ -1391,6 +1518,11 @@
             </div>
           </div>
         </div>
+        <div class="product-page-btn">
+          <?php
+          echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
       </div>
     </div>
 
@@ -1417,6 +1549,11 @@
             would turn regular cables into smart cables that can talk to
             different machines and work as part of a connected system.
           </p>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
         </div>
         <div class="image-wrapper">
           <img
@@ -1452,8 +1589,10 @@
           initially, they quickly pay for themselves with the money saved over
           time.
         </p>
-        <div class="btn-wrapper">
-          <button class="mock-btn">Get a Quick Quote</button>
+        <div class="product-page-btn">
+          <?php
+          echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
       <div class="image-wrapper">
@@ -1461,6 +1600,481 @@
           src="https://www.ql-custom.com/wp-content/uploads/2025/08/068b00c924843db68faa9431ed88a230c4f32fc6.png"
           alt=""
         />
+      </div>
+    </div>
+
+    <!-- Request a quote section -->
+    <div class="request-quote-area section-area">
+      <div class="section-container ql-ps-mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Why Selecting QL-Custom Technology Ltd</h2>
+            <p>
+              If you need strong and safe overmolded wire harnesses, QL-Custom Technology Ltd. is a great company to choose from. We have our own tools and machines to make the overmolded wire harnesses from start to finish, and we check each one carefully before it leaves the factory. We have helped over 300 customers in many fields, such as car parts, medical equipment, and industrial machines. We can design the overmolded wire harness, make samples quickly, and produce large amounts of waterproof and protected harnesses. When you work with QL-Custom, you get products built for your exact needs and tested to work well in real life.
+            </p>
+          </div>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501.jpg"
+            alt=""
+            class="ql-ps-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="customer-reviews-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-circle"></div>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                "We received what we needed. Their overmolded wire harnesses are easy to use. We are satisfied with their service."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/4d1809d311cae1b538d7d423c7bc1f86541c0d8d.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">John Graham</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                "That's the fourth time we ordered products from them. And they always make us feel friendly and offer the best products."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/6cfcdfd5269aa7cb28270759a4a237c9cc065500.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">Miller Hump</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                "Professional and friendly service with accurate products."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/9daf77c8a7a43fbe914a6e94b710e593d67989bf.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">Chris Simon</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                "They deliver the products at the exact time with promised quality products. I am willing to work with them again."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/44ab72dec87939e1bb2d58e41b4de80a3bacd447.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">Jennifer Holms</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                “Their overmolded harnesses are sturdy and made with top-quality materials. I have been using their products for a long time."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/8b3f84ca3130b5b5e260698e48a3e80147d5a60a.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">Jack Smith</h4>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="review-card-content">
+              <p class="body-b1">
+                "The Overmolded Wire harness is strong, safe, and passed all the tests. I trust this company and the helpful people who work there."
+              </p>
+            </div>
+            <div class="author-info">
+              <div class="author-image">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/1ef1e96d3d09cd9a0b4ee63cf8a2154261199c00.png"
+                  alt=""
+                />
+              </div>
+              <h4 class="heading-h3 author-name">James Scott</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
