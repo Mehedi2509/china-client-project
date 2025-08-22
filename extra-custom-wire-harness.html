@@ -502,7 +502,7 @@
         height: 24px;
       }
       .custom-harness-matter-area .icon-card .card-title h3 {
-        color: #16529B;
+        color: #16529b;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -595,7 +595,7 @@
 
       .industries-application-area .info-card .heading-h3 {
         margin-bottom: 12px;
-        color: #16529B;
+        color: #16529b;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -612,7 +612,61 @@
           grid-template-columns: 1fr;
         }
       }
-      
+      .match-standards-area {
+        background: #f0f0f0;
+      }
+
+      .match-standards-area .info-card {
+        display: flex;
+        padding: 40px;
+        gap: 20px;
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 20px;
+      }
+      .match-standards-area .info-card:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      .match-standards-area .flex-row-reversed {
+        flex-direction: row-reverse;
+      }
+
+      .match-standards-area .info-card .image-wrapper {
+        width: 330px;
+        height: auto;
+        aspect-ratio: 55/42;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+      .match-standards-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .match-standards-area .info-card h3 {
+        margin-bottom: 25px;
+        color: #16529b;
+      }
+      .match-standards-area .info-card p {
+        margin-bottom: 25px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .match-standards-area .info-card {
+          gap: 16px;
+          padding: 24px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .match-standards-area .info-card {
+          flex-direction: column;
+        }
+        .match-standards-area .info-card .image-wrapper {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1044,11 +1098,13 @@
                 ?>
           </div>
         </div>
-        <div class="image-wrapper">
-          <img
-            src="https://www.ql-custom.com/wp-content/uploads/2025/08/35a5426b5d7cc96d6f19b82920d8c78efd22d20a.png"
-            alt=""
-          />
+        <div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/35a5426b5d7cc96d6f19b82920d8c78efd22d20a.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1061,31 +1117,193 @@
         <div class="info-card-wrapper">
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/24eb21d9f26afd1091dd5f8409a7caeac5a2fdf0.png" alt="" />
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/24eb21d9f26afd1091dd5f8409a7caeac5a2fdf0.png"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Automotive & EVs</h3>
-            <p class="body-b2">We make custom wiring harnesses for Automotive sections. We also make custom wiring harnesses for EVs that carry significant power safely. Our harnesses are strong enough for small cars, trucks, and EV fleets. Power harnesses use thick wires, safe routes, and cooling parts to stay safe. We also add shields to stop noise so that GPS, sound, and control systems work without problems.</p>
+            <p class="body-b2">
+              We make custom wiring harnesses for Automotive sections. We also
+              make custom wiring harnesses for EVs that carry significant power
+              safely. Our harnesses are strong enough for small cars, trucks,
+              and EV fleets. Power harnesses use thick wires, safe routes, and
+              cooling parts to stay safe. We also add shields to stop noise so
+              that GPS, sound, and control systems work without problems.
+            </p>
           </div>
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/a8d536eb81c7297a387f6f328be72029876b3c2b.jpg" alt="" />
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/a8d536eb81c7297a387f6f328be72029876b3c2b.jpg"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Aerospace & Defense</h3>
-            <p class="body-b2">For planes and defense, we follow strict rules and safety marks. We use light but strong materials like silver, copper, nickel wires, and PTFE covers. These harnesses are built to handle space, heat, cold, shaking, and more. We follow standards like AS9100 and MIL‑STD. Sometimes we add backup wires, double shields, or lock plugs for extra safety.</p>
+            <p class="body-b2">
+              For planes and defense, we follow strict rules and safety marks.
+              We use light but strong materials like silver, copper, nickel
+              wires, and PTFE covers. These harnesses are built to handle space,
+              heat, cold, shaking, and more. We follow standards like AS9100 and
+              MIL‑STD. Sometimes we add backup wires, double shields, or lock
+              plugs for extra safety.
+            </p>
           </div>
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/e34d679f1e77fded5c61f3819f62e825cff09041.png" alt="" />
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/e34d679f1e77fded5c61f3819f62e825cff09041.png"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Industrial Automation</h3>
-            <p class="body-b2">Our harnesses have thick jackets that protect industrial machines from oil, heat, and damage. We also use strong connectors that lock tightly and do not slip. We add straps and ties for machines that shake often to keep wires from breaking. In robots and control panels, we keep wires neat and organized with clean paths and safe branches. We also add tubes and shields to guard against sharp parts and chemicals. All of our harnesses meet IP67, which means they can still work if water or dust gets on them.</p>
+            <p class="body-b2">
+              Our harnesses have thick jackets that protect industrial machines
+              from oil, heat, and damage. We also use strong connectors that
+              lock tightly and do not slip. We add straps and ties for machines
+              that shake often to keep wires from breaking. In robots and
+              control panels, we keep wires neat and organized with clean paths
+              and safe branches. We also add tubes and shields to guard against
+              sharp parts and chemicals. All of our harnesses meet IP67, which
+              means they can still work if water or dust gets on them.
+            </p>
           </div>
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/c64f8c302f10db3ab42698488219bcd91aec395a.jpg" alt="" />
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/c64f8c302f10db3ab42698488219bcd91aec395a.jpg"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Medical Equipment</h3>
-            <p class="body-b2">For this section we especially use the materials that go through hygienic tests to ensure the safety and hygiene. Also we use special items that help stop noise and make data easy to read. For example, MRI or CT machines use slim harnesses that can bend without cracking. We also keep records so they follow FDA and health rules.</p>
+            <p class="body-b2">
+              For this section we especially use the materials that go through
+              hygienic tests to ensure the safety and hygiene. Also we use
+              special items that help stop noise and make data easy to read. For
+              example, MRI or CT machines use slim harnesses that can bend
+              without cracking. We also keep records so they follow FDA and
+              health rules.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="match-standards-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Custom Wiring Harnesses to Match Your Standards</h2>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div>
+              <div class="image-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/24cd32fc8d0f252510ae7359b66c5fdd52619557.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Custom OBDII Connector</h3>
+              <p class="body-b1">
+                The Custom OBDII Connector is made to check cars quickly and
+                safely. The body is built strong with a hard shell, safe pins,
+                and thick wires that do not break easily. It can handle daily
+                use without damage, even when pulled or pressed hard. This
+                connector helps save time and removes guesswork. It shows real
+                car data in seconds, helps find problems fast, and makes it easy
+                to track car health and use.
+              </p>
+              <div class="product-page-btn">
+                <button class="mock-btn">Get a Quick Quote</button>
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card flex-row-reversed">
+            <div>
+              <div class="image-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/935458f967093b1dbc1f5a3b1a212ad33b256caf.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Flat Ribbon Cables</h3>
+              <p class="body-b1">
+                Flat ribbon cables also help improve speed and reduce clutter
+                inside devices. They are simple to install, safe to use, and
+                built to last a long time without failure. They are used in
+                computers, labs, small tools, and many home devices. They make
+                systems run smoothly, keep parts safe, and give people peace of
+                mind knowing all wires stay connected correctly.
+              </p>
+              <div class="product-page-btn">
+                <button class="mock-btn">Get a Quick Quote</button>
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div>
+              <div class="image-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/c901ff172c84f5218bf6ef4e7166cbd83c7423cd.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Custom XLR Cable</h3>
+              <p class="body-b1">
+                The Custom XLR Cable is made to give clean and sharp sound with
+                no buzz, no hum, and no noise. Even with heavy use, the cable
+                design keeps sound waves steady, pure, and clear. The cable has
+                strong shielding that blocks outside noise and protects sound
+                signals from damage.
+              </p>
+              <div class="product-page-btn">
+                <button class="mock-btn">Get a Quick Quote</button>
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
+            </div>
+          </div>
+          <div class="info-card flex-row-reversed">
+            <div>
+              <div class="image-wrapper">
+                <img
+                  src="https://www.ql-custom.com/wp-content/uploads/2025/08/71af2708d5f29b17b4a772e6c742d190511de0a2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Overmolded Cables</h3>
+              <p class="body-b1">
+                Overmolded Cables are built for hard use in shops, homes, or
+                outdoor work. They have a thick, tough cover that protects wires
+                from dust, dirt, heat, cold, and even pulling or bending. This
+                strong cover also makes the cables easy to hold and plug in.
+                They last long and keep working even in tough places where
+                standard wires might break.
+              </p>
+              <div class="product-page-btn">
+                <button class="mock-btn">Get a Quick Quote</button>
+                <?php
+                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+              </div>
+            </div>
           </div>
         </div>
       </div>
