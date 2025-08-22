@@ -667,6 +667,31 @@
           width: 100%;
         }
       }
+
+      .design-prototyping-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+      .design-prototyping-area .info-card .image-wrapper {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 10px 0 #00000033;
+      }
+      .design-prototyping-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+      }
+      .design-prototyping-area .info-card .body-b1 {
+        color: #242424;
+      }
+      
+      
     </style>
   </head>
   <body>
@@ -1305,6 +1330,52 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="design-prototyping-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Custom Design & Prototyping</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/3b5e97cef45d09b70823f0cbabd20a5dd011a57d.png"
+                alt=""
+              />
+            </div>
+            <p class="body-b1">
+              We work with clients from the start of the design until the
+              finished product. Our team takes your plans or CAD drawings and
+              builds 3D models. This lets us check for problems before we cut
+              any wire. We can fix wire paths, reduce heat spots, and check
+              signal safety early.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/ded4f047cdb0bdaf77c9c8a1eff5d297e0c14569-scaled.jpg"
+                alt=""
+              />
+            </div>
+            <p class="body-b1">
+              Once the design is ready, we make small test harnesses for you to
+              try. You can test them on your machines to see how they fit and
+              work. If changes are needed, we can fix them quickly and send new
+              samples. This process saves money and time. The harness is already
+              safe and proven by the time large production starts.
+            </p>
+          </div>
+        </div>
+        <div class="product-page-btn">
+          <button class="mock-btn">Get a Quick Quote</button>
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
         </div>
       </div>
     </div>
