@@ -905,7 +905,7 @@
           gap: 24px;
         }
         .scaling-cost-quality-area .info-card {
-          padding: 24px;
+          padding: 16px;
           flex-direction: column-reverse;
           gap: 24px;
         }
@@ -917,6 +917,71 @@
         }
         .scaling-cost-quality-area .info-card-wrapper .flex-row-reversed {
           flex-direction: column-reverse;
+        }
+      }
+
+      /*request-quote-area*/
+      .request-quote-area.section-area {
+        padding-right: 0;
+      }
+
+      .request-quote-area .section-container {
+        max-width: 1600px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .request-quote-area .content-wrapper {
+        width: 100%;
+      }
+      .request-quote-area .image-wrapper {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+      }
+      .request-quote-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .request-quote-area .content-wrapper .section-title {
+        text-align: start;
+        margin-bottom: 24px;
+        gap: 25px;
+      }
+
+      .request-quote-area .bottom-text {
+        max-width: 1280px;
+        margin: 0 auto;
+        margin-top: 140px;
+        padding: 40px;
+        border-radius: 12px;
+        background-color: #16529B;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+      }
+      .request-quote-area .bottom-text .heading-h3 {
+        color: #ffffff;
+        max-width: 913px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .request-quote-area.section-area {
+          padding-right: 16px;
+        }
+        .request-quote-area .section-container {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .request-quote-area .bottom-text {
+          margin-top: 100px;
+          flex-direction: column;
+          align-items: start;
+          gap: 24px;
+          padding: 16px;
         }
       }
 
@@ -946,17 +1011,13 @@
       }
 
       .about-gm-area .yt-video-wrapper {
+        display: flex;
         width: 460px;
         height: auto;
-        aspect-ratio: 23 / 14;
+        aspect-ratio: 460 / 280;
         overflow: hidden;
         flex-shrink: 0;
         border-radius: 20px;
-      }
-
-      .about-gm-area .yt-video-wrapper img {
-        width: 100%;
-        height: 100%;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -973,7 +1034,7 @@
           padding: 40px 16px;
         }
         .about-gm-area .about-gm-container {
-          padding: 24px;
+          padding: 16px;
         }
         .about-gm-area .yt-video-wrapper {
           width: 100%;
@@ -991,13 +1052,10 @@
       }
 
       .customer-reviews-area .review-video-wrapper .yt-video {
+        display: flex;
         width: 100%;
         height: auto;
-      }
-      .customer-reviews-area .review-video-wrapper .yt-video img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        aspect-ratio: 400/280;
       }
 
       @media only screen and (max-width: 1024px) {
@@ -1912,6 +1970,44 @@
       </div>
     </div>
 
+    <div class="request-quote-area section-area">
+      <div class="section-container ql-ps-mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p>
+              Choosing QL-Custom Technology Ltd. means you work with experts who have over 20 years of experience. We only focus on harnesses, which makes us very skilled. Our team is trained and certified. Unlike many others, we do not outsource. We do all the work ourselves, which makes results faster and safer.
+              <br>
+              <br>
+              We also support you at every step. We help fix design issues, make updates quickly, and keep you informed. Our testing and service are some of the best in the industry. That is why clients trust us. We give not only the best harnesses but also the best service.
+            </p>
+          </div>
+          <div class="product-page-btn">
+            <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4501-1.jpg"
+            alt=""
+            class="ql-ps-image"
+          />
+        </div>
+      </div>
+      <div class="bottom-text">
+        <article class="heading-h3">
+          Ready to get started? Ask for a Quote, Send Your Design, or Talk to Our Engineers. At QL-Custom Technology Ltd., we provide custom harnesses that are safe, speedy, and carefree.
+        </article>
+        <div class="product-page-btn">
+          <?php
+          echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
+        </div>
+      </div>
+    </div>
+
     <div class="about-gm-area section-area">
       <div class="about-gm-container mx-auto">
         <div class="content-wrapper">
@@ -1938,10 +2034,7 @@
           </div>
         </div>
         <div class="yt-video-wrapper">
-          <img
-            src="https://i.ibb.co.com/sYfZjD8/915377e3740fefebce450213361794626f9a4ef1.png"
-            alt=""
-          />
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RM0W2aikDs4?si=YVKGuafCJbmeUxGd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -1953,22 +2046,13 @@
         </div>
         <div class="review-video-wrapper">
           <div class="yt-video">
-            <img
-              src="https://i.ibb.co.com/MkTWZtQj/33f30e5e2624880d2d248882a23dcd9180ed81b4.png"
-              alt=""
-            />
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPtjuytTnI0?si=bOjxVQl_YrbO0Nb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="yt-video">
-            <img
-              src="https://i.ibb.co.com/MkTWZtQj/33f30e5e2624880d2d248882a23dcd9180ed81b4.png"
-              alt=""
-            />
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yyIu13OZ30E?si=9Mh9MwE1I1V5e_Ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <div class="yt-video">
-            <img
-              src="https://i.ibb.co.com/MkTWZtQj/33f30e5e2624880d2d248882a23dcd9180ed81b4.png"
-              alt=""
-            />
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2cw70HGhJKE?si=3sZK116elvTsSPIu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </div>
