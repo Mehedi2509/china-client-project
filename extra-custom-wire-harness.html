@@ -674,12 +674,22 @@
         gap: 40px;
         margin-bottom: 40px;
       }
+
+      .design-prototyping-area .info-card {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .design-prototyping-area .flex-col-reversed {
+        flex-direction: column-reverse;
+      }
+
       .design-prototyping-area .info-card .image-wrapper {
         width: 100%;
         height: 320px;
         overflow: hidden;
         border-radius: 12px;
-        margin-bottom: 40px;
         box-shadow: 0 0 10px 0 #00000033;
       }
       .design-prototyping-area .info-card .image-wrapper img {
@@ -690,8 +700,65 @@
       .design-prototyping-area .info-card .body-b1 {
         color: #242424;
       }
-      
-      
+
+      @media only screen and (max-width: 767px) {
+        .design-prototyping-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .design-prototyping-area .flex-col-reversed {
+          flex-direction: column;
+        }
+      }
+
+      .assembly-automation-area {
+        background: #f0f0f0;
+      }
+      .assembly-automation-area .section-container {
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        gap: 40px;
+        background: #fff;
+      }
+      .assembly-automation-area .section-title h2 {
+        text-align: start;
+      }
+      .assembly-automation-area .content-wrapper p {
+        color: #242424;
+        margin-bottom: 40px;
+      }
+      .assembly-automation-area .image-wrapper {
+        width: 430px;
+        height: auto;
+        aspect-ratio: 430/500;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .assembly-automation-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .assembly-automation-area .section-container{
+          gap: 20px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .assembly-automation-area .section-container {
+          padding: 24px;
+          flex-direction: column;
+        }
+        .assembly-automation-area .image-wrapper {
+          width: 100%;
+        }
+         .assembly-automation-area .content-wrapper p {
+        margin-bottom: 24px;
+      }
+      }
     </style>
   </head>
   <body>
@@ -1355,7 +1422,7 @@
               signal safety early.
             </p>
           </div>
-          <div class="info-card">
+          <div class="info-card flex-col-reversed">
             <div class="image-wrapper">
               <img
                 src="https://www.ql-custom.com/wp-content/uploads/2025/08/ded4f047cdb0bdaf77c9c8a1eff5d297e0c14569-scaled.jpg"
@@ -1376,6 +1443,45 @@
           <?php
             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
                 ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="assembly-automation-area section-area">
+      <div class="section-container mx-auto">
+        <div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/Assembly-and-automation.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Precision Assembly & Automation</h2>
+          </div>
+          <p class="body-b1">
+            We use both skilled workers and advanced machines. Wires are cut and
+            stripped with exact machines that measure to the smallest detail.
+            The machines are especially programmed to get the work done
+            accurately.
+          </p>
+          <p class="body-b1">
+            When people do handwork, they use power tools that always give the
+            same results. Crimping tools are checked for the proper pressure. We
+            use fully automatic machines for large production to make hundreds
+            of harnesses daily. These machines cut, strip, crimp, and set wires
+            quickly and correctly. Using robots and skilled people, we make
+            strong harnesses that consistently meet the standard.
+          </p>
+
+          <div class="product-page-btn">
+            <button class="mock-btn">Get a Quick Quote</button>
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+          </div>
         </div>
       </div>
     </div>
