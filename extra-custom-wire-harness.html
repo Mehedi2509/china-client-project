@@ -792,7 +792,194 @@
         }
       }
 
-      
+      .scaling-cost-quality-area {
+        background: #f0f0f0;
+      }
+
+      .scaling-cost-quality-area .info-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+      }
+
+      .scaling-cost-quality-area .info-card {
+        padding: 40px;
+        border-radius: 20px;
+        background: #fff;
+        display: flex;
+        gap: 40px;
+      }
+
+      .scaling-cost-quality-area .info-card-wrapper .flex-row-reversed {
+        flex-direction: row-reverse;
+      }
+
+      .scaling-cost-quality-area .info-card .content-wrapper {
+        width: 680px;
+        height: fit-content;
+        flex-shrink: 0;
+      }
+
+      .scaling-cost-quality-area .info-card .exwh {
+        width: 700px;
+      }
+
+      .scaling-cost-quality-area .info-card .content-wrapper h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #242424;
+        margin-bottom: 24px;
+      }
+
+      .scaling-cost-quality-area .info-card .content-wrapper > p {
+        color: #242424;
+        margin-bottom: 40px;
+      }
+      .scaling-cost-quality-area .info-card .image-wrapper {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      .scaling-cost-quality-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .scaling-cost-quality-area .case-studies-card .content-wrapper h2 {
+        margin-bottom: 0;
+      }
+      .scaling-cost-quality-area
+        .case-studies-card
+        .content-wrapper
+        .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .scaling-cost-quality-area .case-studies-card .case-study-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .scaling-cost-quality-area
+        .case-studies-card
+        .case-study-list
+        .case-study-point {
+        padding: 12px;
+        border-radius: 8px;
+        background: #16529b;
+      }
+      .scaling-cost-quality-area
+        .case-studies-card
+        .case-study-list
+        .case-study-point
+        .body-b2 {
+        color: #fff;
+      }
+
+      .scaling-cost-quality-area .product-page-btn {
+        margin-top: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .scaling-cost-quality-area .info-card-wrapper {
+          gap: 40px;
+        }
+
+        .scaling-cost-quality-area .info-card {
+          padding: 24px;
+          gap: 24px;
+        }
+        .scaling-cost-quality-area .info-card .content-wrapper {
+          width: 60%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .scaling-cost-quality-area .info-card-wrapper {
+          gap: 24px;
+        }
+        .scaling-cost-quality-area .info-card {
+          padding: 24px;
+          flex-direction: column-reverse;
+          gap: 24px;
+        }
+        .scaling-cost-quality-area .info-card .content-wrapper {
+          width: 100%;
+        }
+        .scaling-cost-quality-area .info-card .exwh {
+          width: 100%;
+        }
+        .scaling-cost-quality-area .info-card-wrapper .flex-row-reversed {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .about-gm-area {
+        padding: 77px 60px;
+        background: url("https://www.ql-custom.com/wp-content/uploads/2025/08/e4a6028a15118aaf1e2d6d4b9b2c88bc03c9e4bc.png");
+      }
+      .about-gm-area .about-gm-container {
+        display: flex;
+        gap: 33px;
+        align-items: center;
+        max-width: 1800px;
+        padding: 40px;
+        background: #ffffff80;
+        border: 1px solid #f0f0f0;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px); /* For Safari */
+        border-radius: 40px;
+      }
+
+      .about-gm-area .section-title h2 {
+        text-align: start;
+      }
+
+      .about-gm-area .content-wrapper p {
+        margin-bottom: 40px;
+      }
+
+      .about-gm-area .yt-video-wrapper {
+        width: 460px;
+        height: auto;
+        aspect-ratio: 23 / 14;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 20px;
+      }
+
+      .about-gm-area .yt-video-wrapper img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .about-gm-area .about-gm-container {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+        .about-gm-area .yt-video-wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .about-gm-area {
+          padding: 40px 16px;
+        }
+        .about-gm-area .about-gm-container {
+          padding: 24px;
+        }
+        .about-gm-area .yt-video-wrapper {
+          width: 100%;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1573,6 +1760,175 @@
           <?php
             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
                 ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="scaling-cost-quality-area section-area">
+      <div class="section-container mx-auto info-card-wrapper">
+        <div class="info-card">
+          <div class="content-wrapper">
+            <h2>Scaling from Samples to Full Production</h2>
+            <p class="body-b1">
+              We can build one harness or thousands. For small runs, we provide
+              fast service and samples within days. For larger orders, we
+              increase our lines and still keep quality high. Our staff and
+              machines can adjust quickly.
+            </p>
+            <div class="product-page-btn">
+              <button class="mock-btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/1467ae623c0bfdf113a11d5977142c47881eb698-1.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="info-card flex-row-reversed">
+          <div class="content-wrapper exwh">
+            <h2>Wiring Harness Cost Efficiency</h2>
+            <p class="body-b1">
+              A custom harness saves money over time. We use high-quality parts,
+              but innovative designs help reduce waste. By choosing the wires
+              and layouts of the right size, we avoid extra costs. Neat and
+              ready-to-use harnesses make installation faster. Because our
+              custom wiring harnesses reduce failures, your machines run longer
+              with fewer repairs. This means less downtime and more savings.
+            </p>
+            <div class="product-page-btn">
+              <button class="mock-btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/be9b528e12461970bdffaf966669b7464ab3cb7f.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="content-wrapper exwh">
+            <h2>Strict Quality Standards</h2>
+            <p class="body-b1">
+              Quality builds trust. And because of that reason, we always follow
+              the safety rules. Also, we use materials that are strictly tested.
+              All parts meet RoHS and REACH safety standards, which are safe for
+              people and the planet. Each part can be traced back to its source.
+            </p>
+            <p class="body-b1">
+              We test every step of the process. Wires meet UL, CE, or even MIL
+              standards. Harnesses are tested for power, voltage, and safety. We
+              pull, bend, and flex them to see if they last. We also test them
+              in hot, cold, salty, and shaking conditions. We check our
+              suppliers too. By the time the harness leaves us, it has passed
+              all checks. You also get full test papers with each order.
+            </p>
+            <div class="product-page-btn">
+              <button class="mock-btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/30c4091c0047a25f2e927178427602755c55dc4a-1.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="info-card case-studies-card flex-row-reversed">
+          <div class="content-wrapper">
+            <div class="card-content">
+              <h2>Case Studies & Uses</h2>
+              <p class="body-b1">
+                Our custom wiring harnesses have helped many companies solve
+                huge problems:
+              </p>
+              <div class="case-study-list">
+                <div class="case-study-point">
+                  <p class="body-b2">
+                    A robot company had wires breaking often. We built stronger
+                    harnesses with extra shields, cutting their downtime in
+                    half.
+                  </p>
+                </div>
+                <div class="case-study-point">
+                  <p class="body-b2">
+                    An EV company needed safe battery wires. We made harnesses
+                    that met strict safety rules and supported faster charging.
+                  </p>
+                </div>
+                <div class="case-study-point">
+                  <p class="body-b2">
+                    A truck fleet had high costs from weak wires. Our custom
+                    looms lasted much longer and saved them money.
+                  </p>
+                </div>
+              </div>
+              <p class="body-b1">
+                Each case shows how a good harness saves time, money, and
+                stress.
+              </p>
+            </div>
+
+            <div class="product-page-btn">
+              <button class="mock-btn">Get a Quick Quote</button>
+              <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
+            </div>
+          </div>
+          <div class="image-wrapper">
+            <img
+              src="https://www.ql-custom.com/wp-content/uploads/2025/08/8c47f2839e9080e2def0eaae10b4cfd3806c1e2b-1.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-gm-area section-area">
+      <div class="about-gm-container mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>QL-Custom's General Manager</h2>
+          </div>
+          <p class="body-b1">
+            David Wang has engaged Custom Wiring Harness and cable assemblies
+            since 2008,while he graduated from college. After he taken over from
+            Joe a Honkongnese retired who was doing standard Power Extension
+            cables since 1997,the year Hongkong come back to China Joe invested
+            0.5million Hongkong Dollars.
+          </p>
+          <p class="body-b1">
+            After David Wang joined in this company, he was starting to contact
+            North American & Europe "cold" customers to make custom wire harness
+            and cable assemblies. He learned many cable and connector knowldge
+            base and was a trained member of IPC620-WHMA-2007.
+          </p>
+          <div class="product-page-btn">
+            <button class="mock-btn">Get a Quick Quote</button>
+            <?php
+                echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+        <div class="yt-video-wrapper">
+          <img
+            src="https://i.ibb.co.com/sYfZjD8/915377e3740fefebce450213361794626f9a4ef1.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
