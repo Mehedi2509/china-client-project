@@ -743,7 +743,7 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .assembly-automation-area .section-container{
+        .assembly-automation-area .section-container {
           gap: 20px;
         }
       }
@@ -755,10 +755,44 @@
         .assembly-automation-area .image-wrapper {
           width: 100%;
         }
-         .assembly-automation-area .content-wrapper p {
-        margin-bottom: 24px;
+        .assembly-automation-area .content-wrapper p {
+          margin-bottom: 24px;
+        }
       }
+
+      .customization-options-area .section-title {
+        text-align: start;
       }
+      .customization-options-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-bottom: 40px;
+      }
+      .customization-options-area .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background: #f0f0f0;
+      }
+      .customization-options-area .info-card h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customization-options-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .customization-options-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+      }
+
+      
     </style>
   </head>
   <body>
@@ -1482,6 +1516,63 @@
               echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
                 ?>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="customization-options-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customization Options</h2>
+          <p>
+            We know that every customer needs something different. That is why
+            we offer many choices:
+          </p>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <h3 class="body-b1">Connector types</h3>
+            <p class="body-b2">
+              We stock brands like Molex, TE, and Deutsch. We provide many
+              kinds, such as ATX, AMP, round, and waterproof. We can also add
+              special parts if needed.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3 class="body-b1">Wire size and color</h3>
+            <p class="body-b2">
+              You can choose the size and color. We have all AWG sizes and many
+              colors. This helps with both heavy power and small signals. Clear
+              colors make setup and repairs easy..
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3 class="body-b1">Extra protection</h3>
+            <p class="body-b2">
+              Add overmolds, shields, labels, or heat-shrink tubing. Overmolds
+              seal ends. Shields block noise. Labels keep IDs clear. Heat-shrink
+              makes bends stronger.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3 class="body-b1">Bundles & packing</h3>
+            <p class="body-b2">
+              We bundle wires with ties, tubes, or wraps. Ends can come ready
+              with connectors or left open. For kits, we add clips, clamps, and
+              mounts. Each pack is marked so there is no mix-up. This makes
+              installation faster and easier.
+            </p>
+          </div>
+        </div>
+        <div class="product-page-btn">
+          <button class="mock-btn">Get a Quick Quote</button>
+          <?php
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+                ?>
         </div>
       </div>
     </div>
