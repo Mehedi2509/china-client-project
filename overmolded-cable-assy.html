@@ -523,6 +523,56 @@
           grid-column: span 1;
         }
       }
+      
+      .resistance-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .resistance-area .info-card {
+        padding: 20px;
+        border-radius: 20px;
+        background: #f0f0f0;
+      }
+
+      .resistance-area .info-card .heading-h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      .resistance-area .info-card .image-wrapper {
+        width: 100px;
+        height: auto;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        border: 1px solid #00BDE7;
+      }
+
+      .resistance-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .resistance-area .info-card-wrapper {
+          gap: 16px;
+        }
+        .resistance-area .info-card {
+          padding: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .resistance-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+      
     </style>
   </head>
   <body>
@@ -1135,6 +1185,39 @@
         <div class="product-page-btn">
           <button class="mock-btn">Get a Quick Quote</button>
         </div>
+      </div>
+    </div>
+
+    <div class="resistance-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Resistance to Water, Vibration & Chemicals</h2>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/30a60c7a55e4bb7b724ac68e757466955b54bf0b.png" alt="">
+            </div>
+            <h3 class="heading-h3">Waterproof (IP67)</h3>
+            <p class="body-b2">These cables are safe from dust and water. Molded covers seal all gaps. For example, NorComp's M12 cables are tested by spray and dunk. They stay dry in rain or water and keep devices safe.</p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/f4ea81d0fd23a2d5f2edb4d040dda90643a6ca47-1.png" alt="">
+            </div>
+            <h3 class="heading-h3">Vibration & Shock</h3>
+            <p class="body-b2">The molded layer acts as support. It stops wires from breaking when pulled or bent. It keeps the link tight, so signals are not lost. This makes them great for robots, engines, or trucks on rough paths.</p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/7060a772d2d1481c37b7292c83e7a6c06b138850.png" alt="">
+            </div>
+            <h3 class="heading-h3">Chemical & Oil Resistance</h3>
+            <p class="body-b2">We use plastics like TPU that fight oil, sun, acid, fuel, and cleaners. Metz Connect's M12 cables show how they last in oily or sunny areas. Many are also fire safe. They handle fuels, washing, and strong cleaners with no harm.</p>
+          </div>
+        </div>
+        
       </div>
     </div>
   </body>
