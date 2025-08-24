@@ -644,7 +644,7 @@
         gap: 20px;
       }
       .case-studies-area .image-wrapper {
-        width: 950px;
+        width: 100%;
         height: auto;
         border-radius: 0 12px 12px 0;
         overflow: hidden;
@@ -680,6 +680,12 @@
         color: #fff;
       }
 
+      @media only screen and (max-width: 1024px) {
+        .case-studies-area .content-wrapper {
+          width: 530px;
+        }
+      }
+
       @media only screen and (max-width: 767px) {
         .case-studies-area {
           padding-left: 16px;
@@ -696,6 +702,74 @@
         }
         .case-studies-area .info-card-wrapper {
           grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .request-quote-area {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-left: 16px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .request-quote-area .request-quote-container {
+        max-width: 1600px;
+        display: flex;
+        gap: 20px;
+      }
+
+      .request-quote-area .image-wrapper {
+        width: 100%;
+        height: auto;
+        border-radius: 12px 0 0 12px;
+        overflow: hidden;
+      }
+      .request-quote-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .request-quote-area .content-wrapper {
+        width: 730px;
+        height: fit-content;
+        flex-shrink: 0;
+      }
+      .request-quote-area .section-title {
+        text-align: start;
+      }
+
+      .request-quote-area .body-b1 {
+        color: #000000;
+        margin-bottom: 40px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .request-quote-area .content-wrapper {
+          width: 530px;
+          height: fit-content;
+          flex-shrink: 0;
+        }
+
+        .request-quote-area .image-wrapper img {
+          object-position: right;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .request-quote-area {
+          padding-left: 16px;
+        }
+        .request-quote-area .request-quote-container {
+          flex-direction: column;
+        }
+        .request-quote-area .image-wrapper {
+          width: 100%;
+          border-radius: 12px 12px 0 0;
+        }
+        .request-quote-area .content-wrapper {
+          width: 100%;
         }
       }
     </style>
@@ -1517,6 +1591,39 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="request-quote-area">
+      <div class="request-quote-container">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Request an Overmolded Cable Assembly Quote</h2>
+          </div>
+          <p class="body-b1">
+            QL-Custom Technology Ltd. is a trusted maker of safe, strong, and
+            custom overmolded cable assemblies. We use innovative but simple
+            designs, clear steps, and modern machines to build cables that last
+            a long time. Our team knows how to make cables that keep working
+            even in hard places like factories, cars, or outdoors. We look at
+            every small detail so you always get what you need. From small test
+            runs to big orders, we work in one place, making it easy and fast.
+            We also make medical cables, car sensor cables, and USB and Ethernet
+            cables with overmold. We follow strict safety rules and test for
+            quality. From your first idea to the last step, we guide you.
+            Contact us now for a quote and see how we make overmolded cable
+            assembly work simple, safe, strong, and kind to the earth.
+          </p>
+          <div class="product-page-btn">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/364e1b5ffb79f0fa2e663eb12029069328beb3ec.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
