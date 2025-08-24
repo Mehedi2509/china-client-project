@@ -709,7 +709,6 @@
         max-width: 1920px;
         margin: 0 auto;
         padding-right: 0;
-        padding-left: 16px;
         display: flex;
         justify-content: flex-end;
       }
@@ -770,6 +769,73 @@
         }
         .request-quote-area .content-wrapper {
           width: 100%;
+        }
+      }
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .customer-reviews-area .review-card {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #eff3f8;
+      }
+
+      .customer-reviews-area .review-card .review-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+      }
+      .customer-reviews-area .review-card .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #f9cc04;
+      }
+
+      .customer-reviews-area .review-card .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .customer-reviews-area .review-card .content-divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 2px;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-name {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
@@ -1595,7 +1661,7 @@
       </div>
     </div>
 
-    <div class="request-quote-area">
+    <div class="request-quote-area section-area">
       <div class="request-quote-container">
         <div class="content-wrapper">
           <div class="section-title">
@@ -1624,6 +1690,320 @@
             src="https://www.ql-custom.com/wp-content/uploads/2025/08/364e1b5ffb79f0fa2e663eb12029069328beb3ec.png"
             alt=""
           />
+        </div>
+      </div>
+    </div>
+
+    <div class="customer-reviews-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  These are very strong cables. We use them on farm tools in
+                  rain, mud, and shaking. The seal is tight, and they still look
+                  new after months outdoors.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/00b454538bef8aea72e0b08fcc1b1fce417afafc-1.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Anthony Ricci</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  The order was easy, and the cables matched well. Each was
+                  tested and had the right colors. The wait was not long. I will
+                  order again.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/87fe8d4a27356f1be044cba6df283d9934d6fd6e-1.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Emma Johnson</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  The USB cables saved us build time. The plugs fit well and
+                  last after many uses. The service was really good.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/1e88f786e2326611e5ecdb62e697538bb0c88b06-1.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">David Li</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  Best cables for outside use. We used them in resort lights.
+                  They held up in salt, rain, and sun. Very strong build.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/ec24c2077e0cf0c554e254ea6b15e82684714de5-1.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Nina Gomez</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
