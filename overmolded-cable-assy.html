@@ -483,6 +483,46 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .steps-overmolded-cable-assy-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .steps-overmolded-cable-assy-area .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background: #f0f0f0;
+      }
+
+      .steps-overmolded-cable-assy-area .info-card .heading-h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+      .steps-overmolded-cable-assy-area .info-card-wrapper .span-col-3 {
+        grid-column: span 3;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .steps-overmolded-cable-assy-area .info-card-wrapper {
+          gap: 16px;
+        }
+        .steps-overmolded-cable-assy-area .info-card {
+          padding: 16px;
+        }
+        
+      }
+
+      @media only screen and (max-width: 767px) {
+        .steps-overmolded-cable-assy-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+        .steps-overmolded-cable-assy-area .info-card-wrapper .span-col-3 {
+          grid-column: span 1;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1006,6 +1046,96 @@
       </div>
     </div>
 
-    
+    <div class="steps-overmolded-cable-assy-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Steps We Apply to Make Overmolded Cable Assembly</h2>
+        </div>
+
+        <div class="info-card-wrapper">
+          <!-- card 1 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Consultation & Design</h3>
+            <p class="body-b1">
+              We learn your needs and check your plans. We pick the best M12
+              connector and the right cable. Our team makes a 3D model and may
+              print a sample so you can see how it looks and fits. Then we pick
+              the right plastic, like PVC or TPU, and make a complete plan.
+              Every step is shown to you for approval.
+            </p>
+          </div>
+          <!-- card 2 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Prototype & Tooling</h3>
+            <p class="body-b1">
+              We built a sample with 3D-printed molds to test fit and function.
+              After the tests, we made the final mold with strong steel or
+              aluminum. This mold holds the overmolded cable assembly in place
+              so the overmold forms right each time.
+            </p>
+          </div>
+          <!-- card 3 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Material Prep</h3>
+            <p class="body-b1">
+              Wires are cut, stripped, and set in the mold. Connectors are fixed
+              and checked. Each wire is tested before moving forward. Nothing
+              goes ahead unless it is correct.
+            </p>
+          </div>
+          <!-- card 4 span 3 -->
+          <div class="info-card span-col-3">
+            <h3 class="heading-h3">Injection Overmolding</h3>
+            <p class="body-b1">
+              Heated plastic flows around the overmolded cable assembly and
+              connector inside the mold. For soft or small parts, we use
+              low-pressure overmolding to keep them safe. The plastic fills all
+              spaces and makes a hard cover that blocks water and stress.
+            </p>
+          </div>
+          <!-- card 5 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Cooling & Unmolding</h3>
+            <p class="body-b1">
+              When the plastic gets hardened and the mold is cooled and ready to
+              open, then it opens. The cable is taken out, trimmed, and shaped.
+              Extra boots or rings may be added for strength.
+            </p>
+          </div>
+          <!-- card 6 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Finishing & Assembly</h3>
+            <p class="body-b1">
+              More support is added if needed. Each overmolded cable assembly is
+              cleaned, labeled, and color-coded. We check each one for a smooth
+              look and good shape.
+            </p>
+          </div>
+          <!-- card 7 -->
+          <div class="info-card">
+            <h3 class="heading-h3">Testing</h3>
+            <p class="body-b1">
+              Each overmolded cable assembly is tested for power, safety, and
+              signal. Bad ones are removed. Good ones are marked with numbers
+              for tracking. This makes sure only safe cables ship.
+            </p>
+          </div>
+          <!-- card 8 -->
+          <div class="info-card span-col-3">
+            <h3 class="heading-h3">Delivery</h3>
+            <p class="body-b1">
+              After all that, the harnesses get carefully packed and shipped to
+              you. They come ready to use with clear marks and colors. You get
+              safe, complete, and long-lasting color-coded overmolded cable
+              assemblies.
+            </p>
+          </div>
+        </div>
+
+        <div class="product-page-btn">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
