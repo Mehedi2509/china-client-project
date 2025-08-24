@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mock-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        background-color: #00bde7;
+        color: #fff;
+      }
+
+      .section-container {
+        max-width: 1280px;
+      }
+      .mx-auto {
+        margin: 0 auto;
+      }
+
+      .section-area {
+        padding: 70px 16px;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .heading-h3 {
+        font-family: Alexandria;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0%;
+        color: #4b5563;
+      }
+      .body-b1 {
+        font-family: Alexandria;
+        font-size: 18px !important;
+        line-height: 28px !important;
+        font-weight: 300 !important;
+        color: #4b5563;
+      }
+      .body-b2 {
+        font-family: Alexandria;
+        font-size: 16px !important;
+        line-height: 24px !important;
+        font-weight: 300 !important;
+        color: #4b5563;
+      }
+
+      /* Common Style */
+      .section-title {
+        margin-bottom: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .section-title h2 {
+        font-family: Alexandria;
+        font-size: 34px;
+        line-height: 51px;
+        font-weight: 400;
+        color: #242424;
+      }
+      .section-title p {
+        font-family: Alexandria;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        color: #4b5563;
+      }
+
+      .product-page-btn {
+        display: flex;
+      }
+      .product-page-btn .popup-form-btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: initial;
+      }
+
+      .info-card-content-wrapper h3 {
+        font-family: Alexandria;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #16529b;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .section-area {
+          padding: 50px 16px;
+        }
+        .section-title {
+          margin-bottom: 32px;
+        }
+        .section-title h2 {
+          font-size: 28px;
+          line-height: 40px;
+        }
+        .section-title p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      /* Hero Area */
+      .hero-area {
+        min-height: 560px;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 16px;
+        overflow: hidden;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .hero-area .hero-section-container {
+        max-width: 1280px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-area .hero-content-wrapper {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-area .section-title {
+        margin-bottom: 0;
+        gap: 40px;
+        text-align: left;
+        max-width: 680px;
+      }
+      .hero-area .section-title h1 {
+        font-family: Alexandria;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 75px;
+        color: #ffffff;
+      }
+      .hero-area .section-title p {
+        font-family: Alexandria;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 44px;
+        color: #ffffff;
+      }
+      .hero-area .hero-product-page-btn {
+        display: flex;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .hero-area {
+          padding: 70px 16px;
+          background-position: right center !important;
+          min-height: unset;
+        }
+        .hero-area .section-title h1 {
+          font-size: 48px;
+          line-height: 56px;
+        }
+        .hero-area .hero-product-page-btn .popup-form-btn {
+          font-size: 16px;
+          padding: 10px 16px;
+        }
+        .hero-area .hero-state-wrapper {
+          gap: 16px;
+        }
+        .hero-area .hero-bottom-wrapper {
+          padding: 24px 32px;
+          gap: 24px;
+          flex-direction: column;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .hero-area {
+          padding: 40px 16px;
+          min-height: 0;
+          background-position: right center !important;
+        }
+        .hero-area .section-title h1 {
+          font-size: 32px;
+          line-height: 42px;
+        }
+        .hero-area .section-title p {
+          font-size: 18px;
+          display: none;
+        }
+
+        .hero-area .hero-state-wrapper .state {
+          width: auto;
+          gap: 8px;
+        }
+
+        .hero-area .hero-state-wrapper .state span:nth-child(1) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .hero-area .hero-state-wrapper .state span:nth-child(2) {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      .product-intro-area .section-container {
+        display: flex;
+        gap: 60px;
+      }
+
+      .product-intro-area .image-wrapper {
+        width: 580px;
+        height: 100%;
+        aspect-ratio: 580/480;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .product-intro-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-intro-area .section-title h2 {
+        text-align: start;
+      }
+
+      .product-intro-area .content-wrapper .body-b1 {
+        margin-bottom: 24px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .product-intro-area .section-container {
+          gap: 32px;
+        }
+        .product-intro-area .image-wrapper {
+          width: 45%;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-intro-area .section-container {
+          flex-direction: column;
+        }
+        .product-intro-area .image-wrapper {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="hero-area"
+      style="
+        background: url('https://www.ql-custom.com/wp-content/uploads/2025/08/8264abbcffc57e7921603a6b0f27304391774fb5-1.png');
+      "
+    >
+      <div class="hero-section-container">
+        <div class="hero-content-wrapper">
+          <div class="section-title">
+            <h1>Custom Wiring Harness</h1>
+            <p>
+              Purchase custom wiring harnesses that are accurately manufactured
+              and thoroughly checked before being sent to you. Get the exact
+              parts that match your needs.
+            </p>
+          </div>
+          <div class="hero-product-page-btn">
+            <?php
+              echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-intro-area section-area">
+      <div class="section-container mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Product Introduction</h2>
+          </div>
+          <p class="body-b1">
+            M12 round connectors are plugs that have four or five pins. It has a
+            rounded shape. To connect wires, machines, or tools, you can use
+            them easily. Overmolded cable assemblies are used for many sectors
+            to supply power and signals. These cables and the plugs should be
+            able to resist rust and dirt to work properly. Plastic overmolding
+            is the best and exact process we use to connect the cables
+            perfectly. The hot plastic perfectly keeps the connector inside in
+            this step. For exact bonding, this process is necessary. The plastic
+            completely takes the pressure of the core cable and keeps it safe
+            from tough uses. There is a tool that keeps the connector in the
+            same place when the mold is filled with plastic. After it cools
+            down, it is fully sealed. This process is vital for the cable to
+            work in tough situations.
+          </p>
+          <div class="product-page-btn">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/Group-41741.png"
+            alt="overmolded cable"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
