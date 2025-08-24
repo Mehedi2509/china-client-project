@@ -512,7 +512,6 @@
         .steps-overmolded-cable-assy-area .info-card {
           padding: 16px;
         }
-        
       }
 
       @media only screen and (max-width: 767px) {
@@ -523,7 +522,7 @@
           grid-column: span 1;
         }
       }
-      
+
       .resistance-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -549,7 +548,7 @@
         border-radius: 8px;
         overflow: hidden;
         margin-bottom: 12px;
-        border: 1px solid #00BDE7;
+        border: 1px solid #00bde7;
       }
 
       .resistance-area .info-card .image-wrapper img {
@@ -572,7 +571,70 @@
           grid-template-columns: 1fr;
         }
       }
-      
+
+      .design-flexibility-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+      .design-flexibility-area .info-card-wrapper .span-col-2 {
+        margin-top: 20px;
+        grid-column: span 2;
+        background: #00bde71a;
+      }
+
+      .design-flexibility-area .info-card {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #f0f0f0;
+      }
+
+      .design-flexibility-area .info-card .heading-h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      .design-flexibility-area .info-card .image-wrapper {
+        width: auto;
+        height: 160px;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 0.5px solid #00bde7;
+        flex-shrink: 0;
+      }
+
+      .design-flexibility-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .design-flexibility-area .info-card-wrapper {
+          gap: 16px;
+        }
+        .design-flexibility-area .info-card {
+          padding: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .design-flexibility-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+        .design-flexibility-area .info-card-wrapper .span-col-2 {
+          grid-column: span 1;
+        }
+        .design-flexibility-area .info-card-wrapper .info-card{
+          flex-direction: column;
+          align-items: start;
+          
+        }
+      }
     </style>
   </head>
   <body>
@@ -1197,27 +1259,151 @@
         <div class="info-card-wrapper">
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/30a60c7a55e4bb7b724ac68e757466955b54bf0b.png" alt="">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/30a60c7a55e4bb7b724ac68e757466955b54bf0b.png"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Waterproof (IP67)</h3>
-            <p class="body-b2">These cables are safe from dust and water. Molded covers seal all gaps. For example, NorComp's M12 cables are tested by spray and dunk. They stay dry in rain or water and keep devices safe.</p>
+            <p class="body-b2">
+              These cables are safe from dust and water. Molded covers seal all
+              gaps. For example, NorComp's M12 cables are tested by spray and
+              dunk. They stay dry in rain or water and keep devices safe.
+            </p>
           </div>
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/f4ea81d0fd23a2d5f2edb4d040dda90643a6ca47-1.png" alt="">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/f4ea81d0fd23a2d5f2edb4d040dda90643a6ca47-1.png"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Vibration & Shock</h3>
-            <p class="body-b2">The molded layer acts as support. It stops wires from breaking when pulled or bent. It keeps the link tight, so signals are not lost. This makes them great for robots, engines, or trucks on rough paths.</p>
+            <p class="body-b2">
+              The molded layer acts as support. It stops wires from breaking
+              when pulled or bent. It keeps the link tight, so signals are not
+              lost. This makes them great for robots, engines, or trucks on
+              rough paths.
+            </p>
           </div>
           <div class="info-card">
             <div class="image-wrapper">
-              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/7060a772d2d1481c37b7292c83e7a6c06b138850.png" alt="">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/7060a772d2d1481c37b7292c83e7a6c06b138850.png"
+                alt=""
+              />
             </div>
             <h3 class="heading-h3">Chemical & Oil Resistance</h3>
-            <p class="body-b2">We use plastics like TPU that fight oil, sun, acid, fuel, and cleaners. Metz Connect's M12 cables show how they last in oily or sunny areas. Many are also fire safe. They handle fuels, washing, and strong cleaners with no harm.</p>
+            <p class="body-b2">
+              We use plastics like TPU that fight oil, sun, acid, fuel, and
+              cleaners. Metz Connect's M12 cables show how they last in oily or
+              sunny areas. Many are also fire safe. They handle fuels, washing,
+              and strong cleaners with no harm.
+            </p>
           </div>
         </div>
-        
+
+        <div class="product-page-btn">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="design-flexibility-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Design Flexibility & Automated Overmolding</h2>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/69abbd8191db5897e10c376916613e953777b955.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Custom Shapes & Colors</h3>
+              <p class="body-b2">
+                The molded cover can be made in many colors and shapes. Bright
+                colors add safety or match brands. Logos or marks can be molded
+                in for ID. This makes cables easy to spot in big systems.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/bd7b0892090fed1446183a016be14623c920625f.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Multiple Connector Codes</h3>
+              <p class="body-b2">
+                We support many codes, like M12 A, B, D, X, USB-C, and more. You
+                can pick what you need. We also make mixed cables, like USB to
+                M12, to link old and new systems.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/7a3b1feec358145503d8abe1d6ca7ebc17bd5d7c.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Length and Function</h3>
+              <p class="body-b2">
+                Cables can be made at any length. We add shields, colors, or
+                matched ends to stop mistakes. This makes linking fast and easy.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/dfcdfeb7da8b2c72d6d227f2baf27ddca2ec04b9.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Quick Prototyping</h3>
+              <p class="body-b2">
+                With 3D-printed molds and fast tools, we make samples in days.
+                This lets you check before completing builds. Our quick
+                prototyping overmolded cables saves time and cuts risks.
+              </p>
+            </div>
+          </div>
+          <div class="info-card span-col-2">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/a2896a73c656c7e5fef65e95ae393c8450eba4e6.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">
+                Automated Overmolding for Consistent Quality
+              </h3>
+              <p class="body-b2">
+                We use automated machines to build each cable the same way. The
+                machines check heat, pressure, and flow. Robots load and unload
+                molds. Each step is watched for quality. This keeps cables free
+                of errors and saves time. Each batch comes out strong and the
+                same.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-page-btn">
+          <button class="mock-btn">Get a Quick Quote</button>
+        </div>
       </div>
     </div>
   </body>
