@@ -629,10 +629,73 @@
         .design-flexibility-area .info-card-wrapper .span-col-2 {
           grid-column: span 1;
         }
-        .design-flexibility-area .info-card-wrapper .info-card{
+        .design-flexibility-area .info-card-wrapper .info-card {
           flex-direction: column;
           align-items: start;
-          
+        }
+      }
+
+      .case-studies-area {
+        padding-left: 0;
+      }
+      .case-studies-area .case-studies-container {
+        max-width: 1600px;
+        display: flex;
+        gap: 20px;
+      }
+      .case-studies-area .image-wrapper {
+        width: 950px;
+        height: auto;
+        border-radius: 0 12px 12px 0;
+        overflow: hidden;
+      }
+      .case-studies-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .case-studies-area .content-wrapper {
+        width: 630px;
+        height: fit-content;
+        flex-shrink: 0;
+      }
+      .case-studies-area .section-title {
+        text-align: start;
+      }
+      .case-studies-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .case-studies-area .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background: #16529b;
+      }
+      .case-studies-area .info-card .heading-h3 {
+        margin-bottom: 12px;
+      }
+      .case-studies-area .info-card .heading-h3,
+      .case-studies-area .info-card .body-b1 {
+        color: #fff;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .case-studies-area {
+          padding-left: 16px;
+        }
+        .case-studies-area .case-studies-container {
+          flex-direction: column;
+        }
+        .case-studies-area .image-wrapper {
+          width: 100%;
+          border-radius: 12px 12px 0 0;
+        }
+        .case-studies-area .content-wrapper {
+          width: 100%;
+        }
+        .case-studies-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
         }
       }
     </style>
@@ -1403,6 +1466,57 @@
 
         <div class="product-page-btn">
           <button class="mock-btn">Get a Quick Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-studies-area section-area">
+      <div class="case-studies-container">
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/1a9cd5ef683e35a48da77e6cf5d0a1f29233446f.png"
+            alt=""
+          />
+        </div>
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Case Studies: Success in Real Use</h2>
+          </div>
+          <div class="info-card-wrapper">
+            <div class="info-card">
+              <h3 class="heading-h3">Automated Doors and Transit</h3>
+              <p class="body-b1">
+                A rail firm needed safe door sensors for trains. We gave them
+                IP68-rated M12 cables. They survived dirt, rain, and shaking and
+                continued to work for years. The doors stayed safe with no
+                stops.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="heading-h3">Industrial Ethernet Networks</h3>
+              <p class="body-b1">
+                A factory used Cat6A M12 cables for nonstop data. The cables
+                bent many times, but kept their speed. They resisted dust, oil,
+                and sun. The factory had no delays and smoother work.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="heading-h3">Medical Equipment</h3>
+              <p class="body-b1">
+                A hospital used our cables in patient monitors and X-ray tools.
+                After many cleanings and bends, the cables stayed soft, sealed,
+                and firm. They passed strict safety tests.
+              </p>
+            </div>
+            <div class="info-card">
+              <h3 class="heading-h3">Energy Sector</h3>
+              <p class="body-b1">
+                For sea wind farms, we built IP67 cables that resist salt,
+                spray, and strong winds. They kept sensors safe and running
+                nonstop. These gave steady, clean power with no breaks.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
