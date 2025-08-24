@@ -394,6 +394,59 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .material-recommendation-area .info-card-wrapper  {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .material-recommendation-area .info-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .material-recommendation-area .info-card .card-content {
+        padding: 12px;
+        background: #F0F0F0;
+        text-align: center;
+        flex-grow: 1;
+        border-radius: 20px;
+      }
+      .material-recommendation-area .info-card .heading-h3 {
+        color: #16529B;
+        margin-bottom: 12px;
+      }
+
+      .material-recommendation-area .info-card .image-wrapper {
+        width: 100%;
+        max-height: 290px;
+        overflow: hidden;
+      }
+
+      .material-recommendation-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .material-recommendation-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .material-recommendation-area .info-card .image-wrapper {
+          max-width: 305px;
+          margin: 0 auto;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .material-recommendation-area .info-card-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+
+
     </style>
   </head>
   <body>
@@ -706,5 +759,52 @@
         </div>
       </div>
     </div>
+
+    <div class="material-recommendation-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Material Recommendation</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/a28c2f22988caae424db8f50b5079b4f531376ab.png" alt="">
+            </div>
+            <div class="card-content">
+              <h3 class="heading-h3">Copper</h3>
+              <p class="body-b2">Good copper wires are key to any cable. We use pure copper with high flow for the best work. This cuts signal loss and heat. It also lasts longer and gives steady power. We use thin strands with a tin coat for flex and safe joins. The wire size is picked to carry the right power and still bend easily. This way, copper wires give both strong power and simple use.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/d8d2102141bf4467adb3fbc8f1b0619799dd7f20.png" alt="">
+            </div>
+            <div class="card-content">
+              <h3 class="heading-h3">Fiberglass</h3>
+              <p class="body-b2">We use fiberglass rods to make the cable stiff. Fiberglass is hard and stops bending. It keeps the overmolded cable assembly straight near the join and adds life. But it may crack in very cold or hot places. We use it when stiff parts are needed indoors. Fiberglass adds strong support without a significant cost.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/985b02ec967764ef9abdc4c36fe42edf3a5b29a8.png" alt="">
+            </div>
+            <div class="card-content">
+              <h3 class="heading-h3">PVC</h3>
+              <p class="body-b2">PVC is a low-cost and straightforward choice for cable covers. It is soft, bonds well to PVC jackets, and flows well in molds. For example, a PVC jacket with PVC resin makes a tight seal. PVC is good against wear, oil, and fire. But it can turn stiff in cold weather and is not best for hot weather. We use PVC primarily for indoor and low-cost jobs.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img src="https://www.ql-custom.com/wp-content/uploads/2025/08/807a523bcf2a0b9e07f87dd7d7b6108d3f589b1d.png" alt="">
+            </div>
+            <div class="card-content">
+              <h3 class="heading-h3">Connector</h3>
+              <p class="body-b2">The joint part is often metal or hard plastic. For M12, the body is nickel brass or steel, which is strong and does not rust. Inside is a plastic ring to hold pins in place. The pins are copper with a gold coating for long life and good flow. The metal shell also stops noise and links to the shield if needed. We pick the body to match the job, like steel for sea work or alloy for light jobs. Each connector is made for safe and long use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
