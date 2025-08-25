@@ -264,10 +264,60 @@
         }
       }
 
+      .product-grid-area {
+        background: #EFF3F8;
+      }
+      .product-grid-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+      }
+      .product-grid-area .info-card-wrapper .info-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .product-grid-area .info-card .image-wrapper {
+        display: flex;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 305/250;
+        overflow: hidden;
+      }
+
+      .product-grid-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .product-grid-area .info-card .card-content {
+        padding: 12px;
+        background: #16529B;
+      }
+
+      .product-grid-area .info-card .card-content h3 {
+        text-align: center;
+        color: #ffffff;
+      } 
+
+      @media only screen and (max-width: 1024px) {
+        .product-grid-area .info-card-wrapper {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .product-grid-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+
       .product-advantage-area {
         background: #f0f0f0;
       }
-
       .product-advantage-area .info-card-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1117,8 +1167,165 @@
       </div>
     </div>
 
+    <div class="product-grid-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Our custom wiring harness</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <a href="#" class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4523.jpg"
+                alt="Control panel wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Control panel wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4524.jpg"
+                alt="Custom wiring looms"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Custom wiring looms</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4525.jpg"
+                alt="Custom Braided Wire Harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Custom Braided Wire Harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4526.jpg"
+                alt="Industry Wire Harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Industry Wire Harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4527.jpg"
+                alt="Custom Jumper Wire Harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Custom Jumper Wire Harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4528.jpg"
+                alt="Appliance wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Appliance wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4529.jpg"
+                alt="Turnkey wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Turnkey wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4530.jpg"
+                alt="Wire harness prototypes"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Wire harness prototypes</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4531.jpg"
+                alt="Quick turn wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Quick turn wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4532.jpg"
+                alt="Control wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Control wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4533.jpg"
+                alt="Overmolded wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Overmolded wire harness</h3>
+            </div>
+          </a>
+          <a class="info-card">
+            <div class="image-wrapper smooth-signal-flow">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4534.jpg"
+                alt="Pre-terminated wire harness"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3 class="body-b1">Pre-terminated wire harness</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="product-advantage-area section-area">
       <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Product Advantages</h2>
+        </div>
         <div class="info-card-wrapper">
           <div class="info-card">
             <div class="image-wrapper smooth-signal-flow">

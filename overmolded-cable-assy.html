@@ -301,6 +301,18 @@
         align-items: center;
         margin-bottom: 8px;
       }
+      .product-advantage-area .icon-card .card-header svg {
+        flex-shrink: 0;
+      }
+      .accordion-card .body-b2 {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .accordion-card.open .body-b2 {
+        max-height: 500px;
+      }
 
       @media only screen and (max-width: 1024px) {
         .product-advantage-area .section-container {
@@ -318,6 +330,10 @@
         .product-advantage-area .image-wrapper {
           width: 100%;
           flex-shrink: unset;
+        }
+        .product-advantage-area .icon-card .card-header h3 {
+          font-size: 18px;
+          line-height: 28px;
         }
       }
 
@@ -362,11 +378,20 @@
         color: #242424;
       }
 
-      .solution-area .info-card p {
+      .solution-area .info-card-desc {
         margin-bottom: 20px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease;
+      }
+      .solution-area .info-card-desc.expanded {
+        -webkit-line-clamp: unset;
+        overflow: visible;
       }
 
-      .solution-area .info-card .read-more-btn {
+      .solution-area .info-card .ql-ps-btn-read {
         border: none;
         background: #00bde7;
         color: #fff;
@@ -580,7 +605,6 @@
       .design-flexibility-area .info-card-wrapper .span-col-2 {
         margin-top: 20px;
         grid-column: span 2;
-        background: #00bde71a;
       }
 
       .design-flexibility-area .info-card {
@@ -745,13 +769,9 @@
 
       @media only screen and (max-width: 1024px) {
         .request-quote-area .content-wrapper {
-          width: 530px;
+          width: 100%;
           height: fit-content;
-          flex-shrink: 0;
-        }
-
-        .request-quote-area .image-wrapper img {
-          object-position: right;
+          flex-shrink: unset;
         }
       }
 
@@ -848,7 +868,6 @@
 
         .customer-reviews-area .review-image-wrapper {
           width: 100%;
-          height: 300px;
           overflow: hidden;
           border-radius: 12px;
         }
@@ -936,8 +955,8 @@
           </div>
 
           <div class="icon-card-wrapper">
-            <div class="icon-card">
-              <div class="card-header">
+            <div class="icon-card accordion-card open">
+              <div class="card-header accordion-title">
                 <svg
                   width="24"
                   height="24"
@@ -972,8 +991,8 @@
                 long and steady work.
               </p>
             </div>
-            <div class="icon-card">
-              <div class="card-header">
+            <div class="icon-card accordion-card">
+              <div class="card-header accordion-title">
                 <svg
                   width="24"
                   height="24"
@@ -1007,8 +1026,42 @@
                 factory tools.
               </p>
             </div>
-            <div class="icon-card">
-              <div class="card-header">
+            <div class="icon-card accordion-card">
+              <div class="card-header accordion-title">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_2168_545)">
+                    <path
+                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
+                      fill="#16529B"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_2168_545">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <h3 class="heading-h3">
+                  M12 male and female circular cable connectors
+                </h3>
+              </div>
+              <p class="body-b2">
+                We make cables with both male and female ends. We build
+                male-to-female, female-to-female, or male-to-male sets. Each
+                molded end bonds to the jacket and blocks dust, dirt, and shock.
+                These cables can be used in robots, sensors, factory machines,
+                cars, or boats. Each type is fully tested to make sure it works
+                right.
+              </p>
+            </div>
+            <div class="icon-card accordion-card">
+              <div class="card-header accordion-title">
                 <svg
                   width="24"
                   height="24"
@@ -1041,40 +1094,6 @@
                 way, each cable looks the same, feels the same, and works the
                 same for long years. This process also makes less waste and uses
                 less power, which is good for the earth.
-              </p>
-            </div>
-            <div class="icon-card">
-              <div class="card-header">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_2168_545)">
-                    <path
-                      d="M16.2514 12C16.2518 12.1166 16.2279 12.2319 16.1813 12.3388C16.1347 12.4456 16.0663 12.5416 15.9806 12.6206L10.4606 17.7891C10.2976 17.9417 10.0807 18.0232 9.85755 18.0158C9.63443 18.0084 9.4234 17.9127 9.27086 17.7497C9.11832 17.5867 9.03678 17.3698 9.04417 17.1467C9.05157 16.9236 9.14729 16.7125 9.31029 16.56L14.1703 12L9.30857 7.44C9.22306 7.36586 9.15339 7.27524 9.1037 7.17356C9.05402 7.07187 9.02536 6.96122 9.01942 6.8482C9.01348 6.73518 9.0304 6.62213 9.06915 6.5158C9.10791 6.40947 9.16771 6.31205 9.24498 6.22936C9.32225 6.14667 9.4154 6.08042 9.51886 6.03455C9.62232 5.98869 9.73397 5.96416 9.84713 5.96243C9.96028 5.9607 10.0726 5.98181 10.1774 6.0245C10.2823 6.06718 10.3774 6.13057 10.4571 6.21086L16.0011 11.3486C16.0871 11.4329 16.154 11.5347 16.1971 11.6471C16.2403 11.7595 16.2588 11.8798 16.2514 12ZM12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM12 1.69029C9.62296 1.69078 7.31926 2.51348 5.47963 4.01884C3.64 5.5242 2.3777 7.61954 1.90683 9.94948C1.43596 12.2794 1.7855 14.7005 2.89617 16.8021C4.00685 18.9037 5.81027 20.5565 8.00057 21.48C10.2033 22.4187 12.6643 22.5606 14.9604 21.8813C17.2565 21.202 19.2441 19.7439 20.5815 17.7578C21.9189 15.7717 22.5225 13.3816 22.2885 10.9986C22.0546 8.61564 20.9976 6.38864 19.2994 4.70057C18.3415 3.74559 17.2046 2.98903 15.9538 2.47423C14.703 1.95943 13.3629 1.69652 12.0103 1.70057L12 1.69029Z"
-                      fill="#16529B"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_2168_545">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <h3 class="heading-h3">
-                  M12 male and female circular cable connectors
-                </h3>
-              </div>
-              <p class="body-b2">
-                We make cables with both male and female ends. We build
-                male-to-female, female-to-female, or male-to-male sets. Each
-                molded end bonds to the jacket and blocks dust, dirt, and shock.
-                These cables can be used in robots, sensors, factory machines,
-                cars, or boats. Each type is fully tested to make sure it works
-                right.
               </p>
             </div>
           </div>
@@ -1122,13 +1141,11 @@
             </div>
             <div class="card-content">
               <h3 class="heading-h3">Product Details</h3>
-              <p class="body-b2">
-                We share full info for each overmolded cable assembly. This has
-                the connector type (pin, code, body) and cable info (wire size,
-                cover, jac...
+              <p class="body-b2 info-card-desc">
+                We share full info for each overmolded cable assembly. This has the connector type (pin, code, body) and cable info (wire size, cover, jacket). For example, we note the copper type (like oxygen-free copper) and jacket (PVC or TPE). We also note connector parts: shells of nickel brass or steel, pins of gold brass, and sealing rings. You also get info on heat range, wire strength, and IP level. This detail makes sure the cable fits your job well.
               </p>
 
-              <button class="read-more-btn">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
           <div class="info-card">
@@ -1140,13 +1157,11 @@
             </div>
             <div class="card-content">
               <h3 class="heading-h3">Customized Mold</h3>
-              <p class="body-b2">
-                Each part uses a mold made just for that cable type. Our team
-                designs the tool in CAD and can add marks like logos or names.
-                Mold metal is p...
+              <p class="body-b2 info-card-desc">
+                Each part uses a mold made just for that cable type. Our team designs the tool in CAD and can add marks like logos or names. Mold metal is picked by run size: hard steel for extended use or soft aluminum for short runs. We also offer low-cost 3D printed molds for early test parts. All molds are made with care to stop leaks or cracks. Some molds have many parts to form more shapes. All molds are built to give the same good part each time. This keeps all orders steady and safe.
               </p>
 
-              <button class="read-more-btn">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
           <div class="info-card">
@@ -1158,20 +1173,18 @@
             </div>
             <div class="card-content">
               <h3 class="heading-h3">Performance Testing</h3>
-              <p class="body-b2">
-                We test each cable before it leaves our shop. We check wires to
-                see if they carry power and signals correctly. We tested the
-                overmold cover...
+              <p class="body-b2 info-card-desc">
+                We test each cable before it leaves our shop. We check wires to see if they carry power and signals correctly. We tested the overmold cover to see if it was strong and sealed. We check the look to see if the color, size, and shape are clean. We test in water and dust to make sure the seal works. We also bent and pulled the cable many times to test its strength. Each test makes sure the cable meets its standard. We keep records to prove the quality of each batch.
               </p>
 
-              <button class="read-more-btn">Read more</button>
+              <button class="ql-ps-btn-read">Read more</button>
             </div>
           </div>
         </div>
         <div class="product-page-btn">
           <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
     </div>
@@ -1382,8 +1395,8 @@
         </div>
         <div class="product-page-btn">
           <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
+            echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
     </div>
@@ -1476,8 +1489,8 @@
 
         <div class="product-page-btn">
           <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
+             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
     </div>
@@ -1537,8 +1550,8 @@
 
         <div class="product-page-btn">
           <?php
-                  echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
-                ?>
+             echo do_shortcode('[filled_rounded_corner_button url="#popup-form" text="Get a Quick Quote"]');
+          ?>
         </div>
       </div>
     </div>
@@ -2052,5 +2065,39 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const readMoreButtons = document.querySelectorAll('.ql-ps-btn-read');
+  
+        readMoreButtons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            const card = button.closest('.card-content');
+            const desc = card.querySelector('.info-card-desc');
+  
+            desc.classList.toggle('expanded');
+            button.textContent = desc.classList.contains('expanded') ? 'Less' : 'Read more';
+          });
+        });
+
+        // Accordion function
+        const accItems = document.querySelectorAll(".accordion-card");
+        const accHeadings = document.querySelectorAll(".accordion-title");
+
+        accHeadings.forEach((heading) => {
+          heading.addEventListener("click", function () {
+            const parent = this.parentNode;
+
+            accItems.forEach((item) => {
+              item.classList.remove("open");
+            });
+
+            if (!parent.classList.contains("open")) {
+              parent.classList.add("open");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
