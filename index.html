@@ -405,7 +405,59 @@
           flex-direction: column;
           padding: 16px;
         }
-       
+      }
+
+      .industries-application-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .industries-application-area .info-card-wrapper .info-card {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: #eff3f8;
+        border-radius: 12px;
+      }
+
+      .industries-application-area .info-card .image-wrapper {
+        width: 200px;
+        height: auto;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 8px;
+        display: flex;
+      }
+
+      .industries-application-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .industries-application-area .info-card .heading-h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .industries-application-area .info-card {
+          flex-direction: column;
+          padding: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .industries-application-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .industries-application-area .info-card {
+          flex-direction: column;
+          padding: 16px;
+        }
       }
     </style>
   </head>
@@ -831,6 +883,120 @@
               <div class="product-page-btn">
                 <button class="mock-btn">Get a Quick Quote</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="industries-application-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Industries and Applications</h2>
+        </div>
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/530f6f675e6d6233f8d923975fb8762790367913.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Hospitals & Clinics</h3>
+              <p class="body-b2">
+                Our cables are especially designed for these sectors. These
+                cables are used in almost every tool in the hospitals. We offer
+                the most hygienic and safe quality cables for this sector. Our
+                cables are built for that, so doctors and nurses can trust them.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/4f33f209a8a229bf4a68918e492a3c9bb33f16b8.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Diagnostic Imaging Centers</h3>
+              <p class="body-b2">
+                MRI, CT scanners and X-rays use shielded cables to keep the
+                image always accurate. If these cables are not used the image
+                will be low quality. Our shielded wires block this, keeping
+                images sharp. Stress-test labs also use ECG leads that must not
+                break or lose signals. Our cables give safe and accurate
+                results.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/4ea3fc581e778407510c0836bc0d8b1e0d7d66c5-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Point-of-Care & Telehealth</h3>
+              <p class="body-b2">
+                Modern healthcare often uses mobile and home devices. These need
+                cables that are light, flexible, and strong. Portable monitors
+                and telemedicine ECG units use our wires to check patient health
+                outside hospitals. Our cables make it quick and easy to connect,
+                helping healthcare workers get correct results fast.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/0b43bb08fb3c955bc86442c7505ab52dac5aef42-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Emergency Services</h3>
+              <p class="body-b2">
+                Ambulances, mobile clinics, and field hospitals need cables that
+                work even while moving or in rough conditions. We make ECG and
+                SpO₂ wires that can handle shaking, heat, and vibration while
+                giving clear signals. These cables are designed for tough use,
+                so emergency teams can trust their equipment.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/bf02c83d18dc5f2437c3b95470cf5ebf01af1719.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Veterinary Medicine</h3>
+              <p class="body-b2">
+                We make special cables for safe, soft, easy-to-clean animals,
+                built for veterinary care with the same safety as human
+                healthcare.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/9e7a0cac929ed7e7aa354bdbb7837d140e9c482b-1.png"
+                alt=""
+              />
+            </div>
+            <div class="content-wrapper">
+              <h3 class="heading-h3">Medical Manufacturing & R&D</h3>
+              <p class="body-b2">
+                Companies that design and build new medical tools need strong,
+                safe cables. We work with these companies to make custom cables
+                for imaging systems, surgery robots, and other devices.
+              </p>
             </div>
           </div>
         </div>
