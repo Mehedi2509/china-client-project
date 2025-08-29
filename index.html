@@ -459,6 +459,62 @@
           padding: 16px;
         }
       }
+
+      .advance-manufacturing-area .manufacturing-container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .advance-manufacturing-area .image-wrapper {
+        width: 562px;
+        height: auto;
+        aspect-ratio: 562/488;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 8px;
+        display: flex;
+        margin-bottom: 40px;
+      }
+
+      .advance-manufacturing-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .advance-manufacturing-area .info-card {
+        padding: 12px;
+        border-radius: 8px;
+        background: #16529b;
+        margin-bottom: 12px;
+      }
+
+      .advance-manufacturing-area .info-card:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      .advance-manufacturing-area .info-card p {
+        color: #fff;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .advance-manufacturing-area .manufacturing-container {
+          flex-direction: column-reverse;
+        }
+        .advance-manufacturing-area .image-wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .advance-manufacturing-area .manufacturing-container {
+          flex-direction: column-reverse;
+        }
+        .advance-manufacturing-area .image-wrapper {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 562/488;
+        }
+      }
     </style>
   </head>
   <body>
@@ -996,6 +1052,69 @@
                 Companies that design and build new medical tools need strong,
                 safe cables. We work with these companies to make custom cables
                 for imaging systems, surgery robots, and other devices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="advance-manufacturing-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Maximizing Efficiency with Advanced Manufacturing</h2>
+        </div>
+        <div class="manufacturing-container">
+          <div class="image-conteiner">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/17e45def409d20895692542546f8cd408f9beeaf.png"
+                alt=""
+              />
+            </div>
+            <div class="product-page-btn">
+              <button class="mock-btn">Get a Quick Quote</button>
+            </div>
+          </div>
+          <div class="info-card-wrapper">
+            <div class="info-card">
+              <p class="body-b2">
+                Automation: <br />
+                Our machines to build these harnesses are accurately tested.
+                This reduces mistakes and makes production faster, so we can
+                make many high-quality cables quickly.
+              </p>
+            </div>
+            <div class="info-card">
+              <p class="body-b2">
+                Digital Design Tools: <br />
+                Before making a cable, we design and test it on a computer. This
+                shows how it works when bent, heated, or stressed. By fixing
+                problems early, we save time and materials.
+              </p>
+            </div>
+            <div class="info-card">
+              <p class="body-b2">
+                AI Quality Control: <br />
+                We use cameras and AI systems to check each step. They find
+                minor problems that people might miss and keep improving over
+                time. This ensures that only perfect cables leave our factory.
+              </p>
+            </div>
+            <div class="info-card">
+              <p class="body-b2">
+                Lean Manufacturing: <br />
+                We follow this method for making the harness more accurate. We
+                always improve the cables to lower the cost and save time.
+              </p>
+            </div>
+            <div class="info-card">
+              <p class="body-b2">
+                Skilled Workforce: <br />
+                Our workers are well-trained in every step of medical cable
+                assembly making. They share ideas to improve the process and
+                solve problems quickly. Their skills and advanced tools keep our
+                cable strong, safe, and reliable.
               </p>
             </div>
           </div>
