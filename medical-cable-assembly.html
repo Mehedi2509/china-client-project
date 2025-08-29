@@ -25,6 +25,7 @@
         padding: 70px 16px;
         max-width: 1920px;
         margin: 0 auto;
+        border-bottom: 1px solid #4B5563;
         overflow: hidden;
       }
 
@@ -188,7 +189,7 @@
       }
       @media only screen and (max-width: 767px) {
         .hero-area {
-          padding: 40px 16px;
+          padding: 20px 16px;
           min-height: 0;
           background-position: right center !important;
         }
@@ -395,6 +396,7 @@
       @media only screen and (max-width: 1024px) {
         .solution-area .info-card {
           gap: 40px;
+          padding: 32px;
         }
       }
 
@@ -446,8 +448,9 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .industries-application-area .info-card {
+        .industries-application-area .info-card-wrapper .info-card {
           flex-direction: column;
+          align-items: start;
           padding: 16px;
         }
       }
@@ -457,7 +460,7 @@
           grid-template-columns: repeat(1, 1fr);
         }
 
-        .industries-application-area .info-card {
+        .industries-application-area .info-card-wrapper .info-card {
           flex-direction: column;
           padding: 16px;
         }
@@ -484,9 +487,11 @@
       }
 
       .certified-area .image-wrapper {
-        width: 100%;
-        height: 540px;
-        border-radius: 12px 0 0 12px;
+        flex-shrink: 0;
+        display: flex;
+        width: 830px;
+        max-width: 100%;
+        aspect-ratio: 830/540;
         overflow: hidden;
       }
       .certified-area .image-wrapper img {
@@ -495,9 +500,7 @@
         object-fit: contain;
       }
       .certified-area .content-wrapper {
-        width: 730px;
-        height: fit-content;
-        flex-shrink: 0;
+        width: 100%;
       }
 
       .certified-area .body-b1 {
@@ -505,9 +508,8 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        .certified-area .content-wrapper {
+        .certified-area .image-wrapper {
           width: 100%;
-          height: fit-content;
           flex-shrink: unset;
         }
       }
@@ -536,7 +538,7 @@
 
       .advance-manufacturing-area .manufacturing-container {
         display: flex;
-        align-items: center;
+        align-items: start;
         gap: 40px;
       }
 
@@ -574,6 +576,7 @@
       @media only screen and (max-width: 1024px) {
         .advance-manufacturing-area .manufacturing-container {
           flex-direction: column-reverse;
+          align-items: center;
         }
         .advance-manufacturing-area .image-wrapper {
           width: 100%;
@@ -667,6 +670,9 @@
       }
 
       @media only screen and (max-width: 1024px) {
+        .medical-device-maker-area .section-container {
+          gap: 24px;
+        }
         .medical-device-maker-area .image-wrapper {
           width: 40%;
           height: auto;
@@ -719,6 +725,9 @@
       }
 
       @media only screen and (max-width: 1024px) {
+        .electric-noise-area .section-container {
+          gap: 24px;
+        }
         .electric-noise-area .image-wrapper {
           width: 40%;
           height: auto;
@@ -742,13 +751,15 @@
         padding-left: 0;
         padding-right: 0;
         display: flex;
+        align-items: center;
         gap: 40px;
         background: #16529b;
-        border: 0.5px solid #ffffff;
       }
 
       .why-us-area .image-wrapper {
+        display: flex;
         width: 330px;
+        max-width: 370px;
         height: auto;
         aspect-ratio: 1/1;
         overflow: hidden;
@@ -778,22 +789,20 @@
       }
 
       @media only screen and (max-width: 1024px) {
+        .why-us-area {
+          flex-direction: column;
+          gap: 0;
+          padding: 50px 16px;
+        }
         .why-us-area .image-wrapper {
-          width: 20%;
-          height: auto;
-          aspect-ratio: 1/1;
+          width: 100%;
+          flex-shrink: unset;
         }
       }
 
       @media only screen and (max-width: 767px) {
-        .why-us-area {
-          flex-direction: column;
-        }
-        .why-us-area .image-wrapper {
-          width: 100%;
-        }
         .why-us-area .content-wrapper .body-b1 {
-          margin-bottom: 40px;
+          margin-bottom: 24px;
         }
       }
 
@@ -867,7 +876,7 @@
           gap: 16px;
         }
       }
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         .customer-reviews-area .customer-reviews-wrapper {
           grid-template-columns: repeat(1, 1fr);
         }
