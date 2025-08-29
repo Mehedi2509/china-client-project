@@ -729,6 +729,76 @@
           margin-bottom: 40px;
         }
       }
+
+      .customer-reviews-area .customer-reviews-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .customer-reviews-area .review-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 12px;
+        background: #eff3f8;
+        text-align: center;
+      }
+
+      .customer-reviews-area .review-card .review-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .customer-reviews-area .review-card .review-rating svg {
+        width: 32px;
+        height: 32px;
+        fill: #f9cc04;
+      }
+
+      .customer-reviews-area .review-card .author-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      .customer-reviews-area .review-card .content-divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 2px;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .customer-reviews-area .review-card .author-info .author-name {
+        color: #4b5563;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          gap: 16px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .customer-reviews-area .customer-reviews-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -1552,6 +1622,250 @@
           src="https://www.ql-custom.com/wp-content/uploads/2025/08/Rectangle-4503.png"
           alt=""
         />
+      </div>
+    </div>
+
+    <div class="customer-reviews-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Customer Reviews</h2>
+        </div>
+
+        <div class="customer-reviews-wrapper">
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  QL-Custom’s cables help a lot in our heart unit. The ECG wires
+                  always work. They are easy to use. The guides are simple to
+                  follow. The company shipped fast and answered us quickly. We
+                  use them every day and they keep working. We trust this
+                  company and recommend them.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/80e9a0c513e3488dc3f9dbb4ab37d6f0f8c58532.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Dr. Emily Carter</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  We used QL-Custom cables in a new lab tool. Their team worked
+                  closely with us and listened. They made changes when asked.
+                  The cables bend easily, so we can set them in many ways. The
+                  final product was better than we hoped. Great partner for
+                  labs.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/79b903bd66f7fdebef6f5d706910f796743d8022.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Anna Rodriguez</h4>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-rating">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2L14.94 8.63L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L9.06 8.63L12 2Z"
+                />
+              </svg>
+            </div>
+            <div class="content-divider">
+              <div class="review-card-content">
+                <p class="body-b1">
+                  In the ICU, each second counts. These cables help us a lot.
+                  The plugs are quick to use, which is key in emergencies. We
+                  have used them for months. None has failed. I feel safe using
+                  them with patients. I trust these cables.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-image">
+                  <img
+                    src="https://www.ql-custom.com/wp-content/uploads/2025/08/d563da34a22c98fc54872c688cddb7612f05c795.png"
+                    alt=""
+                  />
+                </div>
+                <h4 class="heading-h3 author-name">Michael Lee</h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
