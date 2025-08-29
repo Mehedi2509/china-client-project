@@ -94,6 +94,13 @@
         line-height: initial;
       }
 
+      @media only screen and (max-width: 1024px) {
+        .section-title h2 {
+          font-size: 40px;
+          line-height: 60px;
+        }
+      }
+
       @media only screen and (max-width: 767px) {
         .section-area {
           padding: 50px 16px;
@@ -460,6 +467,11 @@
         }
       }
 
+      .advance-manufacturing-area .section-title h2 {
+        font-size: 34px;
+        line-height: 48px;
+      }
+
       .advance-manufacturing-area .manufacturing-container {
         display: flex;
         align-items: center;
@@ -513,6 +525,95 @@
           width: 100%;
           height: auto;
           aspect-ratio: 562/488;
+        }
+      }
+
+      .strong-quality-area .info-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .strong-quality-area .info-card-wrapper .info-card {
+        padding: 20px;
+        background-color: #eff3f8;
+        border-radius: 12px;
+      }
+
+      .strong-quality-area .info-card .image-wrapper {
+        width: 220px;
+        height: auto;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .strong-quality-area .info-card .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .strong-quality-area .info-card .heading-h3 {
+        color: #16529b;
+        margin-bottom: 12px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .strong-quality-area .info-card-wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .medical-device-maker-area .section-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .medical-device-maker-area .image-wrapper {
+        width: 620px;
+        height: auto;
+        aspect-ratio: 620/540;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 8px;
+        transform: scaleX(-1);
+      }
+
+      .medical-device-maker-area .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .medical-device-maker-area .section-title h2 {
+        font-size: 34px;
+        line-height: 48px;
+        text-align: start;
+      }
+
+      .medical-device-maker-area .content-wrapper .body-b1 {
+        margin-bottom: 60px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+     
+        .medical-device-maker-area .image-wrapper {
+          width: 40%;
+          height: auto;
+          aspect-ratio: 620/540;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .medical-device-maker-area .section-container {
+          flex-direction: column-reverse;
+        }
+        .medical-device-maker-area .image-wrapper {
+          width: 100%;
         }
       }
     </style>
@@ -1118,6 +1219,164 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strong-quality-area section-area">
+      <div class="section-container mx-auto">
+        <div class="section-title">
+          <h2>Strong Quality Checks From Making to Shipping</h2>
+        </div>
+
+        <div class="info-card-wrapper">
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/3afcdb6073763ba6811e60a0121bea1140442d9d.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Checking Parts First</h3>
+            <p class="body-b2">
+              We always begin by looking at every part that comes in, even the
+              smallest piece. Every wire, every connector, and every bit of
+              material is looked at with care. We test random cables to see if
+              power and signals can move through them correctly. We do not just
+              trust what is written on paper. We also visit the people who make
+              these parts to be sure they keep the same high rules each time.
+              This step ensures that only safe and sound parts are used. Doing
+              this stops bad parts from going forward, so every cable starts
+              strong and secure.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/58cc5bae28641e37897ea4e9e9e07671288baf99.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Checks During Building</h3>
+            <p class="body-b2">
+              As we put the cables together step by step, we use tools and
+              machines that are checked constantly. These machines cut, press,
+              and join parts; each must be just right. For example, a crimping
+              machine must press hard enough to hold but not so hard that it
+              breaks the wire. If it is pressed incorrectly, the wire may fail
+              later. Our workers test each medical cable assembly as it is being
+              built. They check how power flows, if the outside cover is safe,
+              if labels are clear, and if the joins are neat and smooth. They
+              look at colours and details. These checks catch small mistakes
+              before they grow bigger. This saves time and money and keeps bad
+              parts from the end of the line.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/932d61c62271b1871faae72460de1deee13b4356-1.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Middle Testing</h3>
+            <p class="body-b2">
+              When one part of the cable is done, we stop and test it again
+              before moving on. We check that power and signals move smoothly
+              from one end to the other. We ensure shields around the wires
+              cover them entirely so no outside noise can enter. We plug and
+              unplug connectors often to ensure they stay tight and firm. These
+              tests follow world safety rules, so the cables can be trusted to
+              last for years. Testing at each step ensures no weak spots are
+              missed, and every cable grows stronger as it is built.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/76437b05abf9e83a4815801508f291f35bdb22d3-1.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Final Tests</h3>
+            <p class="body-b2">
+              When a cable is finished, we give it the hardest and biggest
+              tests. Each wire is checked to be sure power runs smoothly. We
+              tested the outside cover with strong power to see if it could stop
+              leaks. We check that signals stay in their place and do not mix
+              with other wires. We test medical cables with loads like they
+              would face in hospitals. We also bend, twist, and pull them to see
+              if they still stay safe. These final checks ensure the cable is
+              ready for real use, safe for people, and strong for many years.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/52b536831c0acfbc73a2e26fbd030797d7c6e7ff.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Keeping Records</h3>
+            <p class="body-b2">
+              Every cable has its label and code, so it can be tracked anytime.
+              We keep the test results safe and store them for years. We also
+              give a paper certificate with each order that shows it passed
+              every rule. If a problem occurs later, we can find the source
+              quickly and fix it. We follow world rules for medical tools to
+              keep safety first. This system ensures every cable is trusted and
+              ready, not only now but also in the future.
+            </p>
+          </div>
+          <div class="info-card">
+            <div class="image-wrapper">
+              <img
+                src="https://www.ql-custom.com/wp-content/uploads/2025/08/e867b612a543710b4bb9a4daa164a5ac66ed5f93-1.png"
+                alt=""
+              />
+            </div>
+            <h3 class="heading-h3">Packing and Shipping</h3>
+            <p class="body-b2">
+              When cables are ready, we carefully pack them. Each cable goes in
+              a bag or tray that protects it from dust, water, and damage. We
+              check each box to ensure the correct number of wires and labels
+              are there. For large orders, we pack them extra safely so they do
+              not break while shipping or storing. We also track the shipment
+              from the start until it reaches you. Every step is checked
+              repeatedly, so nothing is left to chance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="medical-device-maker-area section-area">
+      <div class="section-container mx-auto">
+        <div class="content-wrapper">
+          <div class="section-title">
+            <h2>Working With Medical Device Makers</h2>
+          </div>
+          <p class="body-b1">
+            We work very closely with the people who make medical tools, so our
+            cables fit their devices correctly. Our engineers often join design
+            teams before the first build begins. They help pick the best wires,
+            the right connectors, and the best path for each cable. We share
+            drawings, plans, and samples quickly, so makers can immediately test
+            them. Our cables can be changed in size, length, colour, or shape to
+            match what is needed. We design them so they can also be made easily
+            in large numbers on factory lines. This means devices are ready
+            faster, with fewer problems and less waste. With QL-Custom, the
+            process is smooth, simple, and always focused on your needs.
+          </p>
+          <div class="product-page-btn">
+            <button class="mock-btn">Get a Quick Quote</button>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img
+            src="https://www.ql-custom.com/wp-content/uploads/2025/08/c2d5f8f8bc43d19059af279e6f9e0ddc0e1288a0.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
